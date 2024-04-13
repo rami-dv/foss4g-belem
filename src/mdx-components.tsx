@@ -28,6 +28,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </div>
     ),
+    p: ({ children}) => (
+      <div className="leading-6 my-4">{children}</div>
+    ),
     img: (props) => (
       <Image
         sizes="100vw"
