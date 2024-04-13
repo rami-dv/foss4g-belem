@@ -4,7 +4,7 @@ import FOSS4GLogo from "@/images/foss4g-belem-logo-vertical.svg";
 
 export default function Header() {
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-white p-2 max-w-6xl mx-auto border-f4g_red border-l border-b border-r rounded-bl-xl rounded-br-xl">
+    <nav className="flex items-center justify-between flex-wrap bg-white py-4 px-4 max-w-6xl mx-auto border-f4g_red border-l border-b border-r rounded-bl-xl rounded-br-xl">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <Image className="w-40" alt="FOSS4G Logo" src={FOSS4GLogo} />
       </div>

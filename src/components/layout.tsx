@@ -1,4 +1,5 @@
 import Header from "./header";
+import Footer from "./footer";
 import { PropsWithChildren } from "react";
 
 export default function Layout({ children }: PropsWithChildren) {
@@ -9,6 +10,7 @@ export default function Layout({ children }: PropsWithChildren) {
     <>
       <Header />
       {isMdx ? <MDXLayout>{children}</MDXLayout> : <main>{children}</main>}
+      <Footer />
     </>
   );
 }
