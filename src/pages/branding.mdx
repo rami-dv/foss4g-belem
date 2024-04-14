@@ -4,6 +4,7 @@ import Logo1 from "@/images/logo/logo-horizontal-white.png";
 import Logo2 from "@/images/logo/logo-horizontal.png";
 import Logo3 from "@/images/logo/logo-vertical-white.png";
 import Logo4 from "@/images/logo/logo-vertical.png";
+import MdxLayout from "@/components/mdx-layout";
 
 <Heading color="red" label="FOSS4G 2024 Branding Guidelines" />
 
@@ -23,5 +24,9 @@ import Logo4 from "@/images/logo/logo-vertical.png";
   <div>
     <Image src={Logo3} className="bg-f4g_red rounded-lg" />
     <Image src={Logo4} />
-  </div>
+  </div>  
 </div>
+
+export default function MDXPage({ children }) {
+  return <MdxLayout>{children}</MdxLayout>
+}

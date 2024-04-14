@@ -1,9 +1,12 @@
 import Image from "next/image";
+import MdxLayout from "@/components/mdx-layout";
 import FOSS4G2022GroupPhoto from "@/images/foss2g-2022-group-photo.jpg";
 
 <div className="relative w-full mt-2 mb-4">
   <Image src={FOSS4G2022GroupPhoto} className="rounded-xl w-full shadow-lg" />
-  <div className="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 rounded-bl-xl rounded-br-xl p-4">FOSS4G 2022 in Firenze, Italy Group Photo (c) Anisa Kuci CC-BY-SA</div>
+  <div className="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 rounded-bl-xl rounded-br-xl p-4">
+    FOSS4G 2022 in Firenze, Italy Group Photo (c) Anisa Kuci CC-BY-SA
+  </div>
 </div>
 
 <div className="grid grid-cols-2 space-x-4">
@@ -24,12 +27,12 @@ import FOSS4G2022GroupPhoto from "@/images/foss2g-2022-group-photo.jpg";
 
     In the exciting geospatial field, free and open source technologies are the key to driving innovation and democratizing access to powerful tools.
     By adopting open source solutions, you not only encourage transparency and collaboration, but you break down barriers, allowing a wide range of users to participate in the development and improvement of geospatial platforms.
-    
+
     #### OSGeo
     ---
 
     The Open Source Geospatial Foundation was founded to support and build the highest-quality open source geospatial software. The foundation's goal is to encourage the use and collaborative development of community-led projects, data development and education. Many projects live under the [OSGeo umbrella](https://www.osgeo.org/).
- 
+
     #### Innovation
     ---
 
@@ -56,12 +59,16 @@ import FOSS4G2022GroupPhoto from "@/images/foss2g-2022-group-photo.jpg";
     at this event. Another of our objectives as a conference is to generate a safe space
     to reduce the gender gap in the geospatial field, seeking the participation of women
     and dissidents.
-  
+
   </div>
 
-  <div className="">
-  </div>
+{" "}
+
+<div className=""></div>
 
 </div>
 
-
+export default function MDXPage({ children }) {
+  return <MdxLayout>{children}</MdxLayout>
+ 
+}

@@ -9,17 +9,17 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </div>
     ),
     h2: ({ children }) => (
-      <div className="mb-3 font-ubuntu  text-3xl leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
+      <div className="mb-3 font-ubuntu text-3xl leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
         {children}
       </div>
     ),
     h3: ({ children }) => (
-      <div className="mb-2 font-ubuntu  text-2xl leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl">
+      <div className="mb-2 font-ubuntu text-2xl leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl">
         {children}
       </div>
     ),
     h4: ({ children }) => (
-      <div className="mb-1 font-ubuntu  text-xl leading-none tracking-tight text-gray-900 md:text-2xl lg:text-3xl">
+      <div className="mb-1 font-ubuntu text-xl leading-none tracking-tight text-gray-900 md:text-2xl lg:text-3xl">
         {children}
       </div>
     ),
