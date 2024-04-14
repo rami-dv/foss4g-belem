@@ -9,17 +9,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className="min-h-full">
       <Header />
-      <div
-        className=" -mt-20 min-h-44"
-        style={{
-          background: `url(${PageBackground.src})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          clipPath: "polygon(0 0,100% 0,100% 100%,0 37%)",
-        }}
-      ></div>
-      <Component {...pageProps} />
-
+      <div className="relative z-20">
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </div>
   );

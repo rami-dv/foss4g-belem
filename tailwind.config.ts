@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
-import DefaultTheme from "tailwindcss/defaultTheme"
-import HeadlessUI from "@headlessui/tailwindcss"
+import DefaultTheme from "tailwindcss/defaultTheme";
+import HeadlessUI from "@headlessui/tailwindcss";
 
 const config: Config = {
   content: [
@@ -13,24 +13,24 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['"Roboto"', ...DefaultTheme.fontFamily.sans],
-        ubuntu: 'Ubuntu',
-        roboto: 'Roboto'
+        ubuntu: "Ubuntu",
+        roboto: "Roboto",
       },
+
       colors: {
         f4g_red: "#552f27",
         f4g_blue: "#009575",
         f4g_orange: "#d86e39",
-        f4g_green: "#a6bf64"
+        f4g_green: "#a6bf64",
       },
       backgroundImage: {
+        "footer-texture": "url('/img/footer-texture.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
-  plugins: [
-    HeadlessUI
-  ],
+  plugins: [HeadlessUI],
 };
 export default config;
