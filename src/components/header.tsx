@@ -64,10 +64,10 @@ export default function Header() {
       }}
     >
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <div className="rounded-lg ">
+        <div className="">
           <Image className="w-40" alt="FOSS4G Logo" src={FOSS4GLogo} />
         </div>
-        <div className="space-x-2 ml-6">
+        <div className="space-x-2 ml-6 hidden md:flex">
           {menuItems.map((menuItem) => (
             <Menu
               key={menuItem.label}
@@ -114,9 +114,9 @@ export default function Header() {
         </div>
       </div>
 
-      <div>
+      <div className="lg:flex items-center justify-center hidden">
         <Link
-          className="inline-block px-4 py-2 leading-none bg-f4g_orange/80 hover:bg-f4g_orange border rounded text-white border-f4g_red  mt-4 lg:mt-0"
+          className="px-4 py-2 leading-none bg-f4g_orange/80 hover:bg-f4g_orange border rounded text-white border-f4g_red  mt-4 lg:mt-0"
           href="/call-for-papers"
         >
           Call For Papers
