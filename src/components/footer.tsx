@@ -5,11 +5,11 @@ import FOSS4GLogoWhite from "@/images/foss4g-belem-logo-vertical-white.svg";
 import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {
-  const socialIconHeight = 26;
+  const socialIconHeight = 30;
 
   return (
-    <nav className="flex shadow-lg items-center justify-between flex-wrap bg-f4g_red px-3 py-3 max-w-6xl mx-auto border-white border-t border-l border-r rounded-t-xl">
-      <div className="space-x-2 scale-100 sm:scale-110 origin-left">
+    <nav className="flex shadow-lg items-center justify-between flex-wrap bg-f4g_red px-2 py-1 sm:px-3 sm:py-3 max-w-6xl mx-auto border-white border-t border-l border-r rounded-t-xl">
+      <div className="space-x-1 sm:space-x-2 scale-100 sm:scale-[130%] origin-left">
         <SocialIcon
           url="https://instagram.com/foss4g"
           style={{ width: socialIconHeight, height: socialIconHeight }}
