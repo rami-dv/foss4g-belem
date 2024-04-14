@@ -10,7 +10,7 @@ const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   assetPrefix:
     process.env.NODE_ENV == "production"
-      ? "https://rami-dv.github.io/foss4g-belem/"
+      ? "/foss4g-belem"
       : undefined,
 };
 
