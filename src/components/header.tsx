@@ -58,7 +58,7 @@ export default function Header() {
 
   return (
     <nav
-      className="flex shadow-lg items-center justify-between flex-wrap bg-white py-3 px-3 max-w-6xl mx-auto border-f4g_red border-l border-b border-r rounded-bl-xl rounded-br-xl"
+      className="flex shadow-lg items-center justify-between flex-wrap bg-white py-1 px-2 sm:py-3 sm:px-3 max-w-6xl mx-auto border-f4g_red border-l border-b border-r rounded-bl-xl rounded-br-xl"
       style={{
         background: `linear-gradient(to right, rgba(255,255,255, 0.9), rgba(255,255,255, 0.4)), url(${PatternBg2.src})`,
       }}
