@@ -27,7 +27,7 @@ const menuItems = [
     href: "/registration",
     links: [
       { label: "Visa Info", href: "/visa-info" },
-      { label: "Travel Grant Program", href: "/travel-grant" },
+      { label: "Travel Grant Program", href: "/travel-grant-program" },
     ],
   },
   {
