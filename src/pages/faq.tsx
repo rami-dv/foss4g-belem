@@ -39,7 +39,7 @@ export default function FaqPage() {
 
           <FaqBubble question="Will the presentations be recorded and made available to the public after the conference?">
             Yes. After the conference, recordings of the talks will be made
-            available on OSGeo's official YouTube/FOSS4G channel. The workshops
+            available on OSGeo&apos;s official YouTube/FOSS4G channel. The workshops
             will not be recorded.
           </FaqBubble>
 
