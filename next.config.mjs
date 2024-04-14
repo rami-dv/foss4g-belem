@@ -6,12 +6,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: process.env.NODE_ENV == "production" ? "/foss4g-belem" : undefined,
   reactStrictMode: true,
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-  assetPrefix:
-    process.env.NODE_ENV == "production"
-      ? "/foss4g-belem"
-      : undefined,
 };
 
 export default withMDX()(nextConfig);
