@@ -25,7 +25,7 @@ export default function CommitteesPage() {
           OSGeo-based tools such as QGIS, GRASS GIS, GeoServer and others. In
           addition, the Brazilian community has actively participated in the
           translation of documentation and the organization of events related to
-          OSGeo. To learn more about Brazil's experience with OSGeo, we invite
+          OSGeo. To learn more about Brazil&apos;s experience with OSGeo, we invite
           you to visit our wiki.
         </div>
       </div>
