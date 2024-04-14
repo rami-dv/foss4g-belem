@@ -98,7 +98,8 @@ export default function Header() {
                     <div className="mt-2 bg-white rounded-md  shadow-lg">
                       {menuItem.links?.map((link) => (
                         <Menu.Item key={link.label}>
-                          <Link href={link.href}>
+                          <Link href={link.href}
+              onClick={() => setIsDropdown(null)}>
                             <button className="group flex w-full items-center rounded-md px-2 py-2 text-sm text-f4g_red hover:text-white hover:bg-f4g_orange">
                               {link.label}
                             </button>
