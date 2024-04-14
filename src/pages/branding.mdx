@@ -1,0 +1,27 @@
+import Heading from "@/components/heading";
+import Image from "next/image";
+import Logo1 from "@/images/logo/logo-horizontal-white.png";
+import Logo2 from "@/images/logo/logo-horizontal.png";
+import Logo3 from "@/images/logo/logo-vertical-white.png";
+import Logo4 from "@/images/logo/logo-vertical.png";
+
+<Heading color="red" label="FOSS4G 2024 Branding Guidelines" />
+
+<div className="border-4 border-f4g_red">
+  <iframe
+    className="pdf sm:h-[800px] h-[400px]"
+    src="/foss4g-2024-branding-guidelines.pdf"
+    width="100%"
+  ></iframe>
+</div>
+
+<Heading color="green" label="FOSS4G 2024 Logos" />
+
+<div className="grid grid-cols-1 sm:grid-cols-3 sm:space-x-4 ">
+  <Image src={Logo1} className="bg-f4g_red rounded-lg" />
+  <Image src={Logo2} />
+  <div>
+    <Image src={Logo3} className="bg-f4g_red rounded-lg" />
+    <Image src={Logo4} />
+  </div>
+</div>
