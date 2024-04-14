@@ -11,6 +11,8 @@
   "dependencies": {
     "@fontsource/roboto": "^5.0.12",
     "@fontsource/ubuntu": "^5.0.12",
+    "@headlessui/react": "^1.7.18",
+    "@headlessui/tailwindcss": "^0.2.0",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.1",
