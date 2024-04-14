@@ -16,5 +16,5 @@ export default function Layout({ children }: PropsWithChildren) {
 }
 
 const MDXLayout = ({ children }: PropsWithChildren) => {
-  return <main className="mx-auto max-w-6xl my-4">{children}</main>;
+  return <main className="sm:mx-auto max-w-6xl mx-2 my-2 sm:my-4">{children}</main>;
 };
