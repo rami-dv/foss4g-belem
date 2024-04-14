@@ -24,7 +24,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </div>
     ),
     h5: ({ children }) => (
-      <div className="text-lg leading-none tracking-tight text-gray-900 md:text-xl lg:text-2xl">
+      <div className="text-lg font-ubuntu leading-none tracking-tight text-gray-900 md:text-xl lg:text-2xl">
         {children}
       </div>
     ),
