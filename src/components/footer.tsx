@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import FOSS4GLogoWhite from "@/images/foss4g-belem-logo-vertical-white.svg";
+import FOSS4GLogoWhite from "@/images/logo/foss4g-belem-logo-vertical-white.svg";
 
 import { SocialIcon } from "react-social-icons";
 

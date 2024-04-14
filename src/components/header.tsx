@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import FOSS4GLogo from "@/images/foss4g-belem-logo-vertical.svg";
+import FOSS4GLogo from "@/images/logo/foss4g-belem-logo-vertical.svg";
 import PatternBg2 from "@/images/pattern-background2.png";
 
 const menuItems = [
