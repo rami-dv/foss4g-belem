@@ -91,7 +91,7 @@ export default function Header() {
                   as="div"
                   className="z-40 relative inline-block text-left"
                 >
-                  <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white/65 border-f4g_red/50 border px-2 py-1 font-medium text-f4g_red/80 hover:text-white hover:bg-f4g_orange">
+                  <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white/90 border-f4g_red/50 border px-2 py-1 font-medium text-f4g_red/80 hover:text-white hover:bg-f4g_orange">
                     <Link
                       href={menuItem.href}
                       onClick={() => console.log("lol")}
@@ -137,7 +137,7 @@ export default function Header() {
 
           <div className="lg:flex items-center justify-center hidden">
             <Link
-              className="px-4 py-2 leading-none bg-f4g_orange/80 hover:bg-f4g_orange border rounded text-white border-f4g_red  mt-4 lg:mt-0"
+              className="px-4 py-2 leading-none bg-f4g_orange hover:ring-1 ring-f4g_red hover:m-0 border rounded text-white border-f4g_red"
               href="/call-for-papers"
             >
               Call For Papers
