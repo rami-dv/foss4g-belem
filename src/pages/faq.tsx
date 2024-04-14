@@ -1,18 +1,6 @@
 import { PropsWithChildren } from "react";
 import Link from "next/link";
-
-function FaqHeader({ label }: { label: string }) {
-  return (
-    <div className="flex items-center my-6 sm:my-8">
-      <div className="flex-1 border-t-2 border-f4g_red"></div>
-      <div className="text-2xl sm:text-4xl text-center font-bold font-ubuntu text-f4g_red px-2 sm:px-8">
-        {label}
-      </div>
-      <div className="flex-1 border-t-2 border-f4g_red"></div>
-    </div>
-  );
-}
-
+import Heading from "@/components/heading";
 function FaqBubble({
   question,
   children,
@@ -39,7 +27,7 @@ export default function FaqPage() {
 
   return (
     <main className="sm:mx-auto max-w-6xl mx-2 my-2 sm:my-4">
-      <FaqHeader label="Frequently Asked Questions" />
+      <Heading color="red" label="Frequently Asked Questions" />
       <div className={gridClassName}>
         <div className={colClassName}>
           <FaqBubble question="When and where is the conference?">
@@ -89,7 +77,7 @@ export default function FaqPage() {
         </div>
       </div>
 
-      <FaqHeader label="Registration Questions" />
+      <Heading color="red" label="Registration Questions" />
 
       <div className={gridClassName}>
         <div className={colClassName}>
@@ -180,7 +168,7 @@ export default function FaqPage() {
         </div>
       </div>
 
-      <FaqHeader label="Accommodation Questions" />
+      <Heading color="red" label="Accommodation Questions" />
 
       <div className={gridClassName}>
         <div className={colClassName}>
@@ -227,7 +215,7 @@ export default function FaqPage() {
         </div>
       </div>
 
-      <FaqHeader label="Useful Information" />
+      <Heading color="red" label="Useful Information" />
 
       <div className={gridClassName}>
         <div className={colClassName}>
