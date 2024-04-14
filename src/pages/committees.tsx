@@ -34,8 +34,8 @@ export default function CommitteesPage() {
       <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
         {Committees["loc"].map((name) => (
           <div key={name}>
-            <div className="rounded-full hover:cursor-default border-4 border-f4g_red overflow-hidden m-1 sm:m-2">
-              <img src={`images/committees/loc/${slugify(name)}.jpg`} />
+            <div className="aspect-square rounded-full hover:cursor-default border-4 border-f4g_red overflow-hidden m-1 sm:m-2">
+              <img src={`images2/committees/loc/${slugify(name)}.jpg`} />
             </div>
             <div className="text-ubuntu text-center">{name}</div>
           </div>
@@ -46,7 +46,7 @@ export default function CommitteesPage() {
       <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
         {Committees["academic"].map((name) => (
           <div key={name}>
-            <div className="rounded-full hover:cursor-default border-4 border-f4g_orange overflow-hidden m-1 sm:m-2">
+            <div className="aspect-square rounded-full hover:cursor-default border-4 border-f4g_orange overflow-hidden m-1 sm:m-2">
               <img src={`images/committees/academic/${slugify(name)}.jpg`} />
             </div>
             <div className="text-ubuntu text-center">{name}</div>
@@ -58,7 +58,7 @@ export default function CommitteesPage() {
       <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
         {Committees["program"].map((name) => (
           <div key={name}>
-            <div className="rounded-full hover:cursor-default border-4 border-f4g_green overflow-hidden m-1 sm:m-2">
+            <div className="aspect-square rounded-full hover:cursor-default border-4 border-f4g_green overflow-hidden m-1 sm:m-2">
               <img src={`images/committees/program/${slugify(name)}.jpg`} />
             </div>
             <div className="text-ubuntu text-center">{name}</div>
@@ -70,7 +70,7 @@ export default function CommitteesPage() {
       <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
         {Committees["sponsor"].map((name) => (
           <div key={name}>
-            <div className="rounded-full hover:cursor-default border-4 border-f4g_blue overflow-hidden m-1 sm:m-2">
+            <div className="aspect-square rounded-full hover:cursor-default border-4 border-f4g_blue overflow-hidden m-1 sm:m-2">
               <img src={`images/committees/sponsor/${slugify(name)}.jpg`} />
             </div>
             <div className="text-ubuntu text-center">{name}</div>
