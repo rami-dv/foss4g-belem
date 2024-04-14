@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "name": "venues",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "icon": "beira-rio",
+        "name": "Beira-Rio Hotel",
+        "label": "Beira-Rio Hotel",
+        "sublabel": "Dec 03: B2B & GeoChicas Events"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-48.464445, -1.475769]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "icon": "ifpa-belem",
+        "name": "IFPA - Instituto Federal de Educação, Ciência e Tecnologia do Pará, Campus Belém",
+        "label": "IFPA Belém",
+        "sublabel": "Dec 02-03: Workshops\nDec 07-08: Code Sprint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-48.460504, -1.438426]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "icon": "hangar",
+        "name": "Hangar Convenções & Feiras da Amazônia",
+        "label": "HANGAR",
+        "sublabel": "Dec 04-06: Main Conference\nDec 04: Ice Breaker"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-48.456831, -1.421827]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "icon": "estacao-das-docas",
+        "name": "Estação das Docas",
+        "label": "Estação das Docas",
+        "sublabel": "Dec 05: Jantar de Gala"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-48.50063, -1.449435]
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "name": "lodging",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ibis Styles Hotel",
+        "address": "Avenida Duque de Caxias, 1538",
+        "phone": "+55 91 3182-3700",
+        "website": "https://all.accor.com/hotel/B9K6/index.en.shtml",
+        "booking": "https://www.booking.com/hotel/br/tulip-inn-hangar.html",
+        "description": "ibis Styles Hotel description",
+        "price": "$75-100",
+        "category": "hotel"
+      },
+      "geometry": { "type": "Point", "coordinates": [-48.4579383, -1.4246265] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rede Andrade Hotel",
+        "address": "Travessa Alferes Costa, 2716",
+        "phone": "+559133557372",
+        "website": "http://www.hotelhangar.com.br",
+        "booking": "https://www.booking.com/hotel/br/hangar.html",
+        "description": "Rede Andrade Hotel description",
+        "price": "$45-50",
+        "category": "hotel"
+      },
+      "geometry": { "type": "Point", "coordinates": [-48.457803, -1.42517] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hangar House Hostel",
+        "address": "Avenida Duque de Caxias, 1384",
+        "phone": "+5591985403441",
+        "website": "https://hangar-house.hoteis-nortedobrasil.com/en/",
+        "booking": "https://www.booking.com/hotel/br/hangar-house.en-gb.html",
+        "description": "Hangar House Hostel description",
+        "price": "$25-35",
+        "category": "hostel",
+        "confidence": 0.82254078101828965
+      },
+      "geometry": { "type": "Point", "coordinates": [-48.45935, -1.42665] }
+    }
+  ]
+}
