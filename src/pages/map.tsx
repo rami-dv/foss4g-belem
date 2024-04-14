@@ -169,6 +169,7 @@ const getMapStyle = ({
         id: "osm",
         type: "raster",
         source: "osm",
+        maxzoom: 11
       },
       {
         id: "earth",
