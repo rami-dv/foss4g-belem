@@ -36,9 +36,8 @@ export default function Map() {
     <div className="absolute top-0 left-0 bottom-0 right-0">
       <MapLibreMap
         ref={mapRef}
-        minZoom={10.5}
+        minZoom={2}
         maxZoom={17}
-        maxBounds={[-48.8, -1.8, -48.04, -1.04]}
         initialViewState={{
           bounds: [-48.508521, -1.481578, -48.437068, -1.410125],
         }}
@@ -80,9 +79,12 @@ export default function Map() {
             ? router.basePath?.substring(1) + "/"
             : router.basePath;
 
+          const baseUrl =
+            process.env.NEXT_PUBLIC_MAP_ASSET_BASEURL ?? window.location.origin;
+
           return url.startsWith(fakeAssetUrl)
             ? {
-                url: `${window.location.origin}/${parsedBasePath}${
+                url: `${baseUrl}/${parsedBasePath}${
                   url.split(fakeAssetUrl)[1]
                 }`,
               }
@@ -115,11 +117,17 @@ const getMapStyle = ({
     glyphs: "http://{basePath}/map/glyphs/{fontstack}/{range}.pbf",
     sprite: "http://{basePath}/map/sprite",
     sources: {
+      osm: {
+        type: "raster",
+        tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+        tileSize: 256,
+      },
       protomaps: {
         type: "vector",
         attribution:
           '<a href="https://github.com/protomaps/basemaps">Protomaps</a> | <a href="https://openstreetmap.org">OpenStreetMap</a>',
         url: "pmtiles://./map/tiles/protomaps.pmtiles",
+        minzoom: 9,
       },
       overture: {
         type: "vector",
@@ -156,6 +164,11 @@ const getMapStyle = ({
         paint: {
           "background-color": "#cccccc",
         },
+      },
+      {
+        id: "osm",
+        type: "raster",
+        source: "osm",
       },
       {
         id: "earth",
@@ -450,6 +463,7 @@ const getMapStyle = ({
         id: "lodging",
         type: "symbol",
         source: "lodging",
+        minzoom: 10.5,
         layout: {
           "symbol-sort-key": ["-", 1, ["get", "confidence"]],
           "icon-image": "lodging",
@@ -519,6 +533,7 @@ const getMapStyle = ({
         id: "venues",
         type: "symbol",
         source: "venues",
+        minzoom: 10.5,
         layout: {
           "text-allow-overlap": true,
           "text-font": ["literal", ["Noto Sans SemiCondensed Regular"]],
