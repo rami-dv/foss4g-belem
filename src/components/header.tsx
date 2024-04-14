@@ -19,6 +19,10 @@ const menuItems = [
     ],
   },
   {
+    label: "Map",
+    href: "/map"
+  },
+  {
     label: "Registration",
     href: "/registration",
     links: [
@@ -58,7 +62,7 @@ export default function Header() {
 
   return (
     <nav
-      className="flex shadow-lg items-center justify-between flex-wrap bg-white py-1 px-2 sm:py-3 sm:px-3 max-w-6xl mx-auto border-f4g_red border-l border-b border-r rounded-bl-xl rounded-br-xl"
+      className="relative flex shadow-lg items-center justify-between flex-wrap bg-white py-1 px-2 sm:py-3 sm:px-3 max-w-6xl mx-auto border-f4g_red border-l border-b border-r rounded-bl-xl rounded-br-xl z-10"
       style={{
         background: `linear-gradient(to right, rgba(255,255,255, 0.9), rgba(255,255,255, 0.4)), url(${PatternBg2.src})`,
       }}
@@ -74,7 +78,7 @@ export default function Header() {
               onMouseEnter={() => setIsDropdown(menuItem.label)}
               onMouseLeave={() => setIsDropdown(null)}
               as="div"
-              className="z-10 relative inline-block text-left"
+              className="z-20 relative inline-block text-left"
             >
               <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white/65 border-f4g_red/50 border px-2 py-1 font-medium text-f4g_red/80 hover:text-white hover:bg-f4g_orange">
                 <Link href={menuItem.href} onClick={() => console.log("lol")}>
@@ -94,12 +98,14 @@ export default function Header() {
                 leaveTo="transform scale-95 opacity-0"
               >
                 {menuItem.links && (
-                  <Menu.Items className="absolute z-10 left-0 w-60 origin-top-right divide-y divide-gray-100  ring-1 ring-black/5 focus:outline-none">
+                  <Menu.Items className="absolute z-30 left-0 w-60 origin-top-right divide-y divide-gray-100  ring-1 ring-black/5 focus:outline-none">
                     <div className="mt-2 bg-white rounded-md  shadow-lg">
                       {menuItem.links?.map((link) => (
                         <Menu.Item key={link.label}>
-                          <Link href={link.href}
-              onClick={() => setIsDropdown(null)}>
+                          <Link
+                            href={link.href}
+                            onClick={() => setIsDropdown(null)}
+                          >
                             <button className="group flex w-full items-center rounded-md px-2 py-2 text-sm text-f4g_red hover:text-white hover:bg-f4g_orange">
                               {link.label}
                             </button>
