@@ -42,7 +42,7 @@ export default function VisaInfoPage() {
           <div className="grid grid-cols-3 sm:grid-cols-9 items-center justify-center border-f4g_blue border-l border-r border-b">
             {VisaCountries["id_card"].map((iso2) => (
               //  @ts-ignore
-              <span className="p-2 text-center">
+              <span key={iso2} className="p-2 text-center">
                 {/* @ts-ignore */}
                 {VisaCountries["names"]?.[iso2]?.["en"]}
               </span>
@@ -64,7 +64,7 @@ export default function VisaInfoPage() {
               )
               .sort((a, b) => a.localeCompare(b))
               .map((name) => (
-                <span className="flex justify-center items-center text-center h-16">
+                <span key={name} className="flex justify-center items-center text-center h-16">
                   {name}
                 </span>
               ))}
