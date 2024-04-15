@@ -343,13 +343,13 @@ export default function IndexPage() {
           </div>
           <div className="flex items-center flex-col sm:flex-row justify-center sm:space-x-8 space-y-8 sm:space-y-0 max-w-60 sm:max-w-none">
             <div>
-              <Image src={Geolibres} />
+              <Image alt="GeoLibres Logo" src={Geolibres} />
             </div>
             <div>
-              <Image src={OsGeoBrasil} />
+              <Image alt="OSGeo Brasil Logo" src={OsGeoBrasil} />
             </div>
             <div>
-              <Image src={OsGeoLogo} />
+              <Image alt="OSGeo Logo" src={OsGeoLogo} />
             </div>
           </div>
           <div className="text-4xl [font-weight:500] font-ubuntu my-4 mt-12">
@@ -357,10 +357,14 @@ export default function IndexPage() {
           </div>
           <div className="flex items-center flex-col sm:flex-row justify-center sm:space-x-8">
             <div>
-              <Image src={Geochicas} />
+              <Image alt="Geochicas Logo" src={Geochicas} />
             </div>
             <div>
-              <Image className="max-h-32 w-auto" src={MeninasDaGeo} />
+              <Image
+                alt="Meninas Da Geo Logo"
+                className="max-h-32 w-auto"
+                src={MeninasDaGeo}
+              />
             </div>
           </div>
         </div>
