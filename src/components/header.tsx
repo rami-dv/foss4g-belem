@@ -175,38 +175,45 @@ export default function Header() {
             leaveTo="opacity-0"
             className="absolute z-40 top-full items-start justify-start w-full [max-height:calc(100vh_-_5rem)]"
           >
-            <div className="bg-white border sm:hidden w-full rounded-b-lg shadow-md">
+            <div className="bg-white font-ubuntu sm:hidden w-full rounded-b-lg shadow-md">
               {menuItems.map((menuItem) => (
-                <div key={menuItem.href} className="flex flex-col">
-                  <Link
-                    href={menuItem.href}
-                    onClick={() => setIsMenuOpen(false)}
+                <>
+                  <div
+                    key={menuItem.href}
+                    className="flex flex-col border-b border-white/50 bg-f4g_red"
                   >
-                    <div
-                      key={menuItem.label}
-                      className="px-4 py-2 bg-f4g_red text-white flex items-center"
+                    <Link
+                      href={menuItem.href}
+                      onClick={() => setIsMenuOpen(false)}
                     >
-                      <IoChevronForwardCircleSharp className="inline-block mr-2" />
+                      <div
+                        key={menuItem.label}
+                        className="px-4 py-2 bg-f4g_red text-white flex items-center"
+                      >
+                        <IoChevronForwardCircleSharp className="inline-block mr-2" />
 
-                      {menuItem.label}
-                    </div>
-                  </Link>
-                  <div className="flex flex-col">
-                    {menuItem.links &&
-                      menuItem.links.map((link) => (
+                        {menuItem.label}
+                      </div>
+                    </Link>
+                  </div>
+
+                  {menuItem.links && (
+                    <div className="flex flex-col bg-f4g_orange ">
+                      {menuItem.links.map((link) => (
                         <Link
                           key={link.href}
                           href={link.href}
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <div className="flex items-center pl-8 text-white py-2 bg-f4g_orange">
+                          <div className="flex items-center pl-8  border-b border-white/50 text-white py-2 bg-f4g_orange">
                             <IoChevronForwardCircleOutline className="inline-block mr-2" />
                             {link.label}
                           </div>
                         </Link>
                       ))}
-                  </div>
-                </div>
+                    </div>
+                  )}
+                </>
               ))}
             </div>
           </Transition>
