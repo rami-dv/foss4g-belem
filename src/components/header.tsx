@@ -66,7 +66,7 @@ export default function Header() {
   return (
     <>
       <div
-        className={`min-h-20 sm:min-h-44 items-start justify-center bg-cover bg-no-repeat -z-20 sm:[clip-path:polygon(0_0,100%_0,100%_100%,0_37%)] hidden sm:flex`}
+        className={`min-h-20 sm:min-h-44 items-start justify-center bg-cover bg-no-repeat -z-20 sm:[clip-path:polygon(0_0,100%_0,100%_100%,0_37%)] hidden sm:flex sm:-mb-24`}
         style={{
           backgroundImage: `url(${PageBackground.src})`,
         }}

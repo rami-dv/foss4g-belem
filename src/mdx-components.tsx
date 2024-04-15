@@ -32,7 +32,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <hr className=""/>
     ),
     p: ({ children}) => (
-      <div className="leading-6 my-2">{children}</div>
+      <p className="">{children}</p>
     ),
     img: (props) => (
       <Image

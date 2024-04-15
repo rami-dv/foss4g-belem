@@ -27,7 +27,7 @@ export default function FaqPage() {
 
   return (
     <main className="sm:mx-auto max-w-6xl mx-2 my-2 sm:my-4">
-      <Heading color="red" label="Frequently Asked Questions" />
+      <Heading color="red" label="Frequently Asked Questions" bubble />
       <div className={gridClassName}>
         <div className={colClassName}>
           <FaqBubble question="When and where is the conference?">
