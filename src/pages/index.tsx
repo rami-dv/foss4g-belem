@@ -76,8 +76,8 @@ export default function IndexPage() {
             </div>
 
             <div className="text-white [font-size:1.3rem] leading-7 italic [max-width:600px]">
-              "In the heart of the Amazon, Belém, geospatial technology
-              transcends borders, revealing a map of unlimited possibilities..."
+              &quot;In the heart of the Amazon, Belém, geospatial technology
+              transcends borders, revealing a map of unlimited possibilities...&quot;
             </div>
           </div>
         </div>
