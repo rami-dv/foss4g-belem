@@ -8,6 +8,10 @@ import GreenBg from "@/images/green-bg.png";
 import OrangeBg from "@/images/orange-bg.png";
 import SocialEvents from "@/images/social-events.jpg";
 import WhiteArrows from "@/images/white-arrows.png";
+import BrazilPatternBg from "@/images/brazil-pattern-background.png";
+import Foss4gAnnounced from "@/images/foss4g-2024-announced.jpg";
+import SotmGeneric from "@/images/sotm-generic.png";
+import Hangar from "@/images/hangar.jpg";
 import Countdown from "react-countdown";
 import Image from "next/image";
 import Link from "next/link";
@@ -209,6 +213,87 @@ export default function IndexPage() {
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
               <Link href="/social-events">Social Events</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex items-center justify-center my-4">
+        <div className="relative w-full max-w-6xl">
+          <Image
+            className="hidden sm:block w-full mx-auto max-w-4xl"
+            src={BrazilPatternBg}
+            alt="Brazil Pattern Background"
+          />
+          <div className="sm:absolute top-0 left-0 right-0 bottom-0 grid grid-cols-1 sm:grid-cols-2">
+            <div className="hidden sm:block"></div>
+            <div className="flex items-center justify-center sm:items-start sm:justify-start m-4">
+              <div className="bg-white max-w-xs border border-gray-200 p-4 shadow-lg">
+                <Image src={Foss4gAnnounced} alt="FOSS4G 2024 Announced" />
+                <div className="p-2">
+                  <div className="font-ubuntu text-3xl [font-weight:500] my-3">
+                    FOSS4G in Belém!
+                  </div>
+                  <div className="font-ubuntu my-3">
+                    OSGeo announces that the FOSS4G international conference
+                    will be held in Belém
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.osgeo.org/foundation-news/foss4g-2024-has-been-awarded-to-belem-brazil/"
+                      target="_blank"
+                      className="button"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-center sm:items-start sm:justify-end m-4">
+              <div className="bg-white max-w-xs border border-gray-200 p-4 shadow-lg">
+                <Image src={SotmGeneric} alt="FOSS4G 2024 Announced" />
+                <div className="p-2">
+                  <div className="font-ubuntu text-3xl [font-weight:500] my-3">
+                    SOTM LATAM 2024
+                  </div>
+                  <div className="font-ubuntu my-3">
+                    State of the Map LATAM will be held in Belém 07-08 December,
+                    after the main conference!
+                  </div>
+                  <div>
+                    <a
+                      href="https://wiki.openstreetmap.org/wiki/ES:LatAm/Eventos/State_of_the_Map_Latam_2024"
+                      target="_blank"
+                      className="button"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-center sm:items-start sm:justify-start m-4">
+              <div className="bg-white max-w-xs border border-gray-200 p-4 shadow-lg">
+                <Image src={Hangar} alt="FOSS4G 2024 Announced" />
+                <div className="p-2">
+                  <div className="font-ubuntu text-3xl [font-weight:500] my-3">
+                    FOSS4G Venue Chosen
+                  </div>
+                  <div className="font-ubuntu my-3">
+                    FOSS4G 2024 Belém will be held at HANGAR Convention Center!
+                  </div>
+                  <div>
+                    <a
+                      href="https://hangarpa.com.br/"
+                      target="_blank"
+                      className="button"
+                    >
+                      Read more
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
