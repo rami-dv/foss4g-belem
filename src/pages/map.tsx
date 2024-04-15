@@ -16,6 +16,8 @@ import { useState, useContext, useRef, useMemo } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { useRouter } from "next/router";
 
+import Head from "next/head";
+
 export default function Map() {
   const router = useRouter();
   const mapRef = useRef<MapRef>(null);
@@ -34,6 +36,9 @@ export default function Map() {
 
   return (
     <div className="fixed top-0 left-0 bottom-0 right-0">
+      <Head>
+        <title>Map</title>
+      </Head>
       <MapLibreMap
         ref={mapRef}
         minZoom={2}
@@ -169,7 +174,7 @@ const getMapStyle = ({
         id: "osm",
         type: "raster",
         source: "osm",
-        maxzoom: 11
+        maxzoom: 11,
       },
       {
         id: "earth",

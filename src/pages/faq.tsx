@@ -1,6 +1,13 @@
 import { PropsWithChildren } from "react";
 import Link from "next/link";
 import Heading from "@/components/heading";
+
+import Head from "next/head";
+
+<Head>
+  <title>Frequently Asked Questions (FAQ)</title>
+</Head>
+
 function FaqBubble({
   question,
   children,

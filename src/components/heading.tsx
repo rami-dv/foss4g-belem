@@ -1,11 +1,11 @@
 export default function Heading({
   label,
-  bubble,
-  color,
+  bubble = false,
+  color = null,
 }: {
   label: string;
-  bubble: boolean;
-  color: "green" | "orange" | "red" | "blue" | null;
+  bubble?: boolean | null;
+  color?: "green" | "orange" | "red" | "blue" | null;
 }) {
   // doing it this way for the tailwind jit compiler
   // https://tailwindcss.com/docs/content-configuration#dynamic-class-names
