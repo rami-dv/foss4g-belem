@@ -177,7 +177,7 @@ export default function Header() {
           >
             <div className="bg-white border sm:hidden w-full rounded-b-lg shadow-md">
               {menuItems.map((menuItem) => (
-                <div key={menuItem.href} className="flex flex-col divide-y">
+                <div key={menuItem.href} className="flex flex-col">
                   <Link
                     href={menuItem.href}
                     onClick={() => setIsMenuOpen(false)}
@@ -191,7 +191,7 @@ export default function Header() {
                       {menuItem.label}
                     </div>
                   </Link>
-                  <div className="flex flex-col divide-y">
+                  <div className="flex flex-col">
                     {menuItem.links &&
                       menuItem.links.map((link) => (
                         <Link
