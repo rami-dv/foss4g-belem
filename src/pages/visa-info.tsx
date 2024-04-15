@@ -93,7 +93,7 @@ export default function VisaInfoPage() {
           </div>
           <div>
             <p>
-              For those who have to apply for a visa, don't worry! Luckily,
+              For those who have to apply for a visa, don&apos;t worry! Luckily,
               tourist visa applications are not to difficult to apply for, and
               Brazil consular services has a great reputation for helping
               tourists with their documentation if necessary.
