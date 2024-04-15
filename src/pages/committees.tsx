@@ -21,7 +21,7 @@ export default function CommitteesPage() {
       </Head>
       <main className="sm:mx-auto max-w-6xl mx-2 my-2 sm:my-4">
         <Heading label="Conference Committees" color="red" bubble />
-        <div className="grid grid-cols-2">
+        <div className="grid sm:grid-cols-2">
           <div className="flex-grow">
             <Image alt="Conference Committee" src={CommitteeImage} />
           </div>
