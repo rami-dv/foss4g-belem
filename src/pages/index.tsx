@@ -13,6 +13,11 @@ import Foss4gAnnounced from "@/images/foss4g-2024-announced.jpg";
 import SotmGeneric from "@/images/sotm-generic.png";
 import GreenBackground from "@/images/green-background.png";
 import Hangar from "@/images/hangar.jpg";
+import Geochicas from "@/images/logo/geochicas.png";
+import Geolibres from "@/images/logo/geolibres.png";
+import MeninasDaGeo from "@/images/meninas-da-geo.png";
+import OsGeoBrasil from "@/images/osgeo-brasil.png";
+import OsGeoLogo from "@/images/osgeo-logo.png";
 import Countdown from "react-countdown";
 import Image from "next/image";
 import Link from "next/link";
@@ -326,6 +331,36 @@ export default function IndexPage() {
                   Contact Us
                 </div>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex items-center justify-center my-4 w-full mb-10 ">
+        <div className="flex flex-col items-center justify-center w-full max-w-6xl">
+          <div className="text-4xl [font-weight:500] font-ubuntu my-4">
+            Organizers
+          </div>
+          <div className="flex items-center flex-col sm:flex-row justify-center sm:space-x-8 space-y-8 sm:space-y-0 max-w-60 sm:max-w-none">
+            <div>
+              <Image src={Geolibres} />
+            </div>
+            <div>
+              <Image src={OsGeoBrasil} />
+            </div>
+            <div>
+              <Image src={OsGeoLogo} />
+            </div>
+          </div>
+          <div className="text-4xl [font-weight:500] font-ubuntu my-4 mt-12">
+            Community Partners
+          </div>
+          <div className="flex items-center flex-col sm:flex-row justify-center sm:space-x-8">
+            <div>
+              <Image src={Geochicas} />
+            </div>
+            <div>
+              <Image className="max-h-32 w-auto" src={MeninasDaGeo} />
             </div>
           </div>
         </div>
