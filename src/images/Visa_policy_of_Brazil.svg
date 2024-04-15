@@ -113,7 +113,8 @@ Set the visibility property to hidden or visible, to hide or show all circles in
 /* Color individual jurisdictions */
 
 .br {fill:#d86e39} /* Brazil */
-.ar,.bo,.cl,.co,.ec,.py,.pe,.uy,.ve,.eu,.frt,.dkt,.nlt,.al,.ad,.ag,.am,.au,.bs,.bb,.by,.bz,.ba,.bw,.ca,.cr,.dm,.do,.sv,.fj,.ge,.gd,.gt,.gy,.hn,.hk,.is,.id,.il,.jm,.jp,.kz,.li,.mo,.my,.mx,.md,.mc,.mn,.me,.ma,.na,.nzt,.ni,.mk,.not,.pa,.ph,.qa,.ru,.kn,.lc,.vc,.sm,.rs,.sc,.sg,.za,.kr,.smom,.sr,.ch,.th,.tt,.tn,.tr,.ua,.ae,.gbt,.ust,.va {fill:#22B14C} /* visa exemption*/
+.ar,.bo,.cl,.co,.ec,.py,.pe,.uy,.ve {fill:#a6bf64} /* ID card */
+.eu,.frt,.dkt,.nlt,.al,.ad,.ag,.am,.au,.bs,.bb,.by,.bz,.ba,.bw,.ca,.cr,.dm,.do,.sv,.fj,.ge,.gd,.gt,.gy,.hn,.hk,.is,.id,.il,.jm,.jp,.kz,.li,.mo,.my,.mx,.md,.mc,.mn,.me,.ma,.na,.nzt,.ni,.mk,.not,.pa,.ph,.qa,.ru,.kn,.lc,.vc,.sm,.rs,.sc,.sg,.za,.kr,.smom,.sr,.ch,.th,.tt,.tn,.tr,.ua,.ae,.gbt,.ust,.va {fill:#009575} /* visa exemption*/
 
 .ps,.hk,.mo,.smom {visibility:visible}
 

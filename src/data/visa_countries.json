@@ -131,7 +131,7 @@
       "pt": "Butão"
     },
     "bo": {
-      "en": "Bolivia (Plurinational State of)",
+      "en": "Bolivia",
       "es": "Bolivia",
       "pt": "Bolívia"
     },
@@ -521,7 +521,7 @@
       "pt": "Indonésia"
     },
     "ir": {
-      "en": "Iran (Islamic Republic of)",
+      "en": "Iran",
       "es": "Irán",
       "pt": "Irã"
     },
@@ -586,12 +586,12 @@
       "pt": "Quiribáti"
     },
     "kp": {
-      "en": "Korea (Democratic People's Republic of)",
+      "en": "North Korea",
       "es": "Corea del Norte",
       "pt": "Coreia do Norte"
     },
     "kr": {
-      "en": "Korea, Republic of",
+      "en": "South Korea",
       "es": "Corea del Sur",
       "pt": "Coreia do Sul"
     },
@@ -731,7 +731,7 @@
       "pt": "Marrocos"
     },
     "md": {
-      "en": "Moldova, Republic of",
+      "en": "Moldova",
       "es": "Moldavia",
       "pt": "Moldávia"
     },
@@ -1086,8 +1086,8 @@
       "pt": "Síria"
     },
     "tw": {
-      "en": "Taiwan, Province of China",
-      "es": "Taiwán (República de China)",
+      "en": "Taiwan",
+      "es": "Taiwán",
       "pt": "Taiwan"
     },
     "tj": {
@@ -1096,7 +1096,7 @@
       "pt": "Tajiquistão"
     },
     "tz": {
-      "en": "Tanzania, United Republic of",
+      "en": "Tanzania",
       "es": "Tanzania",
       "pt": "Tanzânia"
     },
@@ -1171,7 +1171,7 @@
       "pt": "Emirados Árabes Unidos"
     },
     "gb": {
-      "en": "United Kingdom of Great Britain and Northern Ireland",
+      "en": "United Kingdom",
       "es": "Reino Unido",
       "pt": "Reino Unido"
     },
@@ -1201,7 +1201,7 @@
       "pt": "Vanuatu"
     },
     "ve": {
-      "en": "Venezuela (Bolivarian Republic of)",
+      "en": "Venezuela",
       "es": "Venezuela",
       "pt": "Venezuela"
     },
@@ -1248,10 +1248,34 @@
   },
   "id_card": ["ar", "bo", "cl", "co", "ec", "py", "pe", "uy", "ve"],
   "visa_free": [
-    "eu",
-    "frt",
-    "dkt",
-    "nlt",
+    "at",
+    "be",
+    "bg",
+    "hr",
+    "cy",
+    "cz",
+    "dk",
+    "ee",
+    "fi",
+    "de",
+    "gr",
+    "hu",
+    "ie",
+    "it",
+    "lv",
+    "lt",
+    "lu",
+    "mt",
+    "pl",
+    "pt",
+    "ro",
+    "sk",
+    "si",
+    "es",
+    "se",
+    "gb",
+    "dk",
+    "nl",
     "al",
     "ad",
     "ag",
@@ -1291,10 +1315,10 @@
     "me",
     "ma",
     "na",
-    "nzt",
+    "nz",
     "ni",
     "mk",
-    "not",
+    "no",
     "pa",
     "ph",
     "qa",
@@ -1317,8 +1341,8 @@
     "tr",
     "ua",
     "ae",
-    "gbt",
-    "ust",
+    "gb",
+    "us",
     "va"
   ]
 }
