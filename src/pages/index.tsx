@@ -121,7 +121,7 @@ export default function IndexPage() {
             <div className="mt-8">
               Discover how the powerful combination of open source freedom and
               geoinformatics is transforming the way we visualize, analyze, and
-              understand our world. Don’t miss the opportunity to be part of
+              understand our world. Don&apos;t miss the opportunity to be part of
               this cartographic revolution!
             </div>
             <div className="inline-block text-white px-10 py-3 mt-8 rounded button bg-[#ff6600]">
