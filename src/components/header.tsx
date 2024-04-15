@@ -7,7 +7,10 @@ import FOSS4GLogo from "@/images/logo/foss4g-belem-logo-vertical.svg";
 import PatternBg2 from "@/images/pattern-background2.png";
 import PageBackground from "@/images/page-background.jpg";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-import { IoChevronForwardCircleSharp, IoChevronForwardCircleOutline } from "react-icons/io5";
+import {
+  IoChevronForwardCircleSharp,
+  IoChevronForwardCircleOutline,
+} from "react-icons/io5";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -175,18 +178,19 @@ export default function Header() {
             <div className="bg-white border sm:hidden w-full rounded-b-lg shadow-md">
               {menuItems.map((menuItem) => (
                 <div key={menuItem.href} className="flex flex-col divide-y">
-                  <div
-                    key={menuItem.label}
-                    className="px-4 py-2 bg-f4g_red text-white flex items-center"
+                  <Link
+                    href={menuItem.href}
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    <IoChevronForwardCircleSharp className="inline-block mr-2" />
-                    <Link
-                      href={menuItem.href}
-                      onClick={() => setIsMenuOpen(false)}
+                    <div
+                      key={menuItem.label}
+                      className="px-4 py-2 bg-f4g_red text-white flex items-center"
                     >
+                      <IoChevronForwardCircleSharp className="inline-block mr-2" />
+
                       {menuItem.label}
-                    </Link>
-                  </div>
+                    </div>
+                  </Link>
                   <div className="flex flex-col divide-y">
                     {menuItem.links &&
                       menuItem.links.map((link) => (
