@@ -226,7 +226,9 @@ export default function IndexPage() {
             alt="Brazil Pattern Background"
           />
           <div className="sm:absolute top-0 left-0 right-0 bottom-0 grid grid-cols-1 sm:grid-cols-2">
-            <div className="hidden sm:block"></div>
+            <div className="flex justify-center sm:justify-end">
+              <div className="text-4xl font-ubuntu [font-weight:500] sm:mr-8">Latest News</div>
+            </div>
             <div className="flex items-center justify-center sm:items-start sm:justify-start m-4">
               <div className="bg-white max-w-xs border border-gray-200 p-4 shadow-lg">
                 <Image src={Foss4gAnnounced} alt="FOSS4G 2024 Announced" />
