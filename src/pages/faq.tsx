@@ -4,10 +4,6 @@ import Heading from "@/components/heading";
 
 import Head from "next/head";
 
-<Head>
-  <title>Frequently Asked Questions (FAQ)</title>
-</Head>
-
 function FaqBubble({
   question,
   children,
@@ -34,6 +30,9 @@ export default function FaqPage() {
 
   return (
     <main className="sm:mx-auto max-w-6xl mx-2 my-2 sm:my-4">
+      <Head>
+        <title>Frequently Asked Questions (FAQ)</title>
+      </Head>
       <Heading color="red" label="Frequently Asked Questions" bubble />
       <div className={gridClassName}>
         <div className={colClassName}>
@@ -46,8 +45,8 @@ export default function FaqPage() {
 
           <FaqBubble question="Will the presentations be recorded and made available to the public after the conference?">
             Yes. After the conference, recordings of the talks will be made
-            available on OSGeo&apos;s official YouTube/FOSS4G channel. The workshops
-            will not be recorded.
+            available on OSGeo&apos;s official YouTube/FOSS4G channel. The
+            workshops will not be recorded.
           </FaqBubble>
 
           <FaqBubble question="What will the event be like?">
