@@ -80,7 +80,7 @@ export default function Header() {
       <header className="z-30 sm:fixed top-0 left-0 w-full flex items-center justify-center flex-col">
         <nav className="sm:static relative top-0 left-0 flex w-full mx-auto max-w-6xl flex-col">
           <div
-            className="w-full flex shadow-lg items-center justify-between flex-wrap bg-white py-1 px-2 sm:py-3 sm:px-3   border-f4g_red border-l border-b border-r rounded-bl-xl rounded-br-xl z-30"
+            className="w-full flex shadow-lg items-center justify-between flex-wrap bg-white py-1 px-2 sm:py-3 sm:px-3   border-f4g_red border-l border-b border-r sm:rounded-bl-xl sm:rounded-br-xl z-30"
             style={{
               background: `linear-gradient(to right, rgba(255,255,255, 1), rgba(255,255,255, 0.6)), url(${PatternBg2.src})`,
             }}
