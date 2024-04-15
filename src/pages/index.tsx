@@ -3,9 +3,14 @@ import HomepageBanner from "@/images/homepage-one-banner.jpg";
 import AboutFoss4g from "@/images/about-foss4g.png";
 import Objects from "@/images/objects.png";
 import ArrowBrown from "@/images/arrow-brown.png";
+import RegisterImg from "@/images/register-img.jpg";
+import GreenBg from "@/images/green-bg.png";
+import OrangeBg from "@/images/orange-bg.png";
+import SocialEvents from "@/images/social-events.jpg";
+import WhiteArrows from "@/images/white-arrows.png";
 import Countdown from "react-countdown";
 import Image from "next/image";
-import { DiJavascript } from "react-icons/di";
+import Link from "next/link";
 
 export default function IndexPage() {
   return (
@@ -77,7 +82,8 @@ export default function IndexPage() {
 
             <div className="text-white [font-size:1.3rem] leading-7 italic [max-width:600px]">
               &quot;In the heart of the Amazon, Belém, geospatial technology
-              transcends borders, revealing a map of unlimited possibilities...&quot;
+              transcends borders, revealing a map of unlimited
+              possibilities...&quot;
             </div>
           </div>
         </div>
@@ -97,7 +103,7 @@ export default function IndexPage() {
 
       {/* About FOSS4G */}
 
-      <section className="relative flex items-center justify-center">
+      <section className="relative flex items-center justify-center my-4">
         <div className="flex flex-col sm:flex-row space-y-10 sm:space-y-0 sm:space-x-20 max-w-6xl w-full p-4">
           <div className="hidden sm:block">
             <Image
@@ -121,12 +127,14 @@ export default function IndexPage() {
             <div className="mt-8">
               Discover how the powerful combination of open source freedom and
               geoinformatics is transforming the way we visualize, analyze, and
-              understand our world. Don&apos;t miss the opportunity to be part of
-              this cartographic revolution!
+              understand our world. Don&apos;t miss the opportunity to be part
+              of this cartographic revolution!
             </div>
-            <div className="inline-block text-white px-10 py-3 mt-8 rounded button bg-[#ff6600]">
-              LEARN MORE
-            </div>
+            <Link href="/about">
+              <div className="inline-block text-white px-10 py-3 mt-8 rounded button bg-[#ff6600]">
+                LEARN MORE
+              </div>
+            </Link>
           </div>
           <div>
             <Image
@@ -145,8 +153,65 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
-      <section className="relative flex items-center justify-center">
-        <div className="grid grid-cols-1 max-w-6xl w-full p-4">NEW SECTION</div>
+      <section className="relative flex items-center justify-center my-4">
+        <div className="grid grid-cols-1 sm:grid-cols-4 w-full py-4">
+          <div
+            className="flex sm:aspect-square sm:col-span-2 sm:row-span-2 bg-cover bg-no-repeat min-h-96"
+            style={{ backgroundImage: `url(${RegisterImg.src})` }}
+          >
+            <div className="mt-10 sm:mt-20">
+              <div className="bg-[#ee6f2e] font-ubuntu [font-weight:500] p-[20px] inline text-3xl sm:text-[4rem] text-white">
+                Register for the event
+              </div>
+              <div className="sm:ml-72 mt-10">
+                <Image
+                  alt="White Arrows"
+                  className="inline-block -rotate-90"
+                  src={WhiteArrows}
+                />
+                <div className="inline-block ml-10">
+                  <div className="button text-2xl uppercase [font-weight:500] font-ubuntu text-[#ee6f2e] bg-white rounded px-10 py-4">
+                    Coming Soon!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="flex items-end sm:aspect-square bg-cover bg-no-repeat min-h-40"
+            style={{ backgroundImage: `url(${OrangeBg.src})` }}
+          >
+            <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
+              <Link href="/code-of-conduct">Code of Conduct</Link>
+            </div>
+          </div>
+          <div className="flex items-end sm:aspect-square bg-black min-h-40">
+            <div className="grid">
+              <div className="mx-6 hidden sm:block">
+                <Image alt="White Arrows" className="block" src={WhiteArrows} />
+              </div>
+              <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
+                <Link href="/where-to-stay">Where To Stay</Link>
+              </div>
+            </div>
+          </div>
+          <div
+            className="flex items-end sm:aspect-square bg-cover bg-no-repeat min-h-40"
+            style={{ backgroundImage: `url(${GreenBg.src})` }}
+          >
+            <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
+              <Link href="/schedule">Schedule</Link>
+            </div>
+          </div>
+          <div
+            className="flex items-end sm:aspect-square bg-cover bg-no-repeat min-h-40"
+            style={{ backgroundImage: `url(${SocialEvents.src})` }}
+          >
+            <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
+              <Link href="/social-events">Social Events</Link>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
