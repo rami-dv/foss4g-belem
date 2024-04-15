@@ -174,7 +174,7 @@ export default function Header() {
           >
             <div className="bg-white border sm:hidden w-full rounded-b-lg shadow-md">
               {menuItems.map((menuItem) => (
-                <div className="flex flex-col divide-y">
+                <div key={menuItem.href} className="flex flex-col divide-y">
                   <div
                     key={menuItem.label}
                     className="px-4 py-2 bg-f4g_red text-white flex items-center"
@@ -191,6 +191,7 @@ export default function Header() {
                     {menuItem.links &&
                       menuItem.links.map((link) => (
                         <Link
+                          key={link.href}
                           href={link.href}
                           onClick={() => setIsMenuOpen(false)}
                         >
