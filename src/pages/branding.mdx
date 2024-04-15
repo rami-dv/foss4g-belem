@@ -18,10 +18,14 @@ import MdxLayout from "@/components/mdx-layout";
 
 <Heading color="green" label="FOSS4G 2024 Logos" />
 
-<div className="grid grid-cols-1 sm:grid-cols-3 sm:space-x-4 ">
-  <Image src={Logo1} className="bg-f4g_red rounded-lg" />
-  <Image src={Logo2} />
-  <div>
+<div className="grid grid-cols-1 sm:grid-cols-3 sm:space-x-4 sm:space-y-2 ">
+  <div className="p-4">
+    <Image src={Logo1} className="bg-f4g_red rounded-lg" />
+  </div>
+  <div className="p-4">
+    <Image src={Logo2} />
+  </div>
+  <div className="grid space-y-4">
     <Image src={Logo3} className="bg-f4g_red rounded-lg" />
     <Image src={Logo4} />
   </div>  
