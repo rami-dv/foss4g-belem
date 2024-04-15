@@ -11,6 +11,7 @@ import WhiteArrows from "@/images/white-arrows.png";
 import BrazilPatternBg from "@/images/brazil-pattern-background.png";
 import Foss4gAnnounced from "@/images/foss4g-2024-announced.jpg";
 import SotmGeneric from "@/images/sotm-generic.png";
+import GreenBackground from "@/images/green-background.png";
 import Hangar from "@/images/hangar.jpg";
 import Countdown from "react-countdown";
 import Image from "next/image";
@@ -218,7 +219,7 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section className="flex items-center justify-center my-4">
+      <section className="flex items-center justify-center my-12">
         <div className="relative w-full max-w-6xl">
           <Image
             className="hidden sm:block w-full mx-auto max-w-4xl"
@@ -227,7 +228,9 @@ export default function IndexPage() {
           />
           <div className="sm:absolute top-0 left-0 right-0 bottom-0 grid grid-cols-1 sm:grid-cols-2">
             <div className="flex justify-center sm:justify-end">
-              <div className="text-4xl font-ubuntu [font-weight:500] sm:mr-8">Latest News</div>
+              <div className="text-4xl font-ubuntu [font-weight:500] sm:mr-8">
+                Latest News
+              </div>
             </div>
             <div className="flex items-center justify-center sm:items-start sm:justify-start m-4">
               <div className="bg-white max-w-xs border border-gray-200 p-4 shadow-lg">
@@ -296,6 +299,33 @@ export default function IndexPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="flex items-center justify-center my-4 w-full bg-cover bg-right bg-no-repeat min-h-96 sm:mt-32"
+        style={{ backgroundImage: `url(${GreenBackground.src})` }}
+      >
+        <div className="w-full max-w-6xl">
+          <div className="grid space-y-8 sm:space-y-0 sm:grid-cols-2">
+            <div className="font-ubuntu text-2xl sm:text-3xl text-white mx-4 leading-8">
+              Do you want to become our sponsor? <br />
+              Join us as an essential partner in this technological journey!
+            </div>
+            <div className="flex items-center justify-center flex-col space-y-4 sm:space-y-8">
+              <Link href="/sponsors">
+                <div className="button inline-block bg-[#ff6600] uppercase text-white font-ubuntu px-10 py-3 ">
+                  Sponsor Brochure
+                </div>
+              </Link>
+
+              <Link href="/contact">
+                <div className="button inline-block text-[#ff6600] uppercase bg-white font-ubuntu px-10 py-3 ">
+                  Contact Us
+                </div>
+              </Link>
             </div>
           </div>
         </div>
