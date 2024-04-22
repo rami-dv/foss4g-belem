@@ -28,6 +28,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </div>
     ),
+    ul: ({ children }) => (
+      <ul className="list-disc list-inside pl-3">{children}</ul>
+    ),
     hr: () => (
       <hr className=""/>
     ),
