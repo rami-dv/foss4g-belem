@@ -2,9 +2,10 @@ import MdxLayout from "@/components/mdx-layout";
 
 import Head from "next/head";
 
-<Head>
-  <title>Accommodation</title>
-</Head>
+export const metadata = {
+  title: "Accommodation",
+  description: "Accommodation information for the FOSS4G 2024 conference in Belém, Brazil"
+}
 
 Belém, the charming city at the mouth of the Amazon River, has a variety of neighborhoods that offer different experiences for visitors. Here we present a list of the 6 best neighborhoods to stay, according to amenities, accessibility and attractions:
 
@@ -50,5 +51,5 @@ Accommodation prices: From 25 to 140 USD per night, with a variety of options th
 
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }
