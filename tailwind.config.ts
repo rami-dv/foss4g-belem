@@ -16,7 +16,9 @@ const config: Config = {
         ubuntu: "Ubuntu",
         roboto: "Roboto",
       },
-
+      screens: {
+        "6xl": "1152px",
+      },
       colors: {
         f4g_red: "#552f27",
         f4g_blue: "#009575",
