@@ -1,13 +1,12 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>Schedule</title>
-</Head>
+export const metadata = {
+  title: "Schedule",
+  description: null
+}
 
 Schedule
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }

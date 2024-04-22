@@ -1,11 +1,14 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
+export const metadata = {
+  title: "Community Sprint",
+  description: null
+}
 
-<Head>
-  <title>Community Sprint</title>
-</Head>
+Community Sprint
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+
 }

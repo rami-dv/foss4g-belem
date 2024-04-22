@@ -1,11 +1,10 @@
 import Heading from "@/components/heading";
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>Code of Conduct</title>
-</Head>
+export const metadata = {
+  title: "Code of Conduct",
+  description: "Code of Conduct of the FOSS4G 2024 conference in Belém, Brazil"
+}
 
 <Heading label="Code of Conduct" color="red" bubble />
 
@@ -116,5 +115,5 @@ Participants are expected to act respectfully towards others in accordance with 
 </div>
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }

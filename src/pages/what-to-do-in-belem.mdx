@@ -1,10 +1,9 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>What To Do In Belém</title>
-</Head>
+export const metadata = {
+  title: "What to do in Belém",
+  description: null
+}
 
 #### Walk through the Forte do Presépio and the Feliz Lusitânia Tourist Complex
 
@@ -30,7 +29,7 @@ Two musicians are in charge of rocking the dancers and passengers. In addition t
 You can read more at their [official website](https://www.valeverdeturismo.com.br/belem-para-amazonia)
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
 
 }

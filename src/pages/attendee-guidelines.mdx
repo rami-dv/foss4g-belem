@@ -1,11 +1,11 @@
 import MdxLayout from "@/components/mdx-layout";
 import Link from "next/link";
 
-import Head from "next/head";
-
-<Head>
-  <title>Attendee Guidelines</title>
-</Head>
+export const metadata = {
+  title: "Attendee Guidelines",
+  description:
+    "Guidelines for attendance at the FOSS4G 2024 conference in Belém, Brazil",
+};
 
 ### About Belém, Pará state and Brasil
 
@@ -35,8 +35,12 @@ You can find further details [on the website of the Ministry of Foreign Affairs 
 
 ### Code of Conduct
 
-<Link href="code-of-conduct/">The code of conduct for the event can be accessed here</Link>
+<Link href="code-of-conduct/">
+  The code of conduct for the event can be accessed here
+</Link>
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+
 }

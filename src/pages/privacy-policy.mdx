@@ -1,11 +1,10 @@
 import Heading from "@/components/heading";
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>Privacy Policy</title>
-</Head>
+export const metadata = {
+  title: "Privacy Policy",
+  description: null
+}
 
 <Heading label="Privacy Policy" color="red" bubble />
 
@@ -19,5 +18,5 @@ Personal information is protected by LAW N° 13,709, OF AUGUST 14, 2018 - Genera
 You should note that personal information will not be disclosed to third parties.
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }

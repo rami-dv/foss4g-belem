@@ -1,10 +1,9 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>Venue</title>
-</Head>
+export const metadata = {
+  title: "Venue",
+  description: null
+}
 
 Here are the locations at which various events in the conference will be held:
 
@@ -75,7 +74,7 @@ You can remove the products that we give you with the purchase of your ticket, o
 The institute has a bathroom suitable for students with disabilities or reduced mobility, an accessibility room, a pedagogical service room and an elevator. For more information visit: (https://belem.ifpa.edu.br/apresentacao-do-campus)[https://belem.ifpa.edu.br/apresentacao-do-campus]
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
 
 }

@@ -1,12 +1,11 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
+export const metadata = {
+  title: "Social Events",
+  description: null
+}
 
-<Head>
-  <title>Social Events</title>
-</Head>
-
-Colleagues! The excitement doesn’t end in the auditorium! We extend a warm invitation to participate in our exclusive social events that will complement your networking experience. Enjoy moments of camaraderie, exchanging ideas and fun in a relaxed atmosphere. The events are designed to strengthen bonds and create unforgettable memories. Don't miss the opportunity to connect in a more informal setting! Details will be provided on site, we hope to see you there!
+Colleagues! The excitement doesn&quot;t end in the auditorium! We extend a warm invitation to participate in our exclusive social events that will complement your networking experience. Enjoy moments of camaraderie, exchanging ideas and fun in a relaxed atmosphere. The events are designed to strengthen bonds and create unforgettable memories. Don't miss the opportunity to connect in a more informal setting! Details will be provided on site, we hope to see you there!
 
 #### IceBreaker
 
@@ -26,5 +25,5 @@ We want to involve participants in the culture of Pará and make them taste the 
 We invite you to celebrate the closing of the FOSS4G 2024 conference at a special reception! Come and toast a week of learning, networking and collaboration with the FOSS4G community. All members of the FOSS4G association, friends and interested parties are cordially invited for a drink at the end of FOSS4G 2024 on **Friday, December 6th, at 3:30 pm in the same location, HANGAR**.
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }

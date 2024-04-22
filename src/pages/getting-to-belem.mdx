@@ -1,10 +1,9 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>Getting to Belém</title>
-</Head>
+export const metadata = {
+  title: "Getting To Belém!",
+  description: null
+}
 
 ### Transport to Belém
 
@@ -91,5 +90,5 @@ You'll have the opportunity to ride a bike around the city and enjoy the landsca
 
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }

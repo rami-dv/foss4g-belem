@@ -1,10 +1,9 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>B2B Dynamics</title>
-</Head>
+export const metadata = {
+  title: "B2B Dynamics",
+  description: null,
+};
 
 The B2B Meeting - Business to Business will take place at the Hotel Beira Rio. The B2B meeting will be held on December 3rd, 2024, Tuesday, the second day of the event and one day before the main conference and will last 1.5 hours from 4:30 pm to 6 pm in the events hall of the Hotel Beira Rio.
 
@@ -19,7 +18,8 @@ Each participant will then have the opportunity to present their business within
 - Silver Sponsorship: 2 minutes
 - Bronze Sponsorship: 1 minute
 
-
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+
 }

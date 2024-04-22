@@ -1,9 +1,9 @@
 import MdxLayout from "@/components/mdx-layout";
-import Head from "next/head";
 
-<Head>
-  <title>Travel Grant Program</title>
-</Head>
+export const metadata = {
+  title: "Travel Grant Program",
+  description: null
+}
 
 The TPG is an initiative designed to provide financial support to people who wish to attend the FOSS4G 2024 conference, but may face financial limitations in covering travel expenses.
 
@@ -106,6 +106,6 @@ The travel scholarship program is managed by the Conference Committee, in collab
 - **2 December 2024** - Start of the conference
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
 }

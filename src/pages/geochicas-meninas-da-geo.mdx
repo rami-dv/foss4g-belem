@@ -1,10 +1,9 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>GeoChicas &amp; Meninas da Geo Take Belém!</title>
-</Head>
+export const metadata = {
+  title: "GeoChicas & Meninas da Geo Take Belém!",
+  description: null
+}
 
 [Geochicas](https://es.wikipedia.org/wiki/Geochicas) is a collective of feminist mappers within OpenStreetMap, OSGeo and technology communities. Geochicas works on the production of feminist geospatial data, as well as reducing the gender gap in the OpenStreetMap communities and in communities associated with the world of free software and open data.
 
@@ -20,5 +19,5 @@ We invite all people who want to come to the mixed space to learn about the work
 The meeting will take place on **December 3rd, at 6:30 pm at the Hotel Beira-Río**, Business to Business (B2B) location.
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }

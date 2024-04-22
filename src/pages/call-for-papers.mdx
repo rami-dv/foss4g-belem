@@ -1,13 +1,12 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>Call For Papers</title>
-</Head>
+export const metadata = {
+  title: "Call For Papers",
+  description: null,
+};
 
 Call for Papers
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
 }

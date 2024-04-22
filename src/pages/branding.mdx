@@ -6,11 +6,10 @@ import Logo3 from "@/images/logo/logo-vertical-white.png";
 import Logo4 from "@/images/logo/logo-vertical.png";
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>Branding</title>
-</Head>
+export const metadata = {
+  title: "Branding",
+  description: "Branding Guidelines for FOSS4G 2024 conference in Belém, Brazil"
+}
 
 <Heading color="red" label="FOSS4G 2024 Branding Guidelines" bubble />
 
@@ -38,5 +37,5 @@ import Head from "next/head";
 </div>
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }

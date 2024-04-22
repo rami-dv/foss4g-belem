@@ -1,10 +1,9 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import Head from "next/head";
-
-<Head>
-  <title>Guided Tours</title>
-</Head>
+export const metadata = {
+  title: "Guided Tours",
+  description: null
+}
 
 #### Ilha do Combu
 
@@ -48,5 +47,5 @@ Every time you search on the Internet about Alter do Chão you will find sensati
 From August onwards, with a significant reduction in the amount of rain, the water began to recede and open fringes of sand on Ilha do Amor and in all the other beaches in the region.
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }
