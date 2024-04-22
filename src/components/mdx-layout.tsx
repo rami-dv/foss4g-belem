@@ -1,11 +1,19 @@
 import { PropsWithChildren } from "react";
-import PageBackground from "@/images/page-background.jpg";
-import FooterBackground from "@/images/footer-background.jpg";
+import Head from "next/head";
 
-export default function MDXLayout({ children }: PropsWithChildren) {
+export default function MDXLayout({
+  metadata = null,
+  children,
+}: PropsWithChildren<{ metadata: null | { [key: string]: string } }>) {
   return (
     <>
-      <main className="sm:mx-auto max-w-6xl mx-2 my-2 sm:my-4 min-h-96">
+      <Head>
+        <title>{metadata?.title}</title>
+        {metadata?.description && (
+          <meta name="description" content={metadata.description} key="desc" />
+        )}
+      </Head>
+      <main className="6xl:mx-auto max-w-6xl px-4 my-4 6xl:px-2 6xl:my-4 min-h-96">
         {children}
       </main>
     </>
