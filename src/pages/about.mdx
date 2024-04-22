@@ -1,13 +1,13 @@
 import Image from "next/image";
 import MdxLayout from "@/components/mdx-layout";
-import FOSS4G2022GroupPhoto from "@/images/foss2g-2022-group-photo.jpg";
+import Foss4g2022GroupPhoto from "@/images/foss4g-2022/group-photo.jpg";
+import Foss4g2022OpeningSession from "@/images/foss4g-2022/opening-session.jpg";
 
-import Head from "next/head";
 
-<Head>
-  <title>About</title>
-</Head>
-
+export const metadata = {
+  title: "About",
+  description: ""
+}
 
 <div className="relative w-full mt-2 mb-4">
   <Image src={FOSS4G2022GroupPhoto} className="rounded-xl w-full shadow-lg" />
@@ -31,6 +31,8 @@ import Head from "next/head";
 
       </div>
       <div>
+
+      <Image src={Foss4g2022OpeningSession} className="rounded-xl w-full" />
       </div>
 
     </div>
@@ -85,13 +87,14 @@ import Head from "next/head";
 
     <div>
       <div>
-      
+
       </div>
     </div>
+
   </div>
 </div>
 
 export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
 }
