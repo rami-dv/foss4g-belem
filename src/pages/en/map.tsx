@@ -80,8 +80,7 @@ export default function Map() {
         transformRequest={(url: string) => {
           // transform fake sprite url in style to work on both dev and prod
 
-          const baseUrl =
-            process.env.NEXT_PUBLIC_MAP_ASSET_BASEURL ?? window.location.host;
+          const baseUrl = `${window.location.host}${router.basePath ?? "/"}`;
 
           const newUrl = url.replace(
             "http://{basePath}",
