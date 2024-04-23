@@ -32,32 +32,32 @@ export const intlHrefs = {
   "/about": {
     en: "/about",
     es: "/acerca-de",
-    pt: "/about",
+    pt: "/sobre",
   },
   "/conference-committees": {
     en: "/conference-committees",
-    es: "/comites-de-conferencia",
-    pt: "/",
+    es: "/comite-organizador-local",
+    pt: "/comite-organizador-local",
   },
   "/faq-frequently-asked-questions": {
     en: "/faq-frequently-asked-questions",
-    es: "/preguntas-frecuentes",
-    pt: "/",
+    es: "/preguntas-frecuentes-faq",
+    pt: "/perguntas-frequentes-faq",
   },
   "/branding": {
     en: "/branding",
     es: "/marca",
-    pt: "/",
+    pt: "/marca",
   },
   "/code-of-conduct": {
     en: "/code-of-conduct",
     es: "/codigo-de-conducta",
-    pt: "/",
+    pt: "/codigo-de-conduta",
   },
   "/privacy-policy": {
     en: "/privacy-policy",
     es: "/politica-de-privacidad",
-    pt: "/",
+    pt: "/politica-de-privacidade",
   },
   "/map": {
     en: "/map",
@@ -67,77 +67,77 @@ export const intlHrefs = {
   "/registration": {
     en: "/registration",
     es: "/inscripcion",
-    pt: "/",
+    pt: "/inscricao",
   },
   "/visa-info": {
     en: "/visa-info",
-    es: "/info-sobre-visados",
-    pt: "/",
+    es: "/info-sobre-visa",
+    pt: "/info-sobre-visto",
   },
   "/travel-grant-program": {
     en: "/travel-grant-program",
     es: "/programa-de-becas",
-    pt: "/",
+    pt: "/programa-de-bolsas",
   },
   "/schedule": {
     en: "/schedule",
     es: "/programa",
-    pt: "/",
+    pt: "/programa",
   },
   "/b2b-dynamics": {
     en: "/b2b-dynamics",
-    es: "/empresa-a-empresa",
-    pt: "/",
+    es: "/empresa-a-empresa-b2b",
+    pt: "/empresa-a-empresa-b2b",
   },
   "/geochicas-meninas-da-geo": {
     en: "/geochicas-meninas-da-geo",
     es: "/geochicas-meninas-da-geo",
-    pt: "/",
+    pt: "/geochicas-meninas-da-geo",
   },
-  "/community-sprint": {
-    en: "/community-sprint",
-    es: "/sprint-comunitario",
-    pt: "/",
+  "/community-code-sprint": {
+    en: "/community-code-sprint",
+    es: "/community-code-sprint",
+    pt: "/community-code-sprint",
   },
   "/social-events": {
     en: "/social-events",
     es: "/eventos-sociales",
-    pt: "/",
+    pt: "/eventos-sociais",
   },
   "/sponsors": {
     en: "/sponsors",
     es: "/patrocinadores",
-    pt: "/",
+    pt: "/patrocinadores",
   },
   "/attending": {
     en: "/attending",
     es: "/asistiendo",
-    pt: "/",
+    pt: "/participando",
   },
   "/venue": {
     en: "/venue",
     es: "/lugar",
-    pt: "/",
+    pt: "/lugar",
   },
   "/getting-to-belem": {
     en: "/getting-to-belem",
     es: "/llegando-a-belem",
-    pt: "/",
+    pt: "/chegando-a-belem",
   },
   "/accommodation": {
     en: "/accommodation",
     es: "/accommodacion",
-    pt: "/",
+    pt: "/acomodacoes",
   },
   "/guided-tours": {
     en: "/guided-tours",
     es: "/visitas-guiadas",
-    pt: "/",
+    pt: "/visitas-guiadas",
   },
   "/what-to-do-in-belem": {
     en: "/what-to-do-in-belem",
     es: "/que-hacer-en-belem",
-    pt: "/",
+    pt: "/o-que-fazer-em-belem",
   },
 };
 

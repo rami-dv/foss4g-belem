@@ -14,41 +14,46 @@ import {
 } from "react-icons/io5";
 
 const menuItems = [
-  //{ "label:en": "Home", "label:es": "Hogar", "label:pt": "Casa", href: "/" },
+  // {
+  //   "label:en": "Home",
+  //   "label:es": "Home",
+  //   "label:pt": "Home",
+  //   href: "/",
+  // },
   {
     "label:en": "About",
     "label:es": "Acerca de",
-    "label:pt": "About",
+    "label:pt": "Sobre",
     href: "/about",
     links: [
       {
         "label:en": "Conference Committees",
-        "label:es": "Comités de Conferencia",
-        "label:pt": "Conference Committees",
+        "label:es": "Comité Organizador Local",
+        "label:pt": "Comitê Organizador Local",
         href: "/conference-committees ",
       },
       {
         "label:en": "Frequently Asked Questions (FAQ)",
         "label:es": "Preguntas Frecuentes (FAQ)",
-        "label:pt": "Frequently Asked Questions (FAQ)",
+        "label:pt": "Perguntas Frequentes (FAQ)",
         href: "/faq-frequently-asked-questions",
       },
       {
         "label:en": "Branding",
         "label:es": "Marca",
-        "label:pt": "Branding",
+        "label:pt": "Marca",
         href: "/branding",
       },
       {
         "label:en": "Code of Conduct",
         "label:es": "Código de Conducta",
-        "label:pt": "Code of Conduct",
+        "label:pt": "Código de Conduta",
         href: "/code-of-conduct",
       },
       {
         "label:en": "Privacy Policy",
         "label:es": "Política de Privacidad",
-        "label:pt": "Privacy Policy",
+        "label:pt": "Política de Privacidade",
         href: "/privacy-policy",
       },
     ],
@@ -62,19 +67,19 @@ const menuItems = [
   {
     "label:en": "Registration",
     "label:es": "Inscripción",
-    "label:pt": "Registration",
+    "label:pt": "Inscrição",
     href: "/registration",
     links: [
       {
         "label:en": "Visa Info",
-        "label:es": "Info Sobre Visados",
-        "label:pt": "Visa Info",
+        "label:es": "Info Sobre Visa",
+        "label:pt": "Info Sobre Visto",
         href: "/visa-info",
       },
       {
         "label:en": "Travel Grant Program",
         "label:es": "Programa de Becas",
-        "label:pt": "Travel Grant Program",
+        "label:pt": "Programa de Bolsas",
         href: "/travel-grant-program",
       },
     ],
@@ -82,13 +87,13 @@ const menuItems = [
   {
     "label:en": "Schedule",
     "label:es": "Programa",
-    "label:pt": "Schedule",
+    "label:pt": "Programa",
     href: "/schedule",
     links: [
       {
-        "label:en": "B2B Dynamics",
+        "label:en": "Business to Business (B2B)",
         "label:es": "Empresa a Empresa (B2B)",
-        "label:pt": "B2B Dynamics",
+        "label:pt": "Empresa a Empresa (B2B)",
         href: "/b2b-dynamics",
       },
       {
@@ -98,15 +103,15 @@ const menuItems = [
         href: "/geochicas-meninas-da-geo",
       },
       {
-        "label:en": "Community Sprint",
-        "label:es": "Sprint Comunitario",
-        "label:pt": "Community Sprint",
-        href: "/community-sprint",
+        "label:en": "Community Code Sprint",
+        "label:es": "Community Code Sprint",
+        "label:pt": "Community Code Sprint",
+        href: "/community-code-sprint",
       },
       {
         "label:en": "Social Events",
         "label:es": "Eventos Sociales",
-        "label:pt": "Social Events",
+        "label:pt": "Eventos Sociais",
         href: "/social-events",
       },
     ],
@@ -114,43 +119,43 @@ const menuItems = [
   {
     "label:en": "Sponsors",
     "label:es": "Patrocinadores",
-    "label:pt": "Sponsors",
+    "label:pt": "Patrocinadores",
     href: "/sponsors",
   },
   {
     "label:en": "Attending",
     "label:es": "Asistiendo",
-    "label:pt": "Attending",
+    "label:pt": "Participando",
     href: "/attending",
     links: [
       {
         "label:en": "Venue",
         "label:es": "Lugar",
-        "label:pt": "Venue",
+        "label:pt": "Lugar",
         href: "/venue",
       },
       {
         "label:en": "Getting to Belém",
         "label:es": "Llegando a Belém",
-        "label:pt": "Getting to Belém",
+        "label:pt": "Chegando a Belém",
         href: "/getting-to-belem",
       },
       {
         "label:en": "Accommodation",
         "label:es": "Accommodación",
-        "label:pt": "Accommodation",
+        "label:pt": "Acomodações",
         href: "/accommodation",
       },
       {
         "label:en": "Guided Tours",
         "label:es": "Visitas Guiadas",
-        "label:pt": "Guided Tours",
+        "label:pt": "Visitas Guiadas",
         href: "/guided-tours",
       },
       {
         "label:en": "What to do in Belém",
         "label:es": "¿Qué hacer en Belém?",
-        "label:pt": "What to do in Belém",
+        "label:pt": "O que fazer em Belém?",
         href: "/what-to-do-in-belem",
       },
     ],
