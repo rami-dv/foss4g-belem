@@ -6,7 +6,7 @@ import { Menu, Transition } from "@headlessui/react";
 import FOSS4GLogo from "@/images/logo/foss4g-belem-logo-vertical.svg";
 import PatternBg2 from "@/images/pattern-background2.png";
 import PageBackground from "@/images/page-background.jpg";
-import { LanguageContext, LanguageSwitcher } from "@/lib/language";
+import { IntlLink, LanguageContext, LanguageSwitcher } from "@/lib/language";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import {
   IoChevronForwardCircleSharp,
@@ -17,37 +17,37 @@ const menuItems = [
   { "label:en": "Home", "label:es": "Hogar", "label:pt": "Casa", href: "/" },
   {
     "label:en": "About",
-    "label:es": "About",
+    "label:es": "Acerca de",
     "label:pt": "About",
     href: "/about",
     links: [
       {
         "label:en": "Conference Committees",
-        "label:es": "Conference Committees",
+        "label:es": "Comités de Conferencia",
         "label:pt": "Conference Committees",
         href: "/committees",
       },
       {
         "label:en": "Frequently Asked Questions (FAQ)",
-        "label:es": "Frequently Asked Questions (FAQ)",
+        "label:es": "Preguntas Más Frecuentes (FAQ)",
         "label:pt": "Frequently Asked Questions (FAQ)",
         href: "/faq",
       },
       {
         "label:en": "Branding",
-        "label:es": "Branding",
+        "label:es": "Marca",
         "label:pt": "Branding",
         href: "/branding",
       },
       {
         "label:en": "Code of Conduct",
-        "label:es": "Code of Conduct",
+        "label:es": "Código de Conducta",
         "label:pt": "Code of Conduct",
         href: "/code-of-conduct",
       },
       {
         "label:en": "Privacy Policy",
-        "label:es": "Privacy Policy",
+        "label:es": "Política de Privacidad",
         "label:pt": "Privacy Policy",
         href: "/privacy-policy",
       },
@@ -61,19 +61,19 @@ const menuItems = [
   },
   {
     "label:en": "Registration",
-    "label:es": "Registration",
+    "label:es": "Inscripción",
     "label:pt": "Registration",
     href: "/registration",
     links: [
       {
         "label:en": "Visa Info",
-        "label:es": "Visa Info",
+        "label:es": "Info Sobre Visados",
         "label:pt": "Visa Info",
         href: "/visa-info",
       },
       {
         "label:en": "Travel Grant Program",
-        "label:es": "Travel Grant Program",
+        "label:es": "Programa de Becas",
         "label:pt": "Travel Grant Program",
         href: "/travel-grant-program",
       },
@@ -81,13 +81,13 @@ const menuItems = [
   },
   {
     "label:en": "Schedule",
-    "label:es": "Schedule",
+    "label:es": "Programa",
     "label:pt": "Schedule",
     href: "/schedule",
     links: [
       {
         "label:en": "B2B Dynamics",
-        "label:es": "B2B Dynamics",
+        "label:es": "Empresa a Empresa (B2B)",
         "label:pt": "B2B Dynamics",
         href: "/b2b-dynamics",
       },
@@ -99,13 +99,13 @@ const menuItems = [
       },
       {
         "label:en": "Community Sprint",
-        "label:es": "Community Sprint",
+        "label:es": "Sprint Comunitario",
         "label:pt": "Community Sprint",
         href: "/community-sprint",
       },
       {
         "label:en": "Social Events",
-        "label:es": "Social Events",
+        "label:es": "Eventos Sociales",
         "label:pt": "Social Events",
         href: "/social-events",
       },
@@ -113,43 +113,43 @@ const menuItems = [
   },
   {
     "label:en": "Sponsors",
-    "label:es": "Sponsors",
+    "label:es": "Patrocinadores",
     "label:pt": "Sponsors",
     href: "/sponsors",
   },
   {
     "label:en": "Attending",
-    "label:es": "Attending",
+    "label:es": "Asistiendo",
     "label:pt": "Attending",
     href: "/attending",
     links: [
       {
         "label:en": "Venue",
-        "label:es": "Venue",
+        "label:es": "Lugar",
         "label:pt": "Venue",
         href: "/venue",
       },
       {
         "label:en": "Getting to Belém",
-        "label:es": "Getting to Belém",
+        "label:es": "Llegando a Belém",
         "label:pt": "Getting to Belém",
         href: "/getting-to-belem",
       },
       {
         "label:en": "Accommodation",
-        "label:es": "Accommodation",
+        "label:es": "Accommodación",
         "label:pt": "Accommodation",
         href: "/accommodation",
       },
       {
         "label:en": "Guided Tours",
-        "label:es": "Guided Tours",
+        "label:es": "Visitas Guiadas",
         "label:pt": "Guided Tours",
         href: "/guided-tours",
       },
       {
         "label:en": "What to do in Belém",
-        "label:es": "What to do in Belém",
+        "label:es": "¿Qué hacer en Belém?",
         "label:pt": "What to do in Belém",
         href: "/what-to-do-in-belem",
       },
@@ -194,12 +194,9 @@ export default function Header() {
                     className="z-40 relative inline-block text-left"
                   >
                     <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white/90 border-f4g_red/50 border px-2 py-1 font-medium text-f4g_red/80 hover:text-white hover:bg-f4g_orange">
-                      <Link
-                        href={menuItem.href}
-                        onClick={() => console.log("lol")}
-                      >
+                      <IntlLink href={menuItem.href}>
                         {menuItem[labelLang]}
-                      </Link>
+                      </IntlLink>
                     </Menu.Button>
 
                     <Transition
@@ -220,14 +217,18 @@ export default function Header() {
                               <Menu.Item
                                 key={link[labelLang] ?? link["label:en"]}
                               >
-                                <Link
+                                <IntlLink
                                   href={link.href}
-                                  onClick={() => setIsDropdown(null)}
+                                  // @ts-ignore
+                                  onClick={
+                                    // @ts-ignore
+                                    () => setIsDropdown(null)
+                                  }
                                 >
                                   <button className="group flex w-full items-center rounded-md px-2 py-2 text-sm text-f4g_red hover:text-white hover:bg-f4g_orange">
                                     {link[labelLang] ?? link["label:en"]}
                                   </button>
-                                </Link>
+                                </IntlLink>
                               </Menu.Item>
                             ))}
                           </div>
@@ -241,12 +242,12 @@ export default function Header() {
 
             <div className="lg:flex items-center justify-center hidden">
               <LanguageSwitcher />
-              {/* <Link
+              {/* <IntlLink
                 className="px-4 py-2 leading-none bg-f4g_orange hover:ring-1 ring-f4g_red hover:m-0 border rounded text-white border-f4g_red"
                 href="/call-for-papers"
               >
                 Call For Papers
-              </Link> */}
+              </IntlLink> */}
             </div>
 
             <div className="flex sm:hidden items-center justify-center">
@@ -280,9 +281,13 @@ export default function Header() {
                     key={menuItem.href}
                     className="flex flex-col border-b border-white/50 bg-f4g_red"
                   >
-                    <Link
+                    <IntlLink
                       href={menuItem.href}
-                      onClick={() => setIsMenuOpen(false)}
+                      // @ts-ignore
+                      onClick={
+                        // @ts-ignore
+                        () => setIsMenuOpen(false)
+                      }
                     >
                       <div
                         key={menuItem[labelLang]}
@@ -292,22 +297,26 @@ export default function Header() {
 
                         {menuItem[labelLang]}
                       </div>
-                    </Link>
+                    </IntlLink>
                   </div>
 
                   {menuItem.links && (
                     <div className="flex flex-col bg-f4g_orange ">
                       {menuItem.links.map((link) => (
-                        <Link
+                        <IntlLink
                           key={link.href}
                           href={link.href}
-                          onClick={() => setIsMenuOpen(false)}
+                          // @ts-ignore
+                          onClick={
+                            // @ts-ignore
+                            () => setIsMenuOpen(false)
+                          }
                         >
                           <div className="flex items-center pl-8  border-b border-white/50 text-white py-2 bg-f4g_orange">
                             <IoChevronForwardCircleOutline className="inline-block mr-2" />
                             {link[labelLang]}
                           </div>
-                        </Link>
+                        </IntlLink>
                       ))}
                     </div>
                   )}
