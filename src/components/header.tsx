@@ -25,13 +25,13 @@ const menuItems = [
         "label:en": "Conference Committees",
         "label:es": "Comités de Conferencia",
         "label:pt": "Conference Committees",
-        href: "/committees",
+        href: "/conference-committees",
       },
       {
         "label:en": "Frequently Asked Questions (FAQ)",
-        "label:es": "Preguntas Más Frecuentes (FAQ)",
+        "label:es": "Preguntas Frecuentes (FAQ)",
         "label:pt": "Frequently Asked Questions (FAQ)",
-        href: "/faq",
+        href: "/faq-frequently-asked-questions",
       },
       {
         "label:en": "Branding",

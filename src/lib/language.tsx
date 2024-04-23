@@ -34,13 +34,13 @@ export const intlHrefs = {
     es: "/acerca-de",
     pt: "/about",
   },
-  "/committees": {
-    en: "/committees",
-    es: "/comites",
+  "/conference-committees": {
+    en: "/conference-committees",
+    es: "/comites-de-conferencia",
     pt: "/",
   },
-  "/faq": {
-    en: "/faq",
+  "/faq-frequently-asked-questions": {
+    en: "/faq-frequently-asked-questions",
     es: "/preguntas-frecuentes",
     pt: "/",
   },
@@ -193,7 +193,7 @@ export const LanguageSwitcher = (props: any) => {
         }
       </Menu.Button>
       <Menu.Items className="absolute z-30 right-0 w-32 origin-top-right divide-y divide-gray-100 ring-1 ring-black/5 focus:outline-none">
-        <div className="mt-2 bg-white rounded-md  shadow-lg">
+        <div className="mt-2 bg-white rounded-md shadow-lg">
           {Object.values(languages).map((lang) => (
             // @ts-ignore
             <Link
