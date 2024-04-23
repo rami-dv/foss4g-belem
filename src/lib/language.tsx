@@ -24,6 +24,11 @@ export const languages = {
 };
 
 export const intlHrefs = {
+  "/": {
+    en: "/",
+    es: "/",
+    pt: "/"
+  },
   "/about": {
     en: "/about",
     es: "/acerca-de",
@@ -168,11 +173,11 @@ export const LanguageSwitcher = (props: any) => {
     .split("/")
     .filter((part) => part !== "");
 
-  console.log(currentPageLang, currentPageSlug);
+  console.log(currentPageLang, currentPageSlug)
 
   const currentPage = Object.values(intlHrefs).find(
     // @ts-ignore
-    (href) => href[currentPageLang] == `/${currentPageSlug}`
+    (href) => href[currentPageLang] == `/${currentPageSlug ?? ""}`
   );
 
   return (

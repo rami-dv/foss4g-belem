@@ -4,11 +4,27 @@ import Head from "next/head";
 import Favicon from "@/images/favicon.png";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { LanguageContext } from "@/lib/language";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState<"en" | "es" | "pt">("en");
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.asPath != "/") {
+      const [lang, pageSlug] = router.asPath
+        .split("/")
+        .filter((part) => part != "");
+
+      if (["en", "es", "pt"].includes(lang)) {
+        // @ts-ignore
+        setLanguage(lang);
+      }
+    }
+    console.log(router);
+  }, []);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
