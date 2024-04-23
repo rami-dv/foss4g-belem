@@ -59,9 +59,16 @@ export const PhotoBubble = ({name, committee, ...otherProps}) => {
   const basePath = useRouter().basePath;
   const imgUrl = `${basePath ?? ""}/images/committees/${committee}/${slugify(name)}.jpg`
 
+  const border = {
+    "loc": "border-f4g_red",
+    "academic": "border-f4g_orange",
+    "program": "border-f4g_green",
+    "sponsor": "border-f4g_blue"
+  }
+
   return (
     <div key={name} {...otherProps}>
-      <div className="aspect-square rounded-full hover:cursor-default border-4 border-f4g_blue overflow-hidden m-1 sm:m-2">
+      <div className={`aspect-square rounded-full hover:cursor-default border-4 ${border[committee]} overflow-hidden m-1 sm:m-2`}>
         <img width="512" height="512" src={imgUrl} alt={name} />
       </div>
     <div className="text-ubuntu text-center">{name}</div>
