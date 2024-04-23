@@ -25,7 +25,7 @@ const menuItems = [
         "label:en": "Conference Committees",
         "label:es": "Comités de Conferencia",
         "label:pt": "Conference Committees",
-        href: "/conference-committees",
+        href: "/conference-committees ",
       },
       {
         "label:en": "Frequently Asked Questions (FAQ)",
@@ -191,7 +191,7 @@ export default function Header() {
                     onMouseEnter={() => setIsDropdown(menuItem[labelLang])}
                     onMouseLeave={() => setIsDropdown(null)}
                     as="div"
-                    className="z-40 relative inline-block text-left"
+                    className="sm:z-40 relative inline-block text-left"
                   >
                     <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white/90 border-f4g_red/50 border px-2 py-1 font-medium text-f4g_red/80 hover:text-white hover:bg-f4g_orange">
                       <IntlLink href={menuItem.href}>
@@ -251,6 +251,19 @@ export default function Header() {
             </div>
 
             <div className="flex sm:hidden items-center justify-center">
+              <Transition
+                show={isMenuOpen}
+                enter="transition duration-800 ease-out"
+                enterFrom="transform scale-100 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-800 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-100 opacity-0"
+              >
+                <div className="mr-3">
+                  <LanguageSwitcher />
+                </div>
+              </Transition>
               <div
                 className="button border flex items-center justify-center border-f4g_red bg-f4g_red/90 h-10 w-10 p-1 rounded-md"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -272,7 +285,7 @@ export default function Header() {
             leave="transform transition ease-in-out duration-500 sm:duration-700"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            className="absolute z-40 top-full items-start justify-start w-full [max-height:calc(100vh_-_5rem)]"
+            className="absolute sm:z-40 top-full items-start justify-start w-full [max-height:calc(100vh_-_5rem)]"
           >
             <div className="bg-white font-ubuntu sm:hidden w-full rounded-b-lg shadow-md">
               {menuItems.map((menuItem) => (

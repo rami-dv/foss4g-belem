@@ -192,7 +192,7 @@ export const LanguageSwitcher = (props: any) => {
           languages[language].name
         }
       </Menu.Button>
-      <Menu.Items className="absolute z-30 right-0 w-32 origin-top-right divide-y divide-gray-100 ring-1 ring-black/5 focus:outline-none">
+      <Menu.Items className="absolute z-80 right-0 w-32 origin-top-right divide-y divide-gray-100 ring-1 ring-black/5 focus:outline-none">
         <div className="mt-2 bg-white rounded-md shadow-lg">
           {Object.values(languages).map((lang) => (
             // @ts-ignore
