@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 import { useRouter } from "next/router";
 import { Menu, Transition } from "@headlessui/react";
 import FOSS4GLogo from "@/images/logo/foss4g-belem-logo-vertical.svg";
 import PatternBg2 from "@/images/pattern-background2.png";
 import PageBackground from "@/images/page-background.jpg";
+import { LanguageContext, LanguageSwitcher } from "@/lib/language";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import {
   IoChevronForwardCircleSharp,
@@ -13,53 +14,145 @@ import {
 } from "react-icons/io5";
 
 const menuItems = [
-  { label: "Home", href: "/" },
+  { "label:en": "Home", "label:es": "Hogar", "label:pt": "Casa", href: "/" },
   {
-    label: "About",
+    "label:en": "About",
+    "label:es": "About",
+    "label:pt": "About",
     href: "/about",
     links: [
-      { label: "Conference Committees", href: "/committees" },
-      { label: "Frequently Asked Questions (FAQ)", href: "/faq" },
-      { label: "Branding", href: "/branding" },
-      { label: "Code of Conduct", href: "/code-of-conduct" },
-      { label: "Privacy Policy", href: "/privacy-policy" },
+      {
+        "label:en": "Conference Committees",
+        "label:es": "Conference Committees",
+        "label:pt": "Conference Committees",
+        href: "/committees",
+      },
+      {
+        "label:en": "Frequently Asked Questions (FAQ)",
+        "label:es": "Frequently Asked Questions (FAQ)",
+        "label:pt": "Frequently Asked Questions (FAQ)",
+        href: "/faq",
+      },
+      {
+        "label:en": "Branding",
+        "label:es": "Branding",
+        "label:pt": "Branding",
+        href: "/branding",
+      },
+      {
+        "label:en": "Code of Conduct",
+        "label:es": "Code of Conduct",
+        "label:pt": "Code of Conduct",
+        href: "/code-of-conduct",
+      },
+      {
+        "label:en": "Privacy Policy",
+        "label:es": "Privacy Policy",
+        "label:pt": "Privacy Policy",
+        href: "/privacy-policy",
+      },
     ],
   },
   {
-    label: "Map",
+    "label:en": "Map",
+    "label:es": "Mapa",
+    "label:pt": "Mapa",
     href: "/map",
   },
   {
-    label: "Registration",
+    "label:en": "Registration",
+    "label:es": "Registration",
+    "label:pt": "Registration",
     href: "/registration",
     links: [
-      { label: "Visa Info", href: "/visa-info" },
-      { label: "Travel Grant Program", href: "/travel-grant-program" },
+      {
+        "label:en": "Visa Info",
+        "label:es": "Visa Info",
+        "label:pt": "Visa Info",
+        href: "/visa-info",
+      },
+      {
+        "label:en": "Travel Grant Program",
+        "label:es": "Travel Grant Program",
+        "label:pt": "Travel Grant Program",
+        href: "/travel-grant-program",
+      },
     ],
   },
   {
-    label: "Schedule",
+    "label:en": "Schedule",
+    "label:es": "Schedule",
+    "label:pt": "Schedule",
     href: "/schedule",
     links: [
-      { label: "B2B Dynamics", href: "/b2b-dynamics" },
       {
-        label: "GeoChicas & Meninas da Geo",
+        "label:en": "B2B Dynamics",
+        "label:es": "B2B Dynamics",
+        "label:pt": "B2B Dynamics",
+        href: "/b2b-dynamics",
+      },
+      {
+        "label:en": "GeoChicas & Meninas da Geo",
+        "label:es": "GeoChicas & Meninas da Geo",
+        "label:pt": "GeoChicas & Meninas da Geo",
         href: "/geochicas-meninas-da-geo",
       },
-      { label: "Community Sprint", href: "/community-sprint" },
-      { label: "Social Events", href: "/social-events" },
+      {
+        "label:en": "Community Sprint",
+        "label:es": "Community Sprint",
+        "label:pt": "Community Sprint",
+        href: "/community-sprint",
+      },
+      {
+        "label:en": "Social Events",
+        "label:es": "Social Events",
+        "label:pt": "Social Events",
+        href: "/social-events",
+      },
     ],
   },
-  { label: "Sponsors", href: "/sponsors" },
   {
-    label: "Attending",
+    "label:en": "Sponsors",
+    "label:es": "Sponsors",
+    "label:pt": "Sponsors",
+    href: "/sponsors",
+  },
+  {
+    "label:en": "Attending",
+    "label:es": "Attending",
+    "label:pt": "Attending",
     href: "/attending",
     links: [
-      { label: "Venue", href: "/venue" },
-      { label: "Getting to Belém", href: "/getting-to-belem" },
-      { label: "Accommodation", href: "/accommodation" },
-      { label: "Guided Tours", href: "/guided-tours" },
-      { label: "What to do in Belém", href: "/what-to-do-in-belem" },
+      {
+        "label:en": "Venue",
+        "label:es": "Venue",
+        "label:pt": "Venue",
+        href: "/venue",
+      },
+      {
+        "label:en": "Getting to Belém",
+        "label:es": "Getting to Belém",
+        "label:pt": "Getting to Belém",
+        href: "/getting-to-belem",
+      },
+      {
+        "label:en": "Accommodation",
+        "label:es": "Accommodation",
+        "label:pt": "Accommodation",
+        href: "/accommodation",
+      },
+      {
+        "label:en": "Guided Tours",
+        "label:es": "Guided Tours",
+        "label:pt": "Guided Tours",
+        href: "/guided-tours",
+      },
+      {
+        "label:en": "What to do in Belém",
+        "label:es": "What to do in Belém",
+        "label:pt": "What to do in Belém",
+        href: "/what-to-do-in-belem",
+      },
     ],
   },
 ];
@@ -67,7 +160,9 @@ const menuItems = [
 export default function Header() {
   const [isDropdown, setIsDropdown] = useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const outerStyle = useRouter().asPath == "/map" ? "hidden" : "";
+  const { language } = useContext(LanguageContext);
+
+  const labelLang: "label:en" | "label:es" | "label:pt" = `label:${language}`;
 
   return (
     <>
@@ -92,8 +187,8 @@ export default function Header() {
               <div className="space-x-2 ml-6 hidden md:flex">
                 {menuItems.map((menuItem) => (
                   <Menu
-                    key={menuItem.label}
-                    onMouseEnter={() => setIsDropdown(menuItem.label)}
+                    key={menuItem[labelLang]}
+                    onMouseEnter={() => setIsDropdown(menuItem[labelLang])}
                     onMouseLeave={() => setIsDropdown(null)}
                     as="div"
                     className="z-40 relative inline-block text-left"
@@ -103,13 +198,13 @@ export default function Header() {
                         href={menuItem.href}
                         onClick={() => console.log("lol")}
                       >
-                        {menuItem.label}
+                        {menuItem[labelLang]}
                       </Link>
                     </Menu.Button>
 
                     <Transition
-                      show={isDropdown === menuItem.label}
-                      onMouseEnter={() => setIsDropdown(menuItem.label)}
+                      show={isDropdown === menuItem[labelLang]}
+                      onMouseEnter={() => setIsDropdown(menuItem[labelLang])}
                       onMouseLeave={() => setIsDropdown(null)}
                       enter="transition duration-800 ease-out"
                       enterFrom="transform scale-95 opacity-0"
@@ -122,13 +217,15 @@ export default function Header() {
                         <Menu.Items className="absolute z-30 left-0 w-60 origin-top-right divide-y divide-gray-100  ring-1 ring-black/5 focus:outline-none">
                           <div className="mt-2 bg-white rounded-md  shadow-lg">
                             {menuItem.links?.map((link) => (
-                              <Menu.Item key={link.label}>
+                              <Menu.Item
+                                key={link[labelLang] ?? link["label:en"]}
+                              >
                                 <Link
                                   href={link.href}
                                   onClick={() => setIsDropdown(null)}
                                 >
                                   <button className="group flex w-full items-center rounded-md px-2 py-2 text-sm text-f4g_red hover:text-white hover:bg-f4g_orange">
-                                    {link.label}
+                                    {link[labelLang] ?? link["label:en"]}
                                   </button>
                                 </Link>
                               </Menu.Item>
@@ -143,12 +240,13 @@ export default function Header() {
             </div>
 
             <div className="lg:flex items-center justify-center hidden">
-              <Link
+              <LanguageSwitcher />
+              {/* <Link
                 className="px-4 py-2 leading-none bg-f4g_orange hover:ring-1 ring-f4g_red hover:m-0 border rounded text-white border-f4g_red"
                 href="/call-for-papers"
               >
                 Call For Papers
-              </Link>
+              </Link> */}
             </div>
 
             <div className="flex sm:hidden items-center justify-center">
@@ -187,12 +285,12 @@ export default function Header() {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <div
-                        key={menuItem.label}
+                        key={menuItem[labelLang]}
                         className="px-4 py-2 bg-f4g_red text-white flex items-center"
                       >
                         <IoChevronForwardCircleSharp className="inline-block mr-2" />
 
-                        {menuItem.label}
+                        {menuItem[labelLang]}
                       </div>
                     </Link>
                   </div>
@@ -207,7 +305,7 @@ export default function Header() {
                         >
                           <div className="flex items-center pl-8  border-b border-white/50 text-white py-2 bg-f4g_orange">
                             <IoChevronForwardCircleOutline className="inline-block mr-2" />
-                            {link.label}
+                            {link[labelLang]}
                           </div>
                         </Link>
                       ))}
