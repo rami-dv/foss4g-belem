@@ -173,8 +173,6 @@ export const LanguageSwitcher = ({ onClick = () => {} }: any) => {
     .split("/")
     .filter((part) => part !== "");
 
-  console.log(currentPageLang, currentPageSlug);
-
   const currentPage = Object.values(intlHrefs).find(
     // @ts-ignore
     (href) => href[currentPageLang] == `/${currentPageSlug ?? ""}`

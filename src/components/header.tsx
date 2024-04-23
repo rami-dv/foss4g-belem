@@ -14,7 +14,7 @@ import {
 } from "react-icons/io5";
 
 const menuItems = [
-  { "label:en": "Home", "label:es": "Hogar", "label:pt": "Casa", href: "/" },
+  //{ "label:en": "Home", "label:es": "Hogar", "label:pt": "Casa", href: "/" },
   {
     "label:en": "About",
     "label:es": "Acerca de",
@@ -182,7 +182,9 @@ export default function Header() {
           >
             <div className="flex items-center flex-shrink-0 text-white mr-6">
               <div className="">
-                <Image className="w-40" alt="FOSS4G Logo" src={FOSS4GLogo} />
+                <Link href={`/${language}/`}>
+                  <Image className="w-40" alt="FOSS4G Logo" src={FOSS4GLogo} />
+                </Link>
               </div>
               <div className="space-x-2 ml-6 hidden md:flex">
                 {menuItems.map((menuItem) => (
