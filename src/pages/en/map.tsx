@@ -79,23 +79,17 @@ export default function Map() {
         }}
         transformRequest={(url: string) => {
           // transform fake sprite url in style to work on both dev and prod
-          const fakeAssetUrl = "http://{basePath}/";
-          const parsedBasePath = router.basePath?.startsWith("/")
-            ? router.basePath?.substring(1) + "/"
-            : router.basePath;
 
           const baseUrl =
-            process.env.NEXT_PUBLIC_MAP_ASSET_BASEURL ?? window.location.origin;
+            process.env.NEXT_PUBLIC_MAP_ASSET_BASEURL ?? window.location.host;
 
-          return url.startsWith(fakeAssetUrl)
-            ? {
-                url: `${baseUrl}/${parsedBasePath}${
-                  url.split(fakeAssetUrl)[1]
-                }`,
-              }
-            : { url };
+          const newUrl = url.replace(
+            "http://{basePath}",
+            `${window.location.protocol}//${baseUrl}`
+          );
+
+          return { url: newUrl };
         }}
-        hash={true}
         mapStyle={mapStyle}
       >
         {hoveredFeature && <Popup type="hover" feature={hoveredFeature} />}
@@ -131,18 +125,18 @@ const getMapStyle = ({
         type: "vector",
         attribution:
           '<a href="https://github.com/protomaps/basemaps">Protomaps</a> | <a href="https://openstreetmap.org">OpenStreetMap</a>',
-        url: "pmtiles://./map/tiles/protomaps.pmtiles",
+        url: "pmtiles://http://{basePath}/map/tiles/protomaps.pmtiles",
         minzoom: 9,
       },
       overture: {
         type: "vector",
-        url: "pmtiles://./map/tiles/overture.pmtiles",
+        url: "pmtiles://http://{basePath}/map/tiles/overture.pmtiles",
         minzoom: 8,
         maxzoom: 14,
       },
       worldcover: {
         type: "vector",
-        url: "pmtiles://./map/tiles/worldcover.pmtiles",
+        url: "pmtiles://http://{basePath}/map/tiles/worldcover.pmtiles",
         attribution: "© ESA WorldCover 2021",
         minzoom: 8,
         maxzoom: 12,
