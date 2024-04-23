@@ -260,9 +260,7 @@ export default function Header() {
                 leaveFrom="transform scale-100 opacity-100"
                 leaveTo="transform scale-100 opacity-0"
               >
-                <div className="mr-3">
-                  <LanguageSwitcher />
-                </div>
+                <div className="mr-3"></div>
               </Transition>
               <div
                 className="button border flex items-center justify-center border-f4g_red bg-f4g_red/90 h-10 w-10 p-1 rounded-md"
@@ -285,9 +283,12 @@ export default function Header() {
             leave="transform transition ease-in-out duration-500 sm:duration-700"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            className="absolute sm:z-40 top-full items-start justify-start w-full [max-height:calc(100vh_-_5rem)]"
+            className="absolute z-30 top-full items-start justify-start w-full [max-height:calc(100vh_-_5rem)]"
           >
-            <div className="bg-white font-ubuntu sm:hidden w-full rounded-b-lg shadow-md">
+            <div className="bg-white relative font-ubuntu sm:hidden w-full rounded-b-lg shadow-md">
+              <div className="absolute origin-top-right right-[4px] top-[2px]">
+                <LanguageSwitcher onClick={() => setIsMenuOpen(false)} />
+              </div>
               {menuItems.map((menuItem) => (
                 <>
                   <div
