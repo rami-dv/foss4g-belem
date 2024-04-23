@@ -16,11 +16,11 @@ export const languages = {
     code: "es",
     icon: <ES className="w-6 mr-2" />,
   },
-  // pt: {
-  //   name: "Português",
-  //   code: "pt",
-  //   flag: BR
-  // },
+  pt: {
+    name: "Português",
+    code: "pt",
+    icon: <BR className="w-6 mr-2" />
+  },
 };
 
 export const intlHrefs = {
