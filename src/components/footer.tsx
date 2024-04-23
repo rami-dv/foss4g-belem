@@ -14,7 +14,7 @@ export default function Footer() {
 
   return (
     <footer
-      className={`${outerStyle} relative sm:min-h-44 flex items-end justify-center -z-10 bg-white bg-cover`}
+      className={`${outerStyle} relative sm:min-h-44 flex items-end justify-center bg-white bg-cover`}
     >
       <div
         className={`hidden sm:block w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover sm:[clip-path:polygon(0_0,100%_37%,100%_100%,0%_100%)]`}
