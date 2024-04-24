@@ -1,12 +1,18 @@
 import MdxLayout from "@/components/mdx-layout";
+import WeekSchedule from "@/images/week-schedule.png";
+import Image from "next/image";
 
 export const metadata = {
   title: "Schedule",
-  description: null
-}
+  description: null,
+};
+
+<Image src={WeekSchedule} />
 
 Schedule
 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+
 }
