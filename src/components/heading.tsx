@@ -2,10 +2,12 @@ export default function Heading({
   label,
   bubble = false,
   color = null,
+  children = null,
 }: {
   label: string;
   bubble?: boolean | null;
   color?: "green" | "orange" | "red" | "blue" | null;
+  children: React.ReactNode | null;
 }) {
   // doing it this way for the tailwind jit compiler
   // https://tailwindcss.com/docs/content-configuration#dynamic-class-names
@@ -33,7 +35,7 @@ export default function Heading({
           text[color ?? "red"]
         } px-2 sm:px-4 sm:mx-4`}
       >
-        {label}
+        {children}
       </div>
       <div className={`flex-1 border-t-2 ${borders[color ?? "red"]}`}></div>
     </div>

@@ -11,7 +11,7 @@ export const metadata = {
     "Overview of the various committees of FOSS4G 2024 Belém, including the Local, Academic, Program, and Sponsor committees.",
 };
 
-<Heading label="Conference Committees" color="red" bubble />
+<Heading color="red" bubble>Conference Committees</Heading>
 
 <div className="grid sm:grid-cols-2">
   <div className="flex-grow">
@@ -27,28 +27,28 @@ export const metadata = {
   </div>
 </div>
 
-<Heading label="Local Committee" color="red" />
+<Heading color="red">Local Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
   {Committees["loc"].map((name) => (
     <PhotoBubble committee="loc" name={name} key={name} />
   ))}
 </div>
 
-<Heading label="Academic Committee" color="orange" />
+<Heading color="orange">Academic Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
   {Committees["academic"].map((name) => (
     <PhotoBubble committee="academic" name={name} key={name} />
   ))}
 </div>
 
-<Heading label="Program Committee" color="green" />
+<Heading color="green">Program Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
   {Committees["program"].map((name) => (
     <PhotoBubble committee="program" name={name} key={name} />
   ))}
 </div>
 
-<Heading label="Sponsor Committee" color="blue" />
+<Heading color="blue">Sponsor Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
   {Committees["sponsor"].map((name) => (
     <PhotoBubble committee="sponsor" name={name} key={name} />

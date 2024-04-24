@@ -14,7 +14,7 @@ export default function VisaInfoPage() {
         <title>Visa Info</title>
       </Head>
       <main className="sm:mx-auto max-w-6xl mx-2 my-2 sm:my-4 min-h-96">
-        <Heading label="Visa Info" bubble />
+        <Heading bubble>Visa Info</Heading>
         <div>
           <Image alt="Map of Brazil Visa Countries" src={VisaMap} />
           <div className="flex flex-col sm:flex-row mt-2 justify-center items-center sm:items-start space-y-1 sm:space-y-0 sm:space-x-3">
@@ -33,7 +33,7 @@ export default function VisaInfoPage() {
           </div>
         </div>
 
-        <Heading label="Visas by Country" />
+        <Heading>Visas by Country</Heading>
         <div className="">
           <div className="text-xl bg-f4g_green text-white p-2 pl-4 rounded-t-lg">
             No Passport Required; National ID Accepted
@@ -81,7 +81,7 @@ export default function VisaInfoPage() {
           </div>
         </div>
 
-        <Heading label="Applying for a Visa" />
+        <Heading>Applying for a Visa</Heading>
 
         <div className="grid sm:grid-cols-2 space-y-2">
           <div className="flex justify-center items-center">
