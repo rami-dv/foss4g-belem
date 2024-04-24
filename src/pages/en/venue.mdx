@@ -1,5 +1,6 @@
 import MdxLayout, { ReactPlayer } from "@/components/mdx-layout";
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect } from "react";
+import { useRouter } from "next/router";
 
 export const metadata = {
   title: "Venue",
@@ -96,7 +97,7 @@ export const HangarVideo = () => {
         preload="auto"
         autoplay="true"
         loop="true"
-        src="/images/hangar.webm"
+        src={`${useRouter().basePath}/images/hangar.webm`}
       ></video>
     </div>
   );
