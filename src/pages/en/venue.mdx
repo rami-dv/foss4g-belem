@@ -1,26 +1,30 @@
-import MdxLayout from "@/components/mdx-layout";
+import MdxLayout, { ReactPlayer } from "@/components/mdx-layout";
+import { useRef, useEffect } from 'react';
 
 export const metadata = {
   title: "Venue",
-  description: null
-}
+  description: null,
+};
+
+
+<HangarVideo />
 
 Here are the locations at which various events in the conference will be held:
 
 - Hangar Convenções & Feiras da Amazônia Belém
-  - Hangar Infrastructure *
+  - Hangar Infrastructure \*
   - Registration Desk
   - Opening
-  - Violet room (safety point) *
-  - Exhibition Area *
+  - Violet room (safety point) \*
+  - Exhibition Area \*
   - Catering Area
   - Main Sessions
   - AGM OSGeo
   - Ice Break
   - Gala Dinner
   - Closing
-- Instituto Federal do Pará - IFPA (Pará’s Federal Institute)
-  - IFPA Infrastructure *
+- Instituto Federal do Pará - IFPA (Pará&apos;s Federal Institute)
+  - IFPA Infrastructure \*
   - Workshops
   - CodeSprint
 - Beira-Rio Hotel
@@ -73,8 +77,32 @@ You can remove the products that we give you with the purchase of your ticket, o
 
 The institute has a bathroom suitable for students with disabilities or reduced mobility, an accessibility room, a pedagogical service room and an elevator. For more information visit: (https://belem.ifpa.edu.br/apresentacao-do-campus)[https://belem.ifpa.edu.br/apresentacao-do-campus]
 
+
+export const HangarVideo = () => {
+  // have to set playbackRate after mount
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    videoRef.current.playbackRate = 0.6;
+  }, []);
+
+  return (
+    <div className="min-h-[50vh] sm:min-h-96 relative flex items-center justify-center overflow-hidden">
+      <video
+        ref={videoRef} 
+        className="absolute sm:static z-10 h-full sm:h-auto w-auto min-w-full min-h-full max-w-none"
+        width="1440px"
+        height="840px"
+        preload="auto"
+        autoplay="true"
+        loop="true"
+        src="/images/hangar.webm"
+      ></video>
+    </div>
+  );
+};
+
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
-
 
 }
