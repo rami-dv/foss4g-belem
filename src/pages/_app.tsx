@@ -13,7 +13,19 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.asPath != "/") {
+    if (router.asPath == "/") {
+      const lang = navigator.language.split("-")[0].toLowerCase();
+
+      if (["es", "pt"].includes(lang)) {
+        router.push(`/${lang}`);
+        // @ts-ignore
+        setLanguage(lang);
+      } else {
+        router.push(`/en`);
+
+        setLanguage("en");
+      }
+    } else {
       const [lang, pageSlug] = router.asPath
         .split("/")
         .filter((part) => part != "");
@@ -23,7 +35,6 @@ export default function App({ Component, pageProps }: AppProps) {
         setLanguage(lang);
       }
     }
-    console.log(router);
   }, []);
 
   return (
