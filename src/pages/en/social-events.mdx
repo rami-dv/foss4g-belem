@@ -1,9 +1,20 @@
 import MdxLayout from "@/components/mdx-layout";
+import Heading from "@/components/heading";
+import Foss4g2022IceBreaker from "@/images/foss4g-2022/ice-breaker.jpg";
+import Foss4g2022IceBreaker2 from "@/images/foss4g-2022/ice-breaker2.jpg";
+import Foss4g2022Lunch from "@/images/foss4g-2022/lunch.jpg";
+import Foss4g2022SocialDinner from "@/images/foss4g-2022/social-dinner.jpg";
+import Image from "next/image";
 
 export const metadata = {
   title: "Social Events",
-  description: null
-}
+  description: null,
+};
+
+<div className="sm:grid sm:grid-cols-12 gap-4">
+  <div className="col-span-7 rounded-lg overflow-hidden">
+
+    <Heading color="orange" bubble>Social Events</Heading>
 
 Colleagues! The excitement doesn&quot;t end in the auditorium! We extend a warm invitation to participate in our exclusive social events that will complement your networking experience. Enjoy moments of camaraderie, exchanging ideas and fun in a relaxed atmosphere. The events are designed to strengthen bonds and create unforgettable memories. Don't miss the opportunity to connect in a more informal setting! Details will be provided on site, we hope to see you there!
 
@@ -24,6 +35,15 @@ We want to involve participants in the culture of Pará and make them taste the 
 
 We invite you to celebrate the closing of the FOSS4G 2024 conference at a special reception! Come and toast a week of learning, networking and collaboration with the FOSS4G community. All members of the FOSS4G association, friends and interested parties are cordially invited for a drink at the end of FOSS4G 2024 on **Friday, December 6th, at 3:30 pm in the same location, HANGAR**.
 
+  </div>
+  <div className="col-span-5">
+    <Image src={Foss4g2022IceBreaker} className="h-72 my-4 object-cover shadow rounded-lg" />
+    <Image src={Foss4g2022IceBreaker2} className="h-72 my-4 object-cover shadow rounded-lg" />
+    <Image src={Foss4g2022Lunch} className="h-72 my-4 object-cover shadow rounded-lg" />
+    <Image src={Foss4g2022SocialDinner} className="h-72 my-4 object-cover shadow rounded-lg" />
+  </div>
+</div>
+
 export default function MDXPage({ children }) {
-  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
 }
