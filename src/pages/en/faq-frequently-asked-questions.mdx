@@ -1,11 +1,12 @@
 import { PropsWithChildren } from "react";
-import Link from "next/link";
+import { IntlLink } from "@/lib/language";
 import Heading from "@/components/heading";
 import MdxLayout from "@/components/mdx-layout";
 
 export const metadata = {
   title: "Frequently Asked Questions (FAQ)",
-  description: "Common questions and answers about the FOSS4G 2024 Belém Conference"
+  description:
+    "Common questions and answers about the FOSS4G 2024 Belém Conference",
 };
 
 <Heading color="red" bubble>Frequently Asked Questions</Heading>
@@ -53,7 +54,7 @@ export const metadata = {
       To get to Belém do Pará in Brazil, you can consider several means of
       transportation, depending on your exact location and preferences. We
       invite you to go to the{" "}
-      <Link href="/getting-to-belem">Getting to Belém</Link> page, where
+      <IntlLink href="/getting-to-belem">Getting to Belém</IntlLink> page, where
       you can find more information.
     </FaqBubble>
 
@@ -154,7 +155,7 @@ export const metadata = {
       Accommodation must be booked and paid for separately, but food is
       included in the registration fee. To see more information about
       where you can find accommodation, check out the{" "}
-      <Link href="/accommodation">Accommodation</Link> page
+      <IntlLink href="/accommodation">Accommodation</IntlLink> page
     </FaqBubble>
 
     <FaqBubble question="I have someone accompanying me, do they need to register as well?">
@@ -199,7 +200,7 @@ export const metadata = {
 <Grid>
   <Column>
     <FaqBubble question="Where can I find a map of the place and its surroundings?">
-      You can find a map of the facilities and surrounding area <Link href="/map">on the "Map" page</Link>
+      You can find a map of the facilities and surrounding area <IntlLink href="/map">on the "Map" page</IntlLink>
     </FaqBubble>
 
     <FaqBubble question="What are the payment options at local stores and restaurants?">

@@ -1,5 +1,5 @@
 import MdxLayout from "@/components/mdx-layout";
-import Link from "next/link";
+import { IntlLink } from "@/lib/language";
 
 export const metadata = {
   title: "Attendee Guidelines",
@@ -35,12 +35,11 @@ You can find further details [on the website of the Ministry of Foreign Affairs 
 
 ### Code of Conduct
 
-<Link href="code-of-conduct/">
+<IntlLink href="code-of-conduct/">
   The code of conduct for the event can be accessed here
-</Link>
+</IntlLink>
 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
-
 
 }

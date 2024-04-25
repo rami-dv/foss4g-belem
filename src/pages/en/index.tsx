@@ -20,7 +20,7 @@ import OsGeoBrasil from "@/images/logo/osgeo-brasil.png";
 import OsGeoLogo from "@/images/logo/osgeo-logo.png";
 import Countdown from "react-countdown";
 import Image from "next/image";
-import Link from "next/link";
+import { IntlLink } from "@/lib/language";
 
 export default function IndexPage() {
   return (
@@ -140,11 +140,11 @@ export default function IndexPage() {
               understand our world. Don&apos;t miss the opportunity to be part
               of this cartographic revolution!
             </div>
-            <Link href="/about">
+            <IntlLink href="/about">
               <div className="inline-block text-white px-10 py-3 mt-8 rounded button bg-[#ff6600]">
                 LEARN MORE
               </div>
-            </Link>
+            </IntlLink>
           </div>
           <div>
             <Image
@@ -192,7 +192,7 @@ export default function IndexPage() {
             style={{ backgroundImage: `url(${OrangeBg.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
-              <Link href="/code-of-conduct">Code of Conduct</Link>
+              <IntlLink href="/code-of-conduct">Code of Conduct</IntlLink>
             </div>
           </div>
           <div className="flex items-end sm:aspect-square bg-black min-h-40">
@@ -201,7 +201,7 @@ export default function IndexPage() {
                 <Image alt="White Arrows" className="block" src={WhiteArrows} />
               </div>
               <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
-                <Link href="/where-to-stay">Where To Stay</Link>
+                <IntlLink href="/where-to-stay">Where To Stay</IntlLink>
               </div>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function IndexPage() {
             style={{ backgroundImage: `url(${GreenBg.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
-              <Link href="/schedule">Schedule</Link>
+              <IntlLink href="/schedule">Schedule</IntlLink>
             </div>
           </div>
           <div
@@ -218,7 +218,7 @@ export default function IndexPage() {
             style={{ backgroundImage: `url(${SocialEvents.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
-              <Link href="/social-events">Social Events</Link>
+              <IntlLink href="/social-events">Social Events</IntlLink>
             </div>
           </div>
         </div>
@@ -320,17 +320,17 @@ export default function IndexPage() {
               Join us as an essential partner in this technological journey!
             </div>
             <div className="flex items-center justify-center flex-col space-y-4 sm:space-y-8">
-              <Link href="/sponsors">
+              <IntlLink href="/sponsors">
                 <div className="button inline-block bg-[#ff6600] uppercase text-white font-ubuntu px-10 py-3 ">
                   Sponsor Brochure
                 </div>
-              </Link>
+              </IntlLink>
 
-              <Link href="/contact">
+              <IntlLink href="/contact">
                 <div className="button inline-block text-[#ff6600] uppercase bg-white font-ubuntu px-10 py-3 ">
                   Contact Us
                 </div>
-              </Link>
+              </IntlLink>
             </div>
           </div>
         </div>
