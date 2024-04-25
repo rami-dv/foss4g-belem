@@ -21,6 +21,12 @@ div > p:last-child {
   margin-bottom: 0 !important;
 }
 
+a:not(button *):not(:has(button)) {
+  @apply underline underline-offset-4 text-f4g_blue
+}
+
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
