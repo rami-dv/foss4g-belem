@@ -1,12 +1,29 @@
 import MdxLayout from "@/components/mdx-layout";
+import Heading from "@/components/heading";
+import GeoChicas1 from "@/images/geochicas/geochicas1.jpg";
+import GeoChicas2 from "@/images/geochicas/geochicas2.jpg";
+import GeoChicas3 from "@/images/geochicas/geochicas3.jpg";
+import GeoChicas4 from "@/images/geochicas/geochicas4.jpg";
+import Image from "next/image";
 
 export const metadata = {
   title: "GeoChicas & Meninas da Geo Take Belém!",
-  description: null
-}
+  description: null,
+};
+
+<div className="sm:grid sm:grid-cols-12 gap-4">
+  <div className="col-span-5 rounded-lg overflow-hidden">
+    <Image src={GeoChicas3} className="h-72 my-4 object-cover shadow rounded-lg" />
+    <Image src={GeoChicas2} className="h-72 my-4 object-cover shadow rounded-lg" />
+    <Image src={GeoChicas4} className="h-72 my-4 object-cover shadow rounded-lg" />
+    
+  </div>
+  <div className="col-span-7">
+  <Heading bubble>GeoChicas &amp; Meninas da Geo</Heading>
 
 [Geochicas](https://es.wikipedia.org/wiki/Geochicas) is a collective of feminist mappers within OpenStreetMap, OSGeo and technology communities. Geochicas works on the production of feminist geospatial data, as well as reducing the gender gap in the OpenStreetMap communities and in communities associated with the world of free software and open data.
 
+  
 Geochicas Take Belém is the 16th edition of this meeting. The event seeks to create a dynamic space for dialogue, coexistence and fun between women and different genders. The objective of the event is to create a safe space to discuss gender, inclusion and projects that are being carried out within communities. In this opportunity Geochicas will be in Belém do Pará, within the framework of the FOSS4G 2024 conference, in collaboration with the community of Brazil, [Meninas da Geotecnología](https://www.instagram.com/meninasdageo/), a collective that aims to empower girls and women through the use of technology in management forestry in the state of Pará in the Amazon.
 
 **Activity Agenda**
@@ -18,6 +35,10 @@ We invite all people who want to come to the mixed space to learn about the work
 
 The meeting will take place on **December 3rd, at 6:30 pm at the Hotel Beira-Río**, Business to Business (B2B) location.
 
+
+  </div>
+</div>
+
 export default function MDXPage({ children }) {
-  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
 }
