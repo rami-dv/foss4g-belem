@@ -1,0 +1,234 @@
+import { PropsWithChildren } from "react";
+import { IntlLink } from "@/lib/language";
+import Heading from "@/components/heading";
+import MdxLayout from "@/components/mdx-layout";
+
+export const metadata = {
+  title: "Perguntas Frequentes (FAQ)",
+  description:
+    "Perguntas comuns e respostas sobre a Conferência FOSS4G 2024 em Belém",
+};
+
+<Heading color="red" bubble>Perguntas Frequentes</Heading>
+<Grid>
+  <Column>
+    <FaqBubble question="Quando e onde será a conferência?">
+      A conferência ocorrerá de 2 a 8 de dezembro de 2024 em Belém do Pará, Brasil. Será realizada em dois espaços: Hangar e no Instituto Federal de Educação, Ciência e Tecnologia do Pará (IFPA).
+    </FaqBubble>
+
+    <FaqBubble question="As apresentações serão gravadas e disponibilizadas ao público após a conferência?">
+      Sim. Após a conferência, as gravações das palestras serão disponibilizadas no canal oficial da OSGeo/FOSS4G no YouTube. Os workshops não serão gravados.
+    </FaqBubble>
+
+    <FaqBubble question="Como será o evento?">
+      Após a pandemia, consideramos importante retomar os eventos presenciais. Portanto, será presencial, não híbrido.
+    </FaqBubble>
+
+    <FaqBubble question="Eu não sou dedicado à geomática, posso participar da Conferência?">
+      Sim, a conferência é aberta a qualquer público interessado em geomática, software livre, mapas e comunidades.
+    </FaqBubble>
+
+  </Column>
+
+  <Column>
+    <FaqBubble question="Se eu não sou desenvolvedor ou não escrevo código, esta conferência também é para mim?">
+      Sim, este evento é para todos os tipos de pessoas interessadas em compartilhar experiências de mapeamento, desde desenvolvedores que escrevem código até usuários de software de geomática, tomadores de decisão, pesquisadores, estudantes e qualquer pessoa que queira aprender, compartilhar e conhecer pessoas com interesses semelhantes.
+    </FaqBubble>
+
+    <FaqBubble question="Quais atividades a Conferência terá?">
+      A conferência terá Palestras Plenárias, trilha acadêmica, trilha específica, workshops, codesprint, eventos sociais, entre outros.
+    </FaqBubble>
+
+    <FaqBubble question="Como chegar a Belém do Pará?">
+      Para chegar a Belém do Pará, Brasil, você pode considerar vários meios de transporte, dependendo de sua localização exata e preferências. Convidamos você a acessar a página <IntlLink href="/getting-to-belem">Chegando a Belém</IntlLink>, onde pode encontrar mais informações.
+    </FaqBubble>
+
+  </Column>
+
+</Grid>
+
+<Heading color="red">Perguntas de Registro</Heading>
+
+<Grid>
+  <Column>
+    <FaqBubble question="Posso ir sem me registrar?">
+      O evento só será acessível para usuários registrados.
+    </FaqBubble>
+
+    <FaqBubble question="Quais tipos de ingressos existirão?">
+      Haverá diferentes preços de ingressos dependendo do seu local de residência: Brasil (LOC), Argentina (LOC linebacker), Países da América Latina e do Caribe (Regional), Países que não incluem América Latina e Caribe (Internacional).
+    </FaqBubble>
+
+    <FaqBubble question="O que está incluído no ingresso?">
+      O custo de admissão à conferência inclui acesso a todas as atividades das trilhas e eventos sociais. O que não está incluído é a entrada nos workshops, estes são adquiridos separadamente.
+    </FaqBubble>
+
+    <FaqBubble question="Como faço para me inscrever para participar da Conferência?">
+      A inscrição e a compra de ingressos são feitas através de um sistema online. Quando a inscrição estiver habilitada, nós o notificaremos por meio de redes sociais e da lista de e-mails.
+    </FaqBubble>
+
+    <FaqBubble question="Como faço para me inscrever nos workshops?">
+      Cada workshop pode ser adquirido como um ingresso individual. Eles estarão à venda assim que o calendário for publicado. Recomendamos registrar-se o mais rápido possível.
+    </FaqBubble>
+
+    <FaqBubble question="Como saber se há vagas para os workshops?">
+      Na página de inscrição (que ainda não está habilitada), você poderá ver as opções e quantas vagas ainda estão disponíveis. O espaço nas salas de treinamento é limitado, então só podemos oferecer um número limitado de ingressos.
+    </FaqBubble>
+
+  </Column>
+
+  <Column>
+    <FaqBubble question="Se eu já comprei meu ingresso, como posso obter uma fatura/recibo pelo pagamento?">
+      Se você já comprou seu ingresso, nós enviaremos o recibo por e-mail. As faturas serão feitas pelo capítulo local da OSGeo Brasil ou pela Fundação OSGeo, dependendo do seu país de origem. Durante o processo de compra, informações de faturamento podem ser preenchidas, como o nome da empresa para o qual é direcionado e o CNPJ. Certifique-se de que as informações estejam corretas, porque uma vez que o ingresso for comprado e a fatura for gerada, não poderá ser corrigida.
+    </FaqBubble>
+
+    <FaqBubble question="Preciso de um certificado de minha participação no evento, eles serão entregues?">
+      Sim, eles serão enviados assim que o evento terminar.
+    </FaqBubble>
+
+    <FaqBubble question="Eles entregarão camisetas ou material do congresso?">
+      Todos os participantes receberão uma garrafa de água de cortesia e uma sacola, e as camisetas podem ser compradas online.
+    </FaqBubble>
+
+    <FaqBubble question="Posso comprar produtos adicionais?">
+      Sim, a ideia é que, além de obter esses itens com o ingresso, você possa comprar alguns produtos adicionais, e o dinheiro arrecadado irá para o TGP.
+
+      - [RedBubble](https://www.redbubble.com/people/FOSS4G2024/)
+      - [CafePress](https://www.cafepress.com/shop/FOSS4G2024)
+    </FaqBubble>
+
+    <FaqBubble question="Cancelamento inesperado do evento ou impossibilidade de realizá-lo">
+      No caso improvável de que o FOSS4G 2024 não possa ser realizado total ou parcialmente devido a qualquer evento além do controle dos Organizadores ou força maior (como tumultos, incêndios, explosões, acidentes, inundações, terremotos, sabotagem, greves, pandemia, atos de qualquer governo, etc.), os Organizadores da Conferência não são responsáveis por nenhum dano, custo ou perda incorridos, como taxa de inscrição ou qualquer outro prejuízo direto ou indireto ou danos consequentes.
+    </FaqBubble>
+
+  </Column>
+
+</Grid>
+
+<Heading color="red">Perguntas de Acomodação</Heading>
+
+<Grid>
+  <Column>
+    <FaqBubble question="A alimentação e o alojamento estão incluídos nas taxas de inscrição profissional e corporativa?">
+      O alojamento deve ser reservado e pago separadamente, mas a alimentação está incluída na taxa de inscrição. Para ver mais informações sobre onde você pode encontrar acomodação, confira a página de <IntlLink href="/accommodation">Acomodação</IntlLink>.
+    </FaqBubble>
+
+    <FaqBubble question="Tenho alguém me acompanhando, eles também precisam se registrar?">
+      Os acompanhantes devem ser registrados nos seguintes casos: para participar da conferência e se desejarem se alimentar nas instalações.
+    </FaqBubble>
+
+    <FaqBubble question="Quais são as opções de locomoção?">
+      O Centro Hangar fica a 5 km do Aeroporto Internacional de Belém, a 9 minutos de carro. Também há a opção de ônibus público (linha 643 - 631), com uma viagem de 29 minutos. Do Aeroporto Internacional até o centro de Belém, são 9 km, de carro 22 minutos e, de transporte público, 31 minutos (linha 889 ou 869).
+    </FaqBubble>
+
+  </Column>
+
+  <Column>
+    <FaqBubble question="Existem opções para cuidados infantis?">
+
+      Todos são bem-vindos a participar e incentivamos amigos ou familiares que possam ter algum interesse em se juntar à nossa comunidade a também se registrarem para a conferência.
+
+      O serviço de creche está disponível no FOSS4G com um limite de capacidade de 30 crianças, apenas por 4 horas, das 9h às 12h e das 14h às 17h. Para que possamos acompanhar aqueles que precisam do serviço, por esse motivo precisamos que você se registre antecipadamente.
+
+      A inscrição ainda não está aberta neste momento, por favor, verifique novamente em breve para mais informações; uma vez aberta, a inscrição para cuidados infantis estará aberta até 30 de outubro de 2024.
+
+    </FaqBubble>
+
+  </Column>
+
+</Grid>
+
+<Heading color="red">Informações Úteis</Heading>
+
+<Grid>
+  <Column>
+    <FaqBubble question="Onde posso encontrar um mapa do local e seus arredores?">
+      Você pode encontrar um mapa das instalações e da área circundante <IntlLink href="/map">na página "Mapa"</IntlLink>.
+    </FaqBubble>
+
+    <FaqBubble question="Quais são as opções de pagamento em lojas e restaurantes locais?">
+      Cartões de crédito são aceitos em supermercados. Pequenas lojas só aceitam dinheiro. Restaurantes geralmente aceitam cartões, enquanto a maioria dos cafés aceita dinheiro ou cartões de crédito. A moeda é o Real brasileiro (BRL).
+    </FaqBubble>
+
+    <FaqBubble question="A água da torneira é potável?">
+      Não, a água que chega à torneira de Belém não é potável. É recomendável consumir água mineral ou água filtrada. Da mesma forma, na conferência distribuiremos garrafas de água.
+    </FaqBubble>
+
+    <FaqBubble question="Quais são os restaurantes e pubs recomendados em Belém?">
+      Alguns dos melhores restaurantes e pubs de Belém podem ser encontrados [aqui](https://www.tripadvisor.com/Restaurants-g303404-zfg11776-Belem_State_of_Para.html), de acordo com o TripAdvisor.
+    </FaqBubble>
+
+    <FaqBubble question="Estou preocupado com a segurança. Como devo me comportar?">
+      Estatisticamente, Belém não é uma cidade com altos níveis de crime. Belém é o centro de muitas atividades para a região, como o Festival de Ópera de Belém, o Carnaval em Belém, o Círio de Nazaré, o Festival de Cinema, entre outras coisas, sem conflitos relevantes. Para evitar ter problemas, você precisará tomar cuidado clássico ao viajar para uma cidade desconhecida onde outro idioma é falado. É recomendável que você sempre tenha seus pertences com você e que guarde telefones e câmeras assim que forem usados em espaços públicos.
+
+      Links de emergência:
+      - [Delegacia virtual](https://www.delegaciavirtual.pa.gov.br/#/)
+      - [Delegacia Especializada no Atendimento à Mulher](https://jetcall.tiness.com.br/violencia_contra_mulher/)
+
+      Em caso de emergência, você pode ligar para estes números gratuitos 24/7 de qualquer telefone:
+
+      - 190: Polícia Militar
+      - 192: Atendimento Médico de Emergência (SAMU)
+      - 193: Corpo de Bombeiros
+      - 191: Polícia Rodoviária Federal
+    </FaqBubble>
+
+  </Column>
+
+  <Column>
+    <FaqBubble question="Como funciona a moeda e o câmbio em Belém?">
+      A moeda do Brasil é o REAL (R$). Pode ser trocado em bancos, casas de câmbio, agências de viagens e hotéis autorizados. A maioria das empresas que prestam serviços a turistas aceita cartões de crédito internacionais. Deixamos os locais oficiais para [trocar moeda](https://belemtur.belem.pa.gov.br/casas-de-cambio/).
+    </FaqBubble>
+    <FaqBubble question="Onde posso conseguir um chip SIM em Belém?">
+      Comprar um chip SIM como estrangeiro no Brasil é, infelizmente, um processo complicado, devido à necessidade de um número de CPF, que é difícil de obter. Recomendamos muito ativar o roaming internacional em seu plano de telefone ou comprar um eSIM brasileiro antes da chegada. Recomendamos comprar um eSIM com uma empresa de boa reputação como [Airalo](https://www.airalo.com/).
+    </FaqBubble>
+    <FaqBubble question="Quais são os tipos de tomadas e adaptadores que funcionam no Brasil?">
+      O Brasil usa os tipos de tomadas C e N com uma voltagem de 127/220V e uma frequência de 60 Hz. Essas são as mesmas tomadas de muitos países europeus.
+    </FaqBubble>
+    <FaqBubble question="Quais são as opções de assistência médica se algo acontecer durante minha visita?">
+      Assim como ao viajar para qualquer lugar, é recomendável contratar um seguro saúde internacional antes de sua viagem a Belém. Além disso, o Sistema Único de Saúde (SUS) permite acesso gratuito aos cuidados médicos.
+
+      Se você se encontrar em uma situação financeira difícil, não precisará se preocupar, pois o sistema público de saúde oferece check-ups e tratamentos gratuitos.
+
+      Caso deseje consultar a medicina privada, aqui está uma lista de alguns custos esperados:
+
+      - Consulta com o clínico geral: de R$ 120 a 500
+      - Consulta com um especialista: R$ 280 a R$ 400
+      - Consulta com o dentista: R$ 150
+      - Intervenção cirúrgica simples: de R$ 14.000 a R$ 28.000
+      - Hospitalização (um dia, sem incluir tratamento e exames): R$ 2.500 a R$ 9.000
+
+      Claro, os custos exatos dependem do estado e da cidade onde você receberá tratamento. Mas o preço será muito mais alto em São Paulo, já que os melhores médicos e centros estão localizados lá, e seus serviços são muito demandados. Se você tiver uma emergência, deve saber os números para discar. Se precisar de uma ambulância, disque 192 SAMU (Serviço de Atendimento Móvel de Urgência).
+
+      <b>Recomendação</b>: Beba bastante água. O Brasil é um país tropical, então recomendamos que você se mantenha hidratado o tempo todo.
+    </FaqBubble>
+
+  </Column>
+
+</Grid>
+
+export const Grid = ({ children }) => (
+  <div className="grid grid-cols-1 sm:grid-cols-2 sm:space-x-4">{children}</div>
+);
+
+export const Column = ({ children }) => (
+  <div className="space-y-4 my-2">{children}</div>
+);
+
+export const FaqBubble = ({ question, children }) => {
+  return (
+    <div>
+      <div className="bg-f4g_red/90 text-white rounded-t-lg px-4 py-3 leading-5 text-lg">
+        {question}
+      </div>
+      <div className="px-2 py-1 border border-f4g_red rounded-b-lg">
+        {children}
+      </div>
+    </div>
+  );
+};
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+}
