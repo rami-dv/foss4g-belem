@@ -2,6 +2,7 @@ import Committees from "@/data/committees.json";
 import Image from "next/image";
 import Heading from "@/components/heading";
 import CommitteeImage from "@/images/committee.jpg";
+import Foss4gArImage from "@/images/foss4g-ar/foss4g-ar1.jpg";
 import MdxLayout from "@/components/mdx-layout";
 import { useRouter } from "next/router";
 
@@ -11,11 +12,17 @@ export const metadata = {
     "Overview of the various committees of FOSS4G 2024 Belém, including the Local, Academic, Program, and Sponsor committees.",
 };
 
-<Heading color="red" bubble>Conference Committees</Heading>
+<Heading color="red" bubble>
+  {"Conference Committees"}
+</Heading>
 
-<div className="grid sm:grid-cols-2">
+<div className="grid sm:grid-cols-2 gap-y-4 sm:gap-x-4">
   <div className="flex-grow">
-    <Image alt="Conference Committee" src={CommitteeImage} />
+    <Image
+      alt="Conference Committee"
+      src={Foss4gArImage}
+      className="rounded-lg"
+    />
   </div>
   <div className="flex-shrink">
     Brazil has made significant contributions to various open source geospatial
@@ -59,19 +66,21 @@ export const PhotoBubble = ({name, committee, ...otherProps}) => {
   const basePath = useRouter().basePath;
   const imgUrl = `${basePath ?? ""}/images/committees/${committee}/${slugify(name)}.jpg`
 
-  const border = {
-    "loc": "border-f4g_red",
-    "academic": "border-f4g_orange",
-    "program": "border-f4g_green",
-    "sponsor": "border-f4g_blue"
-  }
+const border = {
+"loc": "border-f4g_red",
+"academic": "border-f4g_orange",
+"program": "border-f4g_green",
+"sponsor": "border-f4g_blue"
+}
 
-  return (
-    <div key={name} {...otherProps}>
-      <div className={`aspect-square rounded-full hover:cursor-default border-4 ${border[committee]} overflow-hidden m-1 sm:m-2`}>
-        <img width="512" height="512" src={imgUrl} alt={name} />
-      </div>
-    <div className="text-ubuntu text-center">{name}</div>
+return (
+
+<div key={name} {...otherProps}>
+<div className={`aspect-square rounded-full hover:cursor-default border-4 ${border[committee]} overflow-hidden m-1 sm:m-2`}>
+<img width="512" height="512" src={imgUrl} alt={name} />
+</div>
+<div className="text-ubuntu text-center">{name}</div>
+
   </div>
   )
 
