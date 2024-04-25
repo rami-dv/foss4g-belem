@@ -143,9 +143,11 @@ export const intlHrefs = {
 
 export const IntlLink = ({
   href,
+  className = "",
   children,
   ...otherProps
 }: {
+  className: string;
   href: string;
   children: React.ReactNode;
 }) => {
@@ -159,7 +161,11 @@ export const IntlLink = ({
       : href;
 
   return (
-    <Link href={`/${language}${intlHref}`} {...otherProps}>
+    <Link
+      href={`/${language}${intlHref}`}
+      className={className}
+      {...otherProps}
+    >
       {children}
     </Link>
   );
