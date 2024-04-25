@@ -30,7 +30,7 @@ const menuItems = [
         "label:en": "Conference Committees",
         "label:es": "Comité Organizador Local",
         "label:pt": "Comitê Organizador Local",
-        href: "/conference-committees ",
+        href: "/conference-committees",
       },
       {
         "label:en": "Frequently Asked Questions (FAQ)",
