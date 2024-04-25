@@ -24,8 +24,13 @@ const menuItems = [
     "label:en": "About",
     "label:es": "Acerca de",
     "label:pt": "Sobre",
-    href: "/about",
     links: [
+      {
+        "label:en": "About FOSS4G",
+        "label:es": "Acerca de FOSS4G",
+        "label:pt": "Sobre FOSS4G",
+        href: "/about",
+      },
       {
         "label:en": "Conference Committees",
         "label:es": "Comité Organizador Local",
@@ -68,7 +73,6 @@ const menuItems = [
     "label:en": "Registration",
     "label:es": "Inscripción",
     "label:pt": "Inscrição",
-    href: "/registration",
     links: [
       {
         "label:en": "Visa Info",
@@ -88,8 +92,13 @@ const menuItems = [
     "label:en": "Schedule",
     "label:es": "Programa",
     "label:pt": "Programa",
-    href: "/schedule",
     links: [
+      {
+        "label:en": "Conference Schedule",
+        "label:es": "Programa",
+        "label:pt": "Programa",
+        href: "/schedule",
+      },
       {
         "label:en": "Business to Business (B2B)",
         "label:es": "Empresa a Empresa (B2B)",
@@ -126,7 +135,6 @@ const menuItems = [
     "label:en": "Attending",
     "label:es": "Asistiendo",
     "label:pt": "Participando",
-    href: "/attending",
     links: [
       {
         "label:en": "Venue",
@@ -201,9 +209,13 @@ export default function Header() {
                     className="sm:z-40 relative inline-block text-left"
                   >
                     <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white/90 border-f4g_red/50 border px-2 py-1 font-medium text-f4g_red/80 hover:text-white hover:bg-f4g_orange">
-                      <IntlLink href={menuItem.href}>
-                        {menuItem[labelLang]}
-                      </IntlLink>
+                      {menuItem.href ? (
+                        <IntlLink href={menuItem.href}>
+                          {menuItem[labelLang]}
+                        </IntlLink>
+                      ) : (
+                        menuItem[labelLang]
+                      )}
                     </Menu.Button>
 
                     <Transition
