@@ -4,22 +4,22 @@ import Image, { ImageProps } from "next/image";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: ({ children }) => (
-      <div className="mb-4 font-ubuntu text-4xl leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+      <div className="my-4 font-ubuntu text-4xl leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
         {children}
       </div>
     ),
     h2: ({ children }) => (
-      <div className="mb-3 font-ubuntu text-3xl leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
+      <div className="my-3 font-ubuntu text-3xl leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
         {children}
       </div>
     ),
     h3: ({ children }) => (
-      <div className="mb-2 font-ubuntu text-2xl leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl">
+      <div className="my-2 font-ubuntu text-2xl leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl">
         {children}
       </div>
     ),
     h4: ({ children }) => (
-      <div className="mb-1 font-ubuntu text-xl leading-none tracking-tight text-gray-900 md:text-2xl lg:text-3xl">
+      <div className="my-1 font-ubuntu text-xl leading-none tracking-tight text-gray-900 md:text-2xl lg:text-3xl">
         {children}
       </div>
     ),
@@ -29,13 +29,18 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </div>
     ),
     ul: ({ children }) => (
-      <ul className="list-disc list-inside pl-3">{children}</ul>
+      <ul className="list-disc list-inside pl-3 my-3">{children}</ul>
     ),
-    hr: () => (
-      <hr className=""/>
-    ),
-    p: ({ children}) => (
-      <p className="">{children}</p>
+    hr: () => <hr className="" />,
+    p: ({ children }) => <p className="my-3">{children}</p>,
+    a: ({ href, children }) => (
+      <a
+        href={href}
+        target="_blank"
+        className="underline underline-offset-4 text-f4g_blue"
+      >
+        {children}
+      </a>
     ),
     img: (props) => (
       <Image

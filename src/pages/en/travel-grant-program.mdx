@@ -1,112 +1,167 @@
 import MdxLayout from "@/components/mdx-layout";
 import Heading from "@/components/heading";
+import Image from "next/image";
+import Foss4g2022Volunteers from "@/images/foss4g-2022/volunteers.jpg";
+import Foss4g2022Volunteers2 from "@/images/foss4g-2022/volunteers2.jpg";
 
 export const metadata = {
   title: "Travel Grant Program",
-  description: null
-}
+  description: null,
+};
 
-<Heading color="red" bubble />Travel Grant Program</Heading>
+<Heading color="red" bubble>
+  {"Travel Grant Program"}
+</Heading>
 
-The TPG is an initiative designed to provide financial support to people who wish to attend the FOSS4G 2024 conference, but may face financial limitations in covering travel expenses.
+<div className="sm:grid sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0">
+  <div className="">
+    <Image src={Foss4g2022Volunteers} className="rounded-lg" />
+  </div>
+  <div className="">
+  The FOSS4G Travel Grant Program (TGP) is an initiative designed to provide financial support to people who wish to attend the FOSS4G 2024 conference, but may face financial limitations in covering travel expenses.
 
-Scholarship programs play a crucial role in promoting equal opportunity and access to education and professional development. By offering financial support to talented and motivated individuals who may face financial barriers, these programs expand the reach of the conference and its activities. In addition to fostering diversity, scholarships contribute to the creation of more inclusive communities by allowing diverse voices and perspectives to enrich academic and professional encounters. By investing in the potential of deserving individuals, regardless of their financial resources, scholarship programs lift up the entire community.
+Scholarship programs play a crucial role in promoting equal opportunity and access to education and professional development. By offering financial support to talented and motivated individuals who may face financial barriers, these programs expand the reach of the conference and its activities.
 
-Like every year, OSGeo offers this scholarship program at the FOSS4G 2024 global conference, which will take place in Belém do Pará, Brazil, from December 2 to 8.
-The TGP is provided by OSGeo and managed by members of the Belém LOC (LOC). Applications will be accepted until August 31, 2024.
+In addition to fostering diversity, scholarships contribute to the creation of more inclusive communities by allowing diverse voices and perspectives to enrich academic and professional encounters. By investing in the potential of deserving individuals, regardless of their financial resources, scholarship programs lift up the entire community.
 
-The scholarship applies to countries in Latin America and the Caribbean.
+Since 2017 OSGeo has offered this scholarship program and continues that tradition for the 2024 conference in Belém. The funds for the TGP are provided by OSGeo and are allocated by members of the Belém Local Committee.
 
-##### **Registration Form (coming soon)**
+  <div className="flex">
+    <button className=" border-f4g_red text-white bg-f4g_orange border line-through italic rounded-lg py-2 px-3 text-lg font-ubuntu">
+    {"Click here to apply!"}
+    </button>
+    <span className="text-f4g_red text-xl font-ubuntu ml-4 font-bold">
+    Coming soon!
+    </span>
+  </div>
+  </div>
+</div>
 
-The travel grant will include a round-trip ticket, secondly you can request a smaller subsidy for a conference ticket (including 1 workshop).
+<Heading color="orange">Applying for a Travel Grant</Heading>
 
-The size and number of grants may be adjusted at the discretion of the Conference Committee, depending on the level of funding raised and the number of applications received. Applicants will only be able to apply for one size travel grant.
+<div className="sm:grid sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0">
+  <div>
+  #### Eligibility & Benefits
 
-Anyone applying for more than one scholarship will be excluded from the application process.
+  In order to be eligible to receive a Travel Grant, an applicant:
 
-All travel grant recipients are expected to volunteer for at least 10 hours during the conference. This is a way to strengthen the OSGeo community and will help create a better conference experience for everyone.
+  - **must reside in a country in Latin America or the Caribbean**
+  - is expected to volunteer for at least 10 hours during the conference
 
-### Criteria
+  Travel Grants can include:
 
-To ensure transparent and fair allocation of funds, the travel scholarship program uses a points system to rank applications. Points are awarded if applicants meet specific criteria. Once the application phase is complete, all applicants are ranked by points and the applicants with the most points will receive funding.
+  - a round-trip plane ticket
+  - subsidy of accommodation during the conference
+  - subsidy of conference ticket (including 1 workshop)
+
+  The size and number of grants may be adjusted at the discretion of the Conference Committee, depending on the level of funding raised and the number of applications received. Applicants will only be able to apply for one size travel grant.
+
+  Anyone applying for more than one scholarship will lead to an applicant being excluded from the application process.
+
+  ##### Important dates
+
+  - **July 2024**: FOSS4G 2024 TGP opens, start submitting your applications
+  - **31 August 2024**: Deadline to submit the application
+  - **16 September 2024**: The committee evaluates grant applications and contacts grant recipients via email.
+</div>
+<div>
+#### Selection Criteria
+
+In order to ensure transparent and fair allocation of funds, the travel scholarship program uses a points system to rank applications. Points are awarded for specific criteria that the applicants meet. Once the application phase is complete, all applicants are ranked by points and the applicants with the most points will receive funding.
 
 Please note that the purpose of the travel scholarship program is to improve diversity at the conference. We may reserve some spots in the program for people with unique and outstanding applications. However, most program spots will be determined solely by point standings.
 
-As part of our commitment to diversity, equity and inclusion in this event, the travel grant program seeks the participation of people from marginalized groups, with a special focus on women, gender dissidents, racialized, indigenous, neurodivergent, or people with some type of disability in the geospatial world, they will be put as a priority. Although this program is focused on supporting the participation of these groups, all people are invited to apply.
+As part of our commitment to diversity, equity and inclusion in this event, the travel grant program seeks the participation of people from marginalized groups, with a special focus on women, gender dissidents, racialized, indigenous, neurodivergent, or people with some type of disability in the geospatial world, they will be put as a priority.
 
-Applicants receive points for the following criteria:
+However, even though this program is targeting particular demographics in order to support the participation of these groups, we encourage all people to apply.
 
-#### Residence/Nationality
+  </div>
+</div>
 
-The allocation of points is based on the ECLAC classification, population in poverty and income redistribution, according to major administrative division:
+<Heading color="green">Points System Allocation</Heading>
 
-[https://statistics.cepal.org/portal/cepalstat/index.html?lang=es](https://statistics.cepal.org/portal/cepalstat/index.html?lang=es)
+<div className="sm:grid sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0">
+  <div>
+    ##### Residence/Nationality
 
-- Applicants who currently live in administrative divisions with poverty % greater than or equal to 60% receive 1.5 points.
-- Applicants who currently live in administrative divisions with poverty % between 45 - 59.9% receive 1 point.
-- Applicants who currently live in administrative divisions with poverty % between 30 - 44.9% receive 0.5 points.
-- Applicants who currently live in administrative divisions with poverty % between 0 - 29.9% receive 0 points.
+    The allocation of points is based on the [ECLAC classification](https://statistics.cepal.org/portal/cepalstat/index.html?lang=es), population in poverty and income redistribution, according to major administrative division.
 
-#### Gender and minorities
+    If an applicant resides in an administrative division with the following levels of poverty, they will receive the corresponding points:
 
-To create a more diverse community, women and applicants from other underrepresented groups will receive 1 point.
+    - Poverty >= 60%: 1.5 points
+    - Poverty 45 - 59.9%: 1 point
+    - Poverty 30 - 44.9%: 0.5 points
+    - Poverty 0 - 29.9%: 0 points
 
-#### Students
+    ##### Gender and minorities
 
-Students generally receive 1 point. If a student also applied and is selected into the volunteer program, 1 additional point is awarded. PhD students are considered students.
+    To create a more diverse community, we encourage the parcipation of women and applicants from other underrepresented groups.
 
-#### Talks sent and accepted
+    - Applicant is a woman or member of underrepresented group: 1 point
+    - All others: 0 points
 
-The LOC values ​​applicants who are willing to contribute to the success of FOSS4G. Therefore, we award points to people who are willing to present at the conference. Only one submitted author will be eligible to receive points.
+    ##### Conference Participation
 
-For proposing a talk and/or workshop that has been accepted: 2 points
+    The LOC values ​​applicants who are willing to contribute to the success of FOSS4G. Therefore, we award points to people who are willing to present at the conference.
 
-For proposing a talk and/or workshop but it has not been accepted: 1 point.
+    - Applicants that propose a talk and/or workshop: 1 point
+    - Applicants that propose an _accepted_ talk and/or workshop: 2 points
 
-#### Previous participation in OSGEO projects
+    Please note, only one submitted author per presentation will be eligible to receive points.
 
-Proven prior participation in OSGeo projects or community building activities: 2 points
+  </div>
+  <div>
 
-Demonstrated use and experience with OSGeo software: 1 point
+    ##### Students
 
-#### Apply for minor subsidy
+    We encourage the participation of students in our community. For the purposes of this classification, PhD students are considered students.
 
-If they can accept a smaller subsidy than expected (smaller subsidy for a conference ticket - including 1 workshop - according to each condition): 2 points
+    - Applicant is a student: 1 point
+    - Applicant is student _and_ is accepted into volunteer program: 2 points
 
-Scholarship recipients must have a valid entry visa and documents, managed by themselves.
+    ##### Previous participation in OSGEO projects
 
-#### Contact
+    We value not only those who wish to learn more about and participate in OSGEO, but also those who have a history of participating in OSGeo projects or community building activities.
 
-Those who have applied for both types of scholarships will be contacted by email where the procedure to follow will be detailed.
+    - Applicant has demonstrated use and experience with OSGeo software: 1 point
+    - Proven prior participation in OSGeo projects and/or community building activities: 2 points
 
-#### Supporting the TGP
+    ##### Apply for minor subsidy
 
-The travel scholarship program is funded through:
+    We acknowledge that some applicants are able to attend the conference with less financial assistance than others. Since we only have so much grant money, we consider differently those who are in this category.
 
-- Conference Sponsors
-- Those who cannot obtain sponsorship, purchase tickets whose amount is collected for the TGP (minimum 3 tickets) and will be included in the section of honorable mentions of the TGP page
-- Annual OSGeo Board Engagement
-- With the purchase of the ticket you get a cloth bag + a bottle of water, or some typical Belém item. By purchasing the ticket, you will have the possibility of purchasing a t-shirt or product, the benefits of which will go entirely to the TGP.
-- Money raised through FOSS4G merch on the following pages:
-  - [https://www.redbubble.com/people/](https://www.redbubble.com/people/)
-  - [https://www.cafepress.com/profile/](https://www.cafepress.com/profile/)
-- User donations (Founding). Voluntarily without compensation and that their names appear on a list on the website as a thank you or that they can opt for an online course/workshop/talk that does not involve much preparation work. depending on the amounts donated, online and prior to FOSS4G 2024.
+    Smaller subsidies include a conference ticket, including one workshop, but no other assistance.
 
-You can help make FOSS4G more accessible and increase the diversity of our attendees by making a donation to the FOSS4G TGP through the PayPal account of the local OSGeo Brazil chapter that manages the conference.
+    - Applicant applies for smaller subsidy: 2 points
+    - All others: 0 points
 
-#### About the TGP
+  </div>
+</div>
 
-The FOSS4G Travel Grant Program initiative was established in 2017 by the OSGeo Board to facilitate accessibility and diversity at global and regional FOSS4G events.
+<Heading color="blue">Support the TGP!</Heading>
 
-The travel scholarship program is managed by the Conference Committee, in collaboration with representatives from each FOSS4G event.
+<div className="grid sm:grid-cols-2 sm:space-x-4 gap-y-4 sm:space-y-0">
+  <div className="order-last sm:order-first">
+    Your support goes a long way to help many wonderful people attend FOSS4G. Please help support the Travel Grant Program, if you can! Here are the various ways this program is funded:
 
-#### Important dates
+  - Contribution of conference sponsors
+    {/* - Those who cannot obtain sponsorship, purchase tickets whose amount is collected for the TGP (minimum 3 tickets) and will be included in the section of honorable mentions of the TGP page */}
+  - Annual OSGeo Board Engagement
+  - Purchase of additional t-shirt or products, on-site at the conference.
+  - Money raised through FOSS4G merch on the following pages:
+    - [FOSS4G 2024 Redbubble Store](https://www.redbubble.com/people/FOSS4G2024/)
+    - [FOSS4G 2024 CafePress Store](https://www.cafepress.com/shop/FOSS4G2024)
+  - Direct donations
+    - You can help make FOSS4G more accessible and increase the diversity of our attendees by making a donation to the FOSS4G TGP through the PayPal account of the local OSGeo Brazil chapter that manages the conference.
+    - Those who wish to donate directly to the TGP will have the option for their names to appear on a list on the website as a thank you.
 
-- **July 2024** - FOSS4G 2024 TGP opens, start submitting your applications
-- **31 August 2024** - Deadline to submit the application
-- **16 September 2024** - The committee evaluates grant applications and contacts grant recipients via email.
-- **2 December 2024** - Start of the conference
+  </div>
+
+  <div>
+
+    <Image src={Foss4g2022Volunteers2} className="rounded-lg" />
+  </div>
+</div>
 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
