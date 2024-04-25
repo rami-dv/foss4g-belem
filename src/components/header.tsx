@@ -303,6 +303,7 @@ export default function Header() {
                     className="flex flex-col border-b border-white/50 bg-f4g_red"
                   >
                     <IntlLink
+                      className="non-standard"
                       href={menuItem.href}
                       // @ts-ignore
                       onClick={
@@ -325,6 +326,7 @@ export default function Header() {
                     <div className="flex flex-col bg-f4g_orange ">
                       {menuItem.links.map((link) => (
                         <IntlLink
+                          className="non-standard"
                           key={link.href}
                           href={link.href}
                           // @ts-ignore
