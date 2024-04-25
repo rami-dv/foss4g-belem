@@ -147,7 +147,7 @@ export const IntlLink = ({
   children,
   ...otherProps
 }: {
-  className: string;
+  className?: string;
   href: string;
   children: React.ReactNode;
 }) => {
