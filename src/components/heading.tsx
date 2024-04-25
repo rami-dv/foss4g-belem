@@ -1,10 +1,8 @@
 export default function Heading({
-  label,
   bubble = false,
   color = null,
   children = null,
 }: {
-  label: string;
   bubble?: boolean | null;
   color?: "green" | "orange" | "red" | "blue" | null;
   children: React.ReactNode | null;
@@ -25,13 +23,15 @@ export default function Heading({
     blue: "text-f4g_blue",
   };
 
-  const bubbleClasses = bubble ? "sm:border-2 bg-white": "";
+  const bubbleClasses = bubble ? "sm:border-2 bg-white" : "";
 
   return (
     <div className="flex items-center my-6 sm:my-8">
       <div className={`flex-1 border-t-2 ${borders[color ?? "red"]}`}></div>
       <div
-        className={`text-2xl sm:text-4xl ${bubbleClasses} ${borders[color ?? "red"]} rounded-lg sm:py-2 text-center font-bold font-ubuntu ${
+        className={`text-2xl sm:text-4xl ${bubbleClasses} ${
+          borders[color ?? "red"]
+        } rounded-lg sm:py-2 text-center font-bold font-ubuntu ${
           text[color ?? "red"]
         } px-2 sm:px-4 sm:mx-4`}
       >
