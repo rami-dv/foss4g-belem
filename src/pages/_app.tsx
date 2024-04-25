@@ -7,10 +7,13 @@ import Footer from "@/components/footer";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { LanguageContext } from "@/lib/language";
+import { Transition } from "@headlessui/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [language, setLanguage] = useState<"en" | "es" | "pt">("en");
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const router = useRouter();
+  const isHomePage = router.asPath == "/";
 
   useEffect(() => {
     if (router.asPath == "/") {
@@ -35,7 +38,10 @@ export default function App({ Component, pageProps }: AppProps) {
         setLanguage(lang);
       }
     }
+
+    setIsLoaded(true);
   }, []);
+
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
@@ -43,11 +49,22 @@ export default function App({ Component, pageProps }: AppProps) {
         <Head>
           <link rel="icon" href={Favicon.src} />
         </Head>
-        <Header />
-        <div className="relative z-20">
-          <Component {...pageProps} />
-        </div>
-        <Footer />
+        <Transition
+          show={isLoaded && !isHomePage}
+          enter="transition duration-1200 ease-in"
+          enterFrom="transform opacity-0"
+          enterTo="transform opacity-100"
+        >
+          {isLoaded && (
+            <>
+              <Header />
+              <div className="relative z-20">
+                <Component {...pageProps} />
+              </div>
+              <Footer />
+            </>
+          )}
+        </Transition>
       </div>
     </LanguageContext.Provider>
   );
