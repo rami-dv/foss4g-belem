@@ -119,26 +119,11 @@ export const intlHrefs = {
     es: "/lugar",
     pt: "/lugar",
   },
-  "/getting-to-belem": {
-    en: "/getting-to-belem",
-    es: "/llegando-a-belem",
-    pt: "/chegando-a-belem",
-  },
-  "/accommodation": {
-    en: "/accommodation",
-    es: "/accommodacion",
-    pt: "/acomodacoes",
-  },
-  "/guided-tours": {
-    en: "/guided-tours",
-    es: "/visitas-guiadas",
-    pt: "/visitas-guiadas",
-  },
-  "/what-to-do-in-belem": {
-    en: "/what-to-do-in-belem",
-    es: "/que-hacer-en-belem",
-    pt: "/o-que-fazer-em-belem",
-  },
+  "/visiting-belem": {
+    en: "/visiting-belem",
+    es: "/visitando-belem",
+    pt: "/visitando-belem",
+  }
 };
 
 export const IntlLink = ({

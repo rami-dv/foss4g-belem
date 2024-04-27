@@ -42,7 +42,7 @@ const menuItems = [
         "label:es": "Preguntas Frecuentes (FAQ)",
         "label:pt": "Perguntas Frequentes (FAQ)",
         href: "/faq-frequently-asked-questions",
-      }
+      },
     ],
   },
   {
@@ -125,34 +125,16 @@ const menuItems = [
         href: "/venue",
       },
       {
-        "label:en": "Getting to Belém",
-        "label:es": "Llegando a Belém",
-        "label:pt": "Chegando a Belém",
-        href: "/getting-to-belem",
-      },
-      {
-        "label:en": "Accommodation",
-        "label:es": "Accommodación",
-        "label:pt": "Acomodações",
-        href: "/accommodation",
-      },
-      {
-        "label:en": "Guided Tours",
-        "label:es": "Visitas Guiadas",
-        "label:pt": "Visitas Guiadas",
-        href: "/guided-tours",
+        "label:en": "Visiting Belém",
+        "label:es": "Visitando Belém",
+        "label:pt": "Visitando Belém",
+        href: "/visiting-belem",
       },
       {
         "label:en": "Code of Conduct",
         "label:es": "Código de Conducta",
         "label:pt": "Código de Conduta",
         href: "/code-of-conduct",
-      },
-      {
-        "label:en": "What to do in Belém",
-        "label:es": "¿Qué hacer en Belém?",
-        "label:pt": "O que fazer em Belém?",
-        href: "/what-to-do-in-belem",
       },
     ],
   },
