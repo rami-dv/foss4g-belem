@@ -1,4 +1,5 @@
 import MdxLayout from "@/components/mdx-layout";
+import { Carousel } from "@/mdx-components";
 import Heading from "@/components/heading";
 import Foss4g2022IceBreaker from "@/images/foss4g-2022/ice-breaker.jpg";
 import Foss4g2022IceBreaker2 from "@/images/foss4g-2022/ice-breaker2.jpg";
@@ -11,33 +12,76 @@ export const metadata = {
   description: null,
 };
 
+<Heading color="red" bubble>
+  {"Social Events"}
+</Heading>
+
 <div className="sm:grid sm:grid-cols-12 gap-4">
   <div className="col-span-7 rounded-lg overflow-hidden">
-
-    <Heading color="orange" bubble>Social Events</Heading>
+  
+  <div>
+  <Carousel
+  caption={true}
+  images={[
+    {
+      image: Foss4g2022IceBreaker,
+      caption:
+        "",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022IceBreaker2,
+      caption:
+        "",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022Lunch,
+      caption:
+        "",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022SocialDinner,
+      caption:
+        "",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+  ]}
+  autoplay={true}
+  autoplayDelay={5000}
+/>
+  </div>
 
 Colleagues! The excitement doesn&quot;t end in the auditorium! We extend a warm invitation to participate in our exclusive social events that will complement your networking experience. Enjoy moments of camaraderie, exchanging ideas and fun in a relaxed atmosphere. The events are designed to strengthen bonds and create unforgettable memories. Don't miss the opportunity to connect in a more informal setting! Details will be provided on site, we hope to see you there!
 
 #### IceBreaker
 
+---
+
 IceBreaker will take place on the first day of the event, on **Wednesday, December 4th, from 6:30 pm to 9:00 pm**, in the same location, HANGAR, and will allow participants to have a relaxed moment with music and a small cocktail to promote conviviality between people.
 
 #### Gala Dinner
 
-The Gala Dinner will take place on **Thursday, December 5th, from 8:00 pm to 11:00 pm**, in the Hangar party space.
-A dinner will be served with typical local cuisine, as the city of Belém is considered the "Creative City of Gastronomy" by Unesco.
-The menu includes a starter with typical snacks: chicken drumstick, caranguejo nail, vatapá straw and “empadinha”. As the main dish we will have the typical food of "Arroz Paraense" which includes regional prawns and tucupi sauce, as well as more traditional food with an international taste which includes Filet with rice, salad and farofa, which will serve those who cannot eat seafood. For the vegetarian menu, our suggestion is pasta with herb sauce. For dessert we will have the traditional cupuaçu cream and tapioca ice cream.
-This moment will feature a music band that will showcase the main songs from Pará, also with a repertoire that showcases Brazilian rhythms and at the end the party will close with an international playlist. This moment will allow you to get to know the place, music and gastronomy of Belenense.
+---
 
-We want to involve participants in the culture of Pará and make them taste the best food from the Amazon. It will be an incredible immersion.
+The Gala Dinner will take place on **Thursday, December 5th, from 8:00 pm to 11:00 pm**, in the Hangar party space. A dinner will be served with typical local cuisine, as the city of Belém is considered the "Creative City of Gastronomy" by UNESCO.
+
+The menu includes a starter with typical snacks: chicken drumstick, caranguejo nail, vatapá straw and “empadinha”. As the main dish we will have the typical food of "Arroz Paraense" which includes regional prawns and tucupi sauce, as well as more traditional food with an international taste which includes Filet with rice, salad and farofa, which we will serve those who cannot eat seafood.For dessert we will have the traditional cupuaçu cream and tapioca ice cream. Vegetarian options will be available for each part of the meal.
+
+After dinner we feature a music band that will showcase the main songs from Pará, also with a repertoire that showcases Brazilian rhythms and at the end the party will close with an international playlist. This moment will allow you to get to know the place, music and gastronomy of Belenense.
+
+We want to involve participants in the culture of Pará and make them taste the best food from the Amazon; it will be an incredible immersion.
 
 #### Closing Reception
+
+---
 
 We invite you to celebrate the closing of the FOSS4G 2024 conference at a special reception! Come and toast a week of learning, networking and collaboration with the FOSS4G community. All members of the FOSS4G association, friends and interested parties are cordially invited for a drink at the end of FOSS4G 2024 on **Friday, December 6th, at 3:30 pm in the same location, HANGAR**.
 
   </div>
   <div className="col-span-5">
-    <Image src={Foss4g2022IceBreaker} className="h-72 my-4 object-cover shadow rounded-lg" />
+    <Image src={Foss4g2022IceBreaker} className="h-72 mb-4 object-cover shadow rounded-lg" />
     <Image src={Foss4g2022IceBreaker2} className="h-72 my-4 object-cover shadow rounded-lg" />
     <Image src={Foss4g2022Lunch} className="h-72 my-4 object-cover shadow rounded-lg" />
     <Image src={Foss4g2022SocialDinner} className="h-72 my-4 object-cover shadow rounded-lg" />
