@@ -42,25 +42,7 @@ const menuItems = [
         "label:es": "Preguntas Frecuentes (FAQ)",
         "label:pt": "Perguntas Frequentes (FAQ)",
         href: "/faq-frequently-asked-questions",
-      },
-      {
-        "label:en": "Branding",
-        "label:es": "Marca",
-        "label:pt": "Marca",
-        href: "/branding",
-      },
-      {
-        "label:en": "Code of Conduct",
-        "label:es": "Código de Conducta",
-        "label:pt": "Código de Conduta",
-        href: "/code-of-conduct",
-      },
-      {
-        "label:en": "Privacy Policy",
-        "label:es": "Política de Privacidad",
-        "label:pt": "Política de Privacidade",
-        href: "/privacy-policy",
-      },
+      }
     ],
   },
   {
@@ -161,6 +143,12 @@ const menuItems = [
         href: "/guided-tours",
       },
       {
+        "label:en": "Code of Conduct",
+        "label:es": "Código de Conducta",
+        "label:pt": "Código de Conduta",
+        href: "/code-of-conduct",
+      },
+      {
         "label:en": "What to do in Belém",
         "label:es": "¿Qué hacer en Belém?",
         "label:pt": "O que fazer em Belém?",
@@ -244,7 +232,7 @@ export default function Header() {
                                     () => setIsDropdown(null)
                                   }
                                 >
-                                  <button className="group flex w-full items-center rounded-md px-2 py-2 text-sm text-f4g_red hover:text-white hover:bg-f4g_orange">
+                                  <button className="group flex w-full text-left items-center rounded-md px-2 py-2 text-sm text-f4g_red hover:text-white hover:bg-f4g_orange">
                                     {link[labelLang] ?? link["label:en"]}
                                   </button>
                                 </IntlLink>
