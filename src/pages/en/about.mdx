@@ -1,7 +1,11 @@
 import Image from "next/image";
+import { Carousel } from "@/mdx-components";
 import MdxLayout from "@/components/mdx-layout";
 import Foss4g2022GroupPhoto from "@/images/foss4g-2022/group-photo.jpg";
 import Foss4g2022OpeningSession from "@/images/foss4g-2022/opening-session.jpg";
+import Foss4g2022Talk1 from "@/images/foss4g-2022/talk.jpg";
+import Foss4g2022Talk2 from "@/images/foss4g-2022/talk2.jpg";
+import Foss4g2022Volunteers from "@/images/foss4g-2022/volunteers.jpg";
 import Foss4gAr from "@/images/foss4g-ar/foss4g-ar4.jpg";
 
 export const metadata = {
@@ -10,12 +14,33 @@ export const metadata = {
     "General background information about the FOSS4G 2024 conference held in Belém, Brazil",
 };
 
-<div className="relative w-full mt-2 mb-4">
-  <Image src={Foss4g2022GroupPhoto} className="rounded-xl w-full shadow-lg" />
-  <div className="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 rounded-bl-xl rounded-br-xl p-1 text-sm sm:text-base leading-1 sm:p-4">
-    FOSS4G 2022 in Firenze, Italy Group Photo (c) Anisa Kuci CC-BY-SA
-  </div>
-</div>
+<Carousel
+  images={[
+    {
+      image: Foss4g2022GroupPhoto,
+      caption: "FOSS4G 2022 in Firenze, Italy Group Photo, with over 800 attendees.",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022Talk2,
+      caption: "FOSS4G is attended by hundreds of industry professionals, and geo-curious individuals alike.",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022Talk1,
+      caption: "The many categories of talks cover a wide variety of topics related to open source geospatial technology (FOSS4G)",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022Volunteers,
+      caption: "FOSS4G is made possible by dozens of dedicated volunteers! We are proud of our community and what it has become.",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+  ]}
+  autoplay={true}
+  autoplayDelay={4000}
+
+/>
 
 <div className="grid space-y-4">
   <div className="grid md:grid-cols-2 md:space-x-4">  

@@ -316,8 +316,8 @@ export default function Header() {
                   >
                     <IntlLink
                       className="non-standard"
-                      href={menuItem.href}
                       // @ts-ignore
+                      href={menuItem.href}
                       onClick={
                         // @ts-ignore
                         () => setIsMenuOpen(false)

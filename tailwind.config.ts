@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import DefaultTheme from "tailwindcss/defaultTheme";
 import HeadlessUI from "@headlessui/tailwindcss";
+import withMT from "@material-tailwind/react/utils/withMT";
 
 const config: Config = {
   content: [
@@ -11,6 +12,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      aspectRatio: {
+        "4/3": "4 / 3",
+      },
       fontFamily: {
         sans: ['"Roboto"', ...DefaultTheme.fontFamily.sans],
         ubuntu: "Ubuntu",
@@ -35,4 +39,4 @@ const config: Config = {
   },
   plugins: [HeadlessUI],
 };
-export default config;
+export default withMT(config);
