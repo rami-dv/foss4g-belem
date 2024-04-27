@@ -9,7 +9,7 @@ export function Carousel({
 }: {
   images: Array<{
     image: StaticImageData;
-    caption: string;
+    caption?: string;
     attribution?: string;
   }>;
 } & CarouselProps) {
@@ -38,34 +38,36 @@ export function Carousel({
         <div className="relative h-full w-full">
           <Image
             src={image.image}
-            alt={image.caption}
+            alt={image.caption ?? "Image"}
             className="h-full w-full min-h-80 aspect-3/4 sm:aspect-video object-cover"
           />
 
-          <div className="font-ubuntu flex relative sm:absolute sm:bottom-10 items-center justify-center text-center text-xs sm:text-sm 6xl:text-base w-full bg-white/90 px-2 py-2 shadow-xl">
-            <div className="basis-full px-2 sm:px-4">{image.caption}</div>
-            {image.attribution && (
-              <div className="flex items-center justify-center h-full">
-                <div
-                  className="relative z-30 flex items-center justify-center text-f4g_red text-xs hover:cursor-pointer"
-                  onClick={() => setIsAttrOpen(!isAttrOpen)}
-                >
-                  {isAttrOpen && (
-                    <div className="inline-block right-0 bg-white border 6xl:text-base border-f4g_red rounded-l-full pl-2 sm:pl-4 rounded-r-full z-20 absolute w-auto whitespace-nowrap ">
-                      Image (c) {image.attribution}
-                      <span className="inline-flex bg-white items-center justify-center 6xl:text-base 6xl:w-6 6xl:h-6 text-xs text-f4g_red border rounded-full w-4 h-4">
-                        &copy;
-                      </span>
-                    </div>
-                  )}
+          {image.caption && (
+            <div className="font-ubuntu flex relative sm:absolute sm:bottom-10 items-center justify-center text-center text-xs sm:text-sm 6xl:text-base w-full bg-white/90 px-2 py-2 shadow-xl">
+              <div className="basis-full px-2 sm:px-4">{image.caption}</div>
+              {image.attribution && (
+                <div className="flex items-center justify-center h-full">
+                  <div
+                    className="relative z-30 flex items-center justify-center text-f4g_red text-xs hover:cursor-pointer"
+                    onClick={() => setIsAttrOpen(!isAttrOpen)}
+                  >
+                    {isAttrOpen && (
+                      <div className="inline-block right-0 bg-white border 6xl:text-base border-f4g_red rounded-l-full pl-2 sm:pl-4 rounded-r-full z-20 absolute w-auto whitespace-nowrap ">
+                        Image (c) {image.attribution}
+                        <span className="inline-flex bg-white items-center justify-center 6xl:text-base 6xl:w-6 6xl:h-6 text-xs text-f4g_red border rounded-full w-4 h-4">
+                          &copy;
+                        </span>
+                      </div>
+                    )}
 
-                  <span className="flex items-center justify-center 6xl:text-base 6xl:w-6 6xl:h-6 text-xs border-f4g_red  text-f4g_red border rounded-full w-4 h-4">
-                    &copy;
-                  </span>
+                    <span className="flex items-center justify-center 6xl:text-base 6xl:w-6 6xl:h-6 text-xs border-f4g_red  text-f4g_red border rounded-full w-4 h-4">
+                      &copy;
+                    </span>
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )}
         </div>
       ))}
     </Carousel_>
