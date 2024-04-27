@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "code": "FOR", "name": "Fortaleza", "size": 0 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-38.533339, -3.774911]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "REC", "name": "Recife", "size": 0 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.923909, -8.126395]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "GIG", "name": "Rio de Janeiro", "size": 0 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-43.255850, -22.814585]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "CNF", "name": "Belo Horizonte", "size": 0 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-43.948973, -19.850765]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "GRU", "name": "São Paulo", "size": 0 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.481630, -23.437219]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "BSB", "name": "Brasília", "size": 0 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-47.921629, -15.869458]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "MAO", "name": "Manaus", "size": 0 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-60.049790, -3.038583]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "FLL", "name": "Fort Lauderdale", "size": 0 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.152657, 26.072611]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "LIS", "name": "Lisbon", "size": 0 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-9.135825, 38.781317]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "CAY", "name": "Cayenne", "size": 1 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-52.360427, 4.819858]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "PBM", "name": "Paramaribo", "size": 1 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-55.187789, 5.452774]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "code": "BEL", "name": "Belém", "size": 1 },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-48.480280, -1.382665]
+      }
+    }
+  ]
+}

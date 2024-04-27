@@ -25,6 +25,7 @@
     "react": "^18",
     "react-countdown": "^2.3.5",
     "react-dom": "^18",
+    "react-globe.gl": "^2.27.2",
     "react-icons": "^5.0.1",
     "react-map-gl": "^7.1.7",
     "react-social-icons": "^6.16.0"
