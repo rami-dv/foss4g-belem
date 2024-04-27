@@ -46,8 +46,8 @@ export function Carousel({
       )}
       {...otherProps}
     >
-      {images.map((image) => (
-        <div className="relative h-full w-full">
+      {images.map((image, idx) => (
+        <div className="relative h-full w-full" key={idx}>
           <Image
             src={image.image}
             alt={image.caption ?? "Image"}
