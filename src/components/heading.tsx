@@ -26,7 +26,7 @@ export default function Heading({
   const bubbleClasses = bubble ? "sm:border-2 bg-white" : "";
 
   return (
-    <div className="flex items-center my-6 sm:my-8">
+    <div className="flex items-center my-3 sm:my-5">
       <div className={`flex-1 border-t-2 ${borders[color ?? "red"]}`}></div>
       <div
         className={`text-2xl sm:text-4xl ${bubbleClasses} ${
