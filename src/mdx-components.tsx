@@ -30,7 +30,7 @@ export function Carousel({
   return (
     // @ts-ignore
     <Carousel_
-      className="rounded-xl shadow-lg"
+      className=""
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className={`absolute ${captionClasses} sm:top-auto sm:bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2`}>
           {new Array(length).fill("").map((_, i) => (
@@ -47,7 +47,7 @@ export function Carousel({
       {...otherProps}
     >
       {images.map((image, idx) => (
-        <div className="relative h-full w-full" key={idx}>
+        <div className="relative h-full w-full rounded-xl shadow-lg overflow-hidden" key={idx}>
           <Image
             src={image.image}
             alt={image.caption ?? "Image"}
