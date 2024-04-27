@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Carousel } from "@/mdx-components";
+import Heading from "@/components/heading";
 import MdxLayout from "@/components/mdx-layout";
 import Foss4g2022GroupPhoto from "@/images/foss4g-2022/group-photo.jpg";
 import Foss4g2022OpeningSession from "@/images/foss4g-2022/opening-session.jpg";
@@ -18,103 +19,150 @@ export const metadata = {
   images={[
     {
       image: Foss4g2022GroupPhoto,
-      caption: "FOSS4G 2022 in Firenze, Italy Group Photo, with over 800 attendees.",
+      caption:
+        "FOSS4G 2022 in Firenze, Italy Group Photo, with over 800 attendees.",
       attribution: "Anisa Kuci CC-BY-SA",
     },
     {
       image: Foss4g2022Talk2,
-      caption: "FOSS4G is attended by hundreds of industry professionals, and geo-curious individuals alike.",
+      caption:
+        "FOSS4G is attended by hundreds of industry professionals, and geo-curious individuals alike.",
       attribution: "Anisa Kuci CC-BY-SA",
     },
     {
       image: Foss4g2022Talk1,
-      caption: "The conference talks cover a wide variety of topics related to open source geospatial technology (FOSS4G)",
+      caption:
+        "The conference talks cover a wide variety of topics related to open source geospatial technology (FOSS4G)",
       attribution: "Anisa Kuci CC-BY-SA",
     },
     {
       image: Foss4g2022Volunteers,
-      caption: "FOSS4G is made possible by dozens of dedicated volunteers! We are proud of our community and what it has become.",
+      caption:
+        "FOSS4G is made possible by dozens of dedicated volunteers! We are proud of our community and what it has become.",
       attribution: "Anisa Kuci CC-BY-SA",
     },
   ]}
   autoplay={true}
   autoplayDelay={5000}
-
 />
 
 <div className="grid space-y-4">
   <div className="grid md:grid-cols-2 md:space-x-4">  
     <div className="flex flex-col space-y-4">
       <div className="">
-        #### The Conference
+        #### FOSS4G Conference
+        ---
+        
+        FOSS4G is the acronym for Free and Open Source Software for Geospatial. It is the annual recurring global event hosted by [OSGeo](https://www.osgeo.org/), the non-profit organization that supports and promotes the collaborative development of free and open source geographic technologies and open geospatial data.
+        
+        The conference covers all kinds of topics related to geospatial information and earth observation openness from Software development to Transition to FOSS4G, Use cases and applications, Education and research and Open data.
+
+        This event is for all kinds of people interested in sharing experiences about maps, from developers who write code to users of geomatics software, people who make decisions, researchers, students and anyone who wants to learn, share and meet like GIS interested people.
+
+        It attracts over 1,000 practitioners and advocates for free and open source software for geospatial and the tendency is to increase this number every year. It is the main meeting place and educational outreach opportunity for OSGeo members, supporters and newcomers - to share and learn from one another in presentations, hands-on workshops and a conference exhibition.
+
+        For appreciating the quality and variety of the presentations, you can watch video recordings of past FOSS4G events on the [FOSS4G YouTube channel](https://www.youtube.com/c/FOSS4G/)
+
+        #### Who hosts the event?
         ---
 
-        FOSS4G is an international conference that brings together experts, developers and enthusiasts of open source geospatial technology.
-        This annual event, organized by [OSGeo](https://www.osgeo.org/) and with more than 15 years of experience, is the largest global meeting of geospatial software.
+        FOSS4G is hosted by the Open Source Geospatial Foundation (OSGeo), in collaboration with the local community. OSGeo was founded to support and build the highest-quality open source geospatial software, and is the host of the annual FOSS4G global event.
 
-        It serves as a platform to share knowledge, experiences and advances in the field of geographic information systems (GIS) based on free software.
-        FOSS4G highlights the importance of collaboration, innovation and open access to geospatial tools, promoting an open and community-based approach to addressing geospatial challenges across diverse industries and communities.
+        The foundation's goal is to encourage the use and collaborative development of community-led projects, data development and education. Many important open source geospatial projects live under the [OSGeo umbrella](https://www.osgeo.org/).
 
       </div>
       <div>
 
-      <Image src={Foss4g2022OpeningSession} className="rounded-xl w-full" />
+
       </div>
 
     </div>
     <div className="flex flex-col space-y-4">
-      <div className="">
-        #### Our Vision
-        ---
-
-        In the exciting geospatial field, free and open source technologies are the key to driving innovation and democratizing access to powerful tools.
-        By adopting open source solutions, you not only encourage transparency and collaboration, but you break down barriers, allowing a wide range of users to participate in the development and improvement of geospatial platforms.
-
-      </div>
       <div>
-        #### OSGeo
+        #### Who attends FOSS4G?
         ---
 
-        The Open Source Geospatial Foundation was founded to support and build the highest-quality open source geospatial software. The foundation's goal is to encourage the use and collaborative development of community-led projects, data development and education. Many projects live under the [OSGeo umbrella](https://www.osgeo.org/).
+        Conference attendees are:
+        - Developers and Users of GeoSpatial Software
+        - Technical Leaders
+        - Private Companies
+        - Governmental Organizations
+        - Non-Governmental Organizations (NGO)
+        - Teachers and Education Professionals
+        - Scientific Communities and Researchers
       </div>
-      <div>
-        #### Innovation
-        ---
 
-        We understand and appreciate the importance of FOSS4G in giving voice to bold new ideas and developments in perfect harmony with the pillars of what open source for geospatial is, and that is why we promise workshops, talks and keynotes that will provoke your mind and give you hope for a better future.
+      <div>
+      #### What kind of topics are discussed?
+      ---
+
+      - Software status, new software/project development, benchmarking
+      - FOSS4G implementations in strategic application domains: land management, crisis/disaster response, smart cities, population mapping, climate change, ocean and marine monitoring, etc.
+      - Data visualization: spatial analysis, manipulation and visualization of geospatial data
+      - Data collection, data sharing, data science, open data, big data, data exploitation platforms
+      - Sensors, remote sensing, laser-scanning, structure from motion
+      - New trends: IoT, Indoor mapping, drones - UAV (unmanned aerial vehicle)-, Artificial intelligence - machine learning, deep learning-, geospatial data structures
+      - Open and reproducible science
+      - Standards, interoperability, SDIs
+      - Community & participatory FOSS4G
+      - FOSS4G at governmental institutions
+      - FOSS4G in education
+      - Business products powered by FOSS4G
+
       </div>
     </div>
 
   </div>
 
+<Heading bubble color="orange">
+  FOSS4G 2024 in Belém
+</Heading>
+
   <div className="grid md:grid-cols-2 md:space-x-4">
     <div className="flex flex-col space-y-4">
       <div className="">
-        #### Local Chapter Brasil + Geolibres
-        ---
 
-        On this occasion, the OSGeo Local Chapter of Brazil joins, which is dedicated to promoting and disseminating the use of open source geospatial software in the region; and the Asociación Civil Geolibres Argentina, a non-profit organization that has the same objectives, the adoption of geographic standards and the use of free and open source software, together they seek the development of geospatial information capabilities through actions that promote and strengthen the geomatics community.
-      </div>
-      <div>
-
-        #### Focus on Belém do Pará, Brazil.
-        ---
-
-        As Belém is one of the regional capitals of the Amazon, numerous NGOs and government
-        organizations have their headquarters to carry out spatial data collection and analysis
-        for sustainability purposes. These projects are related to the fight against deforestation
-        or the empowerment of indigenous communities with geospatial software adapted to
-        their needs. Our objective is to bring the indigenous agenda closer and make it present
-        at this event. Another of our objectives as a conference is to generate a safe space
-        to reduce the gender gap in the geospatial field, seeking the participation of women
-        and dissidents.
+        <div className="w-full">
+        <Carousel
+          images={[
+            {
+              image: Foss4gAr,
+              caption:
+                "FOSS4G AR 2017 in Buenos Aires, Argentina"
+            }
+          ]}
+          autoplay={true}
+          autoplayDelay={5000}
+        />
         </div>
+
+        #### Our Vision
+        ---
+
+        In the exciting geospatial field, free and open source technologies are the key to driving innovation and democratizing access to powerful tools.
+        By adopting open source solutions, you not only encourage transparency and collaboration, but you break down barriers, allowing a wide range of users to participate in the development and improvement of geospatial platforms.
       </div>
+    </div>
 
     <div>
       <div>
 
-      <Image src={Foss4gAr} className="rounded-xl w-full" />
+        #### Local chapters unite!
+        ---
+
+        In order to coordinate an event of such magnitude of FOSS4G 2024, an international collaboration has been formed between two organizations:
+
+        - **OSGeo Local Chapter of Brazil**, which is dedicated to promoting and disseminating the use of open source geospatial software in the region
+        - **Asociación Civil Geolibres Argentina**, a non-profit organization which promotes the adoption of geographic standards and the use of free and open source software
+        
+        Together they seek the development of geospatial information capabilities through actions that promote and strengthen the geomatics community, and look forward to welcoming participants for a successful FOSS4G event in Belém.
+
+        #### Focus on Belém do Pará, Brazil.
+        ---
+
+        As Belém is one of the regional capitals of the Amazon, numerous NGOs and government organizations have their headquarters to carry out spatial data collection and analysis for sustainability purposes. These projects are related to the fight against deforestation or the empowerment of indigenous communities with geospatial software adapted to their needs.
+        
+        Our objective is to bring the indigenous agenda closer and make it present at this event. Another of our objectives as a conference is to generate a safe space to reduce the gender gap in the geospatial field, seeking the participation of women and dissidents.
       </div>
     </div>
 
