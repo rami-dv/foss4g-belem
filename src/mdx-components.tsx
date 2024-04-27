@@ -5,6 +5,8 @@ import { useState } from "react";
 
 export function Carousel({
   images,
+  captions = false,
+  aspectRatio = "4/3",
   ...otherProps
 }: {
   images: Array<{
@@ -12,15 +14,25 @@ export function Carousel({
     caption?: string;
     attribution?: string;
   }>;
+  aspectRatio: "16/9" | "4/3" | "square";
+  captions: boolean;
 } & CarouselProps) {
   const [isAttrOpen, setIsAttrOpen] = useState(false);
+
+  const aspectClasses = {
+    "16/9": "aspect-video",
+    "4/3": "aspect-4/3",
+    "square": "aspect-square"
+  }
+
+  const captionClasses = captions ? "top-3/4": "bottom-4";
 
   return (
     // @ts-ignore
     <Carousel_
       className="rounded-xl shadow-lg"
       navigation={({ setActiveIndex, activeIndex, length }) => (
-        <div className="absolute top-3/4 sm:top-auto sm:bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+        <div className={`absolute ${captionClasses} sm:top-auto sm:bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2`}>
           {new Array(length).fill("").map((_, i) => (
             <span
               key={i}
@@ -39,7 +51,7 @@ export function Carousel({
           <Image
             src={image.image}
             alt={image.caption ?? "Image"}
-            className="h-full w-full min-h-80 aspect-3/4 sm:aspect-video object-cover"
+            className={`h-full w-full min-h-80 object-cover ${aspectClasses[aspectRatio]}`}
           />
 
           {image.caption && (

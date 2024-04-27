@@ -2,9 +2,14 @@ import Committees from "@/data/committees.json";
 import Image from "next/image";
 import Heading from "@/components/heading";
 import CommitteeImage from "@/images/committee.jpg";
-import Foss4gArImage from "@/images/foss4g-ar/foss4g-ar1.jpg";
+import Foss4gAr1 from "@/images/foss4g-ar/foss4g-ar1.jpg";
+import Foss4gAr2 from "@/images/foss4g-ar/foss4g-ar2.jpg";
+import Foss4gAr4 from "@/images/foss4g-ar/foss4g-ar4.jpg";
+import Foss4gAr5 from "@/images/foss4g-ar/foss4g-ar5.jpg";
+import Foss4gAr6 from "@/images/foss4g-ar/foss4g-ar6.jpg";
 import MdxLayout from "@/components/mdx-layout";
 import { useRouter } from "next/router";
+import { Carousel } from "@/mdx-components";
 
 export const metadata = {
   title: "Conference Committees",
@@ -18,10 +23,26 @@ export const metadata = {
 
 <div className="grid sm:grid-cols-2 gap-y-4 sm:gap-x-4">
   <div className="flex-grow">
-    <Image
-      alt="Conference Committee"
-      src={Foss4gArImage}
-      className="rounded-lg"
+    <Carousel
+      captions={false}
+      autoplay={true}
+      images={[
+        {
+          image: Foss4gAr4,
+        },
+        {
+          image: Foss4gAr1,
+        },
+        {
+          image: Foss4gAr5,
+        },
+        {
+          image: Foss4gAr2,
+        },
+        {
+          image: Foss4gAr6,
+        },
+      ]}
     />
   </div>
   <div className="flex-shrink">
