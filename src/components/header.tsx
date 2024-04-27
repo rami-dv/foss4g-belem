@@ -82,22 +82,10 @@ const menuItems = [
         href: "/schedule",
       },
       {
-        "label:en": "Business to Business (B2B)",
-        "label:es": "Empresa a Empresa (B2B)",
-        "label:pt": "Empresa a Empresa (B2B)",
-        href: "/b2b-dynamics",
-      },
-      {
-        "label:en": "GeoChicas & Meninas da Geo",
-        "label:es": "GeoChicas & Meninas da Geo",
-        "label:pt": "GeoChicas & Meninas da Geo",
-        href: "/geochicas-meninas-da-geo",
-      },
-      {
-        "label:en": "Community Code Sprint",
-        "label:es": "Community Code Sprint",
-        "label:pt": "Community Code Sprint",
-        href: "/community-code-sprint",
+        "label:en": "Additional Events",
+        "label:es": "Eventos Adicionales",
+        "label:pt": "Eventos Adicionais",
+        href: "/additional-events",
       },
       {
         "label:en": "Social Events",
@@ -119,7 +107,7 @@ const menuItems = [
     "label:pt": "Participando",
     links: [
       {
-        "label:en": "Venue",
+        "label:en": "Conference Venue",
         "label:es": "Lugar",
         "label:pt": "Lugar",
         href: "/venue",

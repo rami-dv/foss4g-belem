@@ -84,20 +84,10 @@ export const intlHrefs = {
     es: "/programa",
     pt: "/programa",
   },
-  "/b2b-dynamics": {
-    en: "/b2b-dynamics",
-    es: "/empresa-a-empresa-b2b",
-    pt: "/empresa-a-empresa-b2b",
-  },
-  "/geochicas-meninas-da-geo": {
-    en: "/geochicas-meninas-da-geo",
-    es: "/geochicas-meninas-da-geo",
-    pt: "/geochicas-meninas-da-geo",
-  },
-  "/community-code-sprint": {
-    en: "/community-code-sprint",
-    es: "/community-code-sprint",
-    pt: "/community-code-sprint",
+  "/additional-events": {
+    en: "/additional-events",
+    es: "/eventos-adicionales",
+    pt: "/eventos-adicionais",
   },
   "/social-events": {
     en: "/social-events",
