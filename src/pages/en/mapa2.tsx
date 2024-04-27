@@ -44,7 +44,6 @@ export default function IndexPage() {
   return (
     <div className="w-1/2">
       <GlobeGl
-        height="100%"
         globeImageUrl={GlobeImage.src}
         arcsData={routes}
         // @ts-ignore
