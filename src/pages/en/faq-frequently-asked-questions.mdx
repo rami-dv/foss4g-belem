@@ -38,6 +38,7 @@ export const metadata = {
     <FaqBubble question="What language is the conference?">
       In order to promote the maximum of international collaboration, the working language of the conference is in English. However, we will have various tracks in local languages, including Español and Português.
     </FaqBubble>
+
   </Column>
 
   <Column>
@@ -61,6 +62,16 @@ export const metadata = {
       you can find more information.
     </FaqBubble>
 
+    <FaqBubble question="Where can I find branding information for FOSS4G 2024?">
+      Branding guidelines and assorted FOSS4G 2024 logos can be found <IntlLink href="/branding">at our branding page</IntlLink>
+
+    </FaqBubble>
+
+    <FaqBubble question="Where can I find the Privacy Policy for the event?">
+      Our privacy policy <IntlLink href="/privacy-policy">can be found here </IntlLink>
+
+    </FaqBubble>
+
   </Column>
 
 </Grid>
@@ -75,9 +86,12 @@ export const metadata = {
 
     <FaqBubble question="What types of tickets will exist?">
       There will be different ticket prices depending on your place of
-      residence: Brazil (LOC), Argentina (LOC linebacker), Countries of
-      Latin America and the Caribbean (Regional), Countries that do not
-      include Latin America and the Caribbean (International)
+      residence:
+      
+      - Brazil (LOC)
+      - Argentina (LOC)
+      - Countries of Latin America and the Caribbean (Regional)
+      - Other Countries (International)
     </FaqBubble>
 
     <FaqBubble question="What is included in the ticket?">
@@ -103,6 +117,18 @@ export const metadata = {
       able to see the options and how many places are still available.
       Space in the training rooms is limited, so we can only offer a
       limited number of tickets.
+    </FaqBubble>
+
+    <FaqBubble question="I have someone accompanying me, do they need to register as well?">
+      Companions must be registered in the following cases: to participate
+      in the conference and if they wish to eat at the facilities.
+    </FaqBubble>
+
+    <FaqBubble question="Are food and lodging included in professional and corporate registration fees?">
+      Accommodation must be booked and paid for separately, but food is
+      included in the registration fee. To see more information about
+      where you can find accommodation, please see the 
+      <IntlLink href="/visiting-belem">Visiting Belém</IntlLink> page
     </FaqBubble>
 
   </Column>
@@ -136,7 +162,7 @@ export const metadata = {
       - [CafePress](https://www.cafepress.com/shop/FOSS4G2024)
     </FaqBubble>
 
-    <FaqBubble question="Unexpected cancellation of the event or inability to carry it out">
+    <FaqBubble question="What happens if there is an unexpected cancellation of the event beyond our control?">
       In the unlikely event that FOSS4G 2024 cannot be held in whole or in
       part due to any event beyond the control of the Organizers or force
       majeure (such as riots, fires, explosions, accidents, floods,
@@ -146,39 +172,7 @@ export const metadata = {
       or indirect loss or consequential damage.
     </FaqBubble>
 
-  </Column>
-
-</Grid>
-
-<Heading color="red">Accommodation Questions</Heading>
-
-<Grid>
-  <Column>
-    <FaqBubble question="Are food and lodging included in professional and corporate registration fees?">
-      Accommodation must be booked and paid for separately, but food is
-      included in the registration fee. To see more information about
-      where you can find accommodation, check out the{" "}
-      <IntlLink href="/accommodation">Accommodation</IntlLink> page
-    </FaqBubble>
-
-    <FaqBubble question="I have someone accompanying me, do they need to register as well?">
-      Companions must be registered in the following cases: to participate
-      in the conference and if they wish to eat at the facilities.
-    </FaqBubble>
-
-    <FaqBubble question="What are the options for getting around?">
-      The Hangar Center is located 5km from Belém International Airport, a
-      9-minute drive by car. There is also the option of a public bus
-      (line 643 - 631), with a journey of 29 minutes. From the
-      International Airport to the center of Belém, it is 9 km, by car 22
-      minutes, and by public transportation, 31 minutes (line 889 or 869).
-    </FaqBubble>
-
-  </Column>
-
-  <Column>
     <FaqBubble question="Are there any options for child care?">
-
       Everyone is welcome to attend and we encourage friends or family
       who may have some interest in joining our community to also
       register for the conference.
@@ -198,7 +192,7 @@ export const metadata = {
 
 </Grid>
 
-<Heading color="red">Useful Information</Heading>
+<Heading color="red">Questions about Belém</Heading>
 
 <Grid>
   <Column>
@@ -206,10 +200,19 @@ export const metadata = {
       You can find a map of the facilities and surrounding area <IntlLink href="/map">on the "Map" page</IntlLink>
     </FaqBubble>
 
-    <FaqBubble question="What are the payment options at local stores and restaurants?">
-      Credit cards are accepted in supermarkets. Small stores only accept
-      cash. Restaurants usually accept cards, while most cafes accept cash
-      or credit cards. The currency is Brazilian Real (BRL).
+
+    <FaqBubble question="What languages are spoken in Belém?">
+      The official language of Brasil is Brazilian Portuguese and it is spoken by 98% of Brasil's diverse population. Within Brasil there exists dozens of indigenous and regional languages, in various pockets throughout the country.
+
+      While Brazilians do love international, English-speaking artists, English is not commonly spoken anywhere in the country outside of very specific places and only to a limited capacity.
+    </FaqBubble>
+
+    <FaqBubble question="What are the options for transport within Belém?">
+      For a comfortable, easy, familiar, and reasonably affordable transport option, we recommend rideshare apps such as Uber, Cabify, or 99, which all function in the city.
+
+      There also exists the option of public transport, which is plentiful and very affordable. A bus fare can be expected to be anywhere between 2 and 8 Reais for transport within the city, depending on the distance covered and the particular service chosen. Transit directions are availble in various mobile apps, and more details about bus services can be found [at the official website](https://semob.belem.pa.gov.br/linhas/).
+
+      Finally, in Belém exists an expansive network of bicycle paths, which is a great option to explore the city. Please refer to the [Bicycle Network Map](https://semob.belem.pa.gov.br/wp-content/uploads/2021/03/Mapa_Rede_Cicloviaria_Realistico-2019.pdf) for more details
     </FaqBubble>
 
     <FaqBubble question="Is tap water drinkable?">
@@ -219,7 +222,9 @@ export const metadata = {
     </FaqBubble>
 
     <FaqBubble question="What are the suggested restaurants and pubs in Belem?">
-      Some of the best restaurants and pubs in Belém can be found [here](https://www.tripadvisor.com/Restaurants-g303404-zfg11776-Belem_State_of_Para.html), according to TripAdvisor.
+      Belém is a vibrant city full of culture, and there are many restaurants and bars to be found throughout the city, of many different types.
+      
+      The conference committee does not have a particular list to recommend, but you can browse the establishments <IntlLink href="/map">on the map</IntlLink>, or can refer to the [TripAdvisor Page](https://www.tripadvisor.com/Restaurants-g303404-zfg11776-Belem_State_of_Para.html), for the best voted restaurants.
     </FaqBubble>
 
     <FaqBubble question="I'm worried about security. How should I behave?">
@@ -246,39 +251,34 @@ export const metadata = {
       - 191: Federal Highway Police
     </FaqBubble>
 
-    <FaqBubble question="Where can I find branding information for FOSS4G 2024?">
-      Branding guidelines and assorted FOSS4G 2024 logos can be found <IntlLink href="/branding">at our branding page</IntlLink>
-
-    </FaqBubble>
-
-    <FaqBubble question="Where can I find the Privacy Policy for the event?">
-      Our privacy policy <IntlLink href="/privacy-policy">can be found here </IntlLink>
-
-    </FaqBubble>
 
   </Column>
 
   <Column>
-    <FaqBubble question="How does currency and exchange work in Belém?">
-      The currency of Brazil is the REAL (R$). It can be redeemed at
-      banks, exchange offices, travel agencies and authorized hotels. Most
-      companies that provide services to tourists accept international
-      credit cards. We leave the official premises to [exchange currency](https://belemtur.belem.pa.gov.br/casas-de-cambio/)
-      
+
+
+    <FaqBubble question="What are the payment options at local hotels, shops, and restaurants?">
+      Brazil's financial technology is quite advanced and widespread throughout the country, such that international credit cards are widely accepted, including at smaller establishments and even informal sellers on the street.
+
+      The vast majority of tourism infrastructure, including lodging, restaurants, and tourist attractions, will accept credit cards, therefore having cash is not totally necessary. However, it may be worth carring some local currency, just in case. The currency of Brazil is the Brazilian Real (BRL).
     </FaqBubble>
-    <FaqBubble question="Where can I get a SIM card in Belém?">
+
+    <FaqBubble question="How do I get access to Mobile Internet in Belém?">
+      For Brazilian visitors, all of the major phone carriers have quality mobile internet services inside the city of Belém.
+
+      For international visitors, we highly recommend activating international roaming on your phone plan, or if your phone has eSIM capabilities, purchasing a Brazilian eSIM. Belém's international airport has free unlimited WiFi to purchase and activate the eSIM on arrival.
+      
       Purchasing a SIM card as a foreigner in Brasil is unfortunately a
       complicated process, due to needing a CPF number, which is difficult
-      to obtain. We highly recommend either activating international
-      roaming on your phone plan, or purchasing a Brazilian eSIM before
-      arrival. We recommend purchasing an eSIM with a reputable company
-      such as [Airalo](https://www.airalo.com/)
+      to obtain. To see a variety of eSIM options, check out [the Brazil page at eSIMDB](https://esimdb.com/brazil).
     </FaqBubble>
+
     <FaqBubble question="Which power plugs and adapters work in Brazil?">
       Brazil uses outlet types C and N at a voltage of 127/220V and a
       frequency of 60 Hz. These are the same plugs as many European
       countries.
     </FaqBubble>
+
     <FaqBubble question="What are the options for healthcare if something were to happen during my visit?">
       As with travelling anywhere, it is recommended to take out
       international health insurance before your trip to Belém. In
