@@ -163,17 +163,17 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
-      <section className="relative flex items-center justify-center my-4 sm:mx-60">
+      <section className="relative flex items-center justify-center my-4 6xl:mx-60">
         <div className="grid grid-cols-1 sm:grid-cols-4 w-full py-4">
           <div
             className="flex sm:aspect-square sm:col-span-2 sm:row-span-2 bg-cover bg-no-repeat min-h-96"
             style={{ backgroundImage: `url(${RegisterImg.src})` }}
           >
             <div className="mt-10 sm:mt-20">
-              <div className="bg-[#ee6f2e] font-ubuntu [font-weight:500] p-[20px] inline text-3xl sm:text-[4rem] text-white">
+              <div className="bg-[#ee6f2e] font-ubuntu [font-weight:500] p-[20px] inline text-3xl 6xl:text-[4rem] text-white">
                 Register for the event
               </div>
-              <div className="sm:ml-72 mt-10">
+              <div className="6xl:ml-72 sm:ml-10 mt-10">
                 <Image
                   alt="White Arrows"
                   className="inline-block -rotate-90"
@@ -191,7 +191,7 @@ export default function IndexPage() {
             className="flex items-end sm:aspect-square bg-cover bg-no-repeat min-h-40"
             style={{ backgroundImage: `url(${OrangeBg.src})` }}
           >
-            <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
+            <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
               <IntlLink href="/code-of-conduct" className="non-standard">Code of Conduct</IntlLink>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function IndexPage() {
               <div className="mx-6 hidden sm:block">
                 <Image alt="White Arrows" className="block" src={WhiteArrows} />
               </div>
-              <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
+              <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
                 <IntlLink href="/visiting-belem" className="non-standard">Visiting Belém</IntlLink>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function IndexPage() {
             className="flex items-end sm:aspect-square bg-cover bg-no-repeat min-h-40"
             style={{ backgroundImage: `url(${GreenBg.src})` }}
           >
-            <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
+            <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
               <IntlLink href="/schedule" className="non-standard">Schedule</IntlLink>
             </div>
           </div>
@@ -217,7 +217,7 @@ export default function IndexPage() {
             className="flex items-end sm:aspect-square bg-cover bg-no-repeat min-h-40"
             style={{ backgroundImage: `url(${SocialEvents.src})` }}
           >
-            <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
+            <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
               <IntlLink href="/social-events" className="non-standard">Social Events</IntlLink>
             </div>
           </div>
