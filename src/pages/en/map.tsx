@@ -42,7 +42,7 @@ export default function Map() {
       <MapLibreMap
         ref={mapRef}
         minZoom={2}
-        maxZoom={17}
+        maxZoom={20}
         initialViewState={{
           bounds: [-48.508521, -1.481578, -48.437068, -1.410125],
         }}
@@ -257,7 +257,7 @@ const getMapStyle = ({
         id: "buildings",
         type: "fill",
         source: "overture",
-        "source-layer": "buildings/building",
+        "source-layer": "buildings",
         minzoom: 14,
         maxzoom: 20,
         paint: {
@@ -464,6 +464,7 @@ const getMapStyle = ({
         source: "lodging",
         minzoom: 10.5,
         layout: {
+          "visibility": "none",
           "symbol-sort-key": ["-", 1, ["get", "confidence"]],
           "icon-image": "lodging",
           "icon-size": [
@@ -653,6 +654,19 @@ const getMapStyle = ({
           "text-halo-color": "rgba(255,255,255,0.8)",
         },
       },
+      {
+        id: "lodging2",
+        type: "symbol",
+        source: "protomaps",
+        "source-layer": "pois",
+        layout: {
+          "text-field": "{name}",
+          "text-font": ["literal", ["Noto Sans Regular"]],
+          "icon-image": "lodging",
+          "icon-size": 0.2
+        },
+        filter: ["==", "pmap:kind", "hotel"]
+      }
     ],
   };
 };
