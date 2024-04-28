@@ -32,7 +32,7 @@ export default function IndexPage() {
       {/* Banner section */}
 
       <section
-        className="relative flex items-center justify-center sm:-mt-48 bg-center bg-cover bg-no-repeat py-[100px] sm:py-[250px] [clip-path:polygon(0_0,100%_1%,100%_100%,0_91%)]"
+        className="relative flex items-center justify-center sm:-mt-48 bg-center bg-cover bg-no-repeat pt-[60px] pb-[100px] sm:py-[250px] [clip-path:polygon(0_0,100%_0%,100%_100%,0_91%)]"
         style={{
           backgroundImage: `url(${HomepageBanner.src})`,
         }}
@@ -163,7 +163,7 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
-      <section className="relative flex items-center justify-center my-4">
+      <section className="relative flex items-center justify-center my-4 sm:mx-60">
         <div className="grid grid-cols-1 sm:grid-cols-4 w-full py-4">
           <div
             className="flex sm:aspect-square sm:col-span-2 sm:row-span-2 bg-cover bg-no-repeat min-h-96"
@@ -192,7 +192,7 @@ export default function IndexPage() {
             style={{ backgroundImage: `url(${OrangeBg.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
-              <IntlLink href="/code-of-conduct">Code of Conduct</IntlLink>
+              <IntlLink href="/code-of-conduct" className="non-standard">Code of Conduct</IntlLink>
             </div>
           </div>
           <div className="flex items-end sm:aspect-square bg-black min-h-40">
@@ -201,7 +201,7 @@ export default function IndexPage() {
                 <Image alt="White Arrows" className="block" src={WhiteArrows} />
               </div>
               <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
-                <IntlLink href="/where-to-stay">Where To Stay</IntlLink>
+                <IntlLink href="/visiting-belem" className="non-standard">Visiting Belém</IntlLink>
               </div>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function IndexPage() {
             style={{ backgroundImage: `url(${GreenBg.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
-              <IntlLink href="/schedule">Schedule</IntlLink>
+              <IntlLink href="/schedule" className="non-standard">Schedule</IntlLink>
             </div>
           </div>
           <div
@@ -218,7 +218,7 @@ export default function IndexPage() {
             style={{ backgroundImage: `url(${SocialEvents.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl sm:text-5xl m-6">
-              <IntlLink href="/social-events">Social Events</IntlLink>
+              <IntlLink href="/social-events" className="non-standard">Social Events</IntlLink>
             </div>
           </div>
         </div>
