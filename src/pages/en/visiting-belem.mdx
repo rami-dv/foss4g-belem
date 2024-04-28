@@ -1,9 +1,87 @@
 import MdxLayout from "@/components/mdx-layout";
+import { Carousel } from "@/mdx-components";
+import Heading from "@/components/heading";
+import GlobeMap from "@/components/GlobeMap";
+import Belem1 from "@/images/belem/belem1.jpg";
+import Belem2 from "@/images/belem/belem2.jpg";
+import Belem3 from "@/images/belem/belem3.jpg";
+import EstacaoDasDocas from "@/images/belem/estacao-das-docas.jpg";
+import ForteDoPresepio from "@/images/belem/forte-do-presepio.jpg";
+import Guindastes from "@/images/belem/guindastes.jpg";
+import Mercado from "@/images/belem/mercado.jpg";
+import TeatroDaPaz from "@/images/belem/teatro-da-paz.jpg";
+import VerOPeso from "@/images/belem/ver-o-peso.jpg";
 
 export const metadata = {
   title: "Getting To Belém!",
   description: null
 }
+
+<Carousel
+  images={[
+    {
+      image: Belem3,
+    },
+    {
+      image: VerOPeso
+    },
+    {
+      image: Belem2
+    },
+    {
+      image: TeatroDaPaz
+    },
+    {
+      image: EstacaoDasDocas
+    },
+    {
+      image: ForteDoPresepio
+    },
+    {
+      image: Mercado
+    },
+    {
+      image: Guindastes
+    }
+  ]}
+/>
+
+<Heading bubble>Welcome to Belém!</Heading>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div>
+    ##### History of Belém
+    ---
+
+    Belém was founded by the Portuguese in 1615 and became an important hub for the colonization of the Amazon region and the export of natural resources. During the rubber boom (1879-1912), the city experienced rapid growth and became a cosmopolitan center, attracting immigrants from Europe, Africa, and Asia.
+
+    In recent years, Belém has undergone significant urban development and revitalization efforts, including the restoration of historic buildings and the creation of new cultural and tourist attractions. Today, the city is a thriving cultural and economic center, known for its rich musical and artistic heritage, as well as its unique blend of indigenous, African, and European influences.
+
+    For more reading on Belém, the article about [Belém on Wikipedia](https://en.wikipedia.org/wiki/Bel%C3%A9m) is a great place to learn.
+
+    
+  </div>
+  <div>
+  ##### Geography of Belém
+    ---
+
+    Belém is a strategic hub in the Amazon region, serving as the capital of Pará state and the gateway to the Amazon River and its vast basin. Its location at the confluence of the Amazon and Tocantins rivers makes it a crucial transportation hub, connecting the region to the rest of Brazil and the world.
+
+    Geographically, Belém is situated in the eastern part of the Amazon basin, where the Amazon River meets the Guajará Bay, making it a bridge between the rainforest and the Atlantic Ocean. Its proximity to the equator and tropical climate make it an important center for agriculture, with crops like açaí, cocoa, and soybeans driving the local economy.
+  </div>
+</div>
+
+<Heading bubble>Getting to Belém</Heading>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div className="">
+  
+   <GlobeMap />
+  </div>
+  <div>
+  
+  </div>
+</div>
 
 ### What to Do in Belém
 
