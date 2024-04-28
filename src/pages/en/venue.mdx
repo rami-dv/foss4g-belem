@@ -1,6 +1,17 @@
 import MdxLayout, { ReactPlayer } from "@/components/mdx-layout";
+import Heading from "@/components/heading";
+import { Carousel } from "@/mdx-components";
+import Image from "next/image";
 import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
+
+import Hangar1 from "@/images/hangar/hangar1.jpg";
+import Hangar2 from "@/images/hangar/hangar2.jpg";
+import Hangar3 from "@/images/hangar/hangar3.jpg";
+import Hangar4 from "@/images/hangar/hangar4.jpg";
+import Hangar5 from "@/images/hangar/hangar5.jpg";
+import Hangar6 from "@/images/hangar/hangar6.jpg";
+import Hangar7 from "@/images/hangar/hangar7.jpg";
 
 export const metadata = {
   title: "Venue",
@@ -8,83 +19,102 @@ export const metadata = {
 };
 
 
+<Heading bubble>Conference Venue</Heading>
+
 <HangarVideo />
 
-Here are the locations at which various events in the conference will be held:
+<div className="grid grid-cols-12 my-4 gap-4">
+  <div className="col-span-5">
+  <div className="max-h-96">
+  <Carousel
+        images={[
+          {
+            image: Hangar1,
+          },
+          {
+            image: Hangar2,
+          },
+          {
+            image: Hangar3,
+          },
+          {
+            image: Hangar4,
+          },
+          {
+            image: Hangar5,
+          },
+          {
+            image: Hangar6,
+          },
+          {
+            image: Hangar7,
+          },
+        ]}
+        autoplay={true}
+        autoplayDelay={5000}
+      />
+      </div>
+  {/* <Image src={Hangar1} className="aspect-4/3 my-4 object-cover shadow rounded-lg" />
+  <Image src={Hangar2} className="h-72 my-4 object-cover shadow rounded-lg" />
+  <Image src={Hangar3} className="h-72 my-4 object-cover shadow rounded-lg" /> */}
 
-- Hangar Convenções & Feiras da Amazônia Belém
-  - Hangar Infrastructure \*
-  - Registration Desk
-  - Opening
-  - Violet room (safety point) \*
-  - Exhibition Area \*
-  - Catering Area
-  - Main Sessions
-  - AGM OSGeo
-  - Ice Break
-  - Gala Dinner
-  - Closing
-- Instituto Federal do Pará - IFPA (Pará&apos;s Federal Institute)
-  - IFPA Infrastructure \*
-  - Workshops
-  - CodeSprint
-- Beira-Rio Hotel
-  - B2B
-  - Geochicas and Meninas da Geo take Belém
+  </div>
+  <div className="col-span-7">
+    #### Hangar Convention Center
+    ---
 
-### Hangar Infrastructure
+    The venue for the majority of FOSS4G 2024 conference events is the Hangar Convention Center in Belém, Pará, Brasil. Hangar is a very large, air-conditioned space with a modular layout and various different event halls suitable for talks, expositions, and social gatherings.
 
-##### Accessibility
+    ##### Accessibility
 
-It includes areas of accessibility to serve people with disabilities or reduced mobility. The place was designed to guarantee inclusion and accessibility for all participants. Some of the available access areas may include access ramps, elevators, adapted toilets and spaces reserved for wheel stalls and parking with capacity for 800 cars.
+    It includes areas of accessibility to serve people with disabilities or reduced mobility. The place was designed to guarantee inclusion and accessibility for all participants. Some of the available access areas may include access ramps, elevators, adapted toilets and spaces reserved for wheel stalls and parking with capacity for 800 cars.
 
-##### Family Conciliation
+    ##### Family Conciliation
 
-Please note that everyone is welcome to attend and we encourage friends or family who may have some interest in joining our community that also registers for the conference.
+    Please note that everyone is welcome to attend and we encourage friends or family who may have some interest in joining our community that also registers for the conference.
 
-The security service is available on the FOSS4G with a limit of 30 children, only for 4 hours from 9 am to 12 pm or from 2 pm to 5 pm only available in the HANGAR facilities, only on mains sessions days.
+    The security service is available on the FOSS4G with a limit of 30 children, only for 4 hours from 9 am to 12 pm or from 2 pm to 5 pm only available in the HANGAR facilities, only on mains sessions days.
 
-For us to have a follow-up of those who need the service, for this reason we need you to sign up here:
+    For us to have a follow-up of those who need the service, for this reason we need you to sign up here:
 
-**Registration form coming soon!**
+    **Registration form coming soon!**
 
-Once we notify you that registration is open, you have time to register until **October 30, 2024**.
+    Once we notify you that registration is open, you have time to register until **October 30, 2024**.
 
-##### Languages
+    ##### Violet room (safety point)
 
-The resources of the team of volunteers and the organizing team, will have the language reference in which each person speaks.
-We will have a track in the local language (Portuguese).
+    A safe place managed by event organizers will be provided, where they can come to the rescue if they feel that they are suffering some type of harassment or arrest related to sex or gender, as well as if they are victims of any other type of aggression. Any affected person can go to this place, both to notify a controversial situation and to clarify doubts, and if they are answered, it will provide assistance and the necessary access to contact specialized services in matters that correspond to emergencies and/or personal skills.
+    The processing and information will be treated with due data protection and anonymously in any case.
+  </div>
+</div>
 
-##### Violet room (safety point)
+<div className="grid grid-cols-12 my-4 gap-4">
+  <div className="col-span-5">
+  
 
-A safe place managed by event organizers will be provided, where they can come to the rescue if they feel that they are suffering some type of harassment or arrest related to sex or gender, as well as if they are victims of any other type of aggression. Any affected person can go to this place, both to notify a controversial situation and to clarify doubts, and if they are answered, it will provide assistance and the necessary access to contact specialized services in matters that correspond to emergencies and/or personal skills.
-The processing and information will be treated with due data protection and anonymously in any case.
+  </div>
+  <div className="col-span-7">
+    ### Instituto Federal do Pará - IFPA Infrastructure
+  
+  
+    ##### Accessibility
 
-##### Exhibition Area
-
-The Exhibition Area, where you can find our sponsors and partners, is at the Main Building.
-
-##### Conference Badge
-
-Each registered participant goes to the counter by name to collect the conference pass. Participants are asked to wear the badge in all conference spaces and during social events.
-
-##### Conference Items
-
-You can remove the products that we give you with the purchase of your ticket, on the display of the conference items. All participants will receive a bottle of water and a free handbag, and perhaps any surprises?
-
-### Instituto Federal do Pará - IFPA Infrastructure
-
-##### Accessibility
-
-The institute has a bathroom suitable for students with disabilities or reduced mobility, an accessibility room, a pedagogical service room and an elevator. For more information visit: (https://belem.ifpa.edu.br/apresentacao-do-campus)[https://belem.ifpa.edu.br/apresentacao-do-campus]
+    The institute has a bathroom suitable for students with disabilities or reduced mobility, an accessibility room, a pedagogical service room and an elevator. For more information visit: [https://belem.ifpa.edu.br/apresentacao-do-campus](https://belem.ifpa.edu.br/apresentacao-do-campus)
+  </div>
+</div>
 
 
+    
 export const HangarVideo = () => {
   // have to set playbackRate after mount
   const videoRef = useRef(null);
 
   useEffect(() => {
     videoRef.current.playbackRate = 0.6;
+    videoRef.current.addEventListener("ended", function() {
+      videoRef.current.play();
+      setTimeout(() => {videoRef.current.pause()}, 1000)
+    })
     videoRef.current.play();
   }, []);
 
@@ -98,7 +128,6 @@ export const HangarVideo = () => {
         preload="auto"
         muted
         autoplay
-        loop
         src={`${useRouter().basePath}/images/hangar.webm`}
       ></video>
     </div>
