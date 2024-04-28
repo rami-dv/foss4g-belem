@@ -35,30 +35,13 @@ export default function GlobeMap() {
     dstAirport: belem["geometry"]["coordinates"],
   }));
 
-  console.log(belem);
-
   useEffect(() => {
-    setTimeout(() => {
-      setDimensions([
-        containerRef.current?.offsetHeight ?? 0,
-        containerRef.current?.offsetWidth ?? 0,
-      ]);
-      
-    }, 1000);
-
-    window.addEventListener("resize", (e) => {
-      setDimensions([
-        containerRef.current?.offsetHeight ?? 0,
-        containerRef.current?.offsetWidth ?? 0,
-      ]);
-
-    });
     // @ts-ignore
     globeRef?.current?.pointOfView({ lat: 5.382665, lng: -48.48028, altitude: 1.5 });
   }, []);
 
   return (
-    <div ref={containerRef} className="min-h-20 min-w-20 w-full h-full">
+    <div ref={containerRef} className="flex items-center justify-center w-full h-full">
       <GlobeGl
         // @ts-ignore
         ref={globeRef}
