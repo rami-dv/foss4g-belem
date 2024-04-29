@@ -278,15 +278,26 @@ export default function Header() {
                     key={menuItem.href}
                     className="flex flex-col border-b border-white/50 bg-f4g_red"
                   >
-                    <IntlLink
-                      className="non-standard"
-                      // @ts-ignore
-                      href={menuItem.href}
-                      onClick={
+                    {menuItem.href ? (
+                      <IntlLink
+                        className="non-standard"
                         // @ts-ignore
-                        () => setIsMenuOpen(false)
-                      }
-                    >
+                        href={menuItem.href}
+                        // @ts-ignore
+                        onClick={
+                          () => setIsMenuOpen(false)
+                        }
+                      >
+                        <div
+                          key={menuItem[labelLang]}
+                          className="px-4 py-2 bg-f4g_red text-white flex items-center"
+                        >
+                          <IoChevronForwardCircleSharp className="inline-block mr-2" />
+
+                          {menuItem[labelLang]}
+                        </div>
+                      </IntlLink>
+                    ) : (
                       <div
                         key={menuItem[labelLang]}
                         className="px-4 py-2 bg-f4g_red text-white flex items-center"
@@ -295,7 +306,7 @@ export default function Header() {
 
                         {menuItem[labelLang]}
                       </div>
-                    </IntlLink>
+                    )}
                   </div>
 
                   {menuItem.links && (
