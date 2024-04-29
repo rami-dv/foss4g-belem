@@ -124,7 +124,7 @@ const getMapStyle = ({
       protomaps: {
         type: "vector",
         attribution:
-          '<a href="https://github.com/protomaps/basemaps">Protomaps</a> | <a href="https://openstreetmap.org">OpenStreetMap</a>',
+          '<a href="https://github.com/protomaps/basemaps" target="_blank">Protomaps</a> | <a href="https://openstreetmap.org" target="_blank">OpenStreetMap</a>',
         url: "pmtiles://http://{basePath}/map/tiles/protomaps.pmtiles",
         minzoom: 9,
       },
@@ -133,6 +133,7 @@ const getMapStyle = ({
         url: "pmtiles://http://{basePath}/map/tiles/overture.pmtiles",
         minzoom: 8,
         maxzoom: 14,
+        attribution: '<a href="https://overturemaps.org" target="_blank">Overture Maps</a>'
       },
       worldcover: {
         type: "vector",
@@ -154,6 +155,7 @@ const getMapStyle = ({
           placesGeoJson as NamedFeatureCollection,
           featureState
         ),
+        attribution: '<a href="https://overturemaps.org" target="_blank">Overture Maps</a>'
       },
       bairros: {
         type: "geojson",
