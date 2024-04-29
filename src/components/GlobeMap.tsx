@@ -41,7 +41,7 @@ export default function GlobeMap() {
   }, []);
 
   return (
-    <div ref={containerRef} className="flex items-center justify-center w-full h-full">
+    <div ref={containerRef} className="">
       <GlobeGl
         // @ts-ignore
         ref={globeRef}

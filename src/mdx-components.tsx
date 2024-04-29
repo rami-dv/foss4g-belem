@@ -25,7 +25,7 @@ export function Carousel({
     "square": "aspect-square"
   }
 
-  const captionClasses = captions ? "top-3/4": "bottom-4";
+  const captionClasses = captions ? "top-6": "bottom-4";
 
   return (
     // @ts-ignore
@@ -51,7 +51,7 @@ export function Carousel({
           <Image
             src={image.image}
             alt={image.caption ?? "Image"}
-            className={`h-full w-full min-h-80 object-cover ${aspectClasses[aspectRatio]}`}
+            className={`w-full sm:h-full min-h-80 object-cover ${aspectClasses[aspectRatio]}`}
           />
 
           {image.caption && (

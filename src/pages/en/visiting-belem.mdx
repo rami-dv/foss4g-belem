@@ -1,6 +1,8 @@
 import MdxLayout from "@/components/mdx-layout";
 import { Carousel } from "@/mdx-components";
 import Heading from "@/components/heading";
+import { IntlLink } from "@/lib/language";
+import Image from "next/image";
 import GlobeMap from "@/components/GlobeMap";
 import Belem1 from "@/images/belem/belem1.jpg";
 import Belem2 from "@/images/belem/belem2.jpg";
@@ -11,42 +13,66 @@ import Guindastes from "@/images/belem/guindastes.jpg";
 import Mercado from "@/images/belem/mercado.jpg";
 import TeatroDaPaz from "@/images/belem/teatro-da-paz.jpg";
 import VerOPeso from "@/images/belem/ver-o-peso.jpg";
+import PracaBatistaCampos from "@/images/belem/praca-batista-campos.jpg";
+import CidadeVelha from "@/images/belem/cidade-velha.jpg";
+import PracaDoRelogio from "@/images/belem/praca-do-relogio.jpg";
+import AlmiranteBarroso from "@/images/belem/almirante-barroso.jpg";
+import Architecture from "@/images/belem/architecture.jpg";
 
 export const metadata = {
   title: "Getting To Belém!",
-  description: null
-}
+  description: null,
+};
 
 <Carousel
   images={[
     {
       image: Belem3,
+      attribution: "Cayambe CC-SA",
+      caption: "Beautiful Praça da República in Belém, Pará, Brasil",
     },
     {
-      image: VerOPeso
+      image: VerOPeso,
+      attribution: "Cayambe CC-SA",
+      caption: 'Famous "Ver-o-Peso" Market in Cidade Velha neighborhood',
     },
     {
-      image: Belem2
+      image: Belem2,
+      attribution: "Celeumo CC-BY",
+      caption: "Casa das Onze Janelas (House of 11 Windows)",
     },
     {
-      image: TeatroDaPaz
+      image: TeatroDaPaz,
+      attribution: "Fernando Stankuns CC-SA",
+      caption:
+        "Teatro Da Paz, built in 1878, with beautiful colonial architecture",
     },
     {
-      image: EstacaoDasDocas
+      image: EstacaoDasDocas,
+      attribution: "Cayambe CC-SA",
+      caption:
+        "Estação das Docas, originally a warehouse, is now a cultural tourism complex with a beautiful view",
     },
     {
-      image: ForteDoPresepio
+      image: ForteDoPresepio,
+      attribution: "Virgilinojuca CC-BY",
+      caption:
+        "Forte do Presépio, a historic fort built in 1616, is full of history.",
     },
     {
-      image: Mercado
+      image: Mercado,
+      attribution: "Cayambe CC-SA",
+      caption: "Scenes from downtown Belém Brasil",
     },
     {
-      image: Guindastes
-    }
+      image: Guindastes,
+      attribution: "Emerson Pardo CC-SA",
+      caption: "Amazon sunset at the port of Belém Brasil",
+    },
   ]}
 />
 
-<Heading bubble>Welcome to Belém!</Heading>
+<Heading bubble>About Belém</Heading>
 
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
   <div>
@@ -59,7 +85,6 @@ export const metadata = {
 
     For more reading on Belém, the article about [Belém on Wikipedia](https://en.wikipedia.org/wiki/Bel%C3%A9m) is a great place to learn.
 
-    
   </div>
   <div>
   ##### Geography of Belém
@@ -68,216 +93,134 @@ export const metadata = {
     Belém is a strategic hub in the Amazon region, serving as the capital of Pará state and the gateway to the Amazon River and its vast basin. Its location at the confluence of the Amazon and Tocantins rivers makes it a crucial transportation hub, connecting the region to the rest of Brazil and the world.
 
     Geographically, Belém is situated in the eastern part of the Amazon basin, where the Amazon River meets the Guajará Bay, making it a bridge between the rainforest and the Atlantic Ocean. Its proximity to the equator and tropical climate make it an important center for agriculture, with crops like açaí, cocoa, and soybeans driving the local economy.
+
   </div>
 </div>
 
 <Heading bubble>Getting to Belém</Heading>
 
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <div className="">
-  
+  <div className="flex items-center justify-start flex-col">
    <GlobeMap />
+   <div className="text-center italic text-sm">(map: of most trafficked air routes to Belém)</div>
   </div>
   <div>
-  
+    ##### Arriving by air
+    ---
+
+    Belém's Val-de-Cans International Airport is a medium-sized international airport with many direct flights from within Brazil and from other countries.
+
+    The direct international connections are as follows:
+    - FLL (Fort Lauderdale, USA) - Azul Airlines
+    - LIS (Lisbon, Portugal) - TAP Portugal
+    - PBM (Paramaribo, Suriname) - Gol Airlines
+    - CAY (Cayenne, French Guyana) - Air France
+
+    ##### Arriving by sea
+    ---
+
+    In addition to access by air, Belém has an excellent infrastructure for river transport. El Puerto de Belém connects with several other destinations in the north of Brazil, such as Manaos, Santarém and Macapá.
+
+    To enter Belém do Pará by sea, there are two main entry points:
+
+     - **Puerto de Belém**: Belém has an important commercial port, so arriving by sea directly to this port is a common option.
+     - **Puerto de Val de Cans**: this is the port of Belém that receives passenger and tourist boats.
+
   </div>
 </div>
 
-### What to Do in Belém
-
-#### Walk through the Forte do Presépio and the Feliz Lusitânia Tourist Complex
-
-An attraction in Belém, in the Casco Antiguo, is the Fort of the Presépio, also called Fort of the Castle of Belém, built in 1616.
-In the future the first chapel of Belém was built. It was a temporal structure and was dedicated to Our Lady of Gracia, and a few years later it was moved to the current Largo da Sé, and became the Cathedral of Our Lady of Gracia in it. siglo XVIII.
-Feliz Lusitânia is the historic center of this municipality, located in the district of Cidade Velha, a port and tourist area restored in 2002 by the Government of the State of Pará, when the city went through a process of historic urban decay. due to verticalization.
-
-The **Museu do Encontro**, Inside the Forte do Presépio, it is a gem to see.
-
-There you will find a beautiful collection of very rare Tapajonic and Marajoara ceramics, prior to the arrival of the Portuguese. In addition to other architectural remains from different periods of the fortress.
-
-#### Estação das Docas
-
-The Docas Station is one of the must-see attractions in Belém. The tourist and gastronomic complex occupies 500 meters of the river bank of the old port of Belém, built in the 19th century.
-Warehouse 1 was renamed Boulevard das Artes, warehouse 2 became Boulevard da Gastronomía and warehouse 3 is known as Boulevard das Ferias y Expósitos.
-The edge of the complex, a place where visitors can enjoy the beautiful view of Guajará Bay, is also the space where free cultural presentations are held such as the Pôr do som projects, singing on the edge, Rock on the edge, Estação Junina , Estação Natal, New Year's Eve at Docas and special programs.
-
-The Orla a Entardecer river ride, the best boat ride in Belém, departs from Estação das Docas from Tuesday to Sunday at 5:30 p.m.
-
-The route is very touristy but at the same time it is very interesting to take a trip through the rhythms of Pará and the north of Brazil.
-Two musicians are in charge of rocking the dancers and passengers. In addition to the typical songs that serve as the background to the dances, they also show some of their work during breaks.
-
-You can read more at their [official website](https://www.valeverdeturismo.com.br/belem-para-amazonia)
-
-
-### Getting to Belém
-
-#### By Air
-
-
-[Val de Cães (BEL) International Airport](https://en.wikipedia.org/wiki/Bel%C3%A9m/Val-de-Cans_International_Airport) is a medium-sized international airport in Brazil. 
-
-For people coming from outside Brazil, there are 4 regular non-stop flights to and from BEL:
-
-- Lisbon (Portugal)
-- Fort Lauderdale (USA)
-- Cayenne (French Guiana)
-- Paramaribo (Suriname)
-
-There are 21 different direct flight options coming from inside Brazil, some can also be used for international connections, including:
-
-- São Paulo
-- Rio de Janeiro
-- Fortaleza
-- Recife
-- Brasilia
-
-[The map containing all the destinations can be checked here](https://www.flightradar24.com/data/airports/bel/routes).
-
-Prices vary according to their origin and the stops that occur in flights. There are tickets for USD 600 from Latin American countries with one or more stops, or for USD 1500, from Tokyo, Japan.
-
-Telephone contact: +55 (91) 3210-6000
-
-#### By sea
-
-In addition to access by air, the city has an excellent structure for river transport. El Puerto de Belém connects with several other destinations in the north of Brazil, such as Manaos, Santarém and Macapá.
-
-To enter Belém do Pará by sea, there are two main entry points:
-
-- **Puerto de Belém**: Belém has an important commercial port, so arriving by sea directly to this port is a common option. Cargo boats and passengers can dock at the port of Belém, which is located in the center of the city.
-
-- **Puerto de Val de Cans**: this is the port of Belém that receives passenger and tourist boats. It is located about 10 kilometers from the center of the city and is where cruisers and some passenger boats land.
-
-Remember to bring the necessary documents to enter through customs: such as your valid passport, visa if necessary, boarding pass, among other documents.
-
-#### By car
-
-Belém do Pará has several ways of access by road from other parts of the country. However, since the city is located in the northern region of Brazil, main access from other countries by road usually involves entering from the borders with neighboring countries, especially from Suriname, Guyana and Venezuela.
-
-Here are some main border routes you could consider to enter Belém do Pará by road from other countries:
-- Frontera con Surinam (Oiapoque - Albina)
-- Frontera con Guyana (Bonfim - Lethem) 
-- Frontera con Venezuela (Pacaraima - Santa Elena de Uairén)
-
-For more information on border points and travel routes, we suggest using OpenStreetMap, as it provides specific directions to and from Belém do Pará.
-
-
-### Accommodation
-
-
-Belém, the charming city at the mouth of the Amazon River, has a variety of neighborhoods that offer different experiences for visitors. Here we present a list of the 6 best neighborhoods to stay, according to amenities, accessibility and attractions:
-
-#### Batista Campos
-
-Located in the center of the city, it is known for its tree-lined streets and peaceful atmosphere.
-Accommodation prices: From 30 to 100 USD per night, depending on the type of accommodation (hostels, boutique hotels).
-
-- ibis Styles Belem Batista Campos: USD 48 por noche
-- ibis Styles Belém do Pará: USD 84 por noche. 
-
-#### Nazareth
-
-Belém, the charming city at the mouth of the Amazon River, has a variety of neighborhoods that offer different experiences for visitors. Here we present a list of the 6 best neighborhoods to stay, according to amenities, accessibility and attractions:
-
-- ibis Styles Belem Nazaré: USD 62 per night
-- Radisson Hotel Belém: USD 138 per night
-
-#### Umarizal
-It is the city's financial district, with a wide range of accommodation options and a vibrant nightlife.
-Accommodation prices: From 40 to 150 USD per night, with a variety of hotels and apartments available.
-- Mercure Belem Boulevard: USD 138 per night
-- Bristol Umarizal Belem: USD 75 per night
-
-#### Campina
-Known for its colonial architecture and traditional atmosphere, it is ideal for those looking to immerse themselves in local culture.
-Accommodation prices: From 20 to 70 USD per night, with inns and small hotels that offer an authentic Amazonian experience.
-
-- Rede Andrade Docas: USD  54 per night
-- Hotel Princesa Louçã: USD 66 per night
-
-#### Marco
-This neighborhood offers a panoramic view of the Guamá River and is famous for its craft market.
-Accommodation prices: From 30 to 150 USD per night, with options ranging from inns to mid-range hotels.
-- Ibis Styles Belém Hangar: USD 133 per night
-- Rede Andrade Hangar: USD 45 per night
-
-#### Cidade Velha (Ciudad Vieja)
-It is the oldest neighborhood in Belém, with cobblestone streets and beautiful colonial churches.
-Accommodation prices: From 25 to 140 USD per night, with a variety of options that reflect the historic charm of the neighborhood.
-- Grand Mercure Belém do Pará: approximately USD 131 per night.
-- Hotel Sagres: approximately USD 97 per night.
-
-
-## What to do in Belém
-
-#### Walk through the Forte do Presépio and the Feliz Lusitânia Tourist Complex
-
-An attraction in Belém, in the Casco Antiguo, is the Fort of the Presépio, also called Fort of the Castle of Belém, built in 1616.
-In the future the first chapel of Belém was built. It was a temporal structure and was dedicated to Our Lady of Gracia, and a few years later it was moved to the current Largo da Sé, and became the Cathedral of Our Lady of Gracia in it. siglo XVIII.
-Feliz Lusitânia is the historic center of this municipality, located in the district of Cidade Velha, a port and tourist area restored in 2002 by the Government of the State of Pará, when the city went through a process of historic urban decay. due to verticalization.
-
-The **Museu do Encontro**, Inside the Forte do Presépio, it is a gem to see.
-
-There you will find a beautiful collection of very rare Tapajonic and Marajoara ceramics, prior to the arrival of the Portuguese. In addition to other architectural remains from different periods of the fortress.
-
-#### Estação das Docas
-
-The Docas Station is one of the must-see attractions in Belém. The tourist and gastronomic complex occupies 500 meters of the river bank of the old port of Belém, built in the 19th century.
-Warehouse 1 was renamed Boulevard das Artes, warehouse 2 became Boulevard da Gastronomía and warehouse 3 is known as Boulevard das Ferias y Expósitos.
-The edge of the complex, a place where visitors can enjoy the beautiful view of Guajará Bay, is also the space where free cultural presentations are held such as the Pôr do som projects, singing on the edge, Rock on the edge, Estação Junina , Estação Natal, New Year's Eve at Docas and special programs.
-
-The Orla a Entardecer river ride, the best boat ride in Belém, departs from Estação das Docas from Tuesday to Sunday at 5:30 p.m.
-
-The route is very touristy but at the same time it is very interesting to take a trip through the rhythms of Pará and the north of Brazil.
-Two musicians are in charge of rocking the dancers and passengers. In addition to the typical songs that serve as the background to the dances, they also show some of their work during breaks.
-
-You can read more at their [official website](https://www.valeverdeturismo.com.br/belem-para-amazonia)
-
-
-## Guided Tours
-
-
-#### Ilha do Combu
-
-This charming tourist place has several restaurants and leisure spaces, where the public can enjoy a great meal and enjoy a swim in the river.
-A true experience in the Amazon Forest, just 15 minutes by boat from the capital.
-There you have a wide possibility of carrying out many activities:
-- restaurants local food
-- Ecological routes
-- local cocoa and chocolate experiences
-- accommodations
-
-For more info check out [this link](https://ilhadocombu.tur.br/travessia/)!
-
-#### Excursion to Ilha do Mosqueiro river beach with lunch
-
-Travel 80 kilometers outside Belém and discover the bucolic island of Mosqueiro. Relax and refresh yourself by swimming in the calm waters of the Pará River, one of the branches of the Amazon River. Savor an included lunch while you're on the island.
-
-For more info check out [this link](https://www.getyourguide.es/belem-brasil-l32400/belem-excursion-a-la-playa-fluvial-de-ilha-do-mosqueiro-con-almuerzo-t385704/?ranking_uuid=889cf074-77e5-41d4-b3ff-eaf1d093c5a7)!
-
-#### Full-Day Boat Trip to Furos and Igarapé with Lunch
-
-Spend the day sailing along the Guamá and Acará rivers to explore the Belém promenade. Explore the natural channels between two rivers or lagoons, called furos, typical of northern Brazil. Visit a local river community to experience and learn what life by the river is like.
-
-For more info check out [this link](https://www.getyourguide.es/belem-brasil-l32400/belem-excursion-de-un-dia-en-barco-por-el-rio-con-almuerzo-t386462/?ranking_uuid=889cf074-77e5-41d4-b3ff-eaf1d093c5a7)!
-
-#### Marajó Island, in Pará: 3-hour excursion to the Icoaraci Ceramics
-
-The island of Marajó, in Pará, has a particular culture left by the ancestors of the region and some customs that were formed by the local population over the years. Visit the numerous shops full of pottery, and observe the entire ceramic production process: from the extraction of the clay and its modeling, to the final product. He admires the enormous variety of styles and colors, including reproductions of Marajoara and Tapajônica pieces, and stylized manganese-coated pieces.
-Its attractions involve nature and the local way of life, which you will learn about in this post about what to do on the island of Marajó.
-
-For more info check out [this link](https://www.getyourguide.es/belem-brasil-l32400/desde-belem-excursion-de-3-horas-a-la-ceramica-icoaraci-t385722/?ranking_uuid=889cf074-77e5-41d4-b3ff-eaf1d093c5a7)!
-
-#### Atalaia Beach - Salinópolis
-
-A sea of warm waters, lagoons to cool off in sweet water and a wide strip of clear sand that changes size and shape depending on the tide. This is Praia do Atalaia, a prominent point in the city of Salinópolis, in Pará, and one of the best beaches in the state. The playa is about 200 km from Belém.
-In the surrounding areas there are some hotels, inns and houses, as well as, of course, busy kiosks and beach huts, which serve delicious local cuisine, fish and seafood.
-
-#### Santarém, Alter do Chão Beach
-
-Every time you search on the Internet about Alter do Chão you will find sensational images of Ilha do Amor, which is a great postcard of this small town on the outskirts of Pará, but there are many more beaches in Alter do Chão. that you can discover and enjoy during your stay in what is called the Amazon Caribbean.
-From August onwards, with a significant reduction in the amount of rain, the water began to recede and open fringes of sand on Ilha do Amor and in all the other beaches in the region.
-
+<Heading bubble>Accommodation</Heading>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div className="order-last 6xl:order-first">
+   ##### Neighborhoods of Belém
+   ---
+
+Belém, the charming city at the mouth of the Amazon River, has a variety of neighborhoods that offer different experiences for visitors. Here we present a list of the 5 best neighborhoods to stay, according to amenities, accessibility and attractions:
+
+- **Batista Campos**: Located in the center of the city, it is known for its tree-lined streets and peaceful atmosphere.
+- **Campina**: Known for its colonial architecture and traditional atmosphere, it is ideal for those looking to immerse themselves in local culture.
+- **Marco**: This neighborhood offers a panoramic view of the Guamá River and is famous for its craft market.
+- **Cidade Velha**: It is the oldest neighborhood in Belém, with cobblestone streets, beautiful colonial churches, and lots of historic charm.
+- **Umarizal**: It is the city's financial district, with a wide range of accommodation options and a vibrant nightlife.
+
+##### Hotels
+
+---
+
+With a wide variety of hotels at a range of price points, there's something for everyone in Belém. While we are not recommending any particular hotels for conference attendees, you can refer to the interactive <IntlLink href="/map">Conference Map</IntlLink> to see the various neighborhoods and the hotels they contain.
+
+  </div>
+  <div className="order-first 6xl:order-last">
+<Carousel
+  captions={true}
+  images={[
+    {
+      image: PracaBatistaCampos,
+      caption: "Beautiful green Praça Batista Campos",
+      attribution: "Luiz Pantoja CC-SA"
+    },
+    {
+      image: CidadeVelha,
+      caption: "Cidade Velha (Old City)",
+      attribution: "Lgjunior CC-SA"
+    },
+    {
+      image: Architecture,
+      caption: "Beautiful colonial architecture in Cidade Velha",
+      attribution: "Celso Abreu CC-SA"
+    },
+    {
+      image: PracaDoRelogio,
+      caption: "Praça Siqueira Campos in Campina neighborhood",
+      attribution: "Cayambe CC-SA"
+    },
+    {
+      image: AlmiranteBarroso,
+      caption: "Avenida Almirante Barroso in Marco neighborhood",
+      attribution: "Roberto de vasconcel CC-SA"
+    }
+  ]}
+/>
+  </div>
+</div>
+
+<Heading bubble>What to do in Belém</Heading>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div className="">
+    <Image src={ForteDoPresepio} className="rounded-lg w-full aspect-4/3" />
+    #### Forte do Presépio
+    ---
+
+    Forte do Presépio is a historic fort that holds great significance Brazil's colonial past. Built in 1616 by Francisco Caldeira Castelo Branco, it was the first fortified structure in the Amazon region and played a crucial role in the Portuguese colonization of Brazil.
+    
+    The fort was strategically situated at Maúri Point, where the Amazon River meets the Guajará Bay, allowing it to control the entrance to the Amazon River and protect the city from foreign invasions. Throughout its history, the fort has served as a military base, hospital, arsenal, and even a prison, and has undergone several reconstructions.
+    
+    Today, it is a testament to the rich history and cultural heritage of Belém and the Amazon region, and is a popular tourist attraction and national historic landmark.
+
+    In addition, the **Museu do Encontro**, inside the Forte do Presépio, it is a gem to see. There you will find a beautiful collection of very rare Tapajonic and Marajoara ceramics, prior to the arrival of the Portuguese. 
+  </div>
+
+  <div className="">
+    <Image src={EstacaoDasDocas} className="rounded-lg w-full aspect-4/3" />
+    #### Estação das Docas
+    ---
+
+    The Estação das Docas (Dock Station) is one of the must-see attractions in Belém. The touristic complex occupies 500 meters of the river bank of the old port of Belém, built in the 19th century.
+
+    Once a major commercial port, the docks were abandoned and left in disrepair until a thorough renovation restored them to their former glory. Today, the Estação das Docas complex is a popular destination for both locals and tourists, offering a variety of attractions, including restaurants, bars, shops, and cultural spaces. 
+
+    Visitors can enjoy stunning views of the Guajará Bay, take a boat tour of the Amazon River, or explore the nearby historic center of Belém. The complex also hosts various events and festivals throughout the year, showcasing the region's rich cultural heritage and making it a must-visit destination in Belém.
+
+    In addition, the Orla a Entardecer river ride, the best boat ride in Belém, departs from Estação das Docas from Tuesday to Sunday at 5:30 p.m. The route is very touristy but at the same time it is very interesting to take a trip through the rhythms of Pará and the north of Brazil.
+
+    You can read more at their [official website](https://www.valeverdeturismo.com.br/belem-para-amazonia)
+  </div>
+
+</div>
 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
 }
