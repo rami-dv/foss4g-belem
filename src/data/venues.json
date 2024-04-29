@@ -40,19 +40,6 @@
         "type": "Point",
         "coordinates": [-48.456831, -1.421827]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "icon": "estacao-das-docas",
-        "name": "Estação das Docas",
-        "label": "Estação das Docas",
-        "sublabel": "Dec 05: Jantar de Gala"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-48.50063, -1.449435]
-      }
     }
   ]
 }
