@@ -19,7 +19,7 @@ export default function GlobeMap() {
   // @ts-ignore
   const globeRef = useRef();
 
-  const [dimensions, setDimensions] = useState([400, 400]);
+  const [dimensions, setDimensions] = useState([360, 360]);
 
   const belem = Airports.features.find(
     (feat) => feat.properties["code"] == "BEL"
@@ -36,12 +36,28 @@ export default function GlobeMap() {
   }));
 
   useEffect(() => {
+    
+    setTimeout(() => {
+      setDimensions([
+        containerRef.current?.offsetHeight ?? 0,
+        containerRef.current?.offsetWidth ?? 0,
+      ]);
+      
+    }, 1000);
+
+    window.addEventListener("resize", (e) => {
+      setDimensions([
+        containerRef.current?.offsetHeight ?? 0,
+        containerRef.current?.offsetWidth ?? 0,
+      ]);
+
+    });
     // @ts-ignore
     globeRef?.current?.pointOfView({ lat: 5.382665, lng: -48.48028, altitude: 1.5 });
   }, []);
 
   return (
-    <div ref={containerRef} className="">
+    <div ref={containerRef} className="w-full h-full max-w-[500px] max-h-[500px]">
       <GlobeGl
         // @ts-ignore
         ref={globeRef}
