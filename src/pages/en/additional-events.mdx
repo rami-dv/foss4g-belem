@@ -8,6 +8,9 @@ import GeoChicas4 from "@/images/geochicas/geochicas4.jpg";
 import BeiraRio1 from "@/images/belem/beira-rio1.jpg";
 import BeiraRio2 from "@/images/belem/beira-rio2.jpg";
 import BeiraRio3 from "@/images/belem/beira-rio3.jpg";
+import CommunitySprint1 from "@/images/foss4g-2023/community-sprint1.jpg";
+import CommunitySprint2 from "@/images/foss4g-2023/community-sprint2.jpg";
+import CommunitySprint3 from "@/images/foss4g-2023/community-sprint3.jpg";
 import Image from "next/image";
 
 export const metadata = {
@@ -97,8 +100,6 @@ export const metadata = {
 
   </div>
 
-{" "}
-
 <div className="sm:col-span-5 rounded-lg overflow-hidden order-first sm:order-last">
   <div className="hidden sm:block">
 
@@ -132,10 +133,42 @@ export const metadata = {
 
 <div className="sm:grid sm:grid-cols-12 gap-4">
   <div className="col-span-5 rounded-lg overflow-hidden">
-    
+
+    <div className="hidden sm:block">
+      <Image src={CommunitySprint1} className="h-72 my-4 object-cover shadow rounded-lg" />
+      <Image src={CommunitySprint3} className="h-72 my-4 object-cover shadow rounded-lg" />
+    </div>
+    <div className="block sm:hidden my-2">
+      <Carousel
+        images={[
+          {
+            image: CommunitySprint1,
+          },
+          {
+            image: CommunitySprint3,
+          },
+          {
+            image: CommunitySprint2,
+          },
+        ]}
+        autoplay={true}
+        autoplayDelay={5000}
+      />
+    </div>
+
   </div>
   <div className="col-span-7">
-  
+    The FOSS4G Community Code Sprint is an event where developers, contributors, and users of geospatial open-source software come together to collaborate on coding projects. The event provides an opportunity for the community to gather, share ideas, and work together on specific projects or features, driving the development of geospatial technology forward.
+
+    During the code sprint, participants engage in intensive coding sessions, focusing on specific projects or tasks. The tasks which are worked on are determined by the participants themselves, with people both proposing code sprints and also offering themselves up to collaborate on other projects.
+
+    Code sprints at past FOSS4G conferences have been a resounding success, serving as a valuable opportunity for conference attendees to follow and connect with people who share a similar interest.
+
+    The Community Code Sprint is organized on an informal basis in the weeks and days leading up to the conference. Stay tuned to this page for more updates on the Code Sprint, which topics are to be worked on and how to join, in the weeks and months ahead.
+
+    In the meantime, you can refer to the [past conference CodeSprint pages](https://wiki.osgeo.org/wiki/FOSS4G_2022/Community_sprint) to give you an idea of what to expect.
+
+    The Code Sprint will be held **December 07-08, at the IFPA Campus Belém**, on the weekend after the main conference.
   </div>
 </div>
 
