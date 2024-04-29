@@ -24,18 +24,26 @@ export default function Popup({
   const padding = 6;
   const popupOffset = getPopupOffset({ iconAnchor, iconSize, padding });
 
+  const lonLat = [
+    Number(featLonLat.coordinates[0]),
+    Number(featLonLat.coordinates[1]),
+  ];
   return (
     <MapPopup
-      latitude={Number(featLonLat.coordinates[1])}
-      longitude={Number(featLonLat.coordinates[0])}
+      latitude={lonLat[1]}
+      longitude={lonLat[0]}
       offset={popupOffset as any}
       maxWidth={undefined}
       closeButton={type === "select"}
       closeOnClick={false}
       className="cursor-default"
     >
-      {feature.source == "lodging" && (
-        <LodgingPopupContent type={type} properties={feature.properties} />
+      {feature.layer.id == "lodging" && (
+        <LodgingPopupContent
+          type={type}
+          lonLat={lonLat}
+          properties={feature.properties}
+        />
       )}
       {feature.source == "venues" && (
         <VenuePopupContent type={type} properties={feature.properties} />
@@ -62,56 +70,76 @@ function VenuePopupContent({
 
 function LodgingPopupContent({
   type,
+  lonLat,
   properties,
 }: {
   type: "hover" | "select";
+  lonLat: [number, number];
   properties: GeoJSON.GeoJsonProperties;
 }) {
   const isHover = type === "hover";
 
-  const Image = () => null;
-  const NamePrice = () => (
-    <div className="flex space-x-2 mb-1 flex-nowrap justify-center">
+  const propRow = (label: string, key: string) => {
+    return key in properties ? (
+      <>
+        <div className="col-span-2">{label}</div>
+        <div className="col-span-4">{properties[key]}</div>
+      </>
+    ) : (
+      <></>
+    );
+  };
+
+  return (
+    <div className={"text-black -mx-1 -my-2 overflow-auto min-w-60"}>
       <div className="items-center text-xl whitespace-nowrap">
         {properties?.["name"]}
       </div>
-      <div className="flex items-center text-center leading-3 whitespace-nowrap">
-        {properties?.["price"]}
-        <br />
-        /night
-      </div>
-    </div>
-  );
 
-  return isHover ? (
-    <div className={"text-black -mx-1 -my-2 overflow-auto min-w-60"}>
-      <Image />
-      <NamePrice />
-
-      <div className="text-center border-t pt-1 italic">
-        (click for more information)
-      </div>
-    </div>
-  ) : (
-    <div className={"text-black -mx-1 -my-2 overflow-auto min-w-60"}>
-      <Image />
-      <NamePrice />
       <div className="">
-        <div className="flex w-full justify-center bg-slate-200 rounded overflow-hidden">
-          <a href={properties?.["website"]} target="_blank">
-            website
-          </a>
-          <span className="mx-1">|</span>
-          <a href={properties?.["booking"]} target="_blank">
-            booking.com
-          </a>
-          <span className="mx-1">|</span>
-          <a href={`tel:${properties?.["phone"]}`} target="_blank">
-            phone
-          </a>
-        </div>
+        <table className="border-separate border-spacing-1">
+          <tbody>
+            {"address" in properties && (
+              <tr>
+                <td className="align-top leading-4 font-bold">Address</td>
+                <td className="max-w-40 leading-4">{properties["address"]}</td>
+              </tr>
+            )}
+
+            {"phone" in properties && (
+              <tr>
+                <td className="align-top leading-4 font-bold">Phone</td>
+                <td className="max-w-40 leading-4">{properties["phone"]}</td>
+              </tr>
+            )}
+
+            {"website" in properties && (
+              <tr>
+                <td className="align-top leading-4 font-bold">Website</td>
+                <td className="max-w-40 leading-4 overflow-ellipsis overflow-hidden whitespace-nowrap">
+                  <a href={properties["website"]}>{properties["website"]}</a>
+                </td>
+              </tr>
+            )}
+
+            {"social" in properties && (
+              <tr>
+                <td className="align-top leading-4 font-bold">Social</td>
+                <td className="max-w-40 leading-4 overflow-ellipsis overflow-hidden whitespace-nowrap">
+                  <a href={properties["social"]}>{properties["social"]}</a>
+                </td>
+              </tr>
+            )}
+
+            <tr>
+              <td className="align-top leading-4 font-bold">Lon/Lat</td>
+              <td className="max-w-40 leading-4 overflow-ellipsis overflow-hidden whitespace-nowrap">
+                {lonLat[0].toPrecision(6)},{lonLat[1].toPrecision(6)}
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div className="pt-1">{properties?.["description"]}</div>
     </div>
   );
 }

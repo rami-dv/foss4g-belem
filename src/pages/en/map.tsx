@@ -9,7 +9,7 @@ import MapLibreMap, { isSameFeature, applyFeatureStates } from "@/lib/map";
 import Popup from "@/components/Popup";
 
 import venuesGeoJson from "@/data/venues.json";
-import lodgingGeoJson from "@/data/lodging.json";
+import placesGeoJson from "@/data/places.json";
 
 import { useState, useContext, useRef, useMemo } from "react";
 
@@ -147,10 +147,10 @@ const getMapStyle = ({
           featureState
         ),
       },
-      lodging: {
+      places: {
         type: "geojson",
         data: applyFeatureStates(
-          lodgingGeoJson as NamedFeatureCollection,
+          placesGeoJson as NamedFeatureCollection,
           featureState
         ),
       },
@@ -461,10 +461,9 @@ const getMapStyle = ({
       {
         id: "lodging",
         type: "symbol",
-        source: "lodging",
+        source: "places",
         minzoom: 10.5,
         layout: {
-          "visibility": "none",
           "symbol-sort-key": ["-", 1, ["get", "confidence"]],
           "icon-image": "lodging",
           "icon-size": [
@@ -528,6 +527,7 @@ const getMapStyle = ({
           "text-halo-blur": 0.5,
           "text-halo-color": "rgba(255,255,255,0.8)",
         },
+        filter: ["==", "category", "hotel"]
       },
       {
         id: "venues",
@@ -654,19 +654,6 @@ const getMapStyle = ({
           "text-halo-color": "rgba(255,255,255,0.8)",
         },
       },
-      {
-        id: "lodging2",
-        type: "symbol",
-        source: "protomaps",
-        "source-layer": "pois",
-        layout: {
-          "text-field": "{name}",
-          "text-font": ["literal", ["Noto Sans Regular"]],
-          "icon-image": "lodging",
-          "icon-size": 0.2
-        },
-        filter: ["==", "pmap:kind", "hotel"]
-      }
     ],
   };
 };
