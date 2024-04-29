@@ -219,9 +219,10 @@ const getMapStyle = ({
         },
       },
       {
-        id: "bairros",
+        id: "bairros-fill",
         type: "fill",
         source: "bairros",
+        minzoom: 12,
         paint: {
           "fill-color": "#d86e39",
           "fill-opacity": 0.3
@@ -449,6 +450,18 @@ const getMapStyle = ({
           ],
         },
       },
+
+      {
+        id: "bairros-border",
+        type: "line",
+        source: "bairros",
+        minzoom: 12,
+        paint: {
+          "line-color": "#d86e39",
+          "line-opacity": 0.8,
+          "line-width": 1.5
+        }
+      },
       {
         id: "roads_labels_major",
         type: "symbol",
@@ -558,10 +571,29 @@ const getMapStyle = ({
         },
       },
       {
+        id: "bairros-labels",
+        type: "symbol",
+        source: "protomaps",
+        "source-layer": "places",
+        minzoom: 12,
+        layout: {
+          "text-font": ["literal", ["Noto Sans SemiCondensed Regular"]],
+          "text-field": ["get", "name"],
+          "text-size": 14
+        },
+        paint: {
+          "text-color": "#552f27",
+          "text-halo-color": "#fff",
+          "text-halo-width": 2,
+          "text-halo-blur": 0.5
+        },
+        "filter": ["in", "name", "Cidade Velha", "Campina", "Umarizal", "Batista Campos", "Marco"],
+      },
+      {
         id: "venues",
         type: "symbol",
         source: "venues",
-        minzoom: 10.5,
+        minzoom: 12,
         layout: {
           "text-allow-overlap": true,
           "text-font": ["literal", ["Noto Sans SemiCondensed Regular"]],
@@ -682,6 +714,27 @@ const getMapStyle = ({
           "text-halo-color": "rgba(255,255,255,0.8)",
         },
       },
+      {
+        id: "airport",
+        type: "symbol",
+        source: "protomaps",
+        "source-layer": "pois",
+        layout: {
+          "icon-image": "airport",
+          "icon-size": 0.2,
+          "text-field": "Belém International Airport",
+          "text-font": ["literal", ["Noto Sans SemiCondensed Regular"]],
+          "text-size": 12,
+          "text-offset": [0,1],
+          "text-anchor": "top"
+        },
+        paint: {
+          "text-halo-width": 2,
+          "text-halo-blur": 1,
+          "text-halo-color": "rgba(255,255,255,0.8)"
+        },
+        "filter": ["==", "iata", "BEL"],
+      }
     ],
   };
 };
