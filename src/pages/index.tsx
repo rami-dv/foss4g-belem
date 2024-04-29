@@ -1,10 +1,15 @@
-import Head from "next/head";
-import { useEffect, useContext } from "react";
-import { useRouter } from "next/router";
-import { LanguageContext } from "@/lib/language";
+import { metadata } from "@/pages/en/index";
+
+export { metadata } from "@/pages/en/index";
 
 export default function IndexPage() {
-  
-
   return <></>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata,
+    },
+  };
 }
