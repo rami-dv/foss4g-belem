@@ -38,8 +38,8 @@ export default function Popup({
       closeOnClick={false}
       className="cursor-default"
     >
-      {feature.layer.id == "lodging" && (
-        <LodgingPopupContent
+      {feature.layer.id == "places" && (
+        <PlacesPopupContent
           type={type}
           // @ts-ignore
           lonLat={lonLat}
@@ -69,7 +69,7 @@ function VenuePopupContent({
   );
 }
 
-function LodgingPopupContent({
+function PlacesPopupContent({
   type,
   lonLat,
   properties,
@@ -98,50 +98,48 @@ function LodgingPopupContent({
         {properties?.["name"]}
       </div>
 
-      <div className="">
-        <table className="border-separate border-spacing-1">
-          <tbody>
-            {"address" in properties && (
-              <tr>
-                <td className="align-top leading-4 font-bold">Address</td>
-                <td className="max-w-40 leading-4">{properties["address"]}</td>
-              </tr>
-            )}
-
-            {"phone" in properties && (
-              <tr>
-                <td className="align-top leading-4 font-bold">Phone</td>
-                <td className="max-w-40 leading-4">{properties["phone"]}</td>
-              </tr>
-            )}
-
-            {"website" in properties && (
-              <tr>
-                <td className="align-top leading-4 font-bold">Website</td>
-                <td className="max-w-40 leading-4 overflow-ellipsis overflow-hidden whitespace-nowrap">
-                  <a href={properties["website"]}>{properties["website"]}</a>
-                </td>
-              </tr>
-            )}
-
-            {"social" in properties && (
-              <tr>
-                <td className="align-top leading-4 font-bold">Social</td>
-                <td className="max-w-40 leading-4 overflow-ellipsis overflow-hidden whitespace-nowrap">
-                  <a href={properties["social"]}>{properties["social"]}</a>
-                </td>
-              </tr>
-            )}
-
+      <table className="w-full border-separate border-spacing-1">
+        <tbody>
+          {"address" in properties && (
             <tr>
-              <td className="align-top leading-4 font-bold">Lon/Lat</td>
+              <td className="align-top leading-4 font-bold">Address</td>
+              <td className="max-w-40 leading-4">{properties["address"]}</td>
+            </tr>
+          )}
+
+          {"phone" in properties && (
+            <tr>
+              <td className="align-top leading-4 font-bold">Phone</td>
+              <td className="max-w-40 leading-4">{properties["phone"]}</td>
+            </tr>
+          )}
+
+          {"website" in properties && (
+            <tr>
+              <td className="align-top leading-4 font-bold">Website</td>
               <td className="max-w-40 leading-4 overflow-ellipsis overflow-hidden whitespace-nowrap">
-                {lonLat[0].toPrecision(6)},{lonLat[1].toPrecision(6)}
+                <a href={properties["website"]}>{properties["website"]}</a>
               </td>
             </tr>
-          </tbody>
-        </table>
-      </div>
+          )}
+
+          {"social" in properties && (
+            <tr>
+              <td className="align-top leading-4 font-bold">Social</td>
+              <td className="max-w-40 leading-4 overflow-ellipsis overflow-hidden whitespace-nowrap">
+                <a href={properties["social"]}>{properties["social"]}</a>
+              </td>
+            </tr>
+          )}
+
+          <tr>
+            <td className="align-top leading-4 font-bold">Lon/Lat</td>
+            <td className="max-w-40 leading-4 overflow-ellipsis overflow-hidden whitespace-nowrap">
+              {lonLat[0].toPrecision(6)},{lonLat[1].toPrecision(6)}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
