@@ -41,6 +41,7 @@ export default function Popup({
       {feature.layer.id == "lodging" && (
         <LodgingPopupContent
           type={type}
+          // @ts-ignore
           lonLat={lonLat}
           properties={feature.properties}
         />
@@ -78,6 +79,7 @@ function LodgingPopupContent({
   properties: GeoJSON.GeoJsonProperties;
 }) {
   const isHover = type === "hover";
+  if (properties === null) return;
 
   const propRow = (label: string, key: string) => {
     return key in properties ? (
@@ -92,7 +94,7 @@ function LodgingPopupContent({
 
   return (
     <div className={"text-black -mx-1 -my-2 overflow-auto min-w-60"}>
-      <div className="items-center text-xl whitespace-nowrap">
+      <div className="text-center font-ubuntu border-b border-gray-200 mb-2 text-xl whitespace-nowrap">
         {properties?.["name"]}
       </div>
 
