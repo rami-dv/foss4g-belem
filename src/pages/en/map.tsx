@@ -157,7 +157,7 @@ const getMapStyle = ({
       },
       bairros: {
         type: "geojson",
-        data: bairrosGeoJson as NamedFeatureCollection
+        data: bairrosGeoJson as NamedFeatureCollection,
       },
     },
     layers: [
@@ -225,8 +225,8 @@ const getMapStyle = ({
         minzoom: 12,
         paint: {
           "fill-color": "#d86e39",
-          "fill-opacity": 0.3
-        }
+          "fill-opacity": 0.3,
+        },
       },
       {
         id: "landuse_aerodrome",
@@ -459,8 +459,8 @@ const getMapStyle = ({
         paint: {
           "line-color": "#d86e39",
           "line-opacity": 0.8,
-          "line-width": 1.5
-        }
+          "line-width": 1.5,
+        },
       },
       {
         id: "roads_labels_major",
@@ -579,15 +579,23 @@ const getMapStyle = ({
         layout: {
           "text-font": ["literal", ["Noto Sans SemiCondensed Regular"]],
           "text-field": ["get", "name"],
-          "text-size": 14
+          "text-size": 14,
         },
         paint: {
           "text-color": "#552f27",
           "text-halo-color": "#fff",
           "text-halo-width": 2,
-          "text-halo-blur": 0.5
+          "text-halo-blur": 0.5,
         },
-        "filter": ["in", "name", "Cidade Velha", "Campina", "Umarizal", "Batista Campos", "Marco"],
+        filter: [
+          "in",
+          "name",
+          "Cidade Velha",
+          "Campina",
+          "Umarizal",
+          "Batista Campos",
+          "Marco",
+        ],
       },
       {
         id: "venues",
@@ -715,6 +723,38 @@ const getMapStyle = ({
         },
       },
       {
+        id: "attractions",
+        type: "symbol",
+        source: "protomaps",
+        "source-layer": "pois",
+        minzoom: 12,
+        layout: {
+          "icon-image": "star",
+          "icon-size": 0.2,
+          "text-field": ["get", "name"],
+          "text-font": ["literal", ["Noto Sans SemiCondensed Regular"]],
+          "text-size": 12,
+          "text-offset": [0, 1],
+          "text-anchor": "top",
+        },
+        paint: {
+          "text-halo-width": 2,
+          "text-halo-blur": 1,
+          "text-halo-color": "rgba(255,255,255,0.8)",
+        },
+        filter: [
+          "in",
+          "name",
+          "Mercado Ver-o-Peso",
+          "Estação das Docas",
+          "Casa das Onze Janelas",
+          "Forte do Castelo",
+          "Praça da República",
+          "Praça Dom Pedro 2",
+          "Centro Histórico de Belém"
+        ],
+      },
+      {
         id: "airport",
         type: "symbol",
         source: "protomaps",
@@ -725,16 +765,16 @@ const getMapStyle = ({
           "text-field": "Belém International Airport",
           "text-font": ["literal", ["Noto Sans SemiCondensed Regular"]],
           "text-size": 12,
-          "text-offset": [0,1],
-          "text-anchor": "top"
+          "text-offset": [0, 1],
+          "text-anchor": "top",
         },
         paint: {
           "text-halo-width": 2,
           "text-halo-blur": 1,
-          "text-halo-color": "rgba(255,255,255,0.8)"
+          "text-halo-color": "rgba(255,255,255,0.8)",
         },
-        "filter": ["==", "iata", "BEL"],
-      }
+        filter: ["==", "iata", "BEL"],
+      },
     ],
   };
 };
