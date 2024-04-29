@@ -75,35 +75,35 @@ export const metadata = {
 
 <Heading color="red">Local Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
-  {Committees["loc"].map((name) => (
-    <PhotoBubble committee="loc" name={name} key={name} />
+  {Committees["loc"].map((person) => (
+    <PhotoBubble committee="loc" person={person} key={person['name']} />
   ))}
 </div>
 
 <Heading color="orange">Academic Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
-  {Committees["academic"].map((name) => (
-    <PhotoBubble committee="academic" name={name} key={name} />
+  {Committees["academic"].map((person) => (
+    <PhotoBubble committee="academic" person={person} key={person['name']} />
   ))}
 </div>
 
 <Heading color="green">Program Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
-  {Committees["program"].map((name) => (
-    <PhotoBubble committee="program" name={name} key={name} />
+  {Committees["program"].map((person) => (
+    <PhotoBubble committee="program" person={person} key={person['name']} />
   ))}
 </div>
 
 <Heading color="blue">Sponsor Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
-  {Committees["sponsor"].map((name) => (
-    <PhotoBubble committee="sponsor" name={name} key={name} />
+  {Committees["sponsor"].map((person) => (
+    <PhotoBubble committee="sponsor" person={person} key={person['name']} />
   ))}
 </div>
 
-export const PhotoBubble = ({name, committee, ...otherProps}) => {
+export const PhotoBubble = ({person, committee, ...otherProps}) => {
   const basePath = useRouter().basePath;
-  const imgUrl = `${basePath ?? ""}/images/committees/${committee}/${slugify(name)}.jpg`
+  const imgUrl = `${basePath ?? ""}/images/committees/${committee}/${slugify(person['name'])}.jpg`
 
 const border = {
 "loc": "border-f4g_red",
@@ -114,11 +114,12 @@ const border = {
 
 return (
 
-<div key={name} {...otherProps}>
+<div key={person['name']} {...otherProps}>
 <div className={`aspect-square rounded-full hover:cursor-default border-4 ${border[committee]} overflow-hidden m-1 sm:m-2`}>
-<img width="512" height="512" src={imgUrl} alt={name} />
+<img width="512" height="512" src={imgUrl} alt={person['name']} />
 </div>
-<div className="text-ubuntu text-center">{name}</div>
+<div className="text-ubuntu text-center">{person['name']}</div>
+{person['role'] && <div className="text-ubuntu text-center text-xs">{person['role']}</div>}
 
   </div>
   )
@@ -128,8 +129,6 @@ return (
 export function slugify(str) {
   return str
     .toLocaleLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
     .replace(/\s/g, "-");
 }
 

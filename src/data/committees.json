@@ -1,50 +1,234 @@
 {
-  "academic": [
-    "Ana Carol Vizitim",
-    "Ana Larissa de Freitas",
-    "Carlos Grohman",
-    "Denize Monteiro Dos Anjos",
-    "Gustavo Baptista",
-    "Leticia Claro",
-    "Patricia Alves",
-    "Patricia Iribarrem",
-    "Rodrigo Smarzaro",
-    "Sergio Acosta y Lara",
-    "Tahisa Kuck",
-    "Vanessa Brum Bastos"
-  ],
   "loc": [
-    "Andrea Trovant",
-    "Ariel Anthieni",
-    "Carmen Diez",
-    "Felipe Barros",
-    "George Porto Ferreira",
-    "Gustavo Lopez",
-    "Horacio Castellaro",
-    "Julia Martinuzzi",
-    "Kauê de Moraes",
-    "Manuel Retamozo",
-    "Martin Dell Oro",
-    "Narcélio de Sá Pereira",
-    "Selene Yang",
-    "Tatiana Para",
-    "Walter Shilman"
+    {
+      "name": "Tatiana Pará",
+      "role": "Conference Chair"
+    },
+    {
+      "name": "Andrea Trovant",
+      "role": "Conference Co-Chair"
+    },
+    {
+      "name": "Ariel Anthieni",
+      "role": "Logistic Committee"
+    },
+    {
+      "name": "Lubia Vinhas",
+      "role": "Academic Track Chair"
+    },
+    {
+      "name": "Rodrigo Smarzaro",
+      "role": "Program Chair"
+    },
+    {
+      "name": "Selene Yang",
+      "role": "Diversity Team Chair"
+    },
+    {
+      "name": "Miriam Gonzalez",
+      "role": "Diversity Team Co-Chair"
+    },
+    {
+      "name": "Carmen Diez",
+      "role": "Diversity Team"
+    },
+    {
+      "name": "Narcélio De Sá Pereira",
+      "role": "Communication Chair"
+    },
+    {
+      "name": "Sidney Schaberle Goveia",
+      "role": "Communication Co-Chair"
+    },
+    {
+      "name": "Kauê de Moraes",
+      "role": "Communication Team"
+    },
+    {
+      "name": "Carlos Tamasauskas",
+      "role": "Fincance Committee"
+    },
+    {
+      "name": "George Porto Ferreira",
+      "role": "Sponsorship Chair"
+    },
+    {
+      "name": "Leandro França",
+      "role": "Sponsorship Co-Chair"
+    },
+    {
+      "name": "Horacio Castellaro",
+      "role": "Sponsorship Team"
+    },
+    {
+      "name": "Felipe Barros",
+      "role": "IT Team Chair"
+    },
+    {
+      "name": "Carlos Eduardo Mota",
+      "role": "IT Team Co-Chair"
+    },
+    {
+      "name": "Rami DV",
+      "role": "IT Team"
+    },
+    {
+      "name": "Walter Shilman",
+      "role": "IT Team"
+    },
+    {
+      "name": "Martin Dell Oro",
+      "role": "Communication Team"
+    },
+    {
+      "name": "Luiz Motta",
+      "role": "Articulador com Governo"
+    }
   ],
   "program": [
-    "Carlos Grohman",
-    "Carmen Diez",
-    "Leticia Claro",
-    "Miriam Gonzalez",
-    "Rodrigo Smarzaro",
-    "Rosa Aguilar Bolivar",
-    "Selene Yang",
-    "Walkiria Melo"
+    {
+      "name": "Rodrigo Smarzaro",
+      "role": null
+    },
+    {
+      "name": "Walkiria Melo",
+      "role": null
+    },
+    {
+      "name": "Rosa Aguilar Bolivar",
+      "role": null
+    },
+    {
+      "name": "Leticia Claro",
+      "role": null
+    },
+    {
+      "name": "Carlos Grohman",
+      "role": null
+    },
+    {
+      "name": "Luca Delucchi",
+      "role": null
+    },
+    {
+      "name": "Danilo Melo",
+      "role": null
+    },
+    {
+      "name": "Patricia Alvez",
+      "role": null
+    },
+    {
+      "name": "Hermínio Sabino",
+      "role": null
+    },
+    {
+      "name": "Aline Graziedei",
+      "role": null
+    },
+    {
+      "name": "Helton Nogueira",
+      "role": null
+    },
+    {
+      "name": "Andrés Velástegui",
+      "role": null
+    }
+  ],
+  "academic": [
+    {
+      "name": "Lubia Vinhas",
+      "role": null
+    },
+    {
+      "name": "Ana Carol Vizitim",
+      "role": null
+    },
+    {
+      "name": "Sergio Acosta y Lara",
+      "role": null
+    },
+    {
+      "name": "Silvana Camboim",
+      "role": null
+    },
+    {
+      "name": "Gustavo Baptista",
+      "role": null
+    },
+    {
+      "name": "Jamer Andrade da Costa",
+      "role": null
+    },
+    {
+      "name": "Patricia Alvez",
+      "role": null
+    },
+    {
+      "name": "Tahisa Kuck",
+      "role": null
+    },
+    {
+      "name": "Ana Larissa de Freitas",
+      "role": null
+    },
+    {
+      "name": "Patricia Iribarrem",
+      "role": null
+    },
+    {
+      "name": "Carlos Grohman",
+      "role": null
+    },
+    {
+      "name": "Leticia Claro",
+      "role": null
+    },
+    {
+      "name": "Denize Monteiro dos Anjos",
+      "role": null
+    },
+    {
+      "name": "Vanessa Brum Bastos",
+      "role": null
+    },
+    {
+      "name": "Andrés Velástegui",
+      "role": null
+    },
+    {
+      "name": "Taíssa Caroline Silva Rodrigues",
+      "role": null
+    },
+    {
+      "name": "Mariana Buzzi",
+      "role": null
+    },
+    {
+      "name": "Gilberto Camara",
+      "role": null
+    }
   ],
   "sponsor": [
-    "Horacio Castellaro",
-    "Leandro Franca",
-    "Luana",
-    "Steven Feldman",
-    "Walkiria Melo"
+    {
+      "name": "Horacio Castellaro",
+      "role": null
+    },
+    {
+      "name": "Leandro Franca",
+      "role": null
+    },
+    {
+      "name": "Luana",
+      "role": null
+    },
+    {
+      "name": "Steven Feldman",
+      "role": null
+    },
+    {
+      "name": "Walkiria Melo",
+      "role": null
+    }
   ]
 }
