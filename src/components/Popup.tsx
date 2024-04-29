@@ -1,6 +1,7 @@
 import { getPopupOffset } from "@/lib/map";
 import { IconAnchorType } from "@/lib/types";
 import { MapGeoJSONFeature } from "maplibre-gl";
+import { useState } from "react";
 import { Popup as MapPopup, SymbolLayer } from "react-map-gl/maplibre";
 
 export default function Popup({
@@ -78,6 +79,7 @@ function PlacesPopupContent({
   lonLat: [number, number];
   properties: GeoJSON.GeoJsonProperties;
 }) {
+  const [isLonLatCopied, setIsLonLatCopied] = useState(false);
   const isHover = type === "hover";
   if (properties === null) return;
 
@@ -93,7 +95,7 @@ function PlacesPopupContent({
   };
 
   return (
-    <div className={"text-black -mx-1 -my-2 overflow-auto min-w-60"}>
+    <div className={"text-black -mx-1 -my-2 overflow-auto min-w-64"}>
       <div className="text-center font-ubuntu border-b border-gray-200 mb-2 text-xl whitespace-nowrap">
         {properties?.["name"]}
       </div>
@@ -133,9 +135,22 @@ function PlacesPopupContent({
           )}
 
           <tr>
-            <td className="align-top leading-4 font-bold">Lon/Lat</td>
+            <td className="align-top leading-4 font-bold">Lat/Lon</td>
             <td className="max-w-40 leading-4 overflow-ellipsis overflow-hidden whitespace-nowrap">
-              {lonLat[0].toPrecision(6)},{lonLat[1].toPrecision(6)}
+              {`${lonLat[1].toPrecision(6)},${lonLat[0].toPrecision(6)}`}
+              <span
+                className="ml-1 hover:cursor-pointer"
+                onClick={() => {
+                  if (!isLonLatCopied) {
+                    navigator.clipboard.writeText(
+                      `${lonLat[1].toPrecision(6)},${lonLat[0].toPrecision(6)}`
+                    );
+                    setIsLonLatCopied(true)
+                  }
+                }}
+              >
+                {isLonLatCopied ? "(copied!)" : "(click to copy)"}
+              </span>
             </td>
           </tr>
         </tbody>
