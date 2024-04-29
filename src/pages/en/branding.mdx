@@ -39,3 +39,10 @@ export const metadata = {
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

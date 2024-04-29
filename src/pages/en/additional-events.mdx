@@ -11,8 +11,8 @@ import BeiraRio3 from "@/images/belem/beira-rio3.jpg";
 import Image from "next/image";
 
 export const metadata = {
-  title: "GeoChicas & Meninas da Geo Take Belém!",
-  description: null,
+  title: "Additional Events",
+  description: "Additional Events taking place at the FOSS4G 2024 conference, outside of the main conference.",
 };
 
 <Heading bubble>Additional Events</Heading>
@@ -156,4 +156,12 @@ export const metadata = {
 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }

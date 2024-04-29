@@ -14,7 +14,7 @@ import { Carousel } from "@/mdx-components";
 export const metadata = {
   title: "Conference Committees",
   description:
-    "Overview of the various committees of FOSS4G 2024 Belém, including the Local, Academic, Program, and Sponsor committees.",
+    "Overview of the various committees of FOSS4G 2024 Belém conference, including the Local, Academic, Program, and Sponsor committees.",
 };
 
 <Heading color="red" bubble>
@@ -135,4 +135,11 @@ export function slugify(str) {
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
+}
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }

@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import { NextPageContext } from 'next'
 import Head from "next/head";
 
 export default function MDXLayout({
@@ -19,3 +20,5 @@ export default function MDXLayout({
     </>
   );
 }
+
+

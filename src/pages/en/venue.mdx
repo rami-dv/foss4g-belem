@@ -19,7 +19,7 @@ import Ifpa3 from "@/images/belem/ifpa-belem3.jpg";
 
 export const metadata = {
   title: "Venue",
-  description: null,
+  description: "Venue information for the events at the FOSS4G 2024 conference in Belém Brasil.",
 };
 
 <Heading bubble>Conference Venue</Heading>
@@ -154,4 +154,12 @@ return (
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }

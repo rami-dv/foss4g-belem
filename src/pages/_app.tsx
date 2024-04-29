@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const router = useRouter();
   const isHomePage = router.asPath == "/";
+  const metadata = pageProps?.metadata;
 
   useEffect(() => {
     if (router.asPath == "/") {
@@ -42,12 +43,17 @@ export default function App({ Component, pageProps }: AppProps) {
     setIsLoaded(true);
   }, []);
 
-
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
       <div className="min-h-full">
         <Head>
           <link rel="icon" href={Favicon.src} />
+          {metadata && (
+            <>
+              <title>{metadata["title"]}</title>
+              <meta name="description" content={metadata["description"]} />
+            </>
+          )}
         </Head>
         <Transition
           show={isLoaded && !isHomePage}

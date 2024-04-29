@@ -3,7 +3,7 @@ import MdxLayout from "@/components/mdx-layout";
 
 export const metadata = {
   title: "Privacy Policy",
-  description: null
+  description: "Privacy Policy for the FOSS4G 2024 event held in Belém, Brazil."
 }
 
 <Heading color="red" bubble>Privacy Policy</Heading>
@@ -19,4 +19,12 @@ You should note that personal information will not be disclosed to third parties
 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }

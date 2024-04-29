@@ -19,6 +19,11 @@ import { useRouter } from "next/router";
 
 import Head from "next/head";
 
+export const metadata = {
+  title: "Conference Map",
+  description: "Interactive map of the FOSS4G conference and surroundings"
+}
+
 export default function Map() {
   const router = useRouter();
   const mapRef = useRef<MapRef>(null);
@@ -780,3 +785,11 @@ const getMapStyle = ({
     ],
   };
 };
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

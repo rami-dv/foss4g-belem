@@ -117,3 +117,11 @@ Participants are expected to act respectfully towards others in accordance with 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 }
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

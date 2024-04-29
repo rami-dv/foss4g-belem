@@ -20,8 +20,8 @@ import AlmiranteBarroso from "@/images/belem/almirante-barroso.jpg";
 import Architecture from "@/images/belem/architecture.jpg";
 
 export const metadata = {
-  title: "Getting To Belém!",
-  description: null,
+  title: "Visiting Belém",
+  description: "Information on the city of Belém, how to get there, where to stay, and tourism information.",
 };
 
 <Carousel
@@ -223,4 +223,12 @@ With a wide variety of hotels at a range of price points, there's something for 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }

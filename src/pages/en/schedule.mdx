@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const metadata = {
   title: "Schedule",
-  description: null,
+  description: "Overview schedule for the FOSS4G 2024 event in Belém Brazil.",
 };
 
 <div className="text-3xl mt-4 mb-2 md:text-7xl text-center md:mt-8 md:mb-4 font-ubuntu">December 02-08, 2024</div>
@@ -15,4 +15,12 @@ export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
 
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }

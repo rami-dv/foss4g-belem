@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export const metadata = {
   title: "Social Events",
-  description: null,
+  description: "Social events calendar for the FOSS4G 2024 event in Belém Brazil",
 };
 
 <Heading color="red" bubble>
@@ -90,4 +90,12 @@ We invite you to celebrate the closing of the FOSS4G 2024 conference at a specia
 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }

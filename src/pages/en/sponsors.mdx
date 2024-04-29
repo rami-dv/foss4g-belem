@@ -9,7 +9,7 @@ import OsGeoLogo from "@/images/logo/osgeo-logo.png";
 
 export const metadata = {
   title: "Sponsors",
-  description: null,
+  description: "List of sponsors, organizers, and community partners at the FOSS4G 2024 conference in Belém Brazil.",
 };
 
 <Heading bubble color="orange">
@@ -84,4 +84,12 @@ export function SponsorGrid({level, images}) {
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }

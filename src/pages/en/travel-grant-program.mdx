@@ -6,7 +6,7 @@ import Foss4g2022Volunteers2 from "@/images/foss4g-2022/volunteers2.jpg";
 
 export const metadata = {
   title: "Travel Grant Program",
-  description: null,
+  description: "Information regarding the travel grant program for the FOSS4G 2024 conference in Belém Brasil",
 };
 
 <Heading color="red" bubble>
@@ -166,4 +166,12 @@ However, even though this program is targeting particular demographics in order 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }

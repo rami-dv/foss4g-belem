@@ -314,6 +314,9 @@ export const metadata = {
       country, so we recommend that you stay hydrated at all times.
     </FaqBubble>
 
+    {/* - There are no belief-based restrictions for visitors and newcomers of any kind. */}
+{/* - There are also no restrictions regarding LGBTQi+ culture in the city. There are no kind of restrictions, nor for women, neither for clothing in the city. */}
+
   </Column>
 
 </Grid>
@@ -342,4 +345,12 @@ export const FaqBubble = ({ question, children }) => {
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
 
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }
