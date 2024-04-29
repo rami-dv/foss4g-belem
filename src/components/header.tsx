@@ -43,6 +43,12 @@ const menuItems = [
         "label:pt": "Perguntas Frequentes (FAQ)",
         href: "/faq-frequently-asked-questions",
       },
+      {
+        "label:en": "Branding",
+        "label:es": "Marca",
+        "label:pt": "Marca",
+        href: "/branding",
+      },
     ],
   },
   {
