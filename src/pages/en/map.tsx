@@ -10,6 +10,7 @@ import Popup from "@/components/Popup";
 
 import venuesGeoJson from "@/data/venues.json";
 import placesGeoJson from "@/data/places.json";
+import bairrosGeoJson from "@/data/bairros.json";
 
 import { useState, useContext, useRef, useMemo } from "react";
 
@@ -52,7 +53,7 @@ export default function Map() {
 
           const mouseoverFeat = mapRef.current
             .queryRenderedFeatures(e.point, {
-              layers: ["venues", "lodging"],
+              layers: ["venues", "places"],
             })?.[0]
             ?.toJSON();
 
@@ -69,7 +70,7 @@ export default function Map() {
 
           const clickedFeat = mapRef.current
             .queryRenderedFeatures(e.point, {
-              layers: ["venues", "lodging"],
+              layers: ["venues", "places"],
             })?.[0]
             ?.toJSON();
 
@@ -154,6 +155,10 @@ const getMapStyle = ({
           featureState
         ),
       },
+      bairros: {
+        type: "geojson",
+        data: bairrosGeoJson as NamedFeatureCollection
+      },
     },
     layers: [
       {
@@ -212,6 +217,15 @@ const getMapStyle = ({
             "#80deea",
           ],
         },
+      },
+      {
+        id: "bairros",
+        type: "fill",
+        source: "bairros",
+        paint: {
+          "fill-color": "#d86e39",
+          "fill-opacity": 0.3
+        }
       },
       {
         id: "landuse_aerodrome",
@@ -459,13 +473,13 @@ const getMapStyle = ({
         },
       },
       {
-        id: "lodging",
+        id: "places",
         type: "symbol",
         source: "places",
-        minzoom: 14,
+        minzoom: 13,
         layout: {
           "symbol-sort-key": ["-", 1, ["get", "confidence"]],
-          "icon-image": "lodging",
+          "icon-image": "{category}",
           "icon-size": [
             "let",
             "multiplier",
@@ -494,7 +508,13 @@ const getMapStyle = ({
           "text-anchor": "left",
           "text-offset": [1.2, 0],
           "text-max-width": 100,
-          "text-field": ["step", ["zoom"], "", 15, ["get", "name"]],
+          "text-field": [
+            "step",
+            ["zoom"],
+            "",
+            15,
+            ["case", ["==", ["get", "category"], "hotel"], ["get", "name"], ""],
+          ],
           "text-font": ["literal", ["Noto Sans SemiCondensed Regular"]],
           "text-size": [
             "let",
@@ -526,8 +546,16 @@ const getMapStyle = ({
           "text-halo-width": 1,
           "text-halo-blur": 0.5,
           "text-halo-color": "rgba(255,255,255,0.8)",
+          "icon-opacity": [
+            "interpolate",
+            ["exponential", 1],
+            ["zoom"],
+            13,
+            0,
+            13.5,
+            1,
+          ],
         },
-        filter: ["==", "category", "hotel"]
       },
       {
         id: "venues",
