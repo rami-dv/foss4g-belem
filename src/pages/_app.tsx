@@ -76,18 +76,18 @@ export default function App({ Component, pageProps }: AppProps) {
               {/* image */}
               {metadata["image"] ? (
                 <>
-                  <meta property="og:image" content={metadata["image"].src} />
+                  <meta property="og:image" content={`${process.env.baseUrl}${metadata["image"].src}`} />
                   <meta
                     name="twitter:image"
-                    content={metadata["image"].src}
+                    content={`${process.env.baseUrl}${metadata["image"].src}`}
                   />
                 </>
               ) : (
                 <>
-                  <meta property="og:image" content={Foss4g2024Logo.src} />
+                  <meta property="og:image" content={`${process.env.baseUrl}${Foss4g2024Logo.src}`} />
                   <meta
                     name="twitter:image"
-                    content={Foss4g2024Logo.src}
+                    content={`${process.env.baseUrl}${Foss4g2024Logo.src}`}
                   />
                 </>
               )}
