@@ -52,17 +52,44 @@ export default function App({ Component, pageProps }: AppProps) {
           {metadata && (
             <>
               <title>{metadata["title"]}</title>
-              <meta name="description" content={metadata["description"]} />
-              <meta property="og:title" content={metadata["title"]} />
               <meta property="og:type" content="website" />
+
+              <meta name="twitter:card" content="summary" />
+
+              <meta name="description" content={metadata["description"]} />
+              <meta
+                name="twitter:description"
+                content={metadata["description"]}
+              />
+
+              <meta name="twitter:title" content={metadata["title"]} />
+              <meta property="og:title" content={metadata["title"]} />
+              {/* url */}
               <meta
                 property="og:url"
                 content={`${process.env.baseUrl}${router.asPath}`}
               />
+              <meta
+                name="twitter:url"
+                content={`${process.env.baseUrl}${router.asPath}`}
+              />
+              {/* image */}
               {metadata["image"] ? (
-                <meta property="og:image" content={metadata["image"].src} />
+                <>
+                  <meta property="og:image" content={metadata["image"].src} />
+                  <meta
+                    name="twitter:image"
+                    content={metadata["image"].src}
+                  />
+                </>
               ) : (
-                <meta property="og:image" content={Foss4g2024Logo.src} />
+                <>
+                  <meta property="og:image" content={Foss4g2024Logo.src} />
+                  <meta
+                    name="twitter:image"
+                    content={Foss4g2024Logo.src}
+                  />
+                </>
               )}
             </>
           )}
