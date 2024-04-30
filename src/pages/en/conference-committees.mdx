@@ -15,6 +15,7 @@ export const metadata = {
   title: "Conference Committees",
   description:
     "Overview of the various committees of FOSS4G 2024 Belém conference, including the Local, Academic, Program, and Sponsor committees.",
+  image: Foss4gAr2,
 };
 
 <Heading color="red" bubble>
@@ -50,7 +51,7 @@ export const metadata = {
     ---
 
     In order to coordinate an event of such magnitude of FOSS4G 2024, an international collaboration has been formed between two organizations:
-    
+
     - <span className="underline underline-offset-4">OSGeo Local Chapter of Brazil</span>
     - <span className="underline underline-offset-4">Asociación Civil Geolibres Argentina</span>
 
@@ -68,36 +69,37 @@ export const metadata = {
     ---
 
     Geolibres Argentina is a civil association created in 2018 in order to promote the adoption of geographic standards and the use of free and open source software, in addition to provide legal support to related communities.
-    
+
     While not an OSGeo chapter, its goals and activities are closely aligned with that of OSGeo.
+
   </div>
 </div>
 
 <Heading color="red">Local Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
   {Committees["loc"].map((person) => (
-    <PhotoBubble committee="loc" person={person} key={person['name']} />
+    <PhotoBubble committee="loc" person={person} key={person["name"]} />
   ))}
 </div>
 
 <Heading color="orange">Academic Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
   {Committees["academic"].map((person) => (
-    <PhotoBubble committee="academic" person={person} key={person['name']} />
+    <PhotoBubble committee="academic" person={person} key={person["name"]} />
   ))}
 </div>
 
 <Heading color="green">Program Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
   {Committees["program"].map((person) => (
-    <PhotoBubble committee="program" person={person} key={person['name']} />
+    <PhotoBubble committee="program" person={person} key={person["name"]} />
   ))}
 </div>
 
 <Heading color="blue">Sponsor Committee</Heading>
 <div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
   {Committees["sponsor"].map((person) => (
-    <PhotoBubble committee="sponsor" person={person} key={person['name']} />
+    <PhotoBubble committee="sponsor" person={person} key={person["name"]} />
   ))}
 </div>
 
@@ -137,9 +139,9 @@ export default function MDXPage({ children }) {
 
 }
 export async function getStaticProps() {
-  return {
-    props: {
-      metadata
-    },
-  }
+return {
+props: {
+metadata
+},
+}
 }

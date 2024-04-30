@@ -9,7 +9,7 @@ import Head from "next/head";
 
 export const metadata = {
   title: "FOSS4G 2024 Brasil Visa Information",
-  description: "Visa information for the FOSS4G 2024 conference in Belém Brasil"
+  description: "Visa information for the FOSS4G 2024 conference in Belém Brasil",
 }
 
 export default function VisaInfoPage() {
