@@ -54,15 +54,15 @@ export default function App({ Component, pageProps }: AppProps) {
               <title>{metadata["title"]}</title>
               <meta property="og:type" content="website" />
 
-              <meta name="twitter:card" content="summary" />
+              <meta property="twitter:card" content="summary" />
 
-              <meta name="description" content={metadata["description"]} />
+              <meta property="description" content={metadata["description"]} />
               <meta
                 name="twitter:description"
                 content={metadata["description"]}
               />
 
-              <meta name="twitter:title" content={metadata["title"]} />
+              <meta property="twitter:title" content={metadata["title"]} />
               <meta property="og:title" content={metadata["title"]} />
               {/* url */}
               <meta
