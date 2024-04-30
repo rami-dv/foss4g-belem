@@ -1,10 +1,11 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 class MyDocument extends Document {
   render() {
-    const lang = this.props.__NEXT_DATA__.page.slice(1).split("/")[0];
+    const parsedLang = this.props.__NEXT_DATA__.page.slice(1).split("/")[0];
+    const lang = ["en", "es", "pt"].includes(parsedLang) ? parsedLang : "en"
 
     return (
-      <Html lang={["en", "es", "pt"].includes(lang) ? lang : "en"}>
+      <Html prefix="og: https://ogp.me/ns#" lang={lang}>
         <Head />
         <body>
           <Main />

@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { LanguageContext } from "@/lib/language";
 import { Transition } from "@headlessui/react";
+import Foss4g2024Logo from "@/images/logo/logo-horizontal.png";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [language, setLanguage] = useState<"en" | "es" | "pt">("en");
@@ -52,6 +53,17 @@ export default function App({ Component, pageProps }: AppProps) {
             <>
               <title>{metadata["title"]}</title>
               <meta name="description" content={metadata["description"]} />
+              <meta property="og:title" content={metadata["title"]} />
+              <meta property="og:type" content="website " />
+              <meta
+                property="og:url"
+                content={`${process.env.baseUrl}${router.asPath}`}
+              />
+              {metadata["image"] ? (
+                <meta property="og:image" content={metadata["image"].src} />
+              ) : (
+                <meta property="og:image" content={Foss4g2024Logo.src} />
+              )}
             </>
           )}
         </Head>

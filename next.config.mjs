@@ -6,6 +6,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    baseUrl: "https://2024.foss4g.org"
+  },
   basePath: process.env.NODE_ENV == "production" ? "/foss4g-belem" : undefined,
   reactStrictMode: true,
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
