@@ -22,17 +22,19 @@ export function Carousel({
   const aspectClasses = {
     "16/9": "aspect-video",
     "4/3": "aspect-4/3",
-    "square": "aspect-square"
-  }
+    square: "aspect-square",
+  };
 
-  const captionClasses = captions ? "top-6": "bottom-4";
+  const captionClasses = captions ? "top-6" : "bottom-4";
 
   return (
     // @ts-ignore
     <Carousel_
       className=""
       navigation={({ setActiveIndex, activeIndex, length }) => (
-        <div className={`absolute ${captionClasses} sm:top-auto sm:bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2`}>
+        <div
+          className={`absolute ${captionClasses} sm:top-auto sm:bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2`}
+        >
           {new Array(length).fill("").map((_, i) => (
             <span
               key={i}
@@ -47,8 +49,12 @@ export function Carousel({
       {...otherProps}
     >
       {images.map((image, idx) => (
-        <div className="relative h-full w-full rounded-xl shadow-lg overflow-hidden" key={idx}>
+        <div
+          className="relative h-full w-full rounded-xl shadow-lg overflow-hidden"
+          key={idx}
+        >
           <Image
+            placeholder="blur"
             src={image.image}
             alt={image.caption ?? "Image"}
             className={`w-full sm:h-full  object-cover ${aspectClasses[aspectRatio]}`}
