@@ -3,7 +3,7 @@ import {
   MapGeoJSONFeature,
   StyleSpecification,
   MapLayerMouseEvent,
-  MapLayerTouchEvent
+  MapLayerTouchEvent,
 } from "maplibre-gl";
 import { MapRef } from "react-map-gl/maplibre";
 import { NamedFeatureCollection } from "@/lib/types";
@@ -56,17 +56,20 @@ export default function Map() {
     setSelectedFeature(clickedFeat);
     if (clickedFeat) {
       setHoveredFeature(null);
-      mapRef.current.flyTo({
-        center: clickedFeat.geometry.coordinates,
-        speed: 0.2,
-        curve: 1,
-        padding: {
-          top: 600,
-          left: 0,
-          bottom: 0,
-          right: 0,
-        },
-      });
+
+      if (["venues"].includes(clickedFeat.layer.id)) {
+        mapRef.current.flyTo({
+          center: clickedFeat.geometry.coordinates,
+          speed: 0.2,
+          curve: 1,
+          padding: {
+            top: 600,
+            left: 0,
+            bottom: 0,
+            right: 0,
+          },
+        });
+      }
     }
   };
 
