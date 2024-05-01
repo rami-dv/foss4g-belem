@@ -58,7 +58,7 @@ export default function Map() {
       setHoveredFeature(null);
       mapRef.current.flyTo({
         center: clickedFeat.geometry.coordinates,
-        speed: 0.1,
+        speed: 0.2,
         curve: 1,
         padding: {
           top: 600,
