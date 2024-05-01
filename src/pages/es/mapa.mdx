@@ -1,3 +1,34 @@
-import Map from "@/pages/en/map";
+import ConferenceMap from "@/components/ConferenceMap";
 
-export default Map;
+import BeiraRio from "./venue/_beira-rio.mdx";
+import Hangar from "./venue/_hangar.mdx";
+import Ifpa from "./venue/_ifpa.mdx";
+import ForteDoCastelo from "./visiting-belem/_forte-do-castelo.mdx";
+import EstacaoDasDocas from "./visiting-belem/_estacao-das-docas.mdx";
+
+export const PopupEmbeds = {
+  "Beira-Rio Hotel": BeiraRio,
+  Hangar: Hangar,
+  "IFPA Belém": Ifpa,
+  "Forte do Castelo": ForteDoCastelo,
+  "Estação das Docas": EstacaoDasDocas,
+};
+
+export const metadata = {
+  title: "Conference Map",
+  description: "Interactive map of the FOSS4G conference and surroundings",
+};
+
+<div className="fixed top-0 left-0 bottom-0 right-0">
+  <ConferenceMap
+    popupEmbeds={PopupEmbeds}
+  />
+</div>
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata,
+    },
+  };
+}
