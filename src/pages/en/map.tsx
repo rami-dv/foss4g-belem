@@ -2,6 +2,7 @@ import {
   ExpressionSpecification,
   MapGeoJSONFeature,
   StyleSpecification,
+  MapLayerMouseEvent
 } from "maplibre-gl";
 import { MapRef } from "react-map-gl/maplibre";
 import { NamedFeatureCollection } from "@/lib/types";
@@ -40,7 +41,7 @@ export default function Map() {
     [hoveredFeature, selectedFeature]
   );
 
-  const onMouseUp = (e) => {
+  const onMouseUp = (e: MapLayerMouseEvent) => {
     if (!mapRef.current) return;
 
     const clickedFeat = mapRef.current
@@ -67,7 +68,7 @@ export default function Map() {
     }
   };
 
-  const onMouseMove = (e) => {
+  const onMouseMove = (e: MapLayerMouseEvent) => {
     if (!mapRef.current) return;
     if (e.originalEvent.type == "touchmove") return onMouseUp(e);
 
