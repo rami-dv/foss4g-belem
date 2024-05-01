@@ -2,7 +2,8 @@ import {
   ExpressionSpecification,
   MapGeoJSONFeature,
   StyleSpecification,
-  MapLayerMouseEvent
+  MapLayerMouseEvent,
+  MapLayerTouchEvent
 } from "maplibre-gl";
 import { MapRef } from "react-map-gl/maplibre";
 import { NamedFeatureCollection } from "@/lib/types";
@@ -41,7 +42,7 @@ export default function Map() {
     [hoveredFeature, selectedFeature]
   );
 
-  const onClick = (e: MapLayerMouseEvent) => {
+  const onClick = (e: MapLayerMouseEvent | MapLayerTouchEvent) => {
     if (!mapRef.current) return;
 
     const clickedFeat = mapRef.current
@@ -104,6 +105,7 @@ export default function Map() {
         cursor={cursor}
         onMouseMove={onMouseMove}
         onClick={onClick}
+        onTouchEnd={onClick}
         transformRequest={(url: string) => {
           // transform fake sprite url in style to work on both dev and prod
 
