@@ -25,7 +25,11 @@ a:not(button *):not(:has(button)):not(.non-standard) {
   @apply underline underline-offset-4 text-f4g_blue
 }
 
-
+.maplibregl-popup-close-button {
+  font-size: 1.6rem;
+  padding: 6px;
+  border-radius: 0 3px 0 3px !important;
+}
 
 @layer utilities {
   .text-balance {
