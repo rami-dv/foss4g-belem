@@ -58,7 +58,7 @@ export default function Map() {
     if (clickedFeat) {
       setHoveredFeature(null);
 
-      if (["venues"].includes(clickedFeat.layer.id)) {
+      if (["attractions", "venues"].includes(clickedFeat.layer.id)) {
         mapRef.current.flyTo({
           center: clickedFeat.geometry.coordinates,
           speed: 0.2,
