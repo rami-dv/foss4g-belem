@@ -20,7 +20,7 @@ import OsGeoBrasil from "@/images/logo/osgeo-brasil.png";
 import OsGeoLogo from "@/images/logo/osgeo-logo.png";
 import Countdown from "react-countdown";
 import Image from "next/image";
-import { IntlLink } from "@/lib/language";
+import IntlLink from "@/components/IntlLink";
 
 export const metadata = {
   title: "FOSS4G 2024 Belém Brasil",

@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment, useState, useContext } from "react";
-import { useRouter } from "next/router";
+import { useState, useContext } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import FOSS4GLogo from "@/images/logo/foss4g-belem-logo-vertical.svg";
 import PatternBg2 from "@/images/pattern-background2.png";
 import PageBackground from "@/images/page-background.jpg";
-import { IntlLink, LanguageContext, LanguageSwitcher } from "@/lib/language";
+import { LanguageContext } from "@/lib/language";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import IntlLink from "@/components/IntlLink";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import {
   IoChevronForwardCircleSharp,
