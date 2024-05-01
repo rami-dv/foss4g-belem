@@ -6,18 +6,23 @@ import Logo3 from "@/images/logo/logo-vertical-white.png";
 import Logo4 from "@/images/logo/logo-vertical.png";
 import MdxLayout from "@/components/MDXLayout";
 
+import { useRouter } from "next/router";
+
 export const metadata = {
   title: "Branding",
-  description: "Branding Guidelines for FOSS4G 2024 conference in Belém, Brazil",
-  image: Logo2
-}
+  description:
+    "Branding Guidelines for FOSS4G 2024 conference in Belém, Brazil",
+  image: Logo2,
+};
 
-<Heading color="red" bubble>FOSS4G 2024 Branding Guidelines</Heading>
+<Heading color="red" bubble>
+  FOSS4G 2024 Branding Guidelines
+</Heading>
 
 <div className="border-4 border-f4g_red">
   <iframe
     className="pdf sm:h-[800px] h-[400px]"
-    src="/foss4g-2024-branding-guidelines.pdf"
+    src={`${useRouter().basePath ?? ""}/foss4g-2024-branding-guidelines.pdf`}
     width="100%"
   ></iframe>
 </div>
@@ -34,7 +39,7 @@ export const metadata = {
   <div className="grid space-y-4">
     <Image placeholder="blur" src={Logo3} className="bg-f4g_red rounded-lg" />
     <Image placeholder="blur" src={Logo4} />
-  </div>  
+  </div>
 </div>
 
 export default function MDXPage({ children }) {
@@ -46,4 +51,5 @@ export async function getStaticProps() {
       metadata
     },
   }
+
 }
