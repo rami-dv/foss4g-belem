@@ -87,7 +87,7 @@ export default function Map() {
             console.log(clickedFeat)
             mapRef.current.flyTo({
               center: clickedFeat.geometry.coordinates,
-              speed: 0.05,
+              speed: 0.1,
               curve: 1,
               padding: {
                 top: 600,
