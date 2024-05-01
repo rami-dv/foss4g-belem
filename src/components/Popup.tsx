@@ -71,12 +71,10 @@ function VenuePopupContent({
   type: "hover" | "select";
   properties: GeoJSON.GeoJsonProperties;
 }) {
-  const isHover = type === "hover";
-
-  const PopupEmbed = PopupEmbeds[properties["icon"]];
+  const PopupEmbed = PopupEmbeds?.[properties?.["icon"] as "beira-rio"| "ifpa-belem" | "hangar"];
 
   return (
-    <div className={"text-black -mx-1 -my-2 text-sm overflow-auto max-h-[600px] min-w-60 popup-embed max-w-80"}>
+    <div className={"text-black -mx-1 -my-2 text-sm overflow-auto max-h-[500px] min-w-60 popup-embed max-w-80"}>
       {properties?.["icon"] in PopupEmbeds && <PopupEmbed isEmbed={true} />}
     </div>
   );
