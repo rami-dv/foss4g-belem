@@ -70,6 +70,7 @@ export default function Map() {
 
   const onMouseMove = (e: MapLayerMouseEvent) => {
     if (!mapRef.current) return;
+    window.alert(e.originalEvent.type);
     // if (e.originalEvent.type == "touchmove") return onMouseUp(e);
 
     const mouseoverFeat = mapRef.current
