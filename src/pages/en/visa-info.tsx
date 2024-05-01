@@ -21,7 +21,7 @@ export default function VisaInfoPage() {
       <main className="sm:mx-auto max-w-6xl mx-2 my-2 sm:my-4 min-h-96">
         <Heading bubble>Visa Info</Heading>
         <div>
-          <Image placeholder="blur" alt="Map of Brazil Visa Countries" src={VisaMap} />
+          <Image alt="Map of Brazil Visa Countries" src={VisaMap} />
           <div className="flex flex-col sm:flex-row mt-2 justify-center items-center sm:items-start space-y-1 sm:space-y-0 sm:space-x-3">
             <div className="flex items-center text-sm space-x-1">
               <div className="block [background-color:#a6bf64] w-4 h-4 sm:w-6 sm:h-6 border border-black"></div>
