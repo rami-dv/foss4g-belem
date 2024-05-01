@@ -1,0 +1,18 @@
+import ConferenceMap from "@/components/ConferenceMap";
+
+export const metadata = {
+  title: "Conference Map",
+  description: "Interactive map of the FOSS4G conference and surroundings",
+};
+
+<div className="fixed top-0 left-0 bottom-0 right-0">
+  <ConferenceMap />
+</div>
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata,
+    },
+  };
+}

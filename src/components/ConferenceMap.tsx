@@ -15,17 +15,10 @@ import placesGeoJson from "@/data/places.json";
 import bairrosGeoJson from "@/data/bairros.json";
 import osmJson from "@/data/osm.json";
 
-import { useState, useContext, useRef, useMemo } from "react";
+import { useState, useRef, useMemo } from "react";
 
 import "maplibre-gl/dist/maplibre-gl.css";
 import { useRouter } from "next/router";
-
-import Head from "next/head";
-
-export const metadata = {
-  title: "Conference Map",
-  description: "Interactive map of the FOSS4G conference and surroundings",
-};
 
 export default function Map() {
   const router = useRouter();
@@ -93,39 +86,34 @@ export default function Map() {
   };
 
   return (
-    <div className="fixed top-0 left-0 bottom-0 right-0">
-      <Head>
-        <title>Map</title>
-      </Head>
-      <MapLibreMap
-        ref={mapRef}
-        minZoom={2}
-        maxZoom={20}
-        initialViewState={{
-          bounds: [-48.508521, -1.481578, -48.437068, -1.410125],
-        }}
-        cursor={cursor}
-        onMouseMove={onMouseMove}
-        onClick={onClick}
-        onTouchEnd={onClick}
-        transformRequest={(url: string) => {
-          // transform fake sprite url in style to work on both dev and prod
+    <MapLibreMap
+      ref={mapRef}
+      minZoom={2}
+      maxZoom={20}
+      initialViewState={{
+        bounds: [-48.508521, -1.481578, -48.437068, -1.410125],
+      }}
+      cursor={cursor}
+      onMouseMove={onMouseMove}
+      onClick={onClick}
+      onTouchEnd={onClick}
+      transformRequest={(url: string) => {
+        // transform fake sprite url in style to work on both dev and prod
 
-          const baseUrl = `${window.location.host}${router.basePath ?? "/"}`;
+        const baseUrl = `${window.location.host}${router.basePath ?? "/"}`;
 
-          const newUrl = url.replace(
-            "http://{basePath}",
-            `${window.location.protocol}//${baseUrl}`
-          );
+        const newUrl = url.replace(
+          "http://{basePath}",
+          `${window.location.protocol}//${baseUrl}`
+        );
 
-          return { url: newUrl };
-        }}
-        mapStyle={mapStyle}
-      >
-        {hoveredFeature && <Popup type="hover" feature={hoveredFeature} />}
-        {selectedFeature && <Popup type="select" feature={selectedFeature} />}
-      </MapLibreMap>
-    </div>
+        return { url: newUrl };
+      }}
+      mapStyle={mapStyle}
+    >
+      {hoveredFeature && <Popup type="hover" feature={hoveredFeature} />}
+      {selectedFeature && <Popup type="select" feature={selectedFeature} />}
+    </MapLibreMap>
   );
 }
 
@@ -875,11 +863,3 @@ const getMapStyle = ({
     ],
   };
 };
-
-export async function getStaticProps() {
-  return {
-    props: {
-      metadata,
-    },
-  };
-}
