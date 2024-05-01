@@ -7,7 +7,7 @@ const nextConfig = {
     unoptimized: true,
   },
   env: {
-    baseUrl: "https://rami-dv.github.io/foss4g-belem"
+    baseUrl: "https://rami-dv.github.io"
   },
   basePath: process.env.NODE_ENV == "production" ? "/foss4g-belem" : undefined,
   reactStrictMode: true,
