@@ -72,7 +72,7 @@ export function SponsorGrid({level, images}) {
       {images.map((img, idx) => (
         <div key={idx} className={`flex ${classes["maxW"]} items-center justify-center`}>
           {img ? 
-            <Image src={img} className="max-w-full h-auto" /> : 
+            <Image placeholder="blur" src={img} className="max-w-full h-auto" /> : 
             <div className={`border font-ubuntu select-none border-gray-800 p-2 ${classes["text"]} rounded text-center text-gray-700`}>Your Logo Here!</div>
             }
         </div>

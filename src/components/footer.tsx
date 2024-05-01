@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-shrink-0 text-white">
-          <Image className="w-40" alt="FOSS4G Logo" src={FOSS4GLogoWhite} />
+          <Image placeholder="blur" className="w-40" alt="FOSS4G Logo" src={FOSS4GLogoWhite} />
         </div>
       </div>
     </footer>

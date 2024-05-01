@@ -24,13 +24,12 @@ import { IntlLink } from "@/lib/language";
 
 export const metadata = {
   title: "FOSS4G 2024 Belém Brasil",
-  description: "Homepage for the FOSS4G 2024 Conference held in Belém Brasil"
-}
+  description: "Homepage for the FOSS4G 2024 Conference held in Belém Brasil",
+};
 
 export default function IndexPage() {
   return (
     <>
-
       {/* Banner section */}
 
       <section
@@ -39,10 +38,9 @@ export default function IndexPage() {
           backgroundImage: `url(${HomepageBanner.src})`,
         }}
       >
-
-      <Head key="omg">
-        <title key="omg">Home</title>
-      </Head>
+        <Head key="omg">
+          <title key="omg">Home</title>
+        </Head>
         <div className="font-ubuntu text-white grid grid-cols-1 min-h-48 max-w-6xl w-full p-4 sm:p-4">
           <Countdown
             date="2024-12-02"
@@ -123,6 +121,7 @@ export default function IndexPage() {
         <div className="flex flex-col sm:flex-row space-y-10 sm:space-y-0 sm:space-x-20 max-w-6xl w-full p-4">
           <div className="hidden sm:block">
             <Image
+              placeholder="blur"
               className="w-auto h-[240px]"
               src={AboutFoss4g}
               alt="About FOSS4G"
@@ -154,6 +153,7 @@ export default function IndexPage() {
           </div>
           <div>
             <Image
+              placeholder="blur"
               className="h-[45px] w-auto"
               src={ArrowBrown}
               alt="Brown Arrow"
@@ -181,6 +181,7 @@ export default function IndexPage() {
               </div>
               <div className="6xl:ml-72 sm:ml-10 mt-10">
                 <Image
+                  placeholder="blur"
                   alt="White Arrows"
                   className="inline-block -rotate-90"
                   src={WhiteArrows}
@@ -198,16 +199,25 @@ export default function IndexPage() {
             style={{ backgroundImage: `url(${OrangeBg.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
-              <IntlLink href="/code-of-conduct" className="non-standard">Code of Conduct</IntlLink>
+              <IntlLink href="/code-of-conduct" className="non-standard">
+                Code of Conduct
+              </IntlLink>
             </div>
           </div>
           <div className="flex items-end sm:aspect-square bg-black min-h-40">
             <div className="grid">
               <div className="mx-6 hidden sm:block">
-                <Image alt="White Arrows" className="block" src={WhiteArrows} />
+                <Image
+                  placeholder="blur"
+                  alt="White Arrows"
+                  className="block"
+                  src={WhiteArrows}
+                />
               </div>
               <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
-                <IntlLink href="/visiting-belem" className="non-standard">Visiting Belém</IntlLink>
+                <IntlLink href="/visiting-belem" className="non-standard">
+                  Visiting Belém
+                </IntlLink>
               </div>
             </div>
           </div>
@@ -216,7 +226,9 @@ export default function IndexPage() {
             style={{ backgroundImage: `url(${GreenBg.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
-              <IntlLink href="/schedule" className="non-standard">Schedule</IntlLink>
+              <IntlLink href="/schedule" className="non-standard">
+                Schedule
+              </IntlLink>
             </div>
           </div>
           <div
@@ -224,7 +236,9 @@ export default function IndexPage() {
             style={{ backgroundImage: `url(${SocialEvents.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
-              <IntlLink href="/social-events" className="non-standard">Social Events</IntlLink>
+              <IntlLink href="/social-events" className="non-standard">
+                Social Events
+              </IntlLink>
             </div>
           </div>
         </div>
@@ -233,6 +247,7 @@ export default function IndexPage() {
       <section className="flex items-center justify-center my-12">
         <div className="relative w-full max-w-6xl">
           <Image
+            placeholder="blur"
             className="hidden sm:block w-full mx-auto max-w-4xl"
             src={BrazilPatternBg}
             alt="Brazil Pattern Background"
@@ -245,7 +260,11 @@ export default function IndexPage() {
             </div>
             <div className="flex items-center justify-center sm:items-start sm:justify-start m-4">
               <div className="bg-white max-w-xs border border-gray-200 p-4 shadow-lg">
-                <Image src={Foss4gAnnounced} alt="FOSS4G 2024 Announced" />
+                <Image
+                  placeholder="blur"
+                  src={Foss4gAnnounced}
+                  alt="FOSS4G 2024 Announced"
+                />
                 <div className="p-2">
                   <div className="font-ubuntu text-3xl [font-weight:500] my-3">
                     FOSS4G in Belém!
@@ -268,7 +287,11 @@ export default function IndexPage() {
             </div>
             <div className="flex items-center justify-center sm:items-start sm:justify-end m-4">
               <div className="bg-white max-w-xs border border-gray-200 p-4 shadow-lg">
-                <Image src={SotmGeneric} alt="FOSS4G 2024 Announced" />
+                <Image
+                  placeholder="blur"
+                  src={SotmGeneric}
+                  alt="FOSS4G 2024 Announced"
+                />
                 <div className="p-2">
                   <div className="font-ubuntu text-3xl [font-weight:500] my-3">
                     SOTM LATAM 2024
@@ -291,7 +314,11 @@ export default function IndexPage() {
             </div>
             <div className="flex items-center justify-center sm:items-start sm:justify-start m-4">
               <div className="bg-white max-w-xs border border-gray-200 p-4 shadow-lg">
-                <Image src={Hangar} alt="FOSS4G 2024 Announced" />
+                <Image
+                  placeholder="blur"
+                  src={Hangar}
+                  alt="FOSS4G 2024 Announced"
+                />
                 <div className="p-2">
                   <div className="font-ubuntu text-3xl [font-weight:500] my-3">
                     FOSS4G Venue Chosen
@@ -349,13 +376,17 @@ export default function IndexPage() {
           </div>
           <div className="flex items-center flex-col sm:flex-row justify-center sm:space-x-8 space-y-8 sm:space-y-0 max-w-60 sm:max-w-none">
             <div>
-              <Image alt="GeoLibres Logo" src={Geolibres} />
+              <Image placeholder="blur" alt="GeoLibres Logo" src={Geolibres} />
             </div>
             <div>
-              <Image alt="OSGeo Brasil Logo" src={OsGeoBrasil} />
+              <Image
+                placeholder="blur"
+                alt="OSGeo Brasil Logo"
+                src={OsGeoBrasil}
+              />
             </div>
             <div>
-              <Image alt="OSGeo Logo" src={OsGeoLogo} />
+              <Image placeholder="blur" alt="OSGeo Logo" src={OsGeoLogo} />
             </div>
           </div>
           <div className="text-4xl [font-weight:500] font-ubuntu my-4 mt-12">
@@ -363,10 +394,11 @@ export default function IndexPage() {
           </div>
           <div className="flex items-center flex-col sm:flex-row justify-center sm:space-x-8">
             <div>
-              <Image alt="Geochicas Logo" src={Geochicas} />
+              <Image placeholder="blur" alt="Geochicas Logo" src={Geochicas} />
             </div>
             <div>
               <Image
+                placeholder="blur"
                 alt="Meninas Da Geo Logo"
                 className="max-h-32 w-auto"
                 src={MeninasDaGeo}
@@ -382,7 +414,7 @@ export default function IndexPage() {
 export async function getStaticProps() {
   return {
     props: {
-      metadata
+      metadata,
     },
-  }
+  };
 }

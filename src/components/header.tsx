@@ -160,7 +160,7 @@ export default function Header() {
             <div className="flex items-center flex-shrink-0 text-white mr-6">
               <div className="">
                 <Link href={`/${language}/`}>
-                  <Image className="w-40" alt="FOSS4G Logo" src={FOSS4GLogo} />
+                  <Image placeholder="blur" className="w-40" alt="FOSS4G Logo" src={FOSS4GLogo} />
                 </Link>
               </div>
               <div className="space-x-2 ml-6 hidden md:flex">
