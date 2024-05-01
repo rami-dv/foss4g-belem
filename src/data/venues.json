@@ -19,7 +19,7 @@
       "type": "Feature",
       "properties": {
         "icon": "ifpa-belem",
-        "name": "IFPA - Instituto Federal de Educação, Ciência e Tecnologia do Pará, Campus Belém",
+        "name": "IFPA Belém",
         "label": "IFPA Belém",
         "sublabel": "Dec 02-03: Workshops\nDec 07-08: Code Sprint"
       },
@@ -32,8 +32,8 @@
       "type": "Feature",
       "properties": {
         "icon": "hangar",
-        "name": "Hangar Convenções & Feiras da Amazônia",
-        "label": "HANGAR",
+        "name": "Hangar",
+        "label": "Hangar",
         "sublabel": "Dec 04-06: Main Conference\nDec 04: Ice Breaker"
       },
       "geometry": {

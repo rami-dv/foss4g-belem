@@ -7,8 +7,8 @@ import GlobeMap from "@/components/GlobeMap";
 import Belem1 from "@/images/belem/belem1.jpg";
 import Belem2 from "@/images/belem/belem2.jpg";
 import Belem3 from "@/images/belem/belem3.jpg";
-import EstacaoDasDocas from "@/images/belem/estacao-das-docas.jpg";
-import ForteDoPresepio from "@/images/belem/forte-do-presepio.jpg";
+import EstacaoDasDocasImage from "@/images/belem/estacao-das-docas.jpg";
+import ForteDoPresepioImage from "@/images/belem/forte-do-presepio.jpg";
 import Guindastes from "@/images/belem/guindastes.jpg";
 import Mercado from "@/images/belem/mercado.jpg";
 import TeatroDaPaz from "@/images/belem/teatro-da-paz.jpg";
@@ -18,6 +18,9 @@ import CidadeVelha from "@/images/belem/cidade-velha.jpg";
 import PracaDoRelogio from "@/images/belem/praca-do-relogio.jpg";
 import AlmiranteBarroso from "@/images/belem/almirante-barroso.jpg";
 import Architecture from "@/images/belem/architecture.jpg";
+
+import EstacaoDasDocas from "./visiting-belem/_estacao-das-docas.mdx";
+import ForteDoPresepio from "./visiting-belem/_forte-do-castelo.mdx";
 
 export const metadata = {
   title: "Visiting Belém",
@@ -49,13 +52,13 @@ export const metadata = {
         "Teatro Da Paz, built in 1878, with beautiful colonial architecture",
     },
     {
-      image: EstacaoDasDocas,
+      image: EstacaoDasDocasImage,
       attribution: "Cayambe CC-SA",
       caption:
         "Estação das Docas, originally a warehouse, is now a cultural tourism complex with a beautiful view",
     },
     {
-      image: ForteDoPresepio,
+      image: ForteDoPresepioImage,
       attribution: "Virgilinojuca CC-BY",
       caption:
         "Forte do Presépio, a historic fort built in 1616, is full of history.",
@@ -189,34 +192,12 @@ With a wide variety of hotels at a range of price points, there's something for 
 <Heading bubble>What to do in Belém</Heading>
 
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <div className="">
-    <Image placeholder="blur" src={ForteDoPresepio} className="rounded-lg w-full aspect-4/3" />
-    #### Forte do Presépio
-    ---
-
-    Forte do Presépio is a historic fort that holds great significance Brazil's colonial past. Built in 1616 by Francisco Caldeira Castelo Branco, it was the first fortified structure in the Amazon region and played a crucial role in the Portuguese colonization of Brazil.
-    
-    The fort was strategically situated at Maúri Point, where the Amazon River meets the Guajará Bay, allowing it to control the entrance to the Amazon River and protect the city from foreign invasions. Throughout its history, the fort has served as a military base, hospital, arsenal, and even a prison, and has undergone several reconstructions.
-    
-    Today, it is a testament to the rich history and cultural heritage of Belém and the Amazon region, and is a popular tourist attraction and national historic landmark.
-
-    In addition, the **Museu do Encontro**, inside the Forte do Presépio, it is a gem to see. There you will find a beautiful collection of very rare Tapajonic and Marajoara ceramics, prior to the arrival of the Portuguese. 
+  <div>
+    <ForteDoPresepio />
   </div>
 
-  <div className="">
-    <Image placeholder="blur" src={EstacaoDasDocas} className="rounded-lg w-full aspect-4/3" />
-    #### Estação das Docas
-    ---
-
-    The Estação das Docas (Dock Station) is one of the must-see attractions in Belém. The touristic complex occupies 500 meters of the river bank of the old port of Belém, built in the 19th century.
-
-    Once a major commercial port, the docks were abandoned and left in disrepair until a thorough renovation restored them to their former glory. Today, the Estação das Docas complex is a popular destination for both locals and tourists, offering a variety of attractions, including restaurants, bars, shops, and cultural spaces. 
-
-    Visitors can enjoy stunning views of the Guajará Bay, take a boat tour of the Amazon River, or explore the nearby historic center of Belém. The complex also hosts various events and festivals throughout the year, showcasing the region's rich cultural heritage and making it a must-visit destination in Belém.
-
-    In addition, the Orla a Entardecer river ride, the best boat ride in Belém, departs from Estação das Docas from Tuesday to Sunday at 5:30 p.m. The route is very touristy but at the same time it is very interesting to take a trip through the rhythms of Pará and the north of Brazil.
-
-    You can read more at their [official website](https://www.valeverdeturismo.com.br/belem-para-amazonia)
+  <div>
+    <EstacaoDasDocas />
   </div>
 
 </div>

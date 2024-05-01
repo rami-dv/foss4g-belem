@@ -13,6 +13,7 @@ import Popup from "@/components/Popup";
 import venuesGeoJson from "@/data/venues.json";
 import placesGeoJson from "@/data/places.json";
 import bairrosGeoJson from "@/data/bairros.json";
+import osmJson from "@/data/osm.json";
 
 import { useState, useContext, useRef, useMemo } from "react";
 
@@ -47,7 +48,7 @@ export default function Map() {
 
     const clickedFeat = mapRef.current
       .queryRenderedFeatures(e.point, {
-        layers: ["venues", "places"],
+        layers: ["attractions", "venues", "places"],
       })?.[0]
       ?.toJSON();
 
@@ -78,7 +79,7 @@ export default function Map() {
 
     const mouseoverFeat = mapRef.current
       .queryRenderedFeatures(e.point, {
-        layers: ["venues", "places"],
+        layers: ["attractions", "venues", "places"],
       })?.[0]
       ?.toJSON();
 
@@ -140,12 +141,32 @@ const getMapStyle = ({
     select: selectedFeature,
   };
 
+  const osmGeoJson = {
+    name: "osm",
+    type: "FeatureCollection",
+    features: osmJson.elements.map((el) => {
+      const geom =
+        "center" in el
+          ? [el["center"]["lon"], el["center"]["lat"]]
+          : [el["lon"], el["lat"]];
+
+      return {
+        type: "Feature",
+        properties: el.tags,
+        geometry: {
+          type: "Point",
+          coordinates: geom,
+        },
+      };
+    }),
+  };
+
   return {
     version: 8,
     glyphs: "http://{basePath}/map/glyphs/{fontstack}/{range}.pbf",
     sprite: "http://{basePath}/map/sprite",
     sources: {
-      osm: {
+      "osm-carto": {
         type: "raster",
         tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
         tileSize: 256,
@@ -188,6 +209,13 @@ const getMapStyle = ({
         attribution:
           '<a href="https://overturemaps.org" target="_blank">Overture Maps</a>',
       },
+      osm: {
+        type: "geojson",
+        data: applyFeatureStates(
+          osmGeoJson as NamedFeatureCollection,
+          featureState
+        ),
+      },
       bairros: {
         type: "geojson",
         data: bairrosGeoJson as NamedFeatureCollection,
@@ -204,7 +232,7 @@ const getMapStyle = ({
       {
         id: "osm",
         type: "raster",
-        source: "osm",
+        source: "osm-carto",
         maxzoom: 11,
       },
       {
@@ -758,16 +786,63 @@ const getMapStyle = ({
       {
         id: "attractions",
         type: "symbol",
-        source: "protomaps",
-        "source-layer": "pois",
+        source: "osm",
         minzoom: 12,
         layout: {
           "icon-image": "star",
-          "icon-size": 0.2,
-          "text-field": ["get", "name"],
-          "text-font": ["literal", ["Noto Sans SemiCondensed Regular"]],
-          "text-size": 12,
+          "icon-size": [
+            "let",
+            "multiplier",
+            [
+              "case",
+              [
+                "any",
+                ["==", ["get", "hover"], 1],
+                ["==", ["get", "select"], 1],
+              ],
+              1.2,
+              1,
+            ],
+            [
+              "interpolate",
+              ["linear"],
+              ["zoom"],
+              12,
+              ["*", ["var", "multiplier"], 0.2],
+              13,
+              ["*", ["var", "multiplier"], 0.25],
+              14,
+              ["*", ["var", "multiplier"], 0.3],
+            ],
+          ],
           "text-offset": [0, 1],
+          "text-field": ["step", ["zoom"], "", 12.1, ["get", "name"]],
+          "text-font": ["literal", ["Noto Sans SemiCondensed Regular"]],
+          "text-size": [
+            "let",
+            "multiplier",
+            [
+              "case",
+              [
+                "any",
+                ["==", ["get", "hover"], 1],
+                ["==", ["get", "select"], 1],
+              ],
+              1.2,
+              1,
+            ],
+            [
+              "interpolate",
+              ["linear"],
+              ["zoom"],
+              12,
+              ["*", ["var", "multiplier"], 14],
+              13,
+              ["*", ["var", "multiplier"], 15],
+              14,
+              ["*", ["var", "multiplier"], 16],
+            ],
+          ],
           "text-anchor": "top",
         },
         paint: {
@@ -775,17 +850,6 @@ const getMapStyle = ({
           "text-halo-blur": 1,
           "text-halo-color": "rgba(255,255,255,0.8)",
         },
-        filter: [
-          "in",
-          "name",
-          "Mercado Ver-o-Peso",
-          "Estação das Docas",
-          "Casa das Onze Janelas",
-          "Forte do Castelo",
-          "Praça da República",
-          "Praça Dom Pedro 2",
-          "Centro Histórico de Belém",
-        ],
       },
       {
         id: "airport",

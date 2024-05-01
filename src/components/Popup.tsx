@@ -7,11 +7,15 @@ import { Popup as MapPopup, SymbolLayer } from "react-map-gl/maplibre";
 import BeiraRio from "@/pages/en/venue/_beira-rio.mdx";
 import Hangar from "@/pages/en/venue/_hangar.mdx";
 import Ifpa from "@/pages/en/venue/_ifpa.mdx";
+import ForteDoCastelo from "@/pages/en/visiting-belem/_forte-do-castelo.mdx";
+import EstacaoDasDocas from "@/pages/en/visiting-belem/_estacao-das-docas.mdx";
 
 const PopupEmbeds = {
-  "beira-rio": BeiraRio,
-  "hangar": Hangar,
-  "ifpa-belem": Ifpa
+  "Beira-Rio Hotel": BeiraRio,
+  "Hangar": Hangar,
+  "IFPA Belém": Ifpa,
+  "Forte do Castelo": ForteDoCastelo,
+  "Estação das Docas": EstacaoDasDocas
 }
 
 export default function Popup({
@@ -57,7 +61,7 @@ export default function Popup({
           properties={feature.properties}
         />
       )}
-      {feature.source == "venues" && (
+      {["venues", "osm"].includes(feature.source) && (
         <VenuePopupContent type={type} properties={feature.properties} />
       )}
     </MapPopup>
@@ -71,11 +75,12 @@ function VenuePopupContent({
   type: "hover" | "select";
   properties: GeoJSON.GeoJsonProperties;
 }) {
-  const PopupEmbed = PopupEmbeds?.[properties?.["icon"] as "beira-rio"| "ifpa-belem" | "hangar"];
+  const PopupEmbed = PopupEmbeds?.[properties?.["name"] as "Hangar"];
 
+  console.log(PopupEmbed);
   return (
     <div className={"text-black -mx-1 -my-2 text-sm overflow-auto max-h-[460px] min-w-60 popup-embed max-w-72"}>
-      {properties?.["icon"] in PopupEmbeds && <PopupEmbed isEmbed={true} />}
+      {properties?.["name"] in PopupEmbeds && <PopupEmbed isEmbed={true} />}
     </div>
   );
 }
