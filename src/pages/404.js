@@ -1,4 +1,4 @@
-import MdxLayout from "@/components/mdx-layout";
+import MdxLayout from "@/components/MDXLayout";
 import Image from "next/image";
 import Image404 from "../images/404.png";
 

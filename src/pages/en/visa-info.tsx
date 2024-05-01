@@ -1,7 +1,7 @@
 import VisaMap from "@/images/Visa_policy_of_Brazil.svg";
-import Heading from "@/components/heading";
+import Heading from "@/components/Heading";
 import VisaCountries from "@/data/visa_countries.json";
-import MdxLayout from "@/components/mdx-layout";
+import MdxLayout from "@/components/MDXLayout";
 import VisaApplicationImage from "@/images/visa-application.jpg";
 import Image from "next/image";
 
