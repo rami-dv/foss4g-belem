@@ -54,6 +54,7 @@ export default function Map() {
 
     setSelectedFeature(clickedFeat);
     if (clickedFeat) {
+      setHoveredFeature(null);
       mapRef.current.flyTo({
         center: clickedFeat.geometry.coordinates,
         speed: 0.1,
@@ -70,7 +71,7 @@ export default function Map() {
 
   const onMouseMove = (e: MapLayerMouseEvent) => {
     if (!mapRef.current) return;
-    window.alert(e.originalEvent.type);
+    window.alert(e.originalEvent);
     // if (e.originalEvent.type == "touchmove") return onMouseUp(e);
 
     const mouseoverFeat = mapRef.current
@@ -103,6 +104,7 @@ export default function Map() {
         cursor={cursor}
         onMouseMove={onMouseMove}
         onClick={onClick}
+        onTouchEnd={onClick}
         transformRequest={(url: string) => {
           // transform fake sprite url in style to work on both dev and prod
 
