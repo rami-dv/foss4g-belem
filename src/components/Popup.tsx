@@ -19,9 +19,11 @@ const PopupEmbeds = {
 };
 
 export default function Popup({
+  popupEmbeds = {},
   feature,
   type,
 }: {
+  popupEmbeds: { [name: string]: Element };
   feature: MapGeoJSONFeature;
   type: "hover" | "select";
 }) {
@@ -56,6 +58,7 @@ export default function Popup({
     >
       {feature.layer.id == "places" && (
         <PlacesPopupContent
+          popupEmbeds={popupEmbeds}
           type={type}
           // @ts-ignore
           lonLat={lonLat}
@@ -63,20 +66,26 @@ export default function Popup({
         />
       )}
       {["venues", "osm"].includes(feature.source) && (
-        <VenuePopupContent type={type} properties={feature.properties} />
+        <VenuePopupContent
+          popupEmbeds={popupEmbeds}
+          type={type}
+          properties={feature.properties}
+        />
       )}
     </MapPopup>
   );
 }
 
 function VenuePopupContent({
+  popupEmbeds = {},
   type,
   properties,
 }: {
+  popupEmbeds: { [name: string]: Element };
   type: "hover" | "select";
   properties: GeoJSON.GeoJsonProperties;
 }) {
-  const PopupEmbed = PopupEmbeds?.[properties?.["name"] as "Hangar"];
+  const PopupEmbed = popupEmbeds?.[properties?.["name"] as "Hangar"];
 
   return (
     <div
@@ -84,6 +93,7 @@ function VenuePopupContent({
         "text-black -mx-1 -my-2 text-sm overflow-auto max-h-[460px] min-w-60 popup-embed max-w-72"
       }
     >
+      {/* @ts-ignore */}
       {properties?.["name"] in PopupEmbeds && <PopupEmbed isEmbed={true} />}
     </div>
   );

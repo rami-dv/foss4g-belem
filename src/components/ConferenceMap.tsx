@@ -20,7 +20,11 @@ import { useState, useRef, useMemo } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { useRouter } from "next/router";
 
-export default function Map() {
+export default function Map({
+  popupEmbeds,
+}: {
+  popupEmbeds: { [name: string]: Element };
+}) {
   const router = useRouter();
   const mapRef = useRef<MapRef>(null);
 
@@ -111,8 +115,20 @@ export default function Map() {
       }}
       mapStyle={mapStyle}
     >
-      {hoveredFeature && <Popup type="hover" feature={hoveredFeature} />}
-      {selectedFeature && <Popup type="select" feature={selectedFeature} />}
+      {hoveredFeature && (
+        <Popup
+          type="hover"
+          popupEmbeds={popupEmbeds}
+          feature={hoveredFeature}
+        />
+      )}
+      {selectedFeature && (
+        <Popup
+          popupEmbeds={popupEmbeds}
+          type="select"
+          feature={selectedFeature}
+        />
+      )}
     </MapLibreMap>
   );
 }
