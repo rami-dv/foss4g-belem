@@ -1,7 +1,7 @@
 import { getPopupOffset } from "@/lib/map";
 import { IconAnchorType } from "@/lib/types";
 import { MapGeoJSONFeature } from "maplibre-gl";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Popup as MapPopup, SymbolLayer } from "react-map-gl/maplibre";
 
 import BeiraRio from "@/pages/en/venue/_beira-rio.mdx";
@@ -12,11 +12,11 @@ import EstacaoDasDocas from "@/pages/en/visiting-belem/_estacao-das-docas.mdx";
 
 const PopupEmbeds = {
   "Beira-Rio Hotel": BeiraRio,
-  "Hangar": Hangar,
+  Hangar: Hangar,
   "IFPA Belém": Ifpa,
   "Forte do Castelo": ForteDoCastelo,
-  "Estação das Docas": EstacaoDasDocas
-}
+  "Estação das Docas": EstacaoDasDocas,
+};
 
 export default function Popup({
   feature,
@@ -49,6 +49,7 @@ export default function Popup({
       longitude={lonLat[0]}
       offset={popupOffset as any}
       maxWidth={undefined}
+      focusAfterOpen={false}
       closeButton={type === "select"}
       closeOnClick={false}
       className="cursor-default"
@@ -77,9 +78,12 @@ function VenuePopupContent({
 }) {
   const PopupEmbed = PopupEmbeds?.[properties?.["name"] as "Hangar"];
 
-  console.log(PopupEmbed);
   return (
-    <div className={"text-black -mx-1 -my-2 text-sm overflow-auto max-h-[460px] min-w-60 popup-embed max-w-72"}>
+    <div
+      className={
+        "text-black -mx-1 -my-2 text-sm overflow-auto max-h-[460px] min-w-60 popup-embed max-w-72"
+      }
+    >
       {properties?.["name"] in PopupEmbeds && <PopupEmbed isEmbed={true} />}
     </div>
   );
@@ -160,7 +164,7 @@ function PlacesPopupContent({
                     navigator.clipboard.writeText(
                       `${lonLat[1].toPrecision(6)},${lonLat[0].toPrecision(6)}`
                     );
-                    setIsLonLatCopied(true)
+                    setIsLonLatCopied(true);
                   }
                 }}
               >
