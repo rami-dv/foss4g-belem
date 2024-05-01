@@ -4,6 +4,16 @@ import { MapGeoJSONFeature } from "maplibre-gl";
 import { useState } from "react";
 import { Popup as MapPopup, SymbolLayer } from "react-map-gl/maplibre";
 
+import BeiraRio from "@/pages/en/venue/_beira-rio.mdx";
+import Hangar from "@/pages/en/venue/_hangar.mdx";
+import Ifpa from "@/pages/en/venue/_ifpa.mdx";
+
+const PopupEmbeds = {
+  "beira-rio": BeiraRio,
+  "hangar": Hangar,
+  "ifpa-belem": Ifpa
+}
+
 export default function Popup({
   feature,
   type,
@@ -63,9 +73,11 @@ function VenuePopupContent({
 }) {
   const isHover = type === "hover";
 
+  const PopupEmbed = PopupEmbeds[properties["icon"]];
+
   return (
-    <div className={"text-black -mx-1 -my-2 overflow-auto min-w-60"}>
-      {properties?.["name"]}
+    <div className={"text-black -mx-1 -my-2 text-sm overflow-auto max-h-[600px] min-w-60 popup-embed max-w-80"}>
+      {properties?.["icon"] in PopupEmbeds && <PopupEmbed isEmbed={true} />}
     </div>
   );
 }

@@ -14,8 +14,8 @@ export function Carousel({
     caption?: string;
     attribution?: string;
   }>;
-  aspectRatio: "16/9" | "4/3" | "square";
-  captions: boolean;
+  aspectRatio?: "16/9" | "4/3" | "square";
+  captions?: boolean;
 } & CarouselProps) {
   const [isAttrOpen, setIsAttrOpen] = useState(false);
 
@@ -51,7 +51,7 @@ export function Carousel({
           <Image
             src={image.image}
             alt={image.caption ?? "Image"}
-            className={`w-full sm:h-full min-h-80 object-cover ${aspectClasses[aspectRatio]}`}
+            className={`w-full sm:h-full  object-cover ${aspectClasses[aspectRatio]}`}
           />
 
           {image.caption && (

@@ -1,26 +1,11 @@
-import MdxLayout, { ReactPlayer } from "@/components/mdx-layout";
+import MdxLayout from "@/components/mdx-layout";
 import Heading from "@/components/heading";
-import { Carousel } from "@/mdx-components";
-import Image from "next/image";
-import { useRef, useEffect } from "react";
-import { useRouter } from "next/router";
+
+import BeiraRio from "./venue/_beira-rio.mdx";
+import Hangar from "./venue/_hangar.mdx";
+import Ifpa from "./venue/_ifpa.mdx";
 
 import Hangar1 from "@/images/hangar/hangar1.jpg";
-import Hangar2 from "@/images/hangar/hangar2.jpg";
-import Hangar3 from "@/images/hangar/hangar3.jpg";
-import Hangar4 from "@/images/hangar/hangar4.jpg";
-import Hangar5 from "@/images/hangar/hangar5.jpg";
-import Hangar6 from "@/images/hangar/hangar6.jpg";
-import Hangar7 from "@/images/hangar/hangar7.jpg";
-
-import Ifpa1 from "@/images/belem/ifpa-belem1.jpg";
-import Ifpa2 from "@/images/belem/ifpa-belem2.jpg";
-import Ifpa3 from "@/images/belem/ifpa-belem3.jpg";
-
-import BeiraRio1 from "@/images/belem/beira-rio1.jpg";
-import BeiraRio2 from "@/images/belem/beira-rio2.jpg";
-import BeiraRio3 from "@/images/belem/beira-rio3.jpg";
-import BeiraRio4 from "@/images/belem/beira-rio4.jpg";
 
 export const metadata = {
   title: "Venue",
@@ -30,170 +15,9 @@ export const metadata = {
 
 <Heading bubble>Conference Venue</Heading>
 
-{/* <HangarVideo /> */}
-
-<div className="grid grid-cols-1 sm:grid-cols-12 my-4 gap-4">
-  <div className="sm:col-span-5">
-  <div className="max-h-96">
-  <Carousel
-        images={[
-          {
-            image: Hangar1,
-          },
-          {
-            image: Hangar2,
-          },
-          {
-            image: Hangar3,
-          },
-          {
-            image: Hangar4,
-          },
-          {
-            image: Hangar5,
-          },
-          {
-            image: Hangar6,
-          },
-          {
-            image: Hangar7,
-          },
-        ]}
-      />
-      </div>
-  {/* <Image src={Hangar1} className="aspect-4/3 my-4 object-cover shadow rounded-lg" />
-  <Image src={Hangar2} className="h-72 my-4 object-cover shadow rounded-lg" />
-  <Image src={Hangar3} className="h-72 my-4 object-cover shadow rounded-lg" /> */}
-
-  </div>
-  <div className="sm:col-span-7">
-    <div className="">
-    #### Hangar Convention Center
-    </div>
-    ---
-
-    The venue for the majority of FOSS4G 2024 conference events is the Hangar Convention Center in Belém, Pará, Brasil. Hangar is a modern and versatile event space that hosts a wide range of conferences, exhibitions, and cultural events.
-    
-    The center offers state-of-the-art infrastructure, including advanced audiovisual technology, high-speed internet, and ample parking. Its sleek and contemporary design, inspired by the city's rich Amazonian heritage, provides a unique and inspiring backdrop for FOSS4G 2024.
-
-    ##### Activities at Hangar
-    - Main Conference (Dec 04-06)
-    - Ice Breaker (Dec 04)
-    - Gala Dinner (Dec 06)
-
-    ##### Infrastructure
-
-    - **Accessibility accommodations**: access ramps, elevators, adapted toilets and spaces reserved for people with disabilities or reduced mobility.
-    - **Child care**: will be available during the main conference, in two 4 hour windows (9am-12pm, 2pm-5pm), with a capacity of 30 children. Stay tuned for more information!
-    - **Violet room (safety point)**: a safe place managed by event organizers, where anyone can come if they feel they are suffering some type of harrassment or uncomfortable situation, to receive assistance.
-
-  </div>
-</div>
-
-<div className="grid grid-cols-1 sm:grid-cols-12 my-4 gap-4">
-  <div className="sm:col-span-5">
-  <div className="max-h-96">
-  <Carousel
-        images={[
-          {
-            image: Ifpa2,
-          },
-          {
-            image: Ifpa1,
-          },
-          {
-            image: Ifpa3,
-          },
-        ]}
-      />
-      </div>
-
-  </div>
-  <div className="sm:col-span-7">
-    #### IFPA: Instituto Federal do Pará, Campus Belém
-    ---
-
-    The Instituto Federal do Pará is a premier institution of higher education located in the heart of Belém, Pará, Brazil. As a federal institution, it offers a wide range of undergraduate and graduate programs in fields such as engineering, biological sciences, education, and technology.
-
-    With a strong commitment to academic excellence and social responsibility, Instituto Federal do Pará, Campus Belém has established itself as a hub for intellectual and cultural development in the Amazon region.
-
-    ##### Activities at IFPA
-    - Workshops (Dec 02-03)
-    - Community Code Sprint (Dec 07-08)
-
-    ##### Infrastructure
-
-    - **Accessibility accommodations**: bathroom suitable for students with disabilities or reduced mobility, an accessibility room, a pedagogical service room and an elevator.
-    - **Gathering space**: as a university campus, IFPA is equipped with many classrooms, audio-visual equipment, and appropriate infrastructure to host the additional FOSS4G events.
-  </div>
-</div>
-
-<div className="grid grid-cols-1 sm:grid-cols-12 my-4 gap-4">
-  <div className="sm:col-span-5">
-  <div className="max-h-96">
-  <Carousel
-        images={[
-          {
-            image: BeiraRio1,
-          },
-          {
-            image: BeiraRio2,
-          },
-          {
-            image: BeiraRio3,
-          },
-          {
-            image: BeiraRio4,
-          },
-        ]}
-      />
-      </div>
-
-  </div>
-  <div className="sm:col-span-7">
-    #### Beira Rio Hotel
-    ---
-
-    The Hotel Beira Rio is a charming hotel located in the heart of Belém, Brazil. Situated on the banks of the Rio Guamá, the hotel offers stunning views of the river and the city skyline.
-
-    The hotel also features a range of event spaces suitable for various occasions. The hotel's event facilities include a grand ballroom, smaller meeting rooms, and outdoor areas, totaling over 10,000 square feet of space.
-    
-    These spaces are equipped with modern audiovisual equipment and offer catering services, all with a great view of the river and relaxing spaces integrated into the surrounding nature.
-
-    ##### Activities at Beira Rio Hotel
-    - Business to Business (B2B) (Dec 03)
-    - GeoChicas & Meninas da Geo Event (Dec 03)
-  </div>
-</div>
-
-export const HangarVideo = () => {
-  // have to set playbackRate after mount
-  const videoRef = useRef(null);
-
-useEffect(() => {
-videoRef.current.playbackRate = 0.6;
-videoRef.current.addEventListener("ended", function() {
-videoRef.current.play();
-setTimeout(() => {videoRef.current.pause()}, 1000)
-})
-videoRef.current.play();
-}, []);
-
-return (
-
-<div className="min-h-[50vh] sm:min-h-96 relative flex items-center justify-center overflow-hidden">
-  <video
-    ref={videoRef}
-    className="absolute sm:static z-10 h-full sm:h-auto w-auto min-w-full min-h-full max-w-none"
-    width="1440px"
-    height="840px"
-    preload="auto"
-    muted
-    autoplay
-    src={`${useRouter().basePath}/images/hangar.webm`}
-  ></video>
-</div>
-); };
+<Hangar />
+<Ifpa />
+<BeiraRio />
 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>

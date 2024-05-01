@@ -1,0 +1,43 @@
+
+import Ifpa1 from "@/images/belem/ifpa-belem1.jpg";
+import Ifpa2 from "@/images/belem/ifpa-belem2.jpg";
+import Ifpa3 from "@/images/belem/ifpa-belem3.jpg";
+import { Carousel } from "@/mdx-components";
+
+<div className={`grid grid-cols-1 my-4 gap-4 ${!props.isEmbed && "sm:grid-cols-12"}`}>
+  <div className={!props.isEmbed && "sm:col-span-5"}>
+    <div className="max-h-96">
+    <Carousel
+        images={[
+          {
+            image: Ifpa2,
+          },
+          {
+            image: Ifpa1,
+          },
+          {
+            image: Ifpa3,
+          },
+        ]}
+      />
+    </div>
+
+  </div>
+  <div className={!props.isEmbed && "sm:col-span-7"}>
+    #### IFPA: Instituto Federal do Pará, Campus Belém
+    ---
+
+    The Instituto Federal do Pará is a premier institution of higher education located in the heart of Belém, Pará, Brazil. As a federal institution, it offers a wide range of undergraduate and graduate programs in fields such as engineering, biological sciences, education, and technology.
+
+    With a strong commitment to academic excellence and social responsibility, Instituto Federal do Pará, Campus Belém has established itself as a hub for intellectual and cultural development in the Amazon region.
+
+    ##### Activities at IFPA
+    - Workshops (Dec 02-03)
+    - Community Code Sprint (Dec 07-08)
+
+    ##### Infrastructure
+
+    - **Accessibility accommodations**: bathroom suitable for students with disabilities or reduced mobility, an accessibility room, a pedagogical service room and an elevator.
+    - **Gathering space**: as a university campus, IFPA is equipped with many classrooms, audio-visual equipment, and appropriate infrastructure to host the additional FOSS4G events.
+  </div>
+</div>

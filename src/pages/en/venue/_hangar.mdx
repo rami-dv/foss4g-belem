@@ -1,0 +1,61 @@
+import Hangar1 from "@/images/hangar/hangar1.jpg";
+import Hangar2 from "@/images/hangar/hangar2.jpg";
+import Hangar3 from "@/images/hangar/hangar3.jpg";
+import Hangar4 from "@/images/hangar/hangar4.jpg";
+import Hangar5 from "@/images/hangar/hangar5.jpg";
+import Hangar6 from "@/images/hangar/hangar6.jpg";
+import Hangar7 from "@/images/hangar/hangar7.jpg";
+import { Carousel } from "@/mdx-components";
+
+<div className={`grid grid-cols-1 my-4 gap-4 ${!props.isEmbed && "sm:grid-cols-12"}`}>
+  <div className={!props.isEmbed && "sm:col-span-5"}>
+    <div className="max-h-96">
+    <Carousel
+        images={[
+          {
+            image: Hangar1,
+          },
+          {
+            image: Hangar2,
+          },
+          {
+            image: Hangar3,
+          },
+          {
+            image: Hangar4,
+          },
+          {
+            image: Hangar5,
+          },
+          {
+            image: Hangar6,
+          },
+          {
+            image: Hangar7,
+          },
+        ]}
+      />
+      </div>
+
+  </div>
+  <div className={!props.isEmbed && "sm:col-span-7"}>
+    #### Hangar Convention Center
+    ---
+
+    The venue for the majority of FOSS4G 2024 conference events is the Hangar Convention Center in Belém, Pará, Brasil. Hangar is a modern and versatile event space that hosts a wide range of conferences, exhibitions, and cultural events.
+
+    The center offers state-of-the-art infrastructure, including advanced audiovisual technology, high-speed internet, and ample parking. Its sleek and contemporary design, inspired by the city's rich Amazonian heritage, provides a unique and inspiring backdrop for FOSS4G 2024.
+
+    ##### Activities at Hangar
+    - Main Conference (Dec 04-06)
+    - Ice Breaker (Dec 04)
+    - Gala Dinner (Dec 06)
+
+    ##### Infrastructure
+
+    - **Accessibility accommodations**: access ramps, elevators, adapted toilets and spaces reserved for people with disabilities or reduced mobility.
+    - **Child care**: will be available during the main conference, in two 4 hour windows (9am-12pm, 2pm-5pm), with a capacity of 30 children. Stay tuned for more information!
+    - **Violet room (safety point)**: a safe place managed by event organizers, where anyone can come if they feel they are suffering some type of harrassment or uncomfortable situation, to receive assistance.
+
+  </div>
+</div>
