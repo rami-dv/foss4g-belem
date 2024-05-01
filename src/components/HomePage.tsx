@@ -1,4 +1,3 @@
-import Head from "next/head";
 import HomepageBanner from "@/images/homepage-one-banner.jpg";
 import AboutFoss4g from "@/images/about-foss4g.png";
 import Objects from "@/images/objects.png";
@@ -22,12 +21,8 @@ import Countdown from "react-countdown";
 import Image from "next/image";
 import IntlLink from "@/components/IntlLink";
 
-export const metadata = {
-  title: "FOSS4G 2024 Belém Brasil",
-  description: "Homepage for the FOSS4G 2024 Conference held in Belém Brasil",
-};
 
-export default function IndexPage() {
+export default function HomePage() {
   return (
     <>
       {/* Banner section */}
@@ -38,9 +33,6 @@ export default function IndexPage() {
           backgroundImage: `url(${HomepageBanner.src})`,
         }}
       >
-        <Head key="omg">
-          <title key="omg">Home</title>
-        </Head>
         <div className="font-ubuntu text-white grid grid-cols-1 min-h-48 max-w-6xl w-full p-4 sm:p-4">
           <Countdown
             date="2024-12-02"
@@ -409,12 +401,4 @@ export default function IndexPage() {
       </section>
     </>
   );
-}
-
-export async function getStaticProps() {
-  return {
-    props: {
-      metadata,
-    },
-  };
 }

@@ -1,0 +1,16 @@
+import HomePage from "@/components/HomePage";
+
+export const metadata = {
+  title: "FOSS4G 2024 Belém Brasil",
+  description: "Homepage for the FOSS4G 2024 Conference held in Belém Brasil",
+};
+
+<HomePage />
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata,
+    },
+  };
+}
