@@ -21,8 +21,8 @@ import Head from "next/head";
 
 export const metadata = {
   title: "Conference Map",
-  description: "Interactive map of the FOSS4G conference and surroundings"
-}
+  description: "Interactive map of the FOSS4G conference and surroundings",
+};
 
 export default function Map() {
   const router = useRouter();
@@ -81,7 +81,22 @@ export default function Map() {
 
           if (isSameFeature(clickedFeat, hoveredFeature))
             setHoveredFeature(null);
+
           setSelectedFeature(clickedFeat);
+          if (clickedFeat) {
+            console.log(clickedFeat)
+            mapRef.current.flyTo({
+              center: clickedFeat.geometry.coordinates,
+              speed: 0.05,
+              curve: 1,
+              padding: {
+                top: 600,
+                left: 0,
+                bottom: 0,
+                right: 0
+              }
+            });
+          }
         }}
         transformRequest={(url: string) => {
           // transform fake sprite url in style to work on both dev and prod
@@ -138,7 +153,8 @@ const getMapStyle = ({
         url: "pmtiles://http://{basePath}/map/tiles/overture.pmtiles",
         minzoom: 8,
         maxzoom: 14,
-        attribution: '<a href="https://overturemaps.org" target="_blank">Overture Maps</a>'
+        attribution:
+          '<a href="https://overturemaps.org" target="_blank">Overture Maps</a>',
       },
       worldcover: {
         type: "vector",
@@ -160,7 +176,8 @@ const getMapStyle = ({
           placesGeoJson as NamedFeatureCollection,
           featureState
         ),
-        attribution: '<a href="https://overturemaps.org" target="_blank">Overture Maps</a>'
+        attribution:
+          '<a href="https://overturemaps.org" target="_blank">Overture Maps</a>',
       },
       bairros: {
         type: "geojson",
@@ -758,7 +775,7 @@ const getMapStyle = ({
           "Forte do Castelo",
           "Praça da República",
           "Praça Dom Pedro 2",
-          "Centro Histórico de Belém"
+          "Centro Histórico de Belém",
         ],
       },
       {
@@ -789,7 +806,7 @@ const getMapStyle = ({
 export async function getStaticProps() {
   return {
     props: {
-      metadata
+      metadata,
     },
-  }
+  };
 }
