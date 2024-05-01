@@ -40,6 +40,52 @@ export default function Map() {
     [hoveredFeature, selectedFeature]
   );
 
+  const onMouseUp = (e) => {
+    if (!mapRef.current) return;
+
+    const clickedFeat = mapRef.current
+      .queryRenderedFeatures(e.point, {
+        layers: ["venues", "places"],
+      })?.[0]
+      ?.toJSON();
+
+    if (isSameFeature(clickedFeat, hoveredFeature)) setHoveredFeature(null);
+
+    setSelectedFeature(clickedFeat);
+    if (clickedFeat) {
+      mapRef.current.flyTo({
+        center: clickedFeat.geometry.coordinates,
+        speed: 0.1,
+        curve: 1,
+        padding: {
+          top: 600,
+          left: 0,
+          bottom: 0,
+          right: 0,
+        },
+      });
+    }
+  };
+
+  const onMouseMove = (e) => {
+    if (!mapRef.current) return;
+    if (e.originalEvent.type == "touchmove") return onMouseUp(e);
+
+    const mouseoverFeat = mapRef.current
+      .queryRenderedFeatures(e.point, {
+        layers: ["venues", "places"],
+      })?.[0]
+      ?.toJSON();
+
+    setCursor(mouseoverFeat ? "pointer" : "auto");
+
+    if (
+      !isSameFeature(mouseoverFeat, hoveredFeature) &&
+      !isSameFeature(mouseoverFeat, selectedFeature)
+    )
+      setHoveredFeature(mouseoverFeat ? mouseoverFeat : null);
+  };
+
   return (
     <div className="fixed top-0 left-0 bottom-0 right-0">
       <Head>
@@ -53,51 +99,8 @@ export default function Map() {
           bounds: [-48.508521, -1.481578, -48.437068, -1.410125],
         }}
         cursor={cursor}
-        onMouseMove={(e) => {
-          if (!mapRef.current) return;
-
-          const mouseoverFeat = mapRef.current
-            .queryRenderedFeatures(e.point, {
-              layers: ["venues", "places"],
-            })?.[0]
-            ?.toJSON();
-
-          setCursor(mouseoverFeat ? "pointer" : "auto");
-
-          if (
-            !isSameFeature(mouseoverFeat, hoveredFeature) &&
-            !isSameFeature(mouseoverFeat, selectedFeature)
-          )
-            setHoveredFeature(mouseoverFeat ? mouseoverFeat : null);
-        }}
-        onMouseUp={(e) => {
-          if (!mapRef.current) return;
-
-          const clickedFeat = mapRef.current
-            .queryRenderedFeatures(e.point, {
-              layers: ["venues", "places"],
-            })?.[0]
-            ?.toJSON();
-
-          if (isSameFeature(clickedFeat, hoveredFeature))
-            setHoveredFeature(null);
-
-          setSelectedFeature(clickedFeat);
-          if (clickedFeat) {
-            console.log(clickedFeat)
-            mapRef.current.flyTo({
-              center: clickedFeat.geometry.coordinates,
-              speed: 0.1,
-              curve: 1,
-              padding: {
-                top: 600,
-                left: 0,
-                bottom: 0,
-                right: 0
-              }
-            });
-          }
-        }}
+        onMouseMove={onMouseMove}
+        onMouseUp={onMouseUp}
         transformRequest={(url: string) => {
           // transform fake sprite url in style to work on both dev and prod
 
