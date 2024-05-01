@@ -104,7 +104,6 @@ export default function Map() {
         cursor={cursor}
         onMouseMove={onMouseMove}
         onClick={onClick}
-        onTouchEnd={onClick}
         transformRequest={(url: string) => {
           // transform fake sprite url in style to work on both dev and prod
 
