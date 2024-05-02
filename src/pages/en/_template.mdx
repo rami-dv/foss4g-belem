@@ -1,0 +1,21 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "",
+  description: null,
+  image: null
+};
+
+Content Goes Here
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}
