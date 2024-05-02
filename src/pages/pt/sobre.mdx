@@ -1,0 +1,178 @@
+import Image from "next/image";
+import Carousel from "@/components/Carousel";
+import Heading from "@/components/Heading";
+import MdxLayout from "@/components/MDXLayout";
+import Foss4g2022GroupPhoto from "@/images/foss4g-2022/group-photo.jpg";
+import Foss4g2022OpeningSession from "@/images/foss4g-2022/opening-session.jpg";
+import Foss4g2022Talk1 from "@/images/foss4g-2022/talk.jpg";
+import Foss4g2022Talk2 from "@/images/foss4g-2022/talk2.jpg";
+import Foss4g2022Volunteers from "@/images/foss4g-2022/volunteers.jpg";
+import Foss4gAr from "@/images/foss4g-ar/foss4g-ar4.jpg";
+
+export const metadata = {
+  title: "Sobre",
+  description:
+    "Informações gerais sobre a Conferência FOSS4G 2024 realizada em Belém, Brasil, de 02 a 08 de dezembro de 2024",
+  image: Foss4g2022GroupPhoto
+};
+
+<Carousel
+  captions={true}
+  images={[
+    {
+      image: Foss4g2022GroupPhoto,
+      caption:
+        "Foto em grupo da FOSS4G 2022 em Firenze, Itália, com mais de 800 participantes",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022Talk2,
+      caption:
+        "A FOSS4G é frequentada por centenas de profissionais da indústria e pessoas curiosas sobre geoespacial.",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022Talk1,
+      caption:
+        "As palestras da conferência abrangem uma ampla variedade de tópicos relacionados à tecnologia geoespacial de código aberto (FOSS4G)",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022Volunteers,
+      caption:
+        "A FOSS4G é possível graças a dezenas de voluntários dedicados!",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+  ]}
+  autoplay={true}
+  autoplayDelay={5000}
+/>
+
+<div className="grid space-y-4 mt-4">
+  <div className="grid md:grid-cols-2 md:space-x-4">  
+    <div className="flex flex-col space-y-4">
+      <div className="">
+        #### Conferência FOSS4G
+        ---
+        
+        FOSS4G é a sigla para Software Livre e de Código Aberto para Geoespacial. É o evento global anual recorrente hospedado pela [OSGeo](https://www.osgeo.org/), a organização sem fins lucrativos que apoia e promove o desenvolvimento colaborativo de tecnologias geográficas de código aberto e dados geoespaciais abertos.
+        
+        A conferência abrange todos os tipos de tópicos relacionados à informação geoespacial e à abertura da observação terrestre, desde o desenvolvimento de software até a transição para FOSS4G, casos de uso e aplicações, educação e pesquisa e dados abertos.
+
+        Este evento é para todos os tipos de pessoas interessadas em compartilhar experiências sobre mapas, desde desenvolvedores que escrevem código até usuários de software geomático, pessoas que tomam decisões, pesquisadores, estudantes e qualquer pessoa que queira aprender, compartilhar e conhecer pessoas interessadas em SIG.
+
+        Atrai mais de 1.000 profissionais e defensores de software livre e de código aberto para geoespacial e a tendência é aumentar esse número a cada ano. É o principal ponto de encontro e oportunidade de divulgação educacional para membros, apoiadores e novatos da OSGeo - para compartilhar e aprender uns com os outros em apresentações, workshops práticos e uma exposição de conferências.
+
+        Para apreciar a qualidade e variedade das apresentações, você pode assistir às gravações de vídeo de eventos FOSS4G passados no [canal do YouTube FOSS4G](https://www.youtube.com/c/FOSS4G/)
+
+        #### Quem organiza o evento?
+        ---
+
+        A FOSS4G é organizada pela Fundação de Geoespacial de Código Aberto (OSGeo), em colaboração com a comunidade local. A OSGeo foi fundada para apoiar e construir o software geoespacial de código aberto da mais alta qualidade e é a anfitriã do evento global anual FOSS4G.
+
+        O objetivo da fundação é incentivar o uso e o desenvolvimento colaborativo de projetos liderados pela comunidade, desenvolvimento de dados e educação. Muitos projetos importantes de geoespacial de código aberto vivem sob o [guarda-chuva da OSGeo](https://www.osgeo.org/).
+
+      </div>
+      <div>
+
+
+      </div>
+
+    </div>
+    <div className="flex flex-col space-y-4">
+      <div>
+        #### Quem participa da FOSS4G?
+        ---
+
+        Os participantes da conferência são:
+        - Desenvolvedores e Usuários de Software Geoespacial
+        - Líderes Técnicos
+        - Empresas Privadas
+        - Organizações Governamentais
+        - Organizações Não-Governamentais (ONG)
+        - Professores e Profissionais da Educação
+        - Comunidades Científicas e Pesquisadores
+      </div>
+
+      <div>
+      #### Que tipo de tópicos são discutidos?
+      ---
+
+      - Status do software, desenvolvimento de novos projetos de software, benchmarking
+      - Implementações de FOSS4G em domínios de aplicação estratégicos: gestão de terras, resposta a crises/desastres, cidades inteligentes, mapeamento populacional, mudanças climáticas, monitoramento oceânico e marinho, etc.
+      - Visualização de dados: análise espacial, manipulação e visualização de dados geoespaciais
+      - Coleta de dados, compartilhamento de dados, ciência de dados, dados abertos, big data, plataformas de exploração de dados
+      - Sensores, sensoriamento remoto, escaneamento a laser, estrutura a partir de movimento
+      - Novas tendências: IoT, mapeamento indoor, drones - UAV (veículo aéreo não tripulado) -, inteligência artificial - aprendizado de máquina, aprendizado profundo -, estruturas de dados geoespaciais
+      - Ciência aberta e reproduzível
+      - Padrões, interoperabilidade, SDIs
+      - Comunidade e FOSS4G participativo
+      - FOSS4G em instituições governamentais
+      - FOSS4G na educação
+      - Produtos comerciais alimentados por FOSS4G
+
+      </div>
+    </div>
+
+  </div>
+
+<Heading bubble color="orange">
+  FOSS4G 2024 em Belém
+</Heading>
+
+  <div className="grid md:grid-cols-2 md:space-x-4">
+    <div className="flex flex-col space-y-4">
+      <div className="">
+
+        <div className="w-full">
+        <Carousel
+          images={[
+            {
+              image: Foss4gAr,
+              caption:
+                "FOSS4G AR 2017 em Buenos Aires, Argentina"
+            }
+          ]}
+          autoplay={true}
+          autoplayDelay={5000}
+        />
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        #### FOSS4G na América Latina
+        ---
+
+        Pela primeira vez na história, a conferência FOSS4G será realizada presencialmente na América Latina, e estamos extremamente animados em receber nossa comunidade internacional de colegas geoespaciais aqui em Belém, Brasil.
+
+        O uso de software geoespacial livre e de código aberto tem uma longa história aqui, com comunidades orgânicas surgindo em muitos países do continente para apoiar e promover seu uso.
+
+        No entanto, mesmo com o amplo uso de software FOSS4G na América Latina, historicamente a representação dos latino-americanos tem sido bastante baixa nas conferências FOSS4G.
+        
+        Ao sediar a conferência FOSS4G na América do Sul, esperamos reverter essa tendência e servir como um ponto de encontro para pessoas geoespaciais com mentalidade semelhante em todo o continente e ao redor do globo.
+
+        #### Foco em Belém do Pará, Brasil.
+        ---
+
+        Como Belém é uma das capitais regionais da Amazônia, inúmeras ONGs e organizações governamentais têm suas sedes para realizar coleta e análise de dados espaciais para fins de sustentabilidade. Esses projetos estão relacionados à luta contra o desmatamento ou ao empoderamento das comunidades indígenas com software geoespacial adaptado às suas necessidades.
+        
+        Nosso objetivo é aproximar a agenda indígena e torná-la presente neste evento. Outro de nossos objetivos como conferência é gerar um espaço seguro para reduzir a lacuna de gênero no campo geoespacial, buscando a participação de mulheres e dissidentes.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+}
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

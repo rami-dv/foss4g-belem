@@ -1,0 +1,216 @@
+import MdxLayout from "@/components/MDXLayout";
+import Carousel from "@/components/Carousel";
+import Heading from "@/components/Heading";
+import IntlLink from "@/components/IntlLink";
+import Image from "next/image";
+import GlobeMap from "@/components/GlobeMap";
+import Belem1 from "@/images/belem/belem1.jpg";
+import Belem2 from "@/images/belem/belem2.jpg";
+import Belem3 from "@/images/belem/belem3.jpg";
+import EstacaoDasDocasImage from "@/images/belem/estacao-das-docas.jpg";
+import ForteDoPresepioImage from "@/images/belem/forte-do-presepio.jpg";
+import Guindastes from "@/images/belem/guindastes.jpg";
+import Mercado from "@/images/belem/mercado.jpg";
+import TeatroDaPaz from "@/images/belem/teatro-da-paz.jpg";
+import VerOPeso from "@/images/belem/ver-o-peso.jpg";
+import PracaBatistaCampos from "@/images/belem/praca-batista-campos.jpg";
+import CidadeVelha from "@/images/belem/cidade-velha.jpg";
+import PracaDoRelogio from "@/images/belem/praca-do-relogio.jpg";
+import AlmiranteBarroso from "@/images/belem/almirante-barroso.jpg";
+import Architecture from "@/images/belem/architecture.jpg";
+
+import EstacaoDasDocas from "./visiting-belem/_estacao-das-docas.mdx";
+import ForteDoPresepio from "./visiting-belem/_forte-do-castelo.mdx";
+
+export const metadata = {
+  title: "Visita a Belém",
+  description: "Informações sobre a cidade de Belém, como chegar, onde ficar e informações turísticas, para os participantes da Conferência FOSS4G 2024 realizada em Belém, Brasil, de 02 a 08 de dezembro de 2024",
+  image: VerOPeso
+};
+
+<Carousel
+  images={[
+    {
+      image: Belem3,
+      attribution: "Cayambe CC-SA",
+      caption: "Linda Praça da República em Belém, Pará, Brasil",
+    },
+    {
+      image: VerOPeso,
+      attribution: "Cayambe CC-SA",
+      caption: 'Famoso Mercado "Ver-o-Peso" no bairro da Cidade Velha',
+    },
+    {
+      image: Belem2,
+      attribution: "Celeumo CC-BY",
+      caption: "Casa das Onze Janelas",
+    },
+    {
+      image: TeatroDaPaz,
+      attribution: "Fernando Stankuns CC-SA",
+      caption:
+        "Teatro Da Paz, construído em 1878, com bela arquitetura colonial",
+    },
+    {
+      image: EstacaoDasDocasImage,
+      attribution: "Cayambe CC-SA",
+      caption:
+        "Estação das Docas, originalmente um armazém, agora é um complexo de turismo cultural com uma bela vista",
+    },
+    {
+      image: ForteDoPresepioImage,
+      attribution: "Virgilinojuca CC-BY",
+      caption:
+        "Forte do Presépio, uma fortaleza histórica construída em 1616",
+    },
+    {
+      image: Mercado,
+      attribution: "Cayambe CC-SA",
+      caption: "Cenas do centro de Belém, Brasil",
+    },
+    {
+      image: Guindastes,
+      attribution: "Emerson Pardo CC-SA",
+      caption: "Pôr do sol amazônico no porto de Belém, Brasil",
+    },
+  ]}
+/>
+
+<Heading bubble>Sobre Belém</Heading>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div>
+    ##### História de Belém
+    ---
+
+    Belém foi fundada pelos portugueses em 1615 e tornou-se um importante centro para a colonização da região amazônica e a exportação de recursos naturais. Durante o ciclo da borracha (1879-1912), a cidade experimentou um rápido crescimento e tornou-se um centro cosmopolita, atraindo imigrantes da Europa, África e Ásia.
+
+    Nos últimos anos, Belém passou por significativos desenvolvimentos urbanos e esforços de revitalização, incluindo a restauração de edifícios históricos e a criação de novas atrações culturais e turísticas. Hoje, a cidade é um centro cultural e econômico próspero, conhecido por seu rico patrimônio musical e artístico, bem como sua mistura única de influências indígenas, africanas e europeias.
+
+    Para mais informações sobre Belém, o artigo sobre [Belém na Wikipedia](https://en.wikipedia.org/wiki/Bel%C3%A9m) é um ótimo lugar para aprender.
+
+  </div>
+  <div>
+  ##### Geografia de Belém
+    ---
+
+    Belém é um hub estratégico na região amazônica, servindo como capital do estado do Pará e a porta de entrada para o rio Amazonas e sua vasta bacia. Sua localização na confluência dos rios Amazonas e Tocantins a torna um hub de transporte crucial, conectando a região ao resto do Brasil e do mundo.
+
+    Geograficamente, Belém está situada na parte oriental da bacia amazônica, onde o rio Amazonas encontra a Baía do Guajará, tornando-a uma ponte entre a floresta tropical e o Oceano Atlântico. Sua proximidade com o equador e clima tropical a tornam um centro importante para a agricultura, com culturas como açaí, cacau e soja impulsionando a economia local.
+
+  </div>
+</div>
+
+<Heading bubble>Chegando a Belém</Heading>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div className="flex items-center justify-start flex-col">
+   <GlobeMap />
+   <div className="text-center italic text-sm">(mapa: das rotas aéreas mais movimentadas para Belém)</div>
+  </div>
+  <div>
+    ##### Chegando de avião
+    ---
+
+    O Aeroporto Internacional Val-de-Cans de Belém é um aeroporto internacional de médio porte com muitos voos diretos de dentro do Brasil e de outros países.
+
+    As conexões internacionais diretas são as seguintes:
+    - FLL (Fort Lauderdale, EUA) - Azul Airlines
+    - LIS (Lisboa, Portugal) - TAP Portugal
+    - PBM (Paramaribo, Suriname) - Gol Airlines
+    - CAY (Caiena, Guiana Francesa) - Air France
+
+    ##### Chegando por mar
+    ---
+
+    Além do acesso por ar, Belém possui uma excelente infraestrutura para transporte fluvial. O Porto de Belém se conecta com diversos outros destinos no norte do Brasil, como Manaus, Santarém e Macapá.
+
+    Para entrar em Belém do Pará por mar, existem dois pontos de entrada principais:
+
+     - **Porto de Belém**: Belém possui um importante porto comercial, então chegar por mar diretamente a este porto é uma opção comum.
+     - **Porto de Val de Cans**: este é o porto de Belém que recebe barcos de passageiros e turistas.
+
+  </div>
+</div>
+
+<Heading bubble>Acomodações</Heading>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div className="order-last 6xl:order-first">
+   ##### Bairros de Belém
+   ---
+
+Belém, a encantadora cidade na foz do rio Amazonas, tem uma variedade de bairros que oferecem diferentes experiências para os visitantes. Aqui apresentamos uma lista dos 5 melhores bairros para se hospedar, de acordo com as comodidades, acessibilidade e atrações:
+
+- **Batista Campos**: Localizado no centro da cidade, é conhecido por suas ruas arborizadas e atmosfera tranquila.
+- **Campina**: Conhecido por sua arquitetura colonial e atmosfera tradicional, é ideal para aqueles que desejam se envolver na cultura local.
+- **Marco**: Este bairro oferece uma vista panorâmica do rio Guamá e é famoso por seu mercado de artesanato.
+- **Cidade Velha**: É o bairro mais antigo de Belém, com ruas de paralelepípedos, belas igrejas coloniais e muito charme histórico.
+- **Umarizal**: É o distrito financeiro da cidade, com uma ampla variedade de opções de hospedagem e uma vida noturna vibrante.
+
+##### Hotéis
+
+---
+
+Com uma ampla variedade de hotéis em diferentes faixas de preço, há algo para todos em Belém. Embora não estejamos recomendando hotéis específicos para os participantes da conferência, você pode consultar o <IntlLink href="/map">Mapa da Conferência</IntlLink> interativo para ver os diversos bairros e os hotéis que eles contêm.
+
+  </div>
+  <div className="order-first 6xl:order-last">
+<Carousel
+  captions={true}
+  images={[
+    {
+      image: PracaBatistaCampos,
+      caption: "Linda Praça Batista Campos verde",
+      attribution: "Luiz Pantoja CC-SA"
+    },
+    {
+      image: CidadeVelha,
+      caption: "Cidade Velha",
+      attribution: "Lgjunior CC-SA"
+    },
+    {
+      image: Architecture,
+      caption: "Belíssima arquitetura colonial na Cidade Velha",
+      attribution: "Celso Abreu CC-SA"
+    },
+    {
+      image: PracaDoRelogio,
+      caption: "Praça Siqueira Campos no bairro da Campina",
+      attribution: "Cayambe CC-SA"
+    },
+    {
+      image: AlmiranteBarroso,
+      caption: "Avenida Almirante Barroso no bairro do Marco",
+      attribution: "Roberto de vasconcel CC-SA"
+    }
+  ]}
+/>
+  </div>
+</div>
+
+<Heading bubble>O que fazer em Belém</Heading>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div>
+    <ForteDoPresepio />
+  </div>
+
+  <div>
+    <EstacaoDasDocas />
+  </div>
+
+</div>
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

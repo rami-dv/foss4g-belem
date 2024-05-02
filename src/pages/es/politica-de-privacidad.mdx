@@ -1,0 +1,30 @@
+import Heading from "@/components/Heading";
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "Política de Privacidad",
+  description: "Política de Privacidad para la Conferencia FOSS4G 2024 celebrada en Belém, Brasil, del 02 al 08 de diciembre de 2024"
+}
+
+<Heading color="red" bubble>Política de Privacidad</Heading>
+
+Cuando participas en nuestras actividades en línea, como registrarte y completar encuestas voluntarias, proporcionar comentarios por correo electrónico o en nuestros foros de mensajes, recopilamos información personal identificable, como tu nombre y dirección de correo electrónico. En algunos casos (como registros), tomamos información sobre tu ubicación geográfica (país - ciudad) así como preguntas relacionadas con el género.
+
+Estos datos se utilizan para recopilar estadísticas relevantes sobre eventos, lo que nos permite evaluar mejoras en eventos futuros. Tus datos se conservarán durante un año después de la conferencia y después de ese período se eliminarán. Actualmente no utilizamos cookies.
+
+La información personal está protegida por la LEY Nº 13.709, DE 14 DE AGOSTO DE 2018 - Ley General de Protección de Datos Personales - LGPD vigente en Brasil.
+
+#### Acceso de terceros
+Debes tener en cuenta que la información personal no se divulgará a terceros.
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

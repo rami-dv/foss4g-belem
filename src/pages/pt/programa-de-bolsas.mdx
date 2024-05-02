@@ -1,0 +1,177 @@
+import MdxLayout from "@/components/MDXLayout";
+import Heading from "@/components/Heading";
+import Image from "next/image";
+import Foss4g2022Volunteers from "@/images/foss4g-2022/volunteers.jpg";
+import Foss4g2022Volunteers2 from "@/images/foss4g-2022/volunteers2.jpg";
+
+export const metadata = {
+  title: "Programa de Bolsas de Viagem",
+  description: "Informações sobre o programa de bolsas de viagem para a Conferência FOSS4G 2024 realizada em Belém, Brasil, de 02 a 08 de dezembro de 2024",
+  image: Foss4g2022Volunteers
+};
+
+<Heading color="red" bubble>
+  {"Programa de Bolsas de Viagem"}
+</Heading>
+
+<div className="sm:grid sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0">
+  <div className="">
+    <Image placeholder="blur" src={Foss4g2022Volunteers} className="rounded-lg" />
+  </div>
+  <div className="">
+    O Programa de Bolsas de Viagem FOSS4G (TGP) é uma iniciativa projetada para fornecer apoio financeiro a pessoas que desejam participar da conferência FOSS4G 2024, mas podem enfrentar limitações financeiras para cobrir as despesas de viagem.
+
+Os programas de bolsas desempenham um papel crucial na promoção da igualdade de oportunidades e no acesso à educação e ao desenvolvimento profissional. Ao oferecer apoio financeiro a indivíduos talentosos e motivados que podem enfrentar barreiras financeiras, esses programas ampliam o alcance da conferência e suas atividades.
+
+Além de promover a diversidade, as bolsas contribuem para a criação de comunidades mais inclusivas, permitindo que vozes e perspectivas diversas enriqueçam encontros acadêmicos e profissionais. Ao investir no potencial de indivíduos merecedores, independentemente de seus recursos financeiros, os programas de bolsas elevam toda a comunidade.
+
+Desde 2017, a OSGeo oferece este programa de bolsas e continua essa tradição para a conferência de 2024 em Belém. Os fundos para o TGP são fornecidos pela OSGeo e são alocados pelos membros do Comitê Local de Belém.
+
+  <div className="flex">
+    <button className=" border-f4g_red text-white bg-f4g_orange border line-through italic rounded-lg py-2 px-3 text-lg font-ubuntu">
+    {"Clique aqui para se inscrever!"}
+    </button>
+    <span className="text-f4g_red text-xl font-ubuntu ml-4 font-bold">
+    Em breve!
+    </span>
+  </div>
+  </div>
+</div>
+
+<Heading color="orange">Solicitando uma Bolsa de Viagem</Heading>
+
+<div className="sm:grid sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0">
+  <div>
+  #### Elegibilidade e Benefícios
+
+  Para ser elegível para receber uma Bolsa de Viagem, um candidato:
+
+  - **deve residir em um país da América Latina ou do Caribe**
+  - espera-se que faça voluntariado por pelo menos 10 horas durante a conferência
+
+  As Bolsas de Viagem podem incluir:
+
+  - passagem de avião de ida e volta
+  - subsídio de hospedagem durante a conferência
+  - subsídio de ingresso para a conferência (incluindo 1 workshop)
+
+  O tamanho e o número de bolsas podem ser ajustados a critério do Comitê da Conferência, dependendo do nível de financiamento arrecadado e do número de inscrições recebidas. Os candidatos só poderão se inscrever para uma bolsa de viagem de determinado tamanho.
+
+  Qualquer pessoa que se inscrever para mais de uma bolsa será excluída do processo de inscrição.
+
+  ##### Datas importantes
+
+  - **Julho de 2024**: TGP FOSS4G 2024 abre, comece a enviar suas inscrições
+  - **31 de agosto de 2024**: Prazo final para enviar a inscrição
+  - **16 de setembro de 2024**: O comitê avalia as inscrições para bolsas e entra em contato com os beneficiários por e-mail.
+</div>
+<div>
+#### Critérios de Seleção
+
+Para garantir uma alocação transparente e justa de fundos, o programa de bolsas de viagem utiliza um sistema de pontos para classificar as inscrições. Pontos são concedidos para critérios específicos que os candidatos atendem. Uma vez concluída a fase de inscrição, todos os candidatos são classificados por pontos e os candidatos com mais pontos receberão financiamento.
+
+Observe que o objetivo do programa de bolsas de viagem é melhorar a diversidade na conferência. Podemos reservar algumas vagas no programa para pessoas com inscrições únicas e excepcionais. No entanto, a maioria das vagas no programa será determinada apenas pelos pontos obtidos.
+
+Como parte de nosso compromisso com a diversidade, equidade e inclusão neste evento, o programa de bolsas de viagem busca a participação de pessoas de grupos marginalizados, com foco especial em mulheres, dissidentes de gênero, racializadas, indígenas, neurodivergentes ou pessoas com algum tipo de deficiência no mundo geoespacial, elas serão priorizadas.
+
+No entanto, embora este programa esteja direcionado a determinados grupos demográficos para apoiar a participação desses grupos, incentivamos todas as pessoas a se inscreverem.
+
+  </div>
+</div>
+
+<Heading color="green">Alocação do Sistema de Pontos</Heading>
+
+<div className="sm:grid sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0">
+  <div>
+    ##### Residência/Nacionalidade
+
+    A alocação de pontos é baseada na [classificação da CEPAL](https://statistics.cepal.org/portal/cepalstat/index.html?lang=es), população em situação de pobreza e redistribuição de renda, de acordo com a principal divisão administrativa.
+
+    Se um candidato reside em uma divisão administrativa com os seguintes níveis de pobreza, ele receberá os pontos correspondentes:
+
+    - Pobreza >= 60%: 1,5 pontos
+    - Pobreza 45 - 59,9%: 1 ponto
+    - Pobreza 30 - 44,9%: 0,5 pontos
+    - Pobreza 0 - 29,9%: 0 pontos
+
+    ##### Gênero e minorias
+
+    Para criar uma comunidade mais diversificada, incentivamos a participação de mulheres e candidatos de outros grupos sub-representados.
+
+    - O candidato é uma mulher ou membro de grupo sub-representado: 1 ponto
+    - Todos os outros: 0 pontos
+
+    ##### Participação na Conferência
+
+    O LOC valoriza os candidatos que estão dispostos a contribuir para o sucesso do FOSS4G. Portanto, concedemos pontos a pessoas que estão dispostas a apresentar na conferência.
+
+    - Candidatos que propõem uma palestra e/ou workshop: 1 ponto
+    - Candidatos que propõem uma palestra e/ou workshop _aceitos_: 2 pontos
+
+    Observe que apenas um autor submetido por apresentação será elegível para receber pontos.
+
+  </div>
+  <div>
+
+    ##### Estudantes
+
+    Incentivamos a participação de estudantes em nossa comunidade. Para fins desta classificação, os estudantes de doutorado são considerados estudantes.
+
+    - O candidato é estudante: 1 ponto
+    - O candidato é estudante _e_ é aceito no programa de voluntariado: 2 pontos
+
+    ##### Participação anterior em projetos OSGEO
+
+    Valorizamos não apenas aqueles que desejam aprender mais sobre e participar dos projetos OSGEO, mas também aqueles que têm um histórico de participação em projetos ou atividades de construção de comunidades da OSGeo.
+
+    - O candidato demonstrou uso e experiência com software OSGeo: 1 ponto
+    - Participação comprovada anterior em projetos e/ou atividades de construção de comunidades OSGeo: 2 pontos
+
+    ##### Solicitar subsídio menor
+
+    Reconhecemos que alguns candidatos podem participar da conferência com menos assistência financeira do que outros. Como temos apenas uma certa quantidade de dinheiro de subsídio, consideramos de forma diferente aqueles que estão nesta categoria.
+
+    Subsídios menores incluem um ingresso para a conferência, incluindo um workshop, mas sem outra assistência.
+
+    - O candidato solicita um subsídio menor: 2 pontos
+    - Todos os outros: 0 pontos
+
+  </div>
+</div>
+
+<Heading color="blue">Apoie o TGP!</Heading>
+
+<div className="grid sm:grid-cols-2 sm:space-x-4 gap-y-4 sm:space-y-0">
+  <div className="order-last sm:order-first">
+    Seu apoio ajuda muitas pessoas maravilhosas a participarem do FOSS4G. Por favor, ajude a apoiar o Programa de Bolsas de Viagem, se puder! Aqui estão as várias maneiras pelas quais este programa é financiado:
+
+  - Contribuição de patrocinadores da conferência
+  - Engajamento anual do Conselho da OSGeo
+  - Compra de camisetas ou produtos adicionais, no local da conferência.
+  - Dinheiro arrecadado por meio de merchandising do FOSS4G nas seguintes páginas:
+    - [Loja Redbubble do FOSS4G 2024](https://www.redbubble.com/people/FOSS4G2024/)
+    - [Loja CafePress do FOSS4G 2024](https://www.cafepress.com/shop/FOSS4G2024)
+  - Doações diretas
+    - Você pode ajudar a tornar o FOSS4G mais acessível e aumentar a diversidade de nossos participantes fazendo uma doação para o TGP FOSS4G por meio da conta PayPal do capítulo local da OSGeo Brasil que gerencia a conferência.
+    - Aqueles que desejam doar diretamente para o TGP terão a opção de ter seus nomes listados no site como agradecimento.
+
+  </div>
+
+  <div>
+
+    <Image placeholder="blur" src={Foss4g2022Volunteers2} className="rounded-lg" />
+  </div>
+</div>
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

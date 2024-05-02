@@ -1,0 +1,33 @@
+import MdxLayout from "@/components/MDXLayout";
+import Heading from "@/components/Heading";
+
+import BeiraRio from "./venue/_beira-rio.mdx";
+import Hangar from "./venue/_hangar.mdx";
+import Ifpa from "./venue/_ifpa.mdx";
+
+import Hangar1 from "@/images/hangar/hangar1.jpg";
+
+export const metadata = {
+  title: "Sede",
+  description: "Información sobre la sede de los eventos en la Conferencia FOSS4G 2024 celebrada en Belém, Brasil, del 02 al 08 de diciembre de 2024",
+  image: Hangar1
+};
+
+<Heading bubble>Sede de la Conferencia</Heading>
+
+<Hangar />
+<Ifpa />
+<BeiraRio />
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

@@ -1,12 +1,95 @@
 import MdxLayout from "@/components/MDXLayout";
+import Heading from "@/components/Heading";
+import Image from "next/image";
+import Geochicas from "@/images/logo/geochicas.png";
+import Geolibres from "@/images/logo/geolibres.png";
+import MeninasDaGeo from "@/images/logo/meninas-da-geo.png";
+import OsGeoBrasil from "@/images/logo/osgeo-brasil.png";
+import OsGeoLogo from "@/images/logo/osgeo-logo.png";
 
 export const metadata = {
-  title: "Sponsors",
-  description: null
-}
+  title: "Patrocinadores",
+  description: "Lista de patrocinadores, organizadores y socios comunitarios en la Conferencia FOSS4G 2024 celebrada en Belém, Brasil, del 02 al 08 de diciembre de 2024",
+};
 
-Patrocinadores
+<Heading bubble color="orange">
+  Organizadores
+</Heading>
+<SponsorGrid level={1} images={[OsGeoLogo, OsGeoBrasil, Geolibres]} />
+
+<Heading color="red">{"Patrocinadores Diamante"}</Heading>
+<SponsorGrid level={0} images={[null]} />
+
+<Heading color="red">{"Patrocinadores Platino"}</Heading>
+<SponsorGrid level={1} images={[null, null]} />
+
+<Heading color="red">{"Patrocinadores Oro"}</Heading>
+<SponsorGrid level={2} images={[null, null, null]} />
+
+<Heading color="red">{"Patrocinadores Plata"}</Heading>
+<SponsorGrid level={3} images={[null, null, null, null, null]} />
+
+<Heading color="red">{"Patrocinadores Bronce"}</Heading>
+<SponsorGrid level={4} images={[null, null, null, null, null, null]} />
+
+<Heading color="orange">Socios Comunitarios</Heading>
+<SponsorGrid level={1} images={[Geochicas, MeninasDaGeo]} />
+
+export function SponsorGrid({level, images}) {
+
+  const levelMap = {
+    0: {
+      gap: "gap-4 6xl:gap-10",
+      maxW: "",
+      text: "p-4 6xl:p-6 text-4xl 6xl:text-6xl leading-5"
+    },
+    1: {
+      gap: "gap-3 sm:gap-8",
+      maxW: "max-w-40 6xl:max-w-72",
+      text: "p-3 6xl:p-5 text-2xl 6xl:text-4xl leading-5"
+    },
+    2: {
+      gap: "gap-2 sm:gap-6",
+      maxW: "max-w-40 6xl:max-w-60",
+      text: "p-2 6xl:p-4 6xl:text-xl leading-4"
+    },
+    3: {
+      gap: "gap-1 sm:gap-4",
+      maxW: "max-w-40 6xl:max-w-48",
+      text: "p-1 6xl:p-3 text-sm 6xl:text-lg leading-4"
+    },
+    4: {
+      gap: "gap-1 sm:gap-2",
+      maxW: "max-w-40 6xl:max-w-36",
+      text: "text-xs 6xl:text-base leading-4"
+    },
+  }
+
+  const classes = levelMap[level];
+
+  return (
+    <div className={`flex flex-wrap items-center justify-center ${classes["gap"]}`}>
+      {images.map((img, idx) => (
+        <div key={idx} className={`flex ${classes["maxW"]} items-center justify-center`}>
+          {img ? 
+            <Image placeholder="blur" src={img} className="max-w-full h-auto" /> : 
+            <div className={`border font-ubuntu select-none border-gray-800 p-2 ${classes["text"]} rounded text-center text-gray-700`}>¡Tu Logotipo Aquí!</div>
+            }
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
 }

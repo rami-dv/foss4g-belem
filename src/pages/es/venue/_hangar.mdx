@@ -1,0 +1,61 @@
+import Hangar1 from "@/images/hangar/hangar1.jpg";
+import Hangar2 from "@/images/hangar/hangar2.jpg";
+import Hangar3 from "@/images/hangar/hangar3.jpg";
+import Hangar4 from "@/images/hangar/hangar4.jpg";
+import Hangar5 from "@/images/hangar/hangar5.jpg";
+import Hangar6 from "@/images/hangar/hangar6.jpg";
+import Hangar7 from "@/images/hangar/hangar7.jpg";
+import Carousel from "@/components/Carousel";
+
+<div className={`grid grid-cols-1 my-4 gap-4 ${!props.isEmbed && "sm:grid-cols-12"}`}>
+  <div className={!props.isEmbed && "sm:col-span-5"}>
+    <div className="max-h-96">
+    <Carousel
+        images={[
+          {
+            image: Hangar1,
+          },
+          {
+            image: Hangar2,
+          },
+          {
+            image: Hangar3,
+          },
+          {
+            image: Hangar4,
+          },
+          {
+            image: Hangar5,
+          },
+          {
+            image: Hangar6,
+          },
+          {
+            image: Hangar7,
+          },
+        ]}
+      />
+      </div>
+
+  </div>
+  <div className={!props.isEmbed && "sm:col-span-7"}>
+    #### Centro de Convenciones Hangar
+    ---
+
+    El lugar de la mayoría de los eventos de la conferencia FOSS4G 2024 es el Centro de Convenciones Hangar en Belém, Pará, Brasil. Hangar es un espacio de eventos moderno y versátil que alberga una amplia gama de conferencias, exposiciones y eventos culturales.
+
+    El centro ofrece una infraestructura de última generación, que incluye tecnología audiovisual avanzada, internet de alta velocidad y amplio estacionamiento. Su diseño elegante y contemporáneo, inspirado en el rico patrimonio amazónico de la ciudad, proporciona un telón de fondo único e inspirador para FOSS4G 2024.
+
+    ##### Actividades en Hangar
+    - Conferencia Principal (04-06 de diciembre)
+    - Rompehielos (04 de diciembre)
+    - Cena de Gala (06 de diciembre)
+
+    ##### Infraestructura
+
+    - **Adaptaciones de accesibilidad**: rampas de acceso, ascensores, baños adaptados y espacios reservados para personas con discapacidad o movilidad reducida.
+    - **Cuidado de niños**: estará disponible durante la conferencia principal, en dos ventanas de 4 horas (9am-12pm, 2pm-5pm), con una capacidad de 30 niños. ¡Estén atentos para más información!
+    - **Sala violeta (punto de seguridad)**: un lugar seguro gestionado por los organizadores del evento, donde cualquiera puede acudir si sienten que están sufriendo algún tipo de acoso o situación incómoda, para recibir asistencia.
+
+  </div>
+</div>

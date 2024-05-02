@@ -1,0 +1,120 @@
+import VisaMap from "@/images/Visa_policy_of_Brazil.svg";
+import Heading from "@/components/Heading";
+import VisaCountries from "@/data/visa_countries.json";
+import MdxLayout from "@/components/MDXLayout";
+import VisaApplicationImage from "@/images/visa-application.jpg";
+import Image from "next/image";
+
+import Head from "next/head";
+
+export const metadata = {
+  title: "Información de Visa para Brasil FOSS4G 2024",
+  description: "Información de visa para la Conferencia FOSS4G 2024 celebrada en Belém, Brasil, del 02 al 08 de diciembre de 2024",
+}
+
+<main className="sm:mx-auto max-w-6xl mx-2 my-2 sm:my-4 min-h-96">
+  <Heading bubble>Información de Visa</Heading>
+  <div>
+    <Image alt="Mapa de Países con Visa para Brasil" src={VisaMap} />
+    <div className="flex flex-col sm:flex-row mt-2 justify-center items-center sm:items-start space-y-1 sm:space-y-0 sm:space-x-3">
+      <div className="flex items-center text-sm space-x-1">
+        <div className="block [background-color:#a6bf64] w-4 h-4 sm:w-6 sm:h-6 border border-black"></div>
+        <div>No se requiere pasaporte; Se acepta la Identificación Nacional</div>
+      </div>
+      <div className="flex items-center text-sm space-x-1">
+        <div className="block [background-color:#009575] w-4 h-4 sm:w-6 sm:h-6 border border-black"></div>
+        <div>Libre de Visa / Visa a la Llegada</div>
+      </div>
+      <div className="flex items-center text-sm space-x-1">
+        <div className="block [background-color:#B2B2B2] w-4 h-4 sm:w-6 sm:h-6 border border-black"></div>
+        <div>Visa Requerida</div>
+      </div>
+    </div>
+  </div>
+
+  <Heading>Visas por País</Heading>
+  <div className="">
+    <div className="text-xl bg-f4g_green text-white p-2 pl-4 rounded-t-lg">
+      No se requiere pasaporte; Se acepta la Identificación Nacional
+    </div>
+
+    <div className="grid grid-cols-3 sm:grid-cols-9 items-center justify-center border-f4g_blue border-l border-r border-b">
+      {VisaCountries["id_card"].map((iso2) => (
+        //  @ts-ignore
+        <span key={iso2} className="p-2 text-center">
+          {/* @ts-ignore */}
+          {VisaCountries["names"]?.[iso2]?.["en"]}
+        </span>
+      ))}
+    </div>
+  </div>
+
+  <div className="mt-4">
+    <div className="text-xl bg-f4g_blue text-white p-2 pl-4 rounded-t-lg">
+      Libre de Visa / Visa a la Llegada
+    </div>
+
+    <div className="grid grid-cols-3 sm:grid-cols-7 items-center justify-center border-f4g_green border-l border-r border-b">
+      {VisaCountries["visa_free"]
+        .map(
+          (
+            iso2 // @ts-ignore
+          ) => VisaCountries["names"]?.[iso2]?.["en"]
+        )
+        .sort((a, b) => a.localeCompare(b))
+        .map((name) => (
+          <span key={name} className="flex justify-center items-center text-center h-16">
+            {name}
+          </span>
+        ))}
+    </div>
+  </div>
+
+  <div className="mt-4">
+    <div className="text-xl [background-color:#B2B2B2] text-white p-2 pl-4 rounded-t-lg">
+      Visa Requerida
+    </div>
+
+    <div className="[border-color:#B2B2B2] border-b border-l border-r text-center p-2">
+      (todos los otros países no mencionados anteriormente)
+    </div>
+  </div>
+
+  <Heading>Solicitud de Visa</Heading>
+
+  <div className="grid sm:grid-cols-2 space-y-2">
+    <div className="flex justify-center items-center">
+      <Image placeholder="blur"
+        alt="Persona solicitando visa"
+        className="w-full max-w-96"
+        src={VisaApplicationImage}
+      />
+    </div>
+    <div>
+        ¡Para aquellos que necesitan solicitar una visa, no se preocupen! Afortunadamente,
+        las solicitudes de visa de turista no son muy difíciles de realizar, y
+        los servicios consulares de Brasil tienen una gran reputación de ayudar
+        a los turistas con su documentación si es necesario.
+
+        **Importante:** Antes de solicitar una visa, por favor, verifique nuevamente en la [Información Oficial de Visa](https://www.gov.br/mre/pt-br/assuntos/portal-consular/vistos/quadro-geral-de-regime-de-vistos-para-entrada-de-estrangeiros-no-brasil)sitio web para asegurarse de que sea necesario solicitar una. Y, comience el
+        proceso de visa **por lo menos 6 meses antes** para asegurarse de que no haya problemas.
+
+        Aquí hay algunos enlaces útiles para aprender cómo solicitar una
+        visa de turista:
+
+        - [Encuentre un consulado cerca de usted](https://www.gov.br/mre/pt-br/assuntos/portal-consular)
+        - [Formulario de Solicitud de Visa](https://formulario-mre.serpro.gov.br/sci/pages/web/ui/#/cidadao-nacionalidade)
+        - [Legislación de Inmigración](https://www.gov.br/pt-br/servicos/obter-visto-para-viajar-ao-brasil#etapas-para-a-realizacao-deste-servico)
+        - [Ministerio de Relaciones Exteriores de Brasil](https://www.gov.br/mre/pt-br/assuntos/portal-consular/vistos/informacoes-sobre-vistos-para-estrangeiros-viajarem-ao-brasil)
+        - [Wikipedia: Política de Visa de Brasil](https://en.wikipedia.org/wiki/Visa_policy_of_Brazil)
+    </div>
+  </div>
+</main>
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

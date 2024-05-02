@@ -1,0 +1,177 @@
+import MdxLayout from "@/components/MDXLayout";
+import Heading from "@/components/Heading";
+import Image from "next/image";
+import Foss4g2022Volunteers from "@/images/foss4g-2022/volunteers.jpg";
+import Foss4g2022Volunteers2 from "@/images/foss4g-2022/volunteers2.jpg";
+
+export const metadata = {
+  title: "Programa de Becas de Viaje",
+  description: "Información sobre el programa de becas de viaje para la Conferencia FOSS4G 2024 que se celebrará en Belém, Brasil, del 02 al 08 de diciembre de 2024",
+  image: Foss4g2022Volunteers
+};
+
+<Heading color="red" bubble>
+  {"Programa de Becas de Viaje"}
+</Heading>
+
+<div className="sm:grid sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0">
+  <div className="">
+    <Image placeholder="blur" src={Foss4g2022Volunteers} className="rounded-lg" />
+  </div>
+  <div className="">
+  El Programa de Becas de Viaje FOSS4G (TGP) es una iniciativa diseñada para proporcionar apoyo financiero a personas que desean asistir a la conferencia FOSS4G 2024, pero pueden enfrentar limitaciones financieras para cubrir los gastos de viaje.
+
+Los programas de becas desempeñan un papel crucial en la promoción de la igualdad de oportunidades y el acceso a la educación y el desarrollo profesional. Al ofrecer apoyo financiero a individuos talentosos y motivados que pueden enfrentar barreras financieras, estos programas amplían el alcance de la conferencia y sus actividades.
+
+Además de fomentar la diversidad, las becas contribuyen a la creación de comunidades más inclusivas al permitir que voces y perspectivas diversas enriquezcan los encuentros académicos y profesionales. Al invertir en el potencial de individuos merecedores, independientemente de sus recursos financieros, los programas de becas elevan a toda la comunidad.
+
+Desde 2017, OSGeo ha ofrecido este programa de becas y continúa esa tradición para la conferencia de 2024 en Belém. Los fondos para el TGP son proporcionados por OSGeo y son asignados por miembros del Comité Local de Belém.
+
+  <div className="flex">
+    <button className=" border-f4g_red text-white bg-f4g_orange border line-through italic rounded-lg py-2 px-3 text-lg font-ubuntu">
+    {"¡Haga clic aquí para aplicar!"}
+    </button>
+    <span className="text-f4g_red text-xl font-ubuntu ml-4 font-bold">
+    ¡Próximamente!
+    </span>
+  </div>
+  </div>
+</div>
+
+<Heading color="orange">Solicitud de una Beca de Viaje</Heading>
+
+<div className="sm:grid sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0">
+  <div>
+  #### Elegibilidad y Beneficios
+
+  Para ser elegible para recibir una Beca de Viaje, un solicitante:
+
+  - **debe residir en un país de América Latina o el Caribe**
+  - se espera que haga voluntariado durante al menos 10 horas durante la conferencia
+
+  Las Becas de Viaje pueden incluir:
+
+  - un billete de avión de ida y vuelta
+  - subsidio de alojamiento durante la conferencia
+  - subsidio de entrada a la conferencia (incluyendo 1 taller)
+
+  El tamaño y el número de becas pueden ajustarse a discreción del Comité de la Conferencia, dependiendo del nivel de financiamiento recaudado y el número de solicitudes recibidas. Los solicitantes solo podrán solicitar una beca de viaje de un tamaño determinado.
+
+  Cualquier persona que solicite más de una beca será excluida del proceso de solicitud.
+
+  ##### Fechas importantes
+
+  - **Julio de 2024**: FOSS4G 2024 TGP abre, comience a enviar sus solicitudes
+  - **31 de agosto de 2024**: Fecha límite para enviar la solicitud
+  - **16 de septiembre de 2024**: El comité evalúa las solicitudes de subvención y contacta a los beneficiarios por correo electrónico.
+</div>
+<div>
+#### Criterios de Selección
+
+Para garantizar una asignación transparente y justa de fondos, el programa de becas de viaje utiliza un sistema de puntos para clasificar las solicitudes. Se otorgan puntos por criterios específicos que cumplen los solicitantes. Una vez completada la fase de solicitud, todos los solicitantes se clasifican por puntos y los solicitantes con más puntos recibirán financiamiento.
+
+Tenga en cuenta que el propósito del programa de becas de viaje es mejorar la diversidad en la conferencia. Podemos reservar algunos lugares en el programa para personas con solicitudes únicas y excepcionales. Sin embargo, la mayoría de los lugares del programa serán determinados únicamente por el puntaje de puntos.
+
+Como parte de nuestro compromiso con la diversidad, equidad e inclusión en este evento, el programa de becas de viaje busca la participación de personas de grupos marginados, con un enfoque especial en mujeres, disidentes de género, racializadas, indígenas, neurodivergentes o personas con algún tipo de discapacidad en el mundo geoespacial, serán prioritarios.
+
+Sin embargo, aunque este programa está dirigido a grupos demográficos particulares para apoyar la participación de estos grupos, alentamos a todas las personas a presentar su solicitud.
+
+  </div>
+</div>
+
+<Heading color="green">Asignación del Sistema de Puntos</Heading>
+
+<div className="sm:grid sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0">
+  <div>
+    ##### Residencia/Nacionalidad
+
+    La asignación de puntos se basa en la [clasificación de la CEPAL](https://statistics.cepal.org/portal/cepalstat/index.html?lang=es), población en situación de pobreza y redistribución de ingresos, según la principal división administrativa.
+
+    Si un solicitante reside en una división administrativa con los siguientes niveles de pobreza, recibirá los puntos correspondientes:
+
+    - Pobreza >= 60%: 1.5 puntos
+    - Pobreza 45 - 59.9%: 1 punto
+    - Pobreza 30 - 44.9%: 0.5 puntos
+    - Pobreza 0 - 29.9%: 0 puntos
+
+    ##### Género y minorías
+
+    Para crear una comunidad más diversa, alentamos la participación de mujeres y solicitantes de otros grupos subrepresentados.
+
+    - El solicitante es mujer o miembro de un grupo subrepresentado: 1 punto
+    - Todos los demás: 0 puntos
+
+    ##### Participación en la Conferencia
+
+    El LOC valora a los solicitantes que estén dispuestos a contribuir al éxito de FOSS4G. Por lo tanto, otorgamos puntos a las personas que estén dispuestas a presentar en la conferencia.
+
+    - Solicitantes que propongan una charla y/o taller: 1 punto
+    - Solicitantes que propongan una charla y/o taller _aceptados_: 2 puntos
+
+    Tenga en cuenta que solo un autor enviado por presentación será elegible para recibir puntos.
+
+  </div>
+  <div>
+
+    ##### Estudiantes
+
+    Fomentamos la participación de estudiantes en nuestra comunidad. Para fines de esta clasificación, los estudiantes de doctorado se consideran estudiantes.
+
+    - El solicitante es estudiante: 1 punto
+    - El solicitante es estudiante _y_ es aceptado en el programa de voluntariado: 2 puntos
+
+    ##### Participación previa en proyectos de OSGEO
+
+    Valoramos no solo a aquellos que desean aprender más y participar en proyectos de OSGEO, sino también a aquellos que tienen un historial de participación en proyectos de OSGeo o actividades de construcción de comunidades.
+
+    - El solicitante ha demostrado uso y experiencia con software de OSGeo: 1 punto
+    - Participación previa demostrada en proyectos y/o actividades de construcción de comunidades de OSGeo: 2 puntos
+
+    ##### Solicitar un subsidio menor
+
+    Reconocemos que algunos solicitantes pueden asistir a la conferencia con menos ayuda financiera que otros. Dado que solo tenemos una cierta cantidad de dinero de subvención, consideramos de manera diferente a aquellos que están en esta categoría.
+
+    Los subsidios más pequeños incluyen una entrada a la conferencia, incluyendo un taller, pero sin otra asistencia.
+
+    - El solicitante solicita un subsidio menor: 2 puntos
+    - Todos los demás: 0 puntos
+
+  </div>
+</div>
+
+<Heading color="blue">¡Apoye el TGP!</Heading>
+
+<div className="grid sm:grid-cols-2 sm:space-x-4 gap-y-4 sm:space-y-0">
+  <div className="order-last sm:order-first">
+    Su apoyo ayuda mucho a que muchas personas maravillosas asistan a FOSS4G. ¡Por favor, ayude a apoyar el Programa de Becas de Viaje, si puede! Aquí están las diversas formas en que se financia este programa:
+
+  - Contribución de patrocinadores de la conferencia
+  - Compromiso anual de la Junta Directiva de OSGeo
+  - Compra de camisetas o productos adicionales, en el lugar de la conferencia.
+  - Dinero recaudado a través de la mercancía de FOSS4G en las siguientes páginas:
+    - [Tienda Redbubble FOSS4G 2024](https://www.redbubble.com/people/FOSS4G2024/)
+    - [Tienda CafePress FOSS4G 2024](https://www.cafepress.com/shop/FOSS4G2024)
+  - Donaciones directas
+    - Usted puede ayudar a que FOSS4G sea más accesible y aumentar la diversidad de nuestros asistentes haciendo una donación al TGP FOSS4G a través de la cuenta PayPal del capítulo local de OSGeo Brasil que administra la conferencia.
+    - Aquellos que deseen donar directamente al TGP tendrán la opción de que sus nombres aparezcan en una lista en el sitio web como agradecimiento.
+
+  </div>
+
+  <div>
+
+    <Image placeholder="blur" src={Foss4g2022Volunteers2} className="rounded-lg" />
+  </div>
+</div>
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

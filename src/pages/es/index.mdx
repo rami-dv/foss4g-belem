@@ -1,0 +1,65 @@
+import HomePage from "@/components/HomePage";
+
+export const metadata = {
+  title: "FOSS4G 2024 Belém Brasil",
+  description: "Página de inicio para la Conferencia FOSS4G 2024 celebrada en Belém, Brasil del 02 al 08 de diciembre de 2024",
+};
+
+
+export const esHomepagePhrases = {
+  section1Date: "02-08 de diciembre de 2024",
+  section1Subtitle:
+    "En el corazón del Amazonas, Belém, la tecnología geoespacial trasciende fronteras, revelando un mapa de posibilidades ilimitadas...",
+  section2Heading: "Acerca de FOSS4G",
+  section2Text1:
+    "Únete al fascinante mundo de la conferencia internacional FOSS4G, donde la innovación y la colaboración convergen para impulsar el futuro de la geoinformación. En este evento imperdible, líderes y entusiastas de la tecnología geoespacial se reúnen para explorar las últimas tendencias en software de código abierto.",
+  section2Text2:
+    "Descubre cómo la poderosa combinación de libertad de código abierto y geoinformática está transformando la forma en que visualizamos, analizamos y entendemos nuestro mundo. ¡No pierdas la oportunidad de ser parte de esta revolución cartográfica!",
+  section2ButtonText: "Saber Más",
+  section2ButtonLink: "/about",
+  section3Heading: "Regístrate para el evento",
+  section3ButtonLink: "",
+  section3ButtonText: "¡Próximamente!",
+  section3Link1Link: "/code-of-conduct",
+  section3Link1Text: "Código de Conducta",
+  section3Link2Link: "/visiting-belem",
+  section3Link2Text: "Visitar Belém",
+  section3Link3Link: "/schedule",
+  section3Link3Text: "Agenda",
+  section3Link4Link: "/social-events",
+  section3Link4Text: "Eventos Sociales",
+  section4Heading: "Últimas Noticias",
+  section4Card1Heading: "¡FOSS4G en Belém!",
+  section4Card1Text:
+    "OSGeo anuncia que la conferencia internacional FOSS4G se llevará a cabo en Belém",
+  section4Card1Link:
+    "https://www.osgeo.org/foundation-news/foss4g-2024-has-been-awarded-to-belem-brazil/",
+  section4Card2Heading: "SOTM LATAM 2024",
+  section4Card2Text:
+    "¡State of the Map LATAM se llevará a cabo en Belém del 07 al 08 de diciembre, después de la conferencia principal!",
+  section4Card2Link:
+    "https://wiki.openstreetmap.org/wiki/ES:LatAm/Eventos/State_of_the_Map_Latam_2024",
+  section4Card3Heading: "Lugar de FOSS4G Elegido",
+  section4Card3Text:
+    "¡FOSS4G 2024 Belém se llevará a cabo en el Centro de Convenciones HANGAR!",
+  section4Card3Link: "https://hangarpa.com.br/",
+  section5Text:
+    "¿Quieres convertirte en nuestro patrocinador? <br />Únete a nosotros como socio esencial en este viaje tecnológico!",
+  section5Button1Link: "/sponsors",
+  section5Button1Text: "Folleto de Patrocinadores",
+  section5Button2Link: "/contact",
+  section5Button2Text: "Contáctanos",
+  section6Organizers: "Organizadores",
+  section6CommunityPartners: "Socios Comunitarios",
+};
+
+
+<HomePage t={esHomepagePhrases}/>
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata,
+    },
+  };
+}

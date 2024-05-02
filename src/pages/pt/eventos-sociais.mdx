@@ -1,0 +1,102 @@
+import MdxLayout from "@/components/MDXLayout";
+import Carousel from "@/components/Carousel";
+import Heading from "@/components/Heading";
+import Foss4g2022IceBreaker from "@/images/foss4g-2022/ice-breaker.jpg";
+import Foss4g2022IceBreaker2 from "@/images/foss4g-2022/ice-breaker2.jpg";
+import Foss4g2022Lunch from "@/images/foss4g-2022/lunch.jpg";
+import Foss4g2022SocialDinner from "@/images/foss4g-2022/social-dinner.jpg";
+import Image from "next/image";
+
+export const metadata = {
+  title: "Eventos Sociais",
+  description: "Calendário de eventos sociais para a Conferência FOSS4G 2024 realizada em Belém, Brasil, de 02 a 08 de dezembro de 2024",
+  image: Foss4g2022IceBreaker
+};
+
+<Heading color="red" bubble>
+  {"Eventos Sociais"}
+</Heading>
+
+<div className="sm:grid sm:grid-cols-12 gap-4">
+  <div className="col-span-7 rounded-lg overflow-hidden">
+  
+  <div>
+  <Carousel
+  caption={true}
+  images={[
+    {
+      image: Foss4g2022IceBreaker,
+      caption:
+        "",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022IceBreaker2,
+      caption:
+        "",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022Lunch,
+      caption:
+        "",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+    {
+      image: Foss4g2022SocialDinner,
+      caption:
+        "",
+      attribution: "Anisa Kuci CC-BY-SA",
+    },
+  ]}
+  autoplay={true}
+  autoplayDelay={5000}
+/>
+  </div>
+
+Colegas! A empolgação não termina no auditório! Estendemos um caloroso convite para participar dos nossos exclusivos eventos sociais que complementarão sua experiência de networking. Aproveite momentos de camaradagem, troca de ideias e diversão em um ambiente descontraído. Os eventos são projetados para fortalecer laços e criar memórias inesquecíveis. Não perca a oportunidade de se conectar em um ambiente mais informal! Detalhes serão fornecidos no local, esperamos vê-los lá!
+
+#### Quebra-Gelo
+
+---
+
+O Quebra-Gelo ocorrerá no primeiro dia do evento, **quarta-feira, 4 de dezembro, das 18h30 às 21h00**, no mesmo local, HANGAR, e permitirá que os participantes tenham um momento descontraído com música e um pequeno coquetel para promover a convivialidade entre as pessoas.
+
+#### Jantar de Gala
+
+---
+
+O Jantar de Gala acontecerá no **quinta-feira, 5 de dezembro, das 20h00 às 23h00**, no espaço de festas do Hangar. Um jantar será servido com culinária típica local, já que a cidade de Belém é considerada a "Cidade Criativa da Gastronomia" pela UNESCO.
+
+O menu inclui uma entrada com petiscos típicos: coxinha de frango, unha de caranguejo, palha de vatapá e empadinha. Como prato principal, teremos a comida típica do "Arroz Paraense", que inclui camarões regionais e molho de tucupi, além de comidas mais tradicionais com um sabor internacional, que inclui Filé com arroz, salada e farofa, que serviremos para aqueles que não podem comer frutos do mar. Para a sobremesa, teremos o tradicional creme de cupuaçu e sorvete de tapioca. Opções vegetarianas estarão disponíveis para cada parte da refeição.
+
+Após o jantar, teremos uma banda de música que apresentará as principais músicas do Pará, também com um repertório que destaca os ritmos brasileiros e, no final, a festa será encerrada com uma playlist internacional. Este momento permitirá que você conheça o local, música e gastronomia Belenense.
+
+Queremos envolver os participantes na cultura do Pará e fazê-los saborear a melhor comida da Amazônia; será uma imersão incrível.
+
+#### Recepção de Encerramento
+
+---
+
+Convidamos você para celebrar o encerramento da conferência FOSS4G 2024 em uma recepção especial! Venha brindar uma semana de aprendizado, networking e colaboração com a comunidade FOSS4G. Todos os membros da associação FOSS4G, amigos e interessados são cordialmente convidados para um drink ao final da FOSS4G 2024 no **sexta-feira, 6 de dezembro, às 15h30 no mesmo local, HANGAR**.
+
+  </div>
+  <div className="col-span-5">
+    <Image placeholder="blur" src={Foss4g2022IceBreaker} className="h-72 mb-4 object-cover shadow rounded-lg" />
+    <Image placeholder="blur" src={Foss4g2022IceBreaker2} className="h-72 my-4 object-cover shadow rounded-lg" />
+    <Image placeholder="blur" src={Foss4g2022Lunch} className="h-72 my-4 object-cover shadow rounded-lg" />
+    <Image placeholder="blur" src={Foss4g2022SocialDinner} className="h-72 my-4 object-cover shadow rounded-lg" />
+  </div>
+</div>
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

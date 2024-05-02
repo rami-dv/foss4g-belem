@@ -1,0 +1,27 @@
+import MdxLayout from "@/components/MDXLayout";
+import WeekSchedule from "@/images/week-schedule.png";
+import Image from "next/image";
+
+export const metadata = {
+  title: "Programação",
+  description: "Visão geral da programação para a Conferência FOSS4G 2024 realizada em Belém, Brasil, de 02 a 08 de dezembro de 2024",
+  image: WeekSchedule
+};
+
+<div className="text-3xl mt-4 mb-2 md:text-7xl text-center md:mt-8 md:mb-4 font-ubuntu">02 a 08 de dezembro de 2024</div>
+
+<Image placeholder="blur" src={WeekSchedule} />
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+}

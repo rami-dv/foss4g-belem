@@ -1,0 +1,147 @@
+import Committees from "@/data/committees.json";
+import Image from "next/image";
+import Heading from "@/components/Heading";
+import CommitteeImage from "@/images/committee.jpg";
+import Foss4gAr1 from "@/images/foss4g-ar/foss4g-ar1.jpg";
+import Foss4gAr2 from "@/images/foss4g-ar/foss4g-ar2.jpg";
+import Foss4gAr4 from "@/images/foss4g-ar/foss4g-ar4.jpg";
+import Foss4gAr5 from "@/images/foss4g-ar/foss4g-ar5.jpg";
+import Foss4gAr6 from "@/images/foss4g-ar/foss4g-ar6.jpg";
+import MdxLayout from "@/components/MDXLayout";
+import { useRouter } from "next/router";
+import Carousel from "@/components/Carousel";
+
+export const metadata = {
+  title: "Comités de la Conferencia",
+  description:
+    "Visión general de los diversos comités de la Conferencia FOSS4G 2024 celebrada en Belém, Brasil del 02 al 08 de diciembre de 2024, incluyendo los comités Local, Académico, de Programa y de Patrocinadores.",
+  image: Foss4gAr2,
+};
+
+<Heading color="red" bubble>
+  {"Comités de la Conferencia"}
+</Heading>
+
+<div className="grid sm:grid-cols-2 gap-y-4 sm:gap-x-4">
+  <div className="flex-grow max-h-[520px]">
+    <Carousel
+      captions={false}
+      autoplay={true}
+      images={[
+        {
+          image: Foss4gAr4,
+        },
+        {
+          image: Foss4gAr1,
+        },
+        {
+          image: Foss4gAr5,
+        },
+        {
+          image: Foss4gAr2,
+        },
+        {
+          image: Foss4gAr6,
+        },
+      ]}
+    />
+  </div>
+  <div className="flex-shrink">
+    #### Colaboración Internacional
+    ---
+
+    Para coordinar un evento de tal magnitud de FOSS4G 2024, se ha formado una colaboración internacional entre dos organizaciones:
+
+    - <span className="underline underline-offset-4">Capítulo Local OSGeo de Brasil</span>
+    - <span className="underline underline-offset-4">Asociación Civil Geolibres Argentina</span>
+
+    Estos grupos, además de un equipo distribuido de apasionados voluntarios en todo el continente, están trabajando arduamente para organizar un exitoso evento FOSS4G en Belém.
+
+    A continuación se ofrece más información sobre los grupos involucrados y los miembros individuales de los diversos comités de la conferencia.
+
+    ##### OSGeo Brasil
+    ---
+    A partir de principios de la década de 2000, los usuarios brasileños han realizado contribuciones significativas a proyectos de software geoespacial de código abierto, incluyendo el desarrollo de herramientas basadas en OSGeo como QGIS, GRASS GIS, GeoServer y otros.
+
+    En 2024, después de muchos años de organización informal, OSGeo Brasil finalmente se convirtió en un Capítulo Local oficial de OSGeo.
+
+    ##### Geolibres Argentina
+    ---
+
+    Geolibres Argentina es una asociación civil creada en 2018 con el fin de promover la adopción de estándares geográficos y el uso de software libre y de código abierto, además de brindar apoyo legal a las comunidades relacionadas.
+
+    Si bien no es un capítulo de OSGeo, sus objetivos y actividades están estrechamente alineados con los de OSGeo.
+
+  </div>
+</div>
+
+<Heading color="red">Comité Local</Heading>
+<div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
+  {Committees["loc"].map((person) => (
+    <PhotoBubble committee="loc" person={person} key={person["name"]} />
+  ))}
+</div>
+
+<Heading color="orange">Comité Académico</Heading>
+<div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
+  {Committees["academic"].map((person) => (
+    <PhotoBubble committee="academic" person={person} key={person["name"]} />
+  ))}
+</div>
+
+<Heading color="green">Comité de Programa</Heading>
+<div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
+  {Committees["program"].map((person) => (
+    <PhotoBubble committee="program" person={person} key={person["name"]} />
+  ))}
+</div>
+
+<Heading color="blue">Comité de Patrocinadores</Heading>
+<div className="grid grid-cols-3 sm:grid-cols-6 sm:space-x-1">
+  {Committees["sponsor"].map((person) => (
+    <PhotoBubble committee="sponsor" person={person} key={person["name"]} />
+  ))}
+</div>
+
+export const PhotoBubble = ({person, committee, ...otherProps}) => {
+  const basePath = useRouter().basePath;
+  const imgUrl = `${basePath ?? ""}/images/committees/${committee}/${slugify(person['name'])}.jpg`
+
+const border = {
+"loc": "border-f4g_red",
+"academic": "border-f4g_orange",
+"program": "border-f4g_green",
+"sponsor": "border-f4g_blue"
+}
+
+return (
+
+<div key={person['name']} {...otherProps}>
+<div className={`aspect-square rounded-full hover:cursor-default border-4 ${border[committee]} overflow-hidden m-1 sm:m-2`}>
+<img width="512" height="512" src={imgUrl} alt={person['name']} />
+</div>
+<div className="text-ubuntu text-center">{person['name']}</div>
+{person['role'] && <div className="text-ubuntu text-center text-xs">{person['role']}</div>}
+
+  </div>
+  )
+
+}
+
+export function slugify(str) {
+  return str
+    .toLocaleLowerCase()
+    .replace(/\s/g, "-");
+}
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+
+}
+export async function getStaticProps() {
+return {
+props: {
+metadata
+},
+}
+}

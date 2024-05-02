@@ -1,0 +1,68 @@
+import MdxLayout from "@/components/MDXLayout";
+import Image from "next/image";
+import Heading from "@/components/Heading";
+import Volunteers from "@/images/foss4g-2023/volunteers.jpg";
+
+import { SocialIcon } from "react-social-icons";
+
+export const metadata = {
+  title: "Contato",
+  description: "Informações de contato para a Conferência FOSS4G 2024 realizada em Belém, Brasil, de 02 a 08 de dezembro de 2024",
+};
+
+export function ContactTr({url, label}) {
+  return (
+    <tr>
+      <td className="p-2">
+        <SocialIcon
+          url={url}
+          style={{ width: 30, height: 30, padding: "8px" }}
+          bgColor="#552f27"
+          fgColor="transparent"
+        />
+      </td>
+      <td>
+        <a href={url} target="_blank" className="non-standard text-f4g_red underline underline-offset-4">{label}</a>
+      </td>
+    </tr>
+  )
+}
+
+<Heading bubble>Entre em Contato</Heading>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div>
+    <Image placeholder="blur" src={Volunteers} className=" rounded-lg "/>
+  </div>
+  <div>
+    #### Nós adoraríamos ouvir de você!
+    ---
+
+    Tem alguma pergunta sobre patrocínio, inscrição, logística ou algo mais? Por favor, entre em contato conosco em um de nossos muitos canais abaixo:
+
+    <table>
+      <tbody>
+        <ContactTr url="mailto:info@foss4g.org" label="info@foss4g.org" />
+        <ContactTr url="https://lists.osgeo.org/mailman/listinfo/foss4g2024" label="Lista de E-mails FOSS4G 2024" />
+        <ContactTr url="http://eepurl.com/gxPUJH" label="Boletim Informativo FOSS4G 2024" />
+        <ContactTr url="https://t.me/foss4g" label="Grupo Telegram FOSS4G 2024"/>
+      </tbody>
+    </table>
+
+    Esperamos ouvir de você!
+
+  </div>
+</div>
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+
+}
