@@ -96,11 +96,6 @@ export const intlHrefs = {
     es: "/patrocinadores",
     pt: "/patrocinadores",
   },
-  "/attending": {
-    en: "/attending",
-    es: "/asistiendo",
-    pt: "/participando",
-  },
   "/venue": {
     en: "/venue",
     es: "/lugar",
