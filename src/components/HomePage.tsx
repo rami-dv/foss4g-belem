@@ -21,8 +21,58 @@ import Countdown from "react-countdown";
 import Image from "next/image";
 import IntlLink from "@/components/IntlLink";
 
+const homepagePhrases = {
+  section1Date: "02-08 December 2024",
+  section1Subtitle:
+    "In the heart of the Amazon, Belém, geospatial technology transcends borders, revealing a map of unlimited possibilities...",
+  section2Heading: "About FOSS4G",
+  section2Text1:
+    "Join the fascinating world of the FOSS4G international conference, where innovation and collaboration converge to drive the future of geoinformation. At this unmissable event, leaders and enthusiasts of geospatial technology come together to explore the latest trends in open source software.",
+  section2Text2:
+    "Discover how the powerful combination of open source freedom and geoinformatics is transforming the way we visualize, analyze, and understand our world. Don&apos;t miss the opportunity to be part of this cartographic revolution!",
+  section2ButtonText: "Learn More",
+  section2ButtonLink: "/about",
+  section3Heading: "Register for the event",
+  section3ButtonLink: "",
+  section3ButtonText: "Coming Soon!",
+  section3Link1Link: "/code-of-conduct",
+  section3Link1Text: "Code of Conduct",
+  section3Link2Link: "/visiting-belem",
+  section3Link2Text: "Visiting Belém",
+  section3Link3Link: "/schedule",
+  section3Link3Text: "Schedule",
+  section3Link4Link: "/social-events",
+  section3Link4Text: "Social Events",
+  section4Heading: "Latest News",
+  section4Card1Heading: "FOSS4G in Belém!",
+  section4Card1Text:
+    "OSGeo announces that the FOSS4G international conference will be held in Belém",
+  section4Card1Link:
+    "https://www.osgeo.org/foundation-news/foss4g-2024-has-been-awarded-to-belem-brazil/",
+  section4Card2Heading: "SOTM LATAM 2024",
+  section4Card2Text:
+    "State of the Map LATAM will be held in Belém 07-08 December, after the main conference!",
+  section4Card2Link:
+    "https://wiki.openstreetmap.org/wiki/ES:LatAm/Eventos/State_of_the_Map_Latam_2024",
+  section4Card3Heading: "FOSS4G Venue Chosen",
+  section4Card3Text:
+    "FOSS4G 2024 Belém will be held at HANGAR Convention Center!",
+  section4Card3Link: "https://hangarpa.com.br/",
+  section5Text:
+    "Do you want to become our sponsor? <br />Join us as an essential partner in this technological journey!",
+  section5Button1Link: "/sponsors",
+  section5Button1Text: "Sponsor Brochure",
+  section5Button2Link: "/contact",
+  section5Button2Text: "Contact Us",
+  section6Organizers: "Organizers",
+  section6CommunityPartners: "Community Partners",
+};
 
-export default function HomePage() {
+export default function HomePage({
+  t = homepagePhrases,
+}: {
+  t: typeof homepagePhrases;
+}) {
   return (
     <>
       {/* Banner section */}
@@ -83,13 +133,11 @@ export default function HomePage() {
               className="text-white text-xl my-4"
               style={{ textShadow: "3.5px 6.062px 0px rgba(0, 0, 0, 0.1)" }}
             >
-              02-08 December 2024
+              {t["section1Date"]}
             </div>
 
             <div className="text-white [font-size:1.3rem] leading-7 italic [max-width:600px]">
-              &quot;In the heart of the Amazon, Belém, geospatial technology
-              transcends borders, revealing a map of unlimited
-              possibilities...&quot;
+              &quot;{t["section1Subtitle"]}&quot;
             </div>
           </div>
         </div>
@@ -121,25 +169,14 @@ export default function HomePage() {
           </div>
           <div className="sm:max-w-md">
             <div className="font-ubuntu text-[2.5rem] [font-weight:500]">
-              About FOSS4G
+              {t["section2Heading"]}
             </div>
             <div className="w-[60px] h-[3px] bg-[#ff6600] mt-1"></div>
-            <div className="mt-8">
-              Join the fascinating world of the FOSS4G international conference,
-              where innovation and collaboration converge to drive the future of
-              geoinformation. At this unmissable event, leaders and enthusiasts
-              of geospatial technology come together to explore the latest
-              trends in open source software.
-            </div>
-            <div className="mt-8">
-              Discover how the powerful combination of open source freedom and
-              geoinformatics is transforming the way we visualize, analyze, and
-              understand our world. Don&apos;t miss the opportunity to be part
-              of this cartographic revolution!
-            </div>
-            <IntlLink href="/about">
-              <div className="inline-block text-white px-10 py-3 mt-8 rounded button bg-[#ff6600]">
-                LEARN MORE
+            <div className="mt-8">{t["section2Text1"]}</div>
+            <div className="mt-8">{t["section2Text2"]}</div>
+            <IntlLink href={t["section2ButtonLink"]}>
+              <div className="inline-block text-white uppercase px-10 py-3 mt-8 rounded button bg-[#ff6600]">
+                {t["section2ButtonText"]}
               </div>
             </IntlLink>
           </div>
@@ -169,7 +206,7 @@ export default function HomePage() {
           >
             <div className="mt-10 sm:mt-20">
               <div className="bg-[#ee6f2e] font-ubuntu [font-weight:500] p-[20px] inline text-3xl 6xl:text-[4rem] text-white">
-                Register for the event
+                {t["section3Heading"]}
               </div>
               <div className="6xl:ml-72 sm:ml-10 mt-10">
                 <Image
@@ -179,9 +216,17 @@ export default function HomePage() {
                   src={WhiteArrows}
                 />
                 <div className="inline-block ml-10">
-                  <div className="button text-2xl uppercase [font-weight:500] font-ubuntu text-[#ee6f2e] bg-white rounded px-10 py-4">
-                    Coming Soon!
-                  </div>
+                  {t["section3ButtonLink"] == "" ? (
+                    <div className="button text-2xl uppercase [font-weight:500] font-ubuntu text-[#ee6f2e] bg-white rounded px-10 py-4">
+                      {t["section3ButtonText"]}
+                    </div>
+                  ) : (
+                    <IntlLink href={t["section3ButtonLink"]}>
+                      <div className="button text-2xl uppercase [font-weight:500] font-ubuntu text-[#ee6f2e] bg-white rounded px-10 py-4">
+                        {t["section3ButtonText"]}
+                      </div>
+                    </IntlLink>
+                  )}
                 </div>
               </div>
             </div>
@@ -191,8 +236,8 @@ export default function HomePage() {
             style={{ backgroundImage: `url(${OrangeBg.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
-              <IntlLink href="/code-of-conduct" className="non-standard">
-                Code of Conduct
+              <IntlLink href={t["section3Link1Link"]} className="non-standard">
+                {t["section3Link1Text"]}
               </IntlLink>
             </div>
           </div>
@@ -207,8 +252,11 @@ export default function HomePage() {
                 />
               </div>
               <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
-                <IntlLink href="/visiting-belem" className="non-standard">
-                  Visiting Belém
+                <IntlLink
+                  href={t["section3Link2Link"]}
+                  className="non-standard"
+                >
+                  {t["section3Link2Text"]}
                 </IntlLink>
               </div>
             </div>
@@ -218,8 +266,8 @@ export default function HomePage() {
             style={{ backgroundImage: `url(${GreenBg.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
-              <IntlLink href="/schedule" className="non-standard">
-                Schedule
+              <IntlLink href={t["section3Link3Link"]} className="non-standard">
+                {t["section3Link3Text"]}
               </IntlLink>
             </div>
           </div>
@@ -228,8 +276,8 @@ export default function HomePage() {
             style={{ backgroundImage: `url(${SocialEvents.src})` }}
           >
             <div className="button font-ubuntu [font-weight:500] text-white text-3xl 6xl:text-5xl m-6">
-              <IntlLink href="/social-events" className="non-standard">
-                Social Events
+              <IntlLink href={t["section3Link4Link"]} className="non-standard">
+                {t["section3Link4Text"]}
               </IntlLink>
             </div>
           </div>
@@ -247,7 +295,7 @@ export default function HomePage() {
           <div className="sm:absolute top-0 left-0 right-0 bottom-0 grid grid-cols-1 sm:grid-cols-2">
             <div className="flex justify-center sm:justify-end">
               <div className="text-4xl font-ubuntu [font-weight:500] sm:mr-8">
-                Latest News
+                {t["section4Heading"]}
               </div>
             </div>
             <div className="flex items-center justify-center sm:items-start sm:justify-start m-4">
@@ -259,20 +307,13 @@ export default function HomePage() {
                 />
                 <div className="p-2">
                   <div className="font-ubuntu text-3xl [font-weight:500] my-3">
-                    FOSS4G in Belém!
+                    {t["section4Card1Heading"]}
                   </div>
                   <div className="font-ubuntu my-3">
-                    OSGeo announces that the FOSS4G international conference
-                    will be held in Belém
+                    {t["section4Card1Text"]}
                   </div>
                   <div>
-                    <a
-                      href="https://www.osgeo.org/foundation-news/foss4g-2024-has-been-awarded-to-belem-brazil/"
-                      target="_blank"
-                      className="button"
-                    >
-                      Read more
-                    </a>
+                    <IntlLink href={t["section4Card1Link"]}>Read more</IntlLink>
                   </div>
                 </div>
               </div>
@@ -286,20 +327,13 @@ export default function HomePage() {
                 />
                 <div className="p-2">
                   <div className="font-ubuntu text-3xl [font-weight:500] my-3">
-                    SOTM LATAM 2024
+                    {t["section4Card2Heading"]}
                   </div>
                   <div className="font-ubuntu my-3">
-                    State of the Map LATAM will be held in Belém 07-08 December,
-                    after the main conference!
+                    {t["section4Card2Text"]}
                   </div>
                   <div>
-                    <a
-                      href="https://wiki.openstreetmap.org/wiki/ES:LatAm/Eventos/State_of_the_Map_Latam_2024"
-                      target="_blank"
-                      className="button"
-                    >
-                      Read more
-                    </a>
+                    <IntlLink href={t["section4Card2Link"]}>Read more</IntlLink>
                   </div>
                 </div>
               </div>
@@ -313,19 +347,13 @@ export default function HomePage() {
                 />
                 <div className="p-2">
                   <div className="font-ubuntu text-3xl [font-weight:500] my-3">
-                    FOSS4G Venue Chosen
+                    {t["section4Card3Heading"]}
                   </div>
                   <div className="font-ubuntu my-3">
-                    FOSS4G 2024 Belém will be held at HANGAR Convention Center!
+                    {t["section4Card3Text"]}
                   </div>
                   <div>
-                    <a
-                      href="https://hangarpa.com.br/"
-                      target="_blank"
-                      className="button"
-                    >
-                      Read more
-                    </a>
+                    <IntlLink href={t["section4Card2Link"]}>Read more</IntlLink>
                   </div>
                 </div>
               </div>
@@ -340,20 +368,20 @@ export default function HomePage() {
       >
         <div className="w-full max-w-6xl">
           <div className="grid space-y-8 sm:space-y-0 sm:grid-cols-2">
-            <div className="font-ubuntu text-2xl sm:text-3xl text-white mx-4 leading-8">
-              Do you want to become our sponsor? <br />
-              Join us as an essential partner in this technological journey!
-            </div>
+            <div
+              className="font-ubuntu text-2xl sm:text-3xl text-white mx-4 leading-8"
+              dangerouslySetInnerHTML={{ __html: t["section5Text"] }}
+            ></div>
             <div className="flex items-center justify-center flex-col space-y-4 sm:space-y-8">
-              <IntlLink href="/sponsors">
+              <IntlLink href={t["section5Button1Link"]}>
                 <div className="button inline-block bg-[#ff6600] uppercase text-white font-ubuntu px-10 py-3 ">
-                  Sponsor Brochure
+                  {t["section5Button1Text"]}
                 </div>
               </IntlLink>
 
-              <IntlLink href="/contact">
+              <IntlLink href={t["section5Button2Link"]}>
                 <div className="button inline-block text-[#ff6600] uppercase bg-white font-ubuntu px-10 py-3 ">
-                  Contact Us
+                  {t["section5Button2Text"]}
                 </div>
               </IntlLink>
             </div>
@@ -364,7 +392,7 @@ export default function HomePage() {
       <section className="flex items-center justify-center my-4 w-full mb-10 ">
         <div className="flex flex-col items-center justify-center w-full max-w-6xl">
           <div className="text-4xl [font-weight:500] font-ubuntu my-4">
-            Organizers
+            {t["section6Organizers"]}
           </div>
           <div className="flex items-center flex-col sm:flex-row justify-center sm:space-x-8 space-y-8 sm:space-y-0 max-w-60 sm:max-w-none">
             <div>
@@ -382,7 +410,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="text-4xl [font-weight:500] font-ubuntu my-4 mt-12">
-            Community Partners
+            {t["section6CommunityPartners"]}
           </div>
           <div className="flex items-center flex-col sm:flex-row justify-center sm:space-x-8">
             <div>
