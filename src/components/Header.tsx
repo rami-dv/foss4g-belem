@@ -50,6 +50,12 @@ const menuItems = [
         "label:pt": "Marca",
         href: "/branding",
       },
+      {
+        "label:en": "Contact Us",
+        "label:es": "Contacto",
+        "label:pt": "Contactar-nos",
+        href: "/contact",
+      },
     ],
   },
   {

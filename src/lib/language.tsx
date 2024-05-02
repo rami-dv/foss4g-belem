@@ -111,6 +111,11 @@ export const intlHrefs = {
     es: "/visitando-belem",
     pt: "/visitando-belem",
   },
+  "/contact": {
+    en: "/contact",
+    es: "/contacto",
+    pt: "/contactar-nos",
+  },
 };
 
 export const LanguageContext = createContext<{

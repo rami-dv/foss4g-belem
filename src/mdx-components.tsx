@@ -33,11 +33,13 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     hr: () => <hr className="" />,
     p: ({ children }) => <p className="my-3">{children}</p>,
-    a: ({ href, children }) => (
+    a: ({ href, children, className = null }) => (
       <a
         href={href}
         target="_blank"
-        className="underline underline-offset-4 text-f4g_blue"
+        className={
+          className ? className : "underline underline-offset-4 text-f4g_blue"
+        }
       >
         {children}
       </a>
