@@ -21,7 +21,7 @@ import Countdown from "react-countdown";
 import Image from "next/image";
 import IntlLink from "@/components/IntlLink";
 
-const homepagePhrases = {
+const enHomepagePhrases = {
   section1Date: "02-08 December 2024",
   section1Subtitle:
     "In the heart of the Amazon, Belém, geospatial technology transcends borders, revealing a map of unlimited possibilities...",
@@ -69,9 +69,9 @@ const homepagePhrases = {
 };
 
 export default function HomePage({
-  t = homepagePhrases,
+  t = enHomepagePhrases,
 }: {
-  t: typeof homepagePhrases;
+  t: typeof enHomepagePhrases;
 }) {
   return (
     <>
