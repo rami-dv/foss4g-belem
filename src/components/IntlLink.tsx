@@ -2,7 +2,6 @@ import { useContext } from "react";
 import Link from "next/link";
 import { intlHrefs, LanguageContext } from "@/lib/language";
 
-
 export default function IntlLink({
   href,
   className = "",
@@ -22,7 +21,11 @@ export default function IntlLink({
         intlHrefs[href][language]
       : href;
 
-  return (
+  return href.startsWith("http") ? (
+    <a href={href} className={className} {...otherProps}>
+      {children}
+    </a>
+  ) : (
     <Link
       href={`/${language}${intlHref}`}
       className={className}
