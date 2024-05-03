@@ -205,7 +205,7 @@ export default function HomePage({
             style={{ backgroundImage: `url(${RegisterImg.src})` }}
           >
             <div className="mt-10 sm:mt-20">
-              <div className="bg-[#ee6f2e] font-ubuntu [font-weight:500] p-[20px] inline text-3xl 6xl:text-[4rem] text-white">
+              <div className="bg-[#ee6f2e] font-ubuntu [font-weight:500] p-[20px] inline text-2xl 6xl:text-[3rem] text-white">
                 {t["section3Heading"]}
               </div>
               <div className="6xl:ml-72 sm:ml-10 mt-10">
