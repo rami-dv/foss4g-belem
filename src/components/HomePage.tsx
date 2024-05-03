@@ -53,7 +53,7 @@ const enHomepagePhrases = {
   section4Card2Text:
     "State of the Map LATAM will be held in Belém 07-08 December, after the main conference!",
   section4Card2Link:
-    "https://wiki.openstreetmap.org/wiki/ES:LatAm/Eventos/State_of_the_Map_Latam_2024",
+    "https://2024.osmlatam.org/",
   section4Card3Heading: "FOSS4G Venue Chosen",
   section4Card3Text:
     "FOSS4G 2024 Belém will be held at HANGAR Convention Center!",
