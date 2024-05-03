@@ -1,0 +1,90 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "Call For Papers",
+  description: null,
+  image: null,
+};
+
+<br />
+
+# General Track FOSS4G 2024
+
+El objetivo de la conferencia es doble: el intercambio de información y experiencias entre usuarios de datos geográficos y software libre y de código abierto para el tratamiento de información geográfica y la posibilidad de que usuarios nuevos o potenciales descubran la funcionalidad de estos sistemas y la disponibilidad de datos, y conozcan a desarrolladores y usuarios experimentados.
+
+Se espera que las ponencias compartan experiencias de uso o desarrollo de datos y metadatos geográficos libres y de uso o desarrollo de software geográfico libre y de código abierto. Su contribución podría versar sobre cómo utiliza el software geoespacial de código abierto, cómo le permite resolver los problemas de su empresa/organización, un nuevo desarrollo en el que esté implicado, qué ha mejorado, etc., en los distintos campos de aplicación.
+
+No se aceptarán presentaciones que promocionen software con licencia restringida. Esta es una conferencia de Software Libre de Código Abierto, y el FOSS es el principal interés.
+
+# Cómo presentar una propuesta
+
+Tendrá que presentar su propuesta (de hasta 1000 palabras) al presentar una ponencia. A continuación, se le pedirá que seleccione un Tema general que defina mejor su contribución:
+
+- Estado del software;
+- Transición a FOSS4G;
+- Casos de uso y aplicaciones;
+- Educación;
+- Datos abiertos;
+- Comunidad y Fundación
+- Retos y oportunidades de AI4EO
+- Estándar abierto
+- Aplicaciones y soluciones para la región amazónica
+
+También está disponible un track especial
+
+- Geoespacial de código abierto «Hecho en América Latina».
+
+También deberá seleccionar un Tema general que defina mejor su propuesta:
+- Estado del software/estado del arte, desarrollo de nuevo software/proyectos, evaluación comparativa;
+- Implementaciones de FOSS4G en ámbitos de aplicación estratégicos: gestión del territorio, respuesta a crisis/catástrofes, ciudades inteligentes, cartografía de la población, cambio climático, vigilancia oceánica y marina, etc;
+- Visualización de datos: análisis espacial, manipulación y visualización de datos geoespaciales;
+- Recopilación de datos, intercambio de datos, ciencia de datos, datos abiertos, big data y plataformas de explotación de datos;
+- Sensores y procesamiento de datos: teledetección, lidar, estructura a partir del movimiento y GNSS;
+- Nuevas tendencias: IoT, Cartografía en interiores, drones - UAV (vehículo aéreo no tripulado), Gemelos digitales urbanos, Inteligencia artificial - aprendizaje automático, aprendizaje profundo, estructuras de datos geoespaciales, análisis ráster en tiempo real;
+- Ciencia abierta y reproducible;
+- Estándares, interoperabilidad, IDE, metadatos e implementaciones INSPIRE;
+- FOSS4G comunitario y participativo;
+- FOSS4G en instituciones gubernamentales;
+- FOSS4G en la educación;
+- FOSS4G para los Objetivos de Desarrollo Sostenible (ODS);
+- FOSS4G para la salud pública;
+- Productos empresariales impulsados por FOSS4G;
+
+
+A continuación, asignará un número entre 1 y 4, que indicará el nivel de complejidad técnica de su contribución. Uno significa que la audiencia puede tener unos conocimientos técnicos mínimos relacionados con el tema de su presentación para entenderla, y cuatro significa que su audiencia debe ser muy técnica para sacar el máximo partido de su charla.
+
+Además, le animamos a que indique recursos (vídeos, páginas web, artículos, etc.) para leer con antelación, lo que le ayudará a ponerse al día en temas avanzados.
+
+Si está interesado en organizar otro tema en particular, ¡patrocine el evento!
+
+Consulte la página de patrocinio para más información.
+
+# Directrices para la presentación de propuestas
+
+OSGeo es una comunidad abierta, de base y dinámica cuyo evento insignia ha heredado sus profundas características. No hay indicaciones formales a la hora de preparar su contribución para FOSS4G, pero tenga en cuenta las siguientes sugerencias:
+
+- La columna vertebral de FOSS4G es el código abierto, así que asegúrese de indicar cuál o cuáles son los proyectos de código abierto esenciales en su charla;
+- Si habla de nuevos desarrollos o de un nuevo proyecto de código abierto, señale su(s) repositorio(s). Hablarás en una sala llena de frikis con ordenadores e internet de alta velocidad.
+- Cuanto más adecuadas sean las selecciones de tema, asunto y nivel de complejidad técnica, mejor conformado estará el programa final. Así que, por favor, ayúdenos a optimizar su tiempo en FOSS4G 2024.
+- Creemos en la igualdad, por lo que todos los ponentes disponen del mismo tiempo para presentar su trabajo: 20 minutos para la charla, 5 para las preguntas y respuestas, y 5 para los vestuarios. Por favor, téngalo en cuenta a la hora de preparar sus diapositivas.
+- Por último, pero no por ello menos importante, el éxito de este evento radica en la actuación responsable de todos los participantes y organizadores. Si usted o los coautores no pueden estar presentes después de haber confirmado su participación, le rogamos que nos lo comunique lo antes posible.
+
+
+# Proceso de selección de contribuciones
+
+FOSS4G es un evento para la comunidad geoespacial internacional. Por lo tanto, la selección primaria de las ponencias se hará a través del proceso de votación abierta de la comunidad. El programa incluirá automáticamente las más votadas, mientras que el Comité de Programa voluntario de FOSS4G 2024 Belém revisará las demás.
+
+Nos aseguraremos de que el programa de la conferencia sea equilibrado y diverso. Además, el Comité de Programa trabajará duro para asegurar que cada proyecto OSGeo tenga su representación adecuada. Si formas parte de algún proyecto FOSS4G y quieres proponer una sesión especial, ponte en contacto con nosotros para asegurarte de que consideramos la propuesta cuidadosamente.
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+
+}
