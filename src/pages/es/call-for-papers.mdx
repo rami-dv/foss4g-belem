@@ -1,0 +1,57 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "Call For Papers",
+  description: null,
+  image: null,
+};
+
+<br />
+
+# CALL FOR PAPERS
+¡Bienvenidos a la Convocatoria de Presentaciones FOSS4G Belém 2024!
+
+Si has desarrollado un proyecto gratuito y de código abierto relacionado con tecnologías geoespaciales,si implementaste una solución o producto FOSS4G, o participas en un proyecto que utiliza FOSS, lo invitamos a participar en nuestro encuentro.
+Tipo de contribuciones
+Puedes enviar tres tipos de propuestas a la convocatoria de ponencias:
+
+* Charlas (button)
+* Workshops (button)
+* Charlas académicas (button)
+
+Las fechas de cada tipo de contribución, están aclaradas en cada página.
+
+## Cómo contribuir
+El FOSS4G global es el evento emblemático de OSGeo y uno de los eventos geoespaciales globales más importantes del año. Si bien el enfoque de la conferencia gira en torno al software de código abierto, es un punto de encuentro donde se comparten conocimientos y experiencias, se aprenden nuevas herramientas y se establecen nuevas relaciones.
+
+## Sugerencias para ponentes
+La comunidad OSGeo se caracteriza por su forma dinámica de crecer y estamos orgullosos de acoger una variedad de voces e ideas. Si está considerando enviar una propuesta a nuestra convocatoria de ponencias, considere lo siguiente:
+
+La columna vertebral de FOSS4G es gratuita y de código abierto, así que asegúrese de indicar claramente cuáles son los proyectos de código abierto esenciales en su charla.
+
+Si presenta nuevos desarrollos o un proyecto de código abierto completamente nuevo, asegúrese de señalar los correspondientes repositorio(s) para que la gente pueda seguir su charla.
+
+Cuanto más adecuadas sean la selección de temas generales y particulares y el nivel de complejidad técnica, mejor estructurado estará el programa final. Por favor, ayúdenos a optimizar su tiempo en FOSS4G 2024.
+
+## Lo que se espera de ti como ponente
+Creemos en la igualdad, por eso todos los presentadores tienen exactamente la misma cantidad de tiempo para presentar su trabajo. Ten esto en cuenta al preparar diapositivas y considere el tiempo requerido.
+
+Y por último, pero no menos importante, el éxito de este evento reside en las acciones responsables de todos los participantes y organizadores. Si después de haber confirmado la participación, usted o los coautores ya no pueden presentarse, infórmenos lo antes posible.
+
+## Revisión de la comunidad
+¡Ayúdanos a crear nuestro cronograma de charlas! Puedes votar las propuestas de la sesión general. Por favor registre su dirección de correo electrónico. Recibirás un correo electrónico con un enlace para votar, al hacer clic en el enlace verás todas las propuestas de la Conferencia. ¡Es hora de votar lo que te gustaría ver!
+
+**Fecha de cierre para la votación: 16/08/24**
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+
+}

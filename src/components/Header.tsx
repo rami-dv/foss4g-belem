@@ -61,27 +61,8 @@ const menuItems = [
     {
     "label:en": "Call for papers",
     "label:es": "Call for papers",
-    "label:pt": "Call for papers",
-    links: [
-      {
-        "label:en": "General program",
-        "label:es": "General program",
-        "label:pt": "General program",
-        href: "/general-cfp",
-      },
-      {
-        "label:en": "Workshop program",
-        "label:es": "Workshop program",
-        "label:pt": "Workshop program",
-        href: "/workshop-cfp",
-      },
-      {
-        "label:en": "Academic program",
-        "label:es": "Academic program",
-        "label:pt": "Academic program",
-        href: "/academic-cfp",
-      },
-    ],
+    "label:pt": "Chamada de trabalhos",
+    href: "/call-for-papers",
    },
   {
     "label:en": "Map",

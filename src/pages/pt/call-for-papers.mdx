@@ -1,0 +1,62 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "Call For Papers",
+  description: null,
+  image: null,
+};
+
+<br />
+
+# CHAMADA PARA TRABALHOS
+Bem-vindo à Chamada para Apresentações do FOSS4G Belém 2024!
+
+Se você desenvolveu um projeto gratuito e de código aberto relacionado a tecnologias geoespaciais, implementou uma solução ou produto FOSS4G ou está envolvido em um projeto que utiliza FOSS, nós o convidamos a participar de nosso encontro.
+
+
+## Tipos de contribuições
+Você pode enviar três tipos de propostas para a chamada de trabalhos:
+
+* Palestras (botão)
+* Oficinas (botão)
+* Palestras acadêmicas (botão)
+
+Os prazos para cada tipo de contribuição estão especificados em cada página.
+
+
+## Como contribuir
+O FOSS4G Global é o principal evento da OSGeo e um dos eventos geoespaciais globais mais importantes do ano. Embora a conferência se concentre em software de código aberto, ela é um ponto de encontro para compartilhar conhecimentos e experiências, aprender novas ferramentas e estabelecer novos relacionamentos.
+
+
+## Sugestões aos palestrantes
+A comunidade OSGeo é caracterizada por sua forma dinâmica de crescimento, e temos orgulho de receber uma variedade de vozes e ideias. Se estiver pensando em enviar uma proposta para a nossa chamada de trabalhos, considere o seguinte:
+
+A espinha dorsal do FOSS4G é gratuita e de código aberto, portanto, certifique-se de indicar claramente quais projetos de código aberto são essenciais em sua palestra.
+
+Se estiver apresentando novos desenvolvimentos ou um projeto de código aberto completamente novo, não se esqueça de indicar o(s) repositório(s) correspondente(s) para que as pessoas possam acompanhar sua palestra.
+
+Quanto mais adequada for a seleção de tópicos gerais e específicos e o nível de complexidade técnica, mais bem estruturado será o programa final. Ajude-nos a otimizar seu tempo no FOSS4G 2024.
+
+
+## Expectativas como palestrante
+Acreditamos na igualdade, portanto, todos os apresentadores têm exatamente o mesmo tempo para apresentar seu trabalho. Tenha isso em mente ao preparar os slides e considere o tempo necessário.
+
+Por último, mas não menos importante, o sucesso deste evento depende das ações responsáveis de todos os participantes e organizadores. Se, após confirmar sua participação, você ou os coautores não puderem apresentar o trabalho, informe-nos o mais rápido possível.
+
+## Revisão pela comunidade
+Ajude-nos a criar nossa programação de palestras! Você pode votar nas propostas para a sessão geral. Registre seu endereço de e-mail. Você receberá um e-mail com um link para votar e, ao clicar no link, verá todas as propostas para a Conferência. É hora de votar no que você gostaria de ver!
+
+**Prazo para votação: 16/08/24**
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+
+}
