@@ -1,0 +1,103 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "Call For Papers",
+  description: null,
+  image: null,
+};
+
+<br />
+
+# GENERAL SESSIONS (TALKS)
+
+## Deadlines
+**Open call for general talks**: From May 8, 2024 to July 12, 2024.
+
+**Community vote**: From July 24 to August 16, 2024.
+
+**Ranking of the most voted talks**: From August 19 to 30, 2024.
+
+**Full FOSS4G 2024 program**: From September 1st, 2024.
+
+## Description
+The aim of the conference is twofold: the exchange of information and experiences between users of geographic data and Free and Open Source Software for processing geographic information and the possibility for new or potential users to discover the functionality of these systems and the availability of data, and to meet developers and experienced users.
+
+Talks are expected to share experiences using or developing free and open source geographic software. Your contribution could present all about how you use open-source geospatial software, how it helps to solve your company/organization problems, a new development you are involved in, what it has improved, etc., in the various application fields.
+
+Submissions promoting restricted licensed software will not be accepted. This is a Free Open Source Software conference, and FOSS is the main interest.
+
+## How to Submit a Proposal
+
+You will have to submit your proposal (up to 1000 words) when submitting a talk. Then, you will be asked to select a general Track that best defines your contribution:
+State of Software;
+* Transition to FOSS4G;
+* Use cases & applications;
+* Education;
+* Open data;
+* Community & Foundation
+* AI4EO Challenges & Opportunities
+* Open Standard
+* Applications and solutions for the Amazon region
+
+A special track is also available:
+
+* Open source geospatial “Made in Latin America.”
+
+You will also have to select one general Theme that best defines your proposal:
+* Software status/state of the art, new software/project development, benchmarking;
+* FOSS4G implementations in strategic application domains: land management, crisis/disaster response, smart cities, population mapping, climate change, ocean and marine monitoring, etc.;
+* Data visualization: spatial analysis, manipulation, and visualization of geospatial data;
+* Data collection, data sharing, data science, open data, big data, and data exploitation platforms;
+* Sensors and data processing: remote sensing, lidar, structure from motion, and GNSS;
+* New trends: IoT, Indoor mapping, drones - UAV (uncrewed aerial vehicle), Urban Digital Twins, Artificial intelligence - machine learning, deep learning-, geospatial data structures, real-time raster analysis;
+* Open and reproducible science;
+* Standards, interoperability, SDIs, metadata, and INSPIRE implementations;
+* Community & participatory FOSS4G;
+* FOSS4G at governmental institutions;
+* FOSS4G in education;
+* FOSS4G for Sustainable Development Goals (SDG);
+* FOSS4G for Public Health;
+* Business products powered by FOSS4G;
+
+Next, you will assign a number between 1 and 4, indicating your contribution's technical complexity level. One (1) means that the audience can have minimal technical knowledge related to your submission’s subject to understand it, and four (4) means that your audience must be highly technical to get the most out of your talk.
+
+Furthermore, you are encouraged to indicate resources (video, web pages, papers, etc.) to read in advance, which will help you get up to speed on advanced topics.
+
+If you are interested in organizing another particular track, sponsor the event!
+
+Look at the <a href="sponsors" rel="noopener noreferrer">sponsorship page</a> for additional information.
+
+## Guidelines for Submissions
+OSGeo is an open, grassroots, dynamic community whose flagship event has inherited its profound characteristics. There are no formal indications when preparing your contribution for FOSS4G, yet please consider the following suggestions:
+* FOSS4G’s backbone is open source, so make sure you indicate what is (are) the open source project(s) essential in your talk;
+* If discussing new developments or a new open-source project, please point to its repository(ies). You’ll speak in a room full of geeks with computers and internet.
+* The more suitable the selections of topic, theme, and level of technical complexity are, the better shaped the final program will be. So, please help us optimize your time at FOSS4G 2024.
+* We believe in equality, so all presenters have the same amount of time to present their work – 20 minutes for the talk, 5 for Q&A, and 5 for changing rooms. Please consider that when preparing your slides.
+* Last but not least, the success of this event lies in the responsible actions of all participants and organizers alike. If you or the co-authors can no longer be present after you have confirmed participation, please let us know as soon as possible.
+
+## Contribution selection process
+FOSS4G is an event for the international geospatial community. Thus, the primary selection of talks will be done through the open community voting process. The program automatically includes the highest-scored ones, while the FOSS4G 2024 Belém volunteer Program Committee will review the others.
+
+We will make sure that the conference program will be well-balanced and diverse. Moreover, the Program Committee will work hard to ensure that every OSGeo project has its proper representation. If you are part of some FOSS4G project and want to propose a special session, contact us to ensure we consider the proposal carefully.
+
+<div style={{ marginTop: '10px' }}>
+<a href="" rel="noopener noreferrer">
+<button className=" border-f4g_red text-white bg-f4g_orange border italic rounded-lg py-2 px-3 text-lg font-ubuntu">
+{"Submit a talk"}
+</button>
+</a>
+<span className="text-f4g_red text-xl font-ubuntu ml-4 font-bold">Coming soon!</span>
+</div>
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+
+}

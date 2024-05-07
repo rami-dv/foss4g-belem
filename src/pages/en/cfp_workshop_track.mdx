@@ -1,0 +1,54 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "Call For Papers",
+  description: null,
+  image: null,
+};
+
+<br />
+
+# GENERAL SESSIONS (TALKS)
+
+## Deadlines
+**CFP for Submission of workshop**: From May 8 to July 12, 2024.
+
+**Workshop Evaluation**: From July 22 to 31, 2024.
+
+**Full FOSS4G 2022 program**: September 1, 2024.
+
+Workshops are hands-on sessions where attendees can learn a specific FOSS4G software, package, or library for problem-solving.
+
+The workshops showcase current and emerging FOSS4G technologies, encourage skills development, and provide direct interaction between our OSGeo community and the public who wish to acquire new skills.
+
+Each workshop can last for 2 or 4 hours. Everything happens in a hands-on manner, and everyone is expected to use their own computer.
+
+## Submit a workshop
+When submitting a workshop, use the abstract to clarify the scope and content. It is in your and your attendees' best interest to ensure your objectives are well-defined. Include the list of topics you want to cover and links to data and tutorials that will be used to familiarize attendees with the topic.
+
+You will be asked to indicate the level 1-4 (from beginner to very advanced) required knowledge that attendees should have.
+
+The workshops will be held on December 2nd and 3rd.
+
+<div style={{ marginTop: '10px' }}>
+<a href="" rel="noopener noreferrer">
+<button className=" border-f4g_red text-white bg-f4g_orange border italic rounded-lg py-2 px-3 text-lg font-ubuntu">
+{"Submit a workshop"}
+</button>
+</a>
+<span className="text-f4g_red text-xl font-ubuntu ml-4 font-bold">Coming soon!</span>
+</div>
+
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+
+}
