@@ -1,16 +1,22 @@
 import MdxLayout from "@/components/MDXLayout";
 import WeekSchedule from "@/images/week-schedule.png";
+import ImportantDates from "@/images/important-dates.png";
 import Image from "next/image";
 
 export const metadata = {
   title: "Schedule",
   description: "Overview schedule for the FOSS4G 2024 Conference held in Belém, Brasil on 02-08 December 2024",
-  image: WeekSchedule
+  image: WeekSchedule, ImportantDates
 };
 
 <div className="text-3xl mt-4 mb-2 md:text-7xl text-center md:mt-8 md:mb-4 font-ubuntu">December 02-08, 2024</div>
 
 <Image placeholder="blur" src={WeekSchedule} />
+
+
+<div className="text-3xl mt-4 mb-2 md:text-7xl text-center md:mt-8 md:mb-4 font-ubuntu"></div>
+
+<Image placeholder="blur" src={ImportantDates} />
 
 export default function MDXPage({ children }) {
   return <MdxLayout metadata={metadata}>{children}</MdxLayout>
