@@ -1,0 +1,56 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "Call For Papers",
+  description: null,
+  image: null,
+};
+
+<br />
+
+# WORKSHOPS
+
+## Fechas impoprtantes
+**CFP for Submission of workshop**: From May 8 to July 12, 2024
+
+**Workshop Evaluation**: From July 22 to 31, 2024
+
+**Full FOSS4G 2022 program**: September 1, 2024
+
+Los talleres son sesiones prácticas en las que los asistentes pueden aprender un software, paquete o biblioteca específicos de FOSS4G para la resolución de problemas.
+
+Los talleres muestran tecnologías FOSS4G actuales y emergentes, fomentan el desarrollo de habilidades y proporcionan una interacción directa entre nuestra comunidad OSGeo y el público que desee adquirir nuevas habilidades.
+
+Cada taller durará 4 horas. Todo se desarrolla de forma práctica, y se espera que cada uno utilice su propio ordenador.
+
+## Envío de Talleres
+Cuando presente un taller, utilice el resumen para aclarar el alcance y el contenido. Tanto a usted como a los asistentes les conviene asegurarse de que sus objetivos están bien definidos. Incluya la lista de temas que desea tratar y enlaces a datos y tutoriales que se utilizarán para familiarizar a los asistentes con el tema.
+
+Se le pedirá que indique el nivel 1-4 (de principiante a muy avanzado) de conocimientos necesarios que deben tener los asistentes.
+
+También se le preguntará en qué idiomas pueden presentarse en taller, además de inglés.
+
+Los talleres se celebrarán los días 2 y 3 de diciembre.
+
+<div style={{ marginTop: '10px' }}>
+<a href="" rel="noopener noreferrer">
+<button className=" border-f4g_red text-white bg-f4g_orange border italic rounded-lg py-2 px-3 text-lg font-ubuntu">
+{"Enviar un taller"}
+</button>
+</a>
+<span className="text-f4g_red text-xl font-ubuntu ml-4 font-bold">Coming soon!</span>
+</div>
+
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+
+}
