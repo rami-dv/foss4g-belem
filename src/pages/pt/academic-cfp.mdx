@@ -1,0 +1,32 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "Call For Papers",
+  description: null,
+  image: null,
+};
+
+<br />
+
+# FOSS4G 2024 Academic Track
+
+Seguindo uma tradição estabelecida, o FOSS4G organiza uma trilha acadêmica que será realizada durante os dias da Conferência. O Comitê Científico do FOSS4G 2023 convida contribuições originais de pesquisa que abordem qualquer tópico ou domínio relacionado ao Software Geoespacial de Código Aberto, incluindo (mas não se limitando a) Hardware Aberto, Desenvolvimento de Software Aberto, Ciência SIG Aberta, Dados Geoespaciais Abertos, Sistemas de Compartilhamento de Dados (Geo)Espaciais, Plataformas e Serviços de Nuvem Abertos (Geoespaciais), Educação (Geo)Aberta, Mapeamento Participativo, Gêmeos Digitais, GeoAI e Aprendizado de Máquina Geoespacial.
+
+Todos os tipos de artigos são bem-vindos, incluindo os resultados alcançados, estudos de caso, trabalhos em andamento, revisões e demonstrações. No entanto, não recomendamos meras apresentações de tecnologia ou casos de uso sem justificar adequadamente a originalidade em relação ao estado da arte científica e sem novidades específicas. Além disso, o uso de software geoespacial de código aberto deve ser devidamente destacado. As contribuições de estudantes de doutorado e pesquisadores em estágio inicial são especialmente incentivadas.
+
+Na avaliação das propostas, o Comitê Científico dará atenção especial à reprodutibilidade da pesquisa (quando aplicável). A reprodutibilidade é garantida quando a pesquisa disponibiliza abertamente todos os artefatos (dados de entrada, etapas computacionais, métodos e código) para obter resultados consistentes. Quando disponível, o código deve ser liberado publicamente sob uma licença de código aberto.
+
+Consulte a Chamada de trabalhos completa disponível no [site do FOSS4G 2024] (https://2024.foss4g.org/call-for-papers/academic-cfp/).
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+
+}

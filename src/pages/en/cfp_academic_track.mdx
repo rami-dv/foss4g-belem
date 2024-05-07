@@ -1,0 +1,71 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "Call For Papers",
+  description: null,
+  image: null,
+};
+
+<br />
+
+# The Academic Track
+**(co-hosted by OSGeo Brasil and OSGeo)**
+
+## Deadlines
+**Call for Academic Track**: 30/05/2024.
+
+**Deadlines Open call for academic papers**: 05/30/2024 06/30/2024
+
+**Announce accepted papers**: 08/05/2024
+
+**Submission of full academic papers**: 08/30/2024
+
+
+## Description
+Following an established tradition, FOSS4G organizes an Academic Track that will take place during the days of the Conference. The FOSS4G 2024 Scientific Committee invites original research contributions addressing any topic or domain related to open source geospatial software, including (but not limited to) open hardware, open software development, open GIS science, open geospatial data and systems, geospatial data exchange, open geospatial cloud platforms and services, open geospatial education, participatory cartography, digital twins, geoAI and geospatial machine learning.
+
+Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers. When evaluating proposals, the Scientific Committee (link committee) will pay special attention to the research's reproducibility (when applicable). Researchers ensure reproducibility by making all artifacts (input data, computational steps, methods, and code) openly available to achieve consistent results. And, when available, the code is made public under an open source license.
+
+## Submission Process
+
+**Step 1**:
+Authors are invited to submit abstracts written in English that are between 800 and 1000 words long and contain sufficient details for evaluation, including the concepts, methodology, and results, highlighting the reasons why they would be interesting for the FOSS4G Academic Track audience.
+
+The members of the Scientific Committee will evaluate the submitted abstract based on its originality/scientific novelty, relevance to the FOSS4G community, presentation/clarity, and overall quality. Reproducibility will be considered among the evaluation criteria.
+
+The Scientific Committee will provide feedback and improvement suggestions to authors of accepted abstracts, which they should use to prepare their submission for Step 2.
+
+## Requirements
+If the abstract is accepted, the authors are invited to submit an extended paper that shall include original and unpublished research.
+
+We can accept up to 2 papers per registration. If you choose this option and the two abstracts (for which only one author is registered to the conference) are both accepted, one proposal will be presented through a standard oral presentation and the other one will be presented through a poster or a 3-5 minutes lightning talk (this will be decided at a later stage). Alternatively (and based on the reviews) they can be both presented through posters. Regardless of the situation (1 oral presentation and 1 poster/lightning talk or 2 posters), the authors have to write two papers for Step 2.
+
+Submitted papers will not be reviewed again, i.e. the acceptance of the content is solely based on the abstract. However, papers will be checked against the conformance to the template (see below).
+
+Only the work of authors who submit the paper (conformant to the template) will be included (as talks or posters) in the Academic Track program. In other words, no presentation at the Academic Track is possible without submitting a paper.
+
+**Step 2:**
+Authors of accepted abstracts should provide an extended version of their work considering the comments and suggestions received in Step 1.
+
+<div style={{ marginTop: '10px' }}>
+<a href="" rel="noopener noreferrer">
+<button className=" border-f4g_red text-white bg-f4g_orange border italic rounded-lg py-2 px-3 text-lg font-ubuntu">
+{"Submit an article"}
+</button>
+</a>
+<span className="text-f4g_red text-xl font-ubuntu ml-4 font-bold">Coming soon!</span>
+</div>
+
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+
+}

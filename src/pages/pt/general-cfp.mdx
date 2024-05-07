@@ -1,0 +1,91 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+  title: "Call For Papers",
+  description: null,
+  image: null,
+};
+
+<br />
+
+# General Track FOSS4G 2024
+
+O objetivo da conferência é duplo: a troca de informações e experiências entre usuários de dados geográficos e de software livre e de código aberto para o processamento de informações geográficas e a possibilidade de usuários novos ou em potencial descobrirem a funcionalidade desses sistemas e a disponibilidade de dados, além de conhecerem desenvolvedores e usuários experientes.
+
+Espera-se que as palestras compartilhem experiências de uso ou desenvolvimento de dados e metadados geográficos gratuitos e de uso ou desenvolvimento de software geográfico gratuito e de código aberto. Sua contribuição pode apresentar tudo sobre como você usa software geoespacial de código aberto, como ele ajuda a resolver os problemas de sua empresa/organização, um novo desenvolvimento no qual você está envolvido, o que ele melhorou, etc., nos vários campos de aplicação.
+
+Não serão aceitos envios que promovam softwares com licenças restritas. Esta é uma conferência sobre software livre de código aberto, e o FOSS é o principal interesse.
+
+# Como enviar uma proposta
+
+Você terá que enviar sua proposta (até 1000 palavras) ao enviar uma palestra. Em seguida, será solicitado que você selecione uma trilha geral que melhor defina sua contribuição:
+
+- Estado do software;
+- Transição para o FOSS4G;
+- Casos de uso e aplicativos;
+- Educação;
+- Dados abertos;
+- Comunidade e fundação
+- Desafios e oportunidades do AI4EO
+- Padrão aberto
+- Aplicativos e soluções para a região amazônica
+
+Uma trilha especial também está disponível:
+
+- Geoespacial de código aberto “Made in Latin America”.
+
+
+Você também terá que selecionar um tema geral que melhor defina sua proposta:
+
+- Status/estado da arte do software, desenvolvimento de novos softwares/projetos, benchmarking;
+- Implementações do FOSS4G em domínios de aplicativos estratégicos: gerenciamento de terras, resposta a crises/desastres, cidades inteligentes, mapeamento populacional, mudança climática, monitoramento marinho e oceânico, etc;
+- Visualização de dados: análise espacial, manipulação e visualização de dados geoespaciais;
+- Coleta de dados, compartilhamento de dados, ciência de dados, dados abertos, big data e plataformas de exploração de dados;
+- Sensores e processamento de dados: sensoriamento remoto, lidar, estrutura de movimento e GNSS;
+- Novas tendências: IoT, mapeamento interno, drones - UAV (veículo aéreo não tripulado), gêmeos digitais urbanos, inteligência artificial - aprendizado de máquina, aprendizado profundo, estruturas de dados geoespaciais, análise raster em tempo real;
+- Ciência aberta e reproduzível;
+- Padrões, interoperabilidade, SDIs, metadados e implementações INSPIRE;
+- FOSS4G comunitário e participativo;
+- FOSS4G em instituições governamentais;
+- FOSS4G na educação;
+- FOSS4G para os Objetivos de Desenvolvimento Sustentável (SDG);
+- FOSS4G para a saúde pública;
+- Produtos comerciais alimentados pelo FOSS4G;
+
+Em seguida, você atribuirá um número entre 1 e 4, indicando o nível de complexidade técnica da sua contribuição. Um significa que o público pode ter um conhecimento técnico mínimo relacionado ao assunto da sua apresentação para entendê-la, e quatro significa que o público deve ser altamente técnico para aproveitar ao máximo a sua palestra.
+
+Além disso, recomendamos que você indique recursos (vídeos, páginas da Web, artigos etc.) para ler com antecedência, o que o ajudará a se atualizar sobre tópicos avançados.
+
+Se você estiver interessado em organizar outra trilha específica, patrocine o evento!
+
+Consulte a página de patrocínio para obter mais informações.
+
+# Diretrizes para envio de trabalhos
+
+A OSGeo é uma comunidade aberta, de base e dinâmica, cujo principal evento herdou suas características profundas. Não há indicações formais ao preparar sua contribuição para o FOSS4G, mas considere as sugestões a seguir:
+
+- A espinha dorsal do FOSS4G é o código-fonte aberto, portanto, certifique-se de indicar qual(is) é(são) o(s) projeto(s) de código-fonte aberto essencial(is) em sua palestra;
+- Se estiver discutindo novos desenvolvimentos ou um novo projeto de código aberto, indique o(s) respectivo(s) repositório(s). Você falará em uma sala cheia de geeks com computadores e Internet de alta velocidade.
+- Quanto mais adequadas forem as seleções de tópico, tema e nível de complexidade técnica, melhor será o formato do programa final. Portanto, ajude-nos a otimizar seu tempo no FOSS4G 2024.
+- Acreditamos na igualdade, portanto, todos os apresentadores têm o mesmo tempo para apresentar seu trabalho - 20 minutos para a palestra, 5 para perguntas e respostas e 5 para os vestiários. Leve isso em consideração ao preparar seus slides.
+- Por último, mas não menos importante, o sucesso desse evento depende das ações responsáveis de todos os participantes e organizadores. Se você ou os coautores não puderem mais estar presentes após a confirmação da participação, informe-nos o mais rápido possível.
+
+
+# Processo de seleção de contribuições
+
+O FOSS4G é um evento para a comunidade geoespacial internacional. Portanto, a seleção primária das palestras será feita por meio do processo aberto de votação da comunidade. O programa inclui automaticamente as palestras mais bem pontuadas, enquanto o Comitê de Programa voluntário do FOSS4G 2024 Belém analisará as demais.
+
+Garantiremos que o programa da conferência seja bem equilibrado e diversificado. Além disso, o Comitê de Programa trabalhará arduamente para garantir que cada projeto OSGeo tenha sua representação adequada. Se você faz parte de algum projeto FOSS4G e deseja propor uma sessão especial, entre em contato conosco para garantir que a proposta seja considerada com cuidado.
+
+export default function MDXPage({ children }) {
+  return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      metadata
+    },
+  }
+
+}

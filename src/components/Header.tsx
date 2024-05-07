@@ -58,6 +58,12 @@ const menuItems = [
       },
     ],
   },
+    {
+    "label:en": "Call for papers",
+    "label:es": "Call for papers",
+    "label:pt": "Chamada de trabalhos",
+    href: "/call-for-papers",
+   },
   {
     "label:en": "Map",
     "label:es": "Mapa",
